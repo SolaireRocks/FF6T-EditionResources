@@ -47,7 +47,7 @@
         }
 
         .sidebar.closed {
-            left: -250px;
+            left: -250px;  /* Corrected: Use the full width */
         }
 
         .sidebar ul {
@@ -112,12 +112,12 @@
 
         }
         .main-content.sidebar-closed{
-            margin-left: 40px;
-            width: auto;
+            margin-left: 0; /*  Much simpler! */
+            width: 100%;   /*  Much simpler! */
         }
-.main-content > * {
-    overflow-x: auto; /*Allow the children elements to have scroll bars if needed*/
-}
+        .main-content > * {
+            overflow-x: auto; /*Allow the children elements to have scroll bars if needed*/
+        }
 
         /* Table Styles */
         table {
@@ -159,19 +159,19 @@
         @media (max-width: 768px) {
             .sidebar {
                 width: 100%;
-                left: -100%;
+                left: -100%;  /*  Initially hidden */
                 margin-top:0;
             }
 
             .sidebar ul {
                 margin-top: 0;
             }
-            .sidebar.open{
-              left:0;
-            }
+           /* .sidebar.open{  No longer needed, handled by Javascript.  */
+            /*  left:0; */
+           /* } */
 
             .main-content {
-                margin-left: 0 !important;
+                margin-left: 0 !important;  /* Use !important sparingly, okay here */
                 padding: 20px;
                 width:100% !important;
             }
@@ -182,7 +182,7 @@
                 left:10px;
             }
             .sidebar.closed {
-              left: -100%;
+              left: -100%;  /*  Consistent with initial state */
             }
 
             .sidebar li {
@@ -258,7 +258,16 @@
         const hamburgerMenu = document.getElementById('hamburgerMenu');
         const sidebar = document.getElementById('sidebar');
         const mainContent = document.getElementById('mainContent');
-        let sidebarOpen = true;
+
+        // CRUCIAL: Initialize sidebarOpen based on viewport width.
+        let sidebarOpen = window.innerWidth > 768;
+
+        // Update the initial classes based on sidebarOpen
+        if (!sidebarOpen) {
+            sidebar.classList.add('closed');
+            mainContent.classList.add('sidebar-closed');
+        }
+
 
         function toggleSidebar() {
             sidebarOpen = !sidebarOpen;
@@ -272,21 +281,26 @@
         }
 
         hamburgerMenu.addEventListener('click', (e) => {
-          e.stopPropagation();
+          e.stopPropagation(); // Prevent the click from reaching the document
           toggleSidebar();
         });
 
+        // Close the sidebar if a click happens outside of it.
         document.addEventListener('click', (event) => {
           if (!sidebar.contains(event.target) && !hamburgerMenu.contains(event.target) && sidebarOpen && window.innerWidth <=768) {
                 toggleSidebar();
           }
         });
 
+
+       // Close the sidebar when a link inside it is clicked (on mobile).
        document.querySelectorAll('.sidebar a').forEach(link => {
           link.addEventListener('click', (e) => {
             if(window.innerWidth <= 768){
-              toggleSidebar();
+              toggleSidebar(); // Close on mobile
             }
+            // No need for e.preventDefault() or e.stopPropagation() here,
+            // we *want* the link to work.
           });
         });
     </script>
