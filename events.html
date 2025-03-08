@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFVI T-Edition Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Roboto', sans-serif;
+            color: #222;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            border-bottom: 2px solid #007bff; /* Modern blue */
+            padding-bottom: 0.25em;
+        }
+
+        h2 {
+            font-size: 2em;
+            margin-top: 1.5em;
+            margin-bottom: 1em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+            margin-top: 1.2em;
+            margin-bottom: 0.8em;
+        }
+		h4{
+			font-size: 1.3em;
+		}
+
+        /* Section Styles */
+        section {
+            margin-bottom: 2em;
+            padding: 1em;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fafafa;
+        }
+
+        /* List Styles */
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        ul li, ol li {
+            margin-bottom: 0.5em;
+        }
+
+        .conditions, .extra-note {
+            margin-left: 20px;
+            padding-left: 10px;
+            border-left: 3px solid #007bff; /* Accent color */
+        }
+        .extra-note{
+            border-left-color: #77AC30;
+        }
+
+        /* Link Styles */
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Accordion Styles */
+        .accordion-button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            text-align: left;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            display: block; /* Ensure full-width button */
+        }
+
+        .accordion-button:hover {
+            background-color: #0056b3;
+        }
+
+        .accordion-content {
+            display: none;
+            padding: 15px;
+            border-top: 1px solid #ddd;
+        }
+        .accordion-content li{
+            margin-bottom: 15px;
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: right;
+            margin-bottom: 1em;
+            color: #555;
+        }
+
+        /* Table Styles (for layout - consider alternatives if possible) */
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin-bottom: 1em;
+        }
+
+        th, td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+        }
+        .bold-text{
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>New Events / Side Quests</h1>
+        <div class="header">
+            <div>Last Updated: February 5, 2021</div>
+            <div>Version: 2.9.4 (EX: 1.6.3)</div>
+        </div>
+
+        <section id="achievement">
+            <h2>Achievements</h2>
+            <p class="conditions"><span class="bold-text">Conditions:</span> Start the game.</p>
+                <ol>
+                    <li>A new room has been added to the west most part of Narshe's Beginner's Hall that keeps track of your achievements.</li>
+                    <li>By reading the two books here you can gain hints on how to obtain each achievement.</li>
+                    <li>Currently there are 23 achievements to obtain.</li>
+                    <li>If you wish to check your current progress for each character's personal achievement, at least the ones requiring 500 uses or so, a new house north of Narshe in the WoR has an old man who will tell you.</li>
+                    <li>This new event uses a lot of unknown memory and due to this it may cause issues. If there's any serious problems I'll end up getting rid of it, but so far it's fine.</li>
+                    <li>To unlock something after completing the achievement, you must enter the room (so the game flags you having it.  If you don't have a costume, but have completed the requirements, head here, then leave and it should work).  Once unlocked it will remain even if the objectives are reset.  <span class="bold-text">These achievements are carried over in a New Game+.</span></li>
+                </ol>
+            <button class="accordion-button" onclick="toggleAccordion('achievement-list')">Show Achievement List (Spoilers!)</button>
+            <div id="achievement-list" class="accordion-content">
+                <ul>
+                    <li><span class="bold-text">The Feeling of Love:</span> Obtain the memento of Maduin and Madeline, Terra's parents.</li>
+					<li><span class="bold-text">Great Bandit:</span> Succeeded in using "Steal" 500 times.</li>
+					<li><span class="bold-text">Doma-Style Mastery:</span> Mastered all the Iaido techniques.</li>
+					<li><span class="bold-text">Nice Combination:</span> Used "Twin Fang" (Interceptor counter) 250 times.</li>
+					<li><span class="bold-text">King's Responsibility:</span> Successfully freed South Figaro. (Perfect score required.)</li>
+					<li><span class="bold-text">Duncan-Style Martial Arts Mastery:</span> Learned Phantom Rush from Duncan.</li>
+					<li><span class="bold-text">Rune Master:</span> Successfully used "Runic" 500 times.</li>
+					<li><span class="bold-text">Old Dog's New Tricks:</span> Successfully learned all "Blue Magic".</li>
+					<li><span class="bold-text">I'll Draw a Portrait!:</span> Successfully used "Sketch" 500 times.</li>
+					<li><span class="bold-text">Winning Streak:</span> Used "Slots" 500 times.</li>
+					<li><span class="bold-text">Fluffy Dancer:</span> Learned all "Dance" moves.</li>
+					<li><span class="bold-text">Everyone's Friend!:</span> Learned all "Rage" abilities.</li>
+					<li><span class="bold-text">Mimic:</span> Used "Mimic" 500 times.</li>
+					<li><span class="bold-text">Snowstorm:</span> Used "Snowstorm" 500 times.</li>
+					<li><span class="bold-text">The Best Models:</span> All characters have changed costumes.</li>
+					<li><span class="bold-text">King of Collection:</span> Obtained all unique/important items.<br>
+						        ※All the rooms to the left of the Collection Room (key items).<br>
+						        ※All the items to the right of the Collection Room (auction, etc).</li>
+					<li><span class="bold-text">Time Traveler:</span> New Game+ was started.</li>
+					<li><span class="bold-text">Magicite Receiver:</span> Obtained all the Eidolons.</li>
+					<li><span class="bold-text">Absorbed Player:</span> Play time exceeds 100 hours.</li>
+					<li><span class="bold-text">World Roamer:</span> Total steps exceeds 200,000 (seems to bugged; you get it between 80,000-180,000, unsure what triggers it -Kain).</li>
+					<li><span class="bold-text">Quest Achiever:</span> Cleared all the tavern/pub side quests.</li>
+					<li><span class="bold-text">Character Master:</span> Cleared all character achievements.</li>
+					<li><span class="bold-text">EX Complete:</span> Defeated all the enemies in FF6 T-Edition EX Mode.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="collection">
+            <h2>Collection Room</h2>
+            <p class = "conditions"><span class="bold-text">Conditions:</span> Start the game.</p>
+                <ol>
+                    <li>In the far west door of the Narshe's Beginner's Hall there's new rooms displaying specific items.</li>
+                    <li>When you complete certain objectives or collect certain items they'll appear here.</li>
+                    <li>In the center door (unlocked later, this is for EX Mode) this room is used to paint pictures of the bosses you've defeated in the EX Mode patch.</li>
+                </ol>
+            <button class="accordion-button" onclick="toggleAccordion('collection-room-list')">Collection Room List (Spoilers!)</button>
+            <div id="collection-room-list" class="accordion-content">
+
+                <h4>Leftside Room (Key Items)</h4>
+                <ul>
+                   <li><span class="bold-text">Pendant:</span> Start the game.</li>
+					<li><span class="bold-text">Wine Bottle:</span> Obtained during Locke's scenario in South Figaro.</li>
+					<li><span class="bold-text">Clock Key:</span> Obtained during Locke's scenario in South Figaro.</li>
+					<li><span class="bold-text">Lola's Letter:</span> Help the wounded soldier in Mobliz.</li>
+					<li><span class="bold-text">Fish:</span> Catch a "Crystal Bass, Vector Sardine, Bonefish, and Yellow Globe" at Solitary Island.<br></li>
+					<li><span class="bold-text">Various Books:</span> Open Cyan's treasure chest in Mt. Zozo.</li>
+					<li><span class="bold-text">Breathing Helmet:</span> Obtained during Sabin's scenario or the Auction House if sold for the quest in Nikeah.</li>
+					<li><span class="bold-text">Opera Ticket:</span> Buy it at the Auction House.</li>
+					<li><span class="bold-text">Rust-Rid:</span> Buy it from the merchant in Zozo during the World of Ruin.</li>
+					<li><span class="bold-text">Lump of Metal:</span> Obtained in Cyan's Dream.</li>
+					<li><span class="bold-text">Coral Fragments:</span> Found in chests at Ebot's Rock.</li>
+					<li><span class="bold-text">Emperor's Letter:</span> Examine Gestahl's painting at Owzer's Mansion twice.</li>
+					<li><span class="bold-text">Sylkis Greens:</span> Complete the side quest in the Phantom Forest in the World of Ruin.</li>
+					<li><span class="bold-text">Ancient Documents:</span> Obtain the Ancient Documents from the scholar in Albrook.</li>
+					<li><span class="bold-text">Crystal Fragment:</span> Obtain the Crystals of Wind, Water, Fire, and Earth.</li>
+					<li><span class="bold-text">Crystal Orb:</span> Obtain the Crystal Ball from Matoya.</li>
+					<li><span class="bold-text">Goddess's Bell:</span> Obtain the Goddess's Bell during the side quest "Holy Angel Ultima".</li>
+					<li><span class="bold-text">Silk Dress:</span> Obtained in the Eidolon World during the World of Ruin.</li>
+					<li><span class="bold-text">Adamantite:</span> Defeat the Adamantoise in Gogo's Cave.<br>
+						                    Used for making a Phantom Weapon.</li>
+					<li><span class="bold-text">Deathgaze's Claw:</span> Defeat Deathgaze.<br>
+						                    Used for acquiring 2 relics and helping Cid.</li>
+					<li><span class="bold-text">Gil Turtle's Shell:</span> Defeat the Gil Turtle in the Sealed Cave.<br>
+						                    Used for making a Phantom Weapon.</li>
+					<li><span class="bold-text">Omega's Armor:</span> Defeat Omega in the Ancient Castle's Cave.<br>
+						                    Used for making a Phantom Weapon.</li>
+					<li><span class="bold-text">Shinryu's Fang:</span> Defeat Shinryu in the Sealed Cave (WoR).<br>
+						                    Used for making a Phantom Weapon.</li>
+					<li><span class="bold-text">Master Crown:</span> Complete the Soul Shrine.</li>
+                </ul>
+
+                <h4>Middle Room (EX Patch)</h4>
+                <ul>
+					<li><span class="bold-text">Sara:</span> Defeat Chaos</li>
+					<li><span class="bold-text">Crystal:</span> Defeat Chaos</li>
+					<li><span class="bold-text">Hilda:</span> Defeat Mateus</li>
+					<li><span class="bold-text">Blood Sword:</span> Defeat Mateus</li>
+					<li><span class="bold-text">Sarah:</span> Defeat Cloud of Darkness</li>
+					<li><span class="bold-text">Crystal Tower:</span> Defeat Cloud of Darkness</li>
+					<li><span class="bold-text">Luca:</span> Defeat Golbez</li>
+					<li><span class="bold-text">Namingway:</span> Defeat Zeromus</li>
+					<li><span class="bold-text">Boko:</span> Defeat Exdeath</li>
+					<li><span class="bold-text">Ghido:</span> Defeat Exdeath</li>
+					<li><span class="bold-text">Cloud:</span> Defeat Sephiroth</li>
+					<li><span class="bold-text">Sephiroth:</span> Defeat Sephiroth</li>
+					<li><span class="bold-text">Angelo:</span> Defeat Ultimecia</li>
+					<li><span class="bold-text">Gunblade:</span> Defeat Ultimecia</li>
+					<li><span class="bold-text">Oglop:</span> Defeat Kuja</li>
+					<li><span class="bold-text">Crystal:</span> Defeat Kuja</li>
+					<li><span class="bold-text">Pyrefly:</span> Defeat Seymour</li>
+					<li><span class="bold-text">Blitzball:</span> Defeat Seymour</li>
+					<li><span class="bold-text">Ayame:</span> Defeat Kam'lanaut and Eald'narche</li>
+					<li><span class="bold-text">Curilla:</span> Defeat Kam'lanaut and Eald'narche</li>
+					<li><span class="bold-text">Shantotto:</span> Defeat Kam'lanaut and Eald'narche</li>
+					<li><span class="bold-text">Lion:</span> Defeat the Ark Angels</li>
+					<li><span class="bold-text">Prishe:</span> Defeat the Ark Angels</li>
+					<li><span class="bold-text">Aphmau:</span> Defeat the Ark Angels</li>
+					<li><span class="bold-text">Lilisette:</span> Defeat all enemies in FF6 T-Edition EX</li>
+					<li><span class="bold-text">Arciela:</span> Defeat all enemies in FF6 T-Edition EX</li>
+					<li><span class="bold-text">Mandragora:</span> Defeat all enemies in FF6 T-Edition EX</li>
+                </ul>
+
+                <h4>Rightside Room (Other)</h4>
+                <ul>
+                   <li><span class="bold-text">Excalibur:</span> Excalibur obtained</li>
+					<li><span class="bold-text">Orichalcum:</span> Orichalcum obtained</li>
+					<li><span class="bold-text">Sasuke's Katana:</span> Sasuke's Katana obtained</li>
+					<li><span class="bold-text">Holy Lance:</span> Holy Lance obtained</li>
+					<li><span class="bold-text">Earthbreaker:</span> Earthbreaker obtained</li>
+					<li><span class="bold-text">Masamune:</span> Masamune obtained</li>
+					<li><span class="bold-text">Soul Eater:</span> Souleater obtained</li>
+					<li><span class="bold-text">Dragon Whisker:</span> Dragon Whisker obtained</li>
+					<li><span class="bold-text">Wizard Rod:</span> Wizard Rod obtained</li>
+					<li><span class="bold-text">Godhand:</span> Godhand obtained</li>
+					<li><span class="bold-text">Elven Darts:</span> Elven Darts obtained</li>
+					<li><span class="bold-text">Rune Bell:</span> Rune Bell obtained</li>
+					<li><span class="bold-text">Eidolon:</span> Obtained after speaking to Ramuh at Zozo</li>
+					<li><span class="bold-text">Home-made Flowers:</span> Obtained after getting "Various Books"</li>
+					<li><span class="bold-text">Slave Crown:</span> Obtained once Terra rejoins in the World of Ruin</li>
+					<li><span class="bold-text">Bone Sculpture:</span> Obtained once Umaro joins</li>
+					<li><span class="bold-text">Kappa Robot:</span> Obtained from the Auction House (now winnable!)</li>
+					<li><span class="bold-text">Ancient Statues:</span> Obtained after defeating the Warring Triad</li>
+					<li><span class="bold-text">Talking Chocobo:</span> Obtained from the Auction House (now winnable!)</li>
+					<li><span class="bold-text">Magitek Armor:</span> Obtained after entering Kefka's Tower once</li>
+					<li><span class="bold-text">Model Airship:</span> Obtained from the Auction House (now winnable!)</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="carbancle">
+            <h2>The Ruby's Glow</h2>
+            <p class = "conditions"><span class="bold-text">Conditions:</span> Clear the Magitek Research Facility.  Locked out once you enter the WoR.  Obtainable from the Bandit NPC in Tzen during the WoR.</p>
+                <ol>
+                    <li>Complete the Magitek Research Facility event.  After returning to Narshe and speaking with Banon, talk to Arvis (ジュン) to begin the battle.  Once Banon and company leave for Vector, you can return to Narshe after the events in Thamasa to challenge them if you previously didn't do so.  Outside the Narshe Item Shop are two old men NPCs walking around; one will prompt the Carbuncle fight, the other Catoblepas.  Be warned, there is no asking if you're ready, so save prior.</li>
+                    <li>If you miss him, during the WoR he'll be availabe at the Bandit in Tzen once you obtain Seraphim.</li>
+                    <li>Defeat Carbuncle in battle.</li>
+                    <li>Upon winning you'll receive the Eidolon Carbuncle.</li>
+                </ol>
+        </section>
+
+        <section id="catoblepas">
+            <h2>Test of Strength</h2>
+            <p class = "conditions"><span class="bold-text">Conditions:</span> Clear the Magitek Research Facility.  Locked out once you enter the WoR.  Obtainable from the Bandit NPC in Tzen during the WoR.</p>
+                <ol>
+                    <li>Complete the Magitek Research Facility event.  After returning to Narshe and speaking with Banon, talk to the elder of Narshe next to Banon in the Elder's house to begin the battle.  Once Banon and company leave for Vector, you can to return to Narshe after the events in Thamasa to challenge them if you previously didn't do so.  Outside the Narshe Item Shop are two old men NPCs walking around; one will prompt the Carbuncle fight, the other Catoblepas. Be warned, there is no asking if you're ready, so save prior. </li>
+	                <li>If you miss him, during the WoR he'll be availabe at the Bandit in Tzen once you obtain Carbuncle.</li>
+	                <li>Defeat Catoblepas in battle.</li>
+	                <li>Upon winning you'll receive the Eidolon Catoblepas.</li>
+                </ol>
+        </section>
+
+        <section id="seraphim">
+            <h2>The Stolen Eidolon</h2>
+             <p class = "conditions"><span class="bold-text">Conditions:</span> Clear the Magitek Research Facility.  This will never expire.</p>
+                <ol>
+                   <li>After clearing the Magitek Research Facility, speak to the thief in the northeast part of Tzen (ツェン) partially hidden in the trees.</li>
+                    <li>If you pay the 3000 Gil fee, you'll enter a battle against Seraphim.</li>
+                    <li>The old man NPC nearby stationary at the collapsing house will give a hint for this battle (use Sleep when she begins praying/text pops up in battle, text is not translated currently -Kain).
+                    <li>Upon winning you'll receive the Eidolon Seraphim.</li>
+                </ol>
+        </section>
+
+        <section id="gilgame">
+            <h2>Lurking Underground</h2>
+             <p class = "conditions"><span class="bold-text">Conditions:</span>
+                <ul>
+					<li>World of Balance: Once you can travel to the Sealed Cave.  Ends when you depart for Thamasa.</li>
+					<li>World of Ruin: Once you can reopen the path to the Eidolon World.</li>
+                </ul>
+			 </p>
+                <ol>
+                    <li>Examine the floor of the cave near the bottom of the long bridge near the end of the cave. (Suggested to look up a map where the hidden treasures of the Sealed Cave are. It's the northeast one.)</li>
+	                <li>A battle with the Gil Turtle will begin.</li>
+	                <li>Upon winning you'll obtain the "Gil Turtle's Shell" key item.</li>
+                </ol>
+                <p class="extra-note"><span class="bold-text">Extra Note:</span> The "Gil Turtle's Shell" is necessary for the quest <a href="#weapon">Seeking the Legendary Weapon</a>.</p>
+        </section>
+
+        <section id="gilgamesh1">
+            <h2>Rendezvous</h2>
+            <p class = "conditions"><span class="bold-text">Conditions:</span> Check the treasure box in the Phantom Train room where Siegfried would normally appear.</p>
+                <ol>
+                    <li>Examining the treasure box in one room of the Phantom Train (the one where originally Seigfried would appear) will now cause Gilgamesh to appear.</li>
+                    <li>Defeat Gilgamesh in battle.</li>
+                </ol>
+            <p class="extra-note"><span class="bold-text">Extra Note:</span>
+                <ul>
+					<li>Since there's no new events generated with this it's fine to miss/skip it.</li>
+					<li>During the next encounter at Zozo during <a href="#gilgamesh2">Reunion</a> if Sabin and Cyan are in the party they'll have additional dialogue with Gilgamesh if this quest is completed.</li>
+                </ul>
+			</p>
+        </section>
+
+        <section id="gilgamesh2">
+            <h2>Reunion</h2>
+            <p class = "conditions"><span class="bold-text">Conditions:</span> None. (Forced encounter.)</p>
+            <ol>
+               <li>Gilgamesh appears near the top part of the southwest building outside in Zozo as a forced battle.</li>
+                <li>Defeat Gilgamesh in battle.</li>
+            </ol>
+            <p class="extra-note"><span class="bold-text">Extra Note:</span> If the quest <a href="#gilgamesh1">Rendezvous</a> was completed and if Sabin and Cyan are in the party, there'll be additional dialogue with Gilgamesh.</p>
+        </section>
+
+        <section id="gilgamesh3">
+            <h2>Battle on the Big Bridge?</h2>
+            <p class = "conditions"><span class="bold-text">Conditions:</span> None. (Forced encounter.)</p>
+                <ol>
+                   <li>Gilgamesh will appear near the end of the Sealed Cave once you activate the switch for the very long bridge to appear.</li>
+                    <li>Defeat Gilgamesh and Enkidu in battle.</li>
+                </ol>
+            <p class="extra-note"><span class="bold-text">Extra Note:</span>
+                <ul>
+					<li>At the beginning you'll only battle Gilgamesh. Once his HP is reduced to a certain amount, Enkidu will appear.</li>
+					<li>When their HP is reduced to 0 they will not disappear until both have been defeated.</li>
+                </ul>
+			</p>
+        </section>
+
+        <section id="southfigaro1">
+            <h2>Destroy the Cave Demons</h2>
+            <p class = "conditions"><span class="bold-text">Conditions:</span> Limited event.  Complete before the end of the World of Balance.</p>
+                <ol>
+                    <li>Speak to the barkeep in South Figaro and select the option "Defeat the Cave Demons" (洞窟の魔物退治) which upon accepting will teleport you to the event.</li>
+					<li>Once you're moved to the South Figaro Cave defeat the stationary enemy to the north.</li>
+					<li>Upon winning you'll be teleported back to the barkeep and receive 10 Potions, 5 Hi-Potions and 1 Phoenix Down for your work.</li>
+                </ol>
+            <p class="extra-note"><span class="bold-text">Extra Note:</span> Open the treasure chests here as this is a separate map from South Figaro Cave and contain nice rewards.</p>
+        </section>
+
+        <section id="southfigaro2">
+            <h2>Protect Mt. Koltz!</h2>
+            <p class = "conditions"><span class="bold-text">Conditions:</span> Limited event.  Finish before the end of the World of Balance.</p>
+                <ol>
+                    <li>After the Imperial Banquet return and speak to the barkeep in South Figaro and select the "Protect Mt. Koltz!" option (コルツ山を守れ！) to be teleported to Mt. Koltz.</li>
+					<li>Move through Mt. Koltz, avoiding falling rocks, and defeat the fixed enemy at the very end.</li>
+					<li>Upon winning you'll be teleported back to the bar and receive a "Blood Lance" for your reward.</li>
+                </ol>
+        </section>
+
+        <section id="nikeah1">
+            <h2>I'll Buy Anything!</h2>
+            <p class = "conditions"><span class="bold-text">Conditions:</span> Limited event.  Finish before the end of the World of Balance.</p>
+                <ol>
+                   <li>Speak with the barkeep in Nikeah and select the option "I'll Buy Anything!" (何でも買い取ります！).</li>
+					<li>With the key item "Breathing Helmet" (Gau's Treasure) speak with the Nikeah Item Shop NPC and select to sell it for 25,000 Gil.</li>
+                </ol>
+            <p class="extra-note"><span class="bold-text">Extra Note:</span>
+                <ul>
+					<li>The "Breathing Helmet" is automatically acquired during Sabin's scenario.</li>
+					<li>If you sell this for 25,000 Gil you will lose it.</li>
+					<li>If sold you may reacquire it in the World of Ruin at the Auction House.</li>
+					<li>Selling it does not stop you from diving into the Serpent Trench.</li>
+                </ul>
+			</p>
+        </section>
+
+        <section id="kohlingen1">
+            <h2>A Helping Hand</h2>
+             <p class = "conditions"><span class="bold-text">Conditions:</span> Limited event.  Finish before the end of the World of Balance.</p>
+                <ol>
+                    <li>Speak to the barkeep in Kohlingen and select the "A Helping Hand" (救いの手を) option.</li>
+					<li>Talk to the man whose house was ruined by Terra outside to the west of the bar.</li>
+					<li>Give him 10,000 Gil to receive the key item "Opera Ticket".</li>
+                </ol>
+            <p class="extra-note"><span class="bold-text">Extra Note:</span> Opera Ticket is needed for the quest <a href="#kohlingen2">The Dream Opera</a>.</p>
+        </section>
+		<section id = "kohlingen2">
+			<h2>The Dream Opera</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span> Limited event. Finish it before the end of the World of Balance.</p>
+			<ol>
+				<li>Speak with the barkeep in Kohlingen and select the option "The Dream Opera" (夢のオペラへ).</li>
+				<li>Talk to the woman north of the bar outside and offer to give her the "Opera Ticket".</li>
+				<li>As a reward you'll receive the "Kachusa" accessory.</li>
+			</ol>
+			<p class="extra-note"><span class="bold-text">Extra Note:</span>
+			<ul>
+				<li>Opera Ticket can be acquired through the quest <a href="#kohlingen1">A Helping Hand</a>.</li>
+				<li>If you do this quest you may get another Opera Ticket from the Auction House during the World of Ruin.</li>
+			</ul></p>
+		</section>
+		<section id = "kohlingen3">
+			<h2>Requiem</h2>
+			<p class="conditions"><span class = "bold-text">Conditions</span> Limited event. Finish before the end of the World of Balance</p>
+			<ol>
+				<li>Speak with the barkeep in Kohlingen and select the option "Requiem" (レクイエム).</li>
+				<li>Leave Kohlingen and head west to Daryl's Tomb now in the World of Balance and examine the stone wall.</li>
+				<li>Afterwards return to the barkeep to receive a Flame Rod as your reward.</li>
+			</ol>
+			<p class = "extra-note"><span class="bold-text">Extra Note:</span>
+			<ul>
+				<li>Completing this quest changes the BGM in this area to "Music Box".</li>
+				<li>There is a special dialogue cutscene here if you bring Setzer.</li>
+			</ul></p>
+		</section>
+		<section id = "albrook3">
+		<h2>Transporting Goods</h2>
+		<p class = "conditions"><span class = "bold-text">Conditions</span> Limited event. Finish before the end of the World of Balance.</p>
+		<ol>
+			<li>Speak with the barkeep in Albrook and select the option "Transporting Goods" (商品運び).</li>
+			<li>Talk to the Item Shop NPC in Tzen who gives you 5000 Gil and then speak with the Weapon Shop NPC in Maranda to receive 8000 Gil as your rewards.</li>
+
+		</ol>
+		</section>
+		<section id = "newgame">
+			<h2>New Game+</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span> Once you obtain the Falcon.</p>
+			<ol>
+				<li>After obtaining the Falcon, talking to the NPC behind the desk at the Narshe's Beginner's Hall (last option) will allow you to begin a New Game+.</li>
+				<li>Note: Any unfinished bar side quests do NOT carry over; if you are aiming for the achievement, they must ALL be finished in 1 playthrough. If you missed one and are doing New Game+, ALL bar side quests have to be redone. Once you get the achievement, you can ignore any you don't care about on future playthroughs.</li>
+				<li>The following carry over (levels are reset, so if planning to farm New Game+, don't do a lot of grinding until you're on the playthrough you intend to stay on):</li>
+			</ol>
+			<ul>
+				<li>Current items held.　※Key items will not carry over.</li>
+				<li>Magic spells (including % learned if not mastered).</li>
+				<li>Eidolons.</li>
+				<li>Blue Magic, Rages, and Dances.</li>
+				<li>Playtime.</li>
+				<li>Step count.</li>
+				<li>Steal success count.</li>
+				<li>Twin Fang count.</li>
+				<li>Successful uses of Runic.</li>
+				<li>Successful uses of Sketch.</li>
+				<li>Slots use total.</li>
+				<li>Snowstorm use total.</li>
+				<li>Successful uses of Mimic.</li>
+				<li>Unlocked achievements.</li>
+				<li>Tabs used (NOT Golden Apples or Soma Drops, however).</li>
+			</ul>
+			<p>The following are added to "New Game+":</p>
+			<ul>
+				<li>Monster formation encounters are reset.</li>
+				<li>Treasure chests are reset.</li>
+				<li>Trance time increase is reset （Humbaba event).</li>
+				<li>Terra loses Trance.</li>
+				<li>Deathgaze kill flag reset.</li>
+				<li>Reset Dried Meat flag.</li>
+			</ul>
+			<p>If you unlock the Achievement "The Best Models" you can change clothes in various places during gameplay:</p>
+			<ul>
+				    <li>Narshe's Beginner's Hall</li>
+				    <li>Returner's Headquarters</li>
+				    <li>Gau's Father's House - Chocobo Merchant</li>
+				    <li>South Figaro Inn</li>
+				    <li>Mobliz Inn</li>
+				    <li>Nikeah Inn</li>
+				    <li>Kohlingen Inn</li>
+				    <li>Jidoor Inn</li>
+				    <li>Albrook Inn</li>
+				    <li>Tzen Inn</li>
+				    <li>Maranda Inn</li>
+				    <li>Thamasa Inn</li>
+						</ul>
+		</section>
+		<section id = "funbaba">
+			<h2>The Legendary Monster Humbaba</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span>None. (Forced encounter.)</p>
+			<ol>
+				<li>During the World of Ruin all prices at shops are doubled due to a shortage of supplies until Humbaba is killed and Terra rejoins.</li>
+				<li>Prices are returned to normal once Terra rejoins.</li>
+			</ol>
+		</section>
+		<section id = "narshe">
+			<h2>The Return of the Narshe Residents</h2>
+			<p class="conditions"><span class="bold-text">Conditions:</span>During the World of Ruin after obtaining the Falcon. Speak to Banon in the Elder's House.</p>
+			<ol>
+				<li>Speak with Banon in the Elder's House and listen to him speak about the "Narshe Residents" (ナルシェ住民について) (top option, speak to him twice).</li>
+				<li>Track down and find all the residents, guards, and Returners around the world, then return to Narshe. The shops are opened once they've all been found.</li>
+				<li>Once you've found everyone head to Arvis's House (where Terra wakes up at the start of the game) and speak to the old man NPC to receive the Eidolon Ragnarok.</li>
+				<li>Shops unlocked will have basic supplies until you fully complete this quest. Check them once you obtain Ragnarok.</li>
+			</ol>
+			<p class="extra-note"><span class="bold-text">Location of Residents:</span>
+			<ul>
+				<li>Thamasa: Returner at Leo's Grave (unlocks the Weapon Shop).</li>
+				<li>Dragon's Neck Coliseum: Returner at the Inn/Bar area (unlocks normal NPCs).</li>
+				<li>Kohlingen: Narshe Guard at the entrance (unlocks Narshe Guards and the Armor Shop).</li>
+				<li>Tzen: Female NPC inside the Inn (unlocks normal NPCs).</li>
+				<li>Tower of Fanatics: Elder NPC at the entrance (unlocks normal NPCs and the Inn).</li>
+				<li>Inside of Zone Eater: Male NPC in the area reached upon being knocked off a bridge (unlocks normal NPCs and the Item Shop).</li>
+				<li>South Figaro: Elder NPC in the bar's basement where you get the Cider/Wine (unlocks normal NPCs and the Relic Shop).</li>
+			</ul>
+			</p>
+			<p class="extra-note"><span class="bold-text">Extra Note:</span>
+			<ul>
+				<li>Any locked doors are opened now, except the Cursed Shield house (still need Locke).</li>
+				<li>The previously locked treasure house (south of Arvis's house) is now open and the new Narshe Pub.</li>
+			</ul>
+			</p>
+		</section>
+		<section id = "weapon">
+			<h2>Seeking the Legendary Weapon</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span>After completing "<a href="#narshe">The Return of the Narshe Residents</a>" and receiving the Eidolon Ragnarok.</p>
+			<ol>
+				<li>After gathering all the residents of Narshe and receiving the Eidolon Ragnarok, speak to the Weapon Shop owner (backroom).</li>
+				<li>Listen to the information about "Adamantite".</li>
+				<li>Head to Gogo's Cave and in one of the rooms is a switch. Click it to battle Adamantoise and upon winning you'll obtain the "Adamantite" key item.</li>
+				<li>Return to the Weapon Shop owner. You'll lose the "Adamantite" and receive the knight sword "Ragnarok".</li>
+				<li>Once you receive "Ragnarok", speak to the owner again and you'll get a new quest to make an even stronger sword.</li>
+				<li>After obtaining "Gil Turtle's Shell", "Omega's Armor", and "Shinryu's Fang", you'll receive the "Omega Weapon".</li>
+
+			</ol>
+			<p class="extra-note"><span class="bold-text">Extra Note:</span>
+			<ul>
+				<li>For "Gil Turtle's Shell", see <a href="#gilgame">Lurking Underground</a>.</li>
+				<li>For "Omega's Armor", defeat Omega in the Ancient Castle's Cave.</li>
+				<li>For "Shinryu's Fang", defeat Shinryu in the Sealed Cave treasure chest during the World of Ruin revisit.</li>
+			</ul>
+			</p>
+		</section>
+		<section id = "titan">
+			<h2>The Giant Titan</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span>During the World of Ruin visit the Narshe Mines.</p>
+			<ol>
+				<li>Once you're able to return to Narshe in the World of Ruin, head back to the cave where Valigarmanda was originally held. You'll find Titan there now.</li>
+				<li>Defeat Titan in battle and you'll obtain the Eidolon "Titan".</li>
+			</ol>
+		</section>
+		<section id = "summon">
+			<h2>Descendants of the Summoners</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span>During the World of Ruin talk to Arvis (ジュン) in Narshe and ask about the Summoners (召喚士について).</p>
+			<ol>
+				<li>Speak to Arvis (ジュン) in Narshe during the World of Ruin at the Elder's House and ask about the Summoners (召喚士について).</li>
+				<li>Speak to the Elder of Thamasa.</li>
+				<li>This will begin a battle with the Mist Dragon.</li>
+				<li>Upon winning you'll receive the Eidolon "Mist Dragon".</li>
+			</ol>
+		</section>
+		<section id = "odin">
+			<h2>The War God Odin</h2>
+			<p class = "conditions"><span class = "bold-text">Conditions:</span>Examine Odin's Statue in the Ancient Castle.</p>
+			<ol>
+				<li>Examining the statue of Odin in the Ancient Castle will begin a battle against Odin.</li>
+				<li>Defeating him will grant you the Eidolon "Odin".</li>
+				<li>Once completed, if you examine the Queen's Statue you'll receive the knight sword "Zantetsuken".</li>
+			</ol>
+		</section>
+		<section id = "leviathan">
+			<h2>The Great Ocean King</h2>
+			<p class="conditions"><span class="bold-text">Conditions:</span>During the World of Ruin talk to Arvis (ジュン) in Narshe and ask about Leviathan (リヴァイアサンについて).</p>
+			<ol>
+				<li>Talk to Arvis (ジュン) in Narshe during the World of Ruin and ask about Leviathan (リヴァイアサンについて).</li>
+				<li>Travel to the Solitary Island and head to the beach to find an Eidolon. Examining it will begin a battle against Leviathan.</li>
+				<li>Upon winning you'll receive the Eidolon "Leviathan".</li>
+			</ol>
+		</section>
+		<section id = "Ashura">
+			<h2>Eternal Love</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span>Received the Eidolon "Leviathan"</p>
+			<ol>
+				<li>After obtaining the Eidolon "Leviathan" talk to the woman in Maranda running in circles.</li>
+				<li>You'll enter a battle against Ashura.</li>
+				<li>Upon defeating her you'll obtain the Eidolon "Ashura".</li>
+			</ol>
+		</section>
+		<section id = "bahamut">
+			<h2>King of the Dragons</h2>
+			<p class="conditions"><span class = "bold-text">Conditions:</span>Defeat all 8 Dragons in the World of Ruin.</p>
+			<ol>
+				<li>Defeat all 8 Dragons in the World of Ruin to receive a special event.</li>
+				<li>After the event talk to Setzer in the Falcon (must not be in party).</li>
+				<li>You'll enter a battle against Bahamut.</li>
+				<li>Upon winning you'll receive the Eidolon "Bahamut".</li>
+			</ol>
+			<p class = "extra-note">
+			<span class="bold-text">Dragon Locations:</span>
+				<ul>
+					<li>Storm Dragon： Mt. Zozo</li>
+					<li>Freeze Dragon： Narshe Snowfields</li>
+					<li>Earth Dragon： Opera House</li>
+					<li>Red Dragon： Phoenix Cave</li>
+					<li>Holy Dragon： Tower of Fanatics</li>
+					<li>Blue Dragon： Ancient Castle</li>
+					<li>Yellow Dragon： Veldt Cave</li>
+					<li>Skull Dragon： Ebot's Rock</li>
+				</ul>
+			</p>
+		</section>
+		<section id = "diabolos">
+			<h2>Waking Dreams</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span>Complete Cyan's Dream.</p>
+			<ol>
+				<li>After completing Cyan's Dream an Eidolon will appear in the King's Room.</li>
+				<li>Examining it will enter you into a battle against Diabolos.</li>
+				<li>Upon winning you'll receive the Eidolon "Diabolos".</li>
+			</ol>
+		</section>
+		<section id = "legend">
+			<h2>The Sealed Legend</h2>
+			<p class = "conditions"><span class = "bold-text">Conditions:</span>
+			<ul>
+				<li>During the World of Ruin speak to Banon in Narshe and ask about the "Legendary Weapons" (伝説の武器について).</li>
+				<li>Must have Cyan and Locke in your party's roster.
+			</ul>
+			</p>
+			<ol>
+				<li>Listen to the story about the "Legendary Weapons" from Banon in Narshe during the World of Ruin.</li>
+				<li>In the northwest area of the Ancient Castle examine the sealed weapons behind their gates.</li>
+				<li>Return to Banon who will mention scholars at Figaro Castle.</li>
+				<li>In the Figaro Castle Library ask a scholar about the crystals.</li>
+				<li>If you obtain the Crystals of Wind, Water, Fire, and Earth, each one will let you unlock 3 weapons.</li>
+			</ol>
+			<p class="extra-note"><span class="bold-text">Extra Note:</span>
+			<ul>
+				<li>You can obtain the crystals in any order.</li>
+				<li>For each crystal once you've asked about them from the scholar, speak to Cyan, Locke, Setzer, and Gau in the airship to receive information on each. If they don't give hints, try putting them into their normal outfits first if they're in a costume, then talk again -Kain.</li>
+			</ul>
+			</p>
+			<p><span class="bold-text">Water Crystal:</span></p>
+			<ol>
+				<li>In the back of the Veldt Cave near where you found Shadow, examine the switch and you'll be able to enter the Serpent Trench a bit again, but the party leader must be a Toad at the water pond to enter. Click the water once this is done.</li>
+				<li>In the Crystal Room defeat the water fiend Kraken.</li>
+				<li>Upon winning you'll receive the Water Crystal.</li>
+			</ol>
+			<p><span class = "bold-text">Fire Crystal:</span></p>
+			<ol>
+				<li>Examining the area in the back of the Phoenix Cave where you found Locke will allow you to enter the Crystal Room.</li>
+				<li>In the Crystal Room defeat the fire fiend Marilith.</li>
+				<li>Upon winning you'll receive the Fire Crystal.</li>
+			</ol>
+			<p><span class = "bold-text">Wind Crystal:</span></p>
+			<ol>
+				<li>Examining the light at the top of Mt. Zozo outside Cyan's Cave will allow you to enter the Crystal Room.</li>
+				<li>In the Crystal Room defeat the wind fiend Tiamat.</li>
+				<li>Upon winning you'll receive the Wind Crystal.</li>
+			</ol>
+			<p><span class = "bold-text">Earth Crystal:</span></p>
+			<ol>
+				<li>Examining the backside of Daryl's casket you'll find a switch which opens a secret door leading to the Crystal Room.</li>
+				<li>In the Crystal Room  defeat the earth fiend Lich.</li>
+				<li>Upon winning you'll receive the Earth Crystal.</li>
+			</ol>
+		</section>
+		<section id = "father">
+		<h2>Father and Daughter</h2>
+		<p class = "conditions"><span class = "bold-text">Conditions:</span>
+		<ul>
+			<li>Have Strago rejoin in the World of Ruin.</li>
+			<li>Have Shadow survive the World of Balance (he can't die anymore -Kain).</li>
+			<li>Have Shadow rejoin in the World of Ruin.</li>
+			<li>See all of Shadow's Dreams (you may need an inn/bed that plays the "Good Night" FF6 music, as the dreams may not trigger otherwise. The Falcon, Coliseum, etc work -Kain).</li>
+			<li>Have Shadow and Strago in the party.</li>
+		</ul>
+		</p>
+		<ol>
+			<li>When all the above conditions are met, visit Strago's House in Thamasa during the World of Ruin.</li>
+		</ol>
+		<p class="extra-note"><span class = "bold-text">Extra Note:</span>
+		<ul>
+			<li>This event was created based on the FF6 developement team's original idea. It was mentioned indepth in an interview.</li>
+			<li>Once cleared Shadow will gain a new costume "Wanderer's Mantle" that gives him his Clyde appearance.</li>
+		</ul>
+		</p>
+		</section>
+		<section id = "mother">
+			<h2>A Mother's Hope</h2>
+			<p class="conditions"><span class="bold-text">Conditions:</span>
+			<ul>
+				<li>During the World of Ruin.</li>
+				<li>Have Strago and Relm in your party.</li>
+			</ul>
+			</p>
+			<ol>
+				<li>Check the glowing object on the second floor of Strago's House in the World of Ruin with Relm and Strago in your party for an event.</li>
+				<li>After the event you'll receive the "Memento Ring" accessory.</li>
+			</ol>
+			<p class = "extra-note"><span class = "bold-text">Extra Note:</span>
+			<ul>
+				<li>I modified Relm's nightmare from the original game that happens if you let Shadow die.</li>
+				<li>The name of Strago's wife is from the FF6 prototype and concept art. I've changed the events a little, such as when Shadow leaves and when Relm's mother dies.</li>
+				<li>The Memento Ring that was originially hid in Strago's House has become another item now (Soma Drop).</li>
+			</ul>
+			</p>
+		</section>
+		<section id = "ougi">
+			<h2>Mysterious Technique Inheritence</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span>Have Sabin in your party.</p>
+			<ol>
+				<li>Visit Duncan's House in the World of Ruin.</li>
+				<li>You'll enter a battle against Vargas after an event.</li>
+				<li>Upon winning you'll learn "Phantom Rush" for Sabin.</li>
+			</ol>
+		</section>
+		<section id = "veldt">
+			<h2>A Demon's Favorite Food</h2>
+			<p class = "conditions"><span class = "bold-text">Conditions:</span>
+			<ul>
+				<li>Clear the original event "Gau's Dress Up".</li>
+				<li>Locke must be in the party.</li>
+			</ul>
+			</p>
+			<ol>
+				<li>Once the above conditions are met talk to Gau's Father about the Veldt attracting enemies.</li>
+				<li>If you agree the Veldt will now have all registered formations including any you may've missed.</li>
+			</ol>
+		</section>
+		<section id = "negai">
+			<h2>Thoughts and Wishes</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span>
+			<ul>
+				<li>Cid survives the World of Ruin.</li>
+				<li>Locke rejoins the party.</li>
+				<li>All characters have been re-recruited (minus Gogo and Umaro).</li>
+				<li>Deathgaze is defeated.</li>
+			</ul>
+			</p>
+			<ol>
+				<li>After you obtain the Falcon, return and speak with Cid to learn about Deathgaze.</li>
+				<li>Defeat Deathgaze who is found by flying around randomly.</li>
+				<li>When you return to Cid his house has been rebuilt.</li>
+				<li>Speak to Cid with Celes and Locke in party for a special event.</li>
+				<li>Upon finishing you'll receive the "Tynar Rouge" accessory.</li>
+			</ol>
+		</section>
+		<section id = "owzer">
+		<h2>Owzer's Collection</h2>
+		<p class = "conditions"><span class = "bold-text">Conditions:</span>
+		<ul>
+			<li>Defeat Deathgaze.</li>
+			<li>Relm rejoins the party.</li>
+		</ul>
+		</p>
+		<ol>
+			<li>Upon defeating Deathgaze you'll obtain "Deathgaze's Claw".</li>
+			<li>Talk to Owzer for a small event which will grant you the "Floral Fallal" accessory.</li>
+		</ol>
+		</section>
+		<section id = "umaro">
+			<h2>Unexpected Special Skill</h2>
+			<p class = "conditions"><span class = "bold-text">Conditions:</span>
+			<ul>
+				<li>Defeat Deathgaze.</li>
+				<li>Have Umaro in your party.</li>
+			</ul>
+			</p>
+			<ol>
+				<li>Upon defeating Deathgaze you'll obtain the key item "Deathgaze's Claw".</li>
+				<li>Return to Umaro's Cave and examine the Bone Sculpture.</li>
+				<li>You'll receive the "Berserker Ring" accessory.</li>
+			</ol>
+		</section>
+		<section id = "wyvern">
+		<h2>The Last Dragon</h2>
+		<p class="conditions"><span class="bold-text">Conditions:</span>Cleared the Fanatic's Tower.</p>
+		<ol>
+			<li>After clearing the Fanatic's Tower talk to the bandits at the base of the tower.</li>
+			<li>They'll mention a dragon who's taken residence up top now and speaking to it enters you into a battle with Last Wyrm.</li>
+			<li>This battle is won if you give Last Wyrm Dried Meat. For winning, you'll obtain the "Dragon Horn" accessory.</li>
+		</ol>
+		<p class = "extra-note"><span class = "bold-text">Extra Note:</span>
+		<ul>
+			<li>You can run away from Last Wyrm. If so, a hint will be given upon exiting the battle on how to win.</li>
+			<li>A little boy in Mobliz sells Dried Meat once Terra rejoins your party if you have none.</li>
+		</ul>
+		</p>
+		</section>
+		<section id = "molulu">
+			<h2>Molulu's Gift</h2>
+			<p class="conditions"><span class="bold-text">Conditions:</span>
+			<ul>
+				<li>Have Mog join/rejoin in the World of Ruin.</li>
+				<li>Have Umaro join you.</li>
+				<li>Have Mog and Umaro in your party.</li>
+			</ul>
+			</p>
+			<ol>
+				<li>Speak to Molulu in the Moogle's Home in the Narshe Mines to receive the "Molulu's Charm" accessory.</li>
+			</ol>
+		</section>
+		<section id = "figaro1">
+			<h2>A Priestess's Concern</h2>
+			<p class = "conditions"><span class = "bold-text">Conditions:</span><a href="#nikeah3">A Dancer's Depression</a> cleared.</p>
+			<ol>
+				<li>Talk to the old woman in Edgar's Bedroom with Sabin in your party to obtain Sabin's "Royal Coat" costume.</li>
+			</ol>
+		</section>
+		<section id = "motherl">
+		<h2>A Mother's Love</h2>
+		<p class = "conditions"><span class="bold-text">Conditions:</span>Have Terra rejoin in the World of Ruin.</p>
+		<ol>
+			<li>With Terra in your party examine the treasure chest in Maduin's House in the Eidolon World upon the revist in the World of Ruin to obtain the "Silk Dress" key item.</li>
+			<li>Upon obtaining this you'll be able to change Terra's costume to the "Silk Dress" in the Dressing Room on the Falcon.</li>
+		</ol>
+		</section>
+		<section id = "gilgamesh4">
+			<h2>A Duel! The Dragon's Neck Coliseum</h2>
+			<p class="conditions"><span class = "bold-text">Conditions:</span>Obtained "Excalibur".</p>
+			<ol>
+				<li>During <a href="#legend">The Sealed Legend</a> unlock Excalibur.</li>
+				<li>In the side room at the Dragon's Neck Coliseum speak with Gilgamesh and accept his challenge to a battle.</li>
+				<li>Upon winning you'll obtain the "Lightbringer".</li>
+			</ol>
+			<p class="extra-note"><span class = "bold-text">Extra Note:</span>
+			<ul>
+				<li>Even if "Excalibur" is thrown or sold, you can still get this event.</li>
+				<li>"Excalibur" is not lost upon completing this event.</li>
+			</ul>
+			</p>
+		</section>
+		<section id = "orthrus">
+			<h2>Forever Ultros</h2>
+			<p class="conditions"><span class="bold-text">Conditions:</span>None.</p>
+			<ol>
+				<li>During the World of Ruin speak with Ultros at the Dragon's Neck Coliseum.</li>
+				<li>Selecting the option to pay his debt (しょうがないな) will make you lose all your gil. (Dump your money prior to this, as the amount given doesn't matter.)</li>
+				<li>During the battle against Guardian in Kefka's Tower a special event will take place.</li>
+			</ol>
+		</section>
+		<section id = "sealedgate">
+			<h2>The Sealed Gate, Again</h2>
+			<p class = "conditions"><span class = "bold-text">Conditions:</span>
+			<ul>
+				<li>Defeat the Warring Triad in Kefka's Tower.</li>
+				<li>Have Terra rejoin in the World of Ruin.</li>
+			</ul>
+			</p>
+			<ol>
+				<li>Speak with Banon in Narshe after destroying the Warring Triad.</li>
+				<li>A new path opens up in the cave leading to the Ancient Castle.</li>
+				<li>A new forced encounter with the Eidolon "Alexander" takes place on this path.</li>
+				<li>Upon winning you'll enter the Eidolon World.</li>
+				<li>Speak with the elder of the Eidolons.</li>
+				<li>After speaking with him have Terra in your party and speak again to receive the "Maduin's Horn" weapon.</li>
+			</ol>
+		</section>
+		<section id = "shadow">
+			<h2>Wandering Shadow</h2>
+			<p class="conditions"><span class = "bold-text">Conditions:</span>After obtaining the Falcon.</p>
+			<ol>
+				<li>Speak with Banon in Narshe and ask "About the Floating Continent" 「魔大陸について」.</li>
+				<li>North of the Veldt and in some mountains there's the "Mirage Tower" that leads to the "Floating Continent".</li>
+				<li>Defeat the Ultima Buster at the end of the area.</li>
+				<li>Upon defeat it'll drop the "Ultima Weapon".</li>
+			</ol>
+		</section>
+		<section id = "ultima">
+			<h2>Holy Angel Ultima</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span>Speak with Arvis (ジュン) in Narshe during the World of Ruin and ask "About ????" (？？？？について).</p>
+			<ol>
+				<li>Speak with Arvis (ジュン) in Narshe during the World of Ruin and ask "About ????" (？？？？について).</li>
+				<li>Obtain "Ancient Documents" from the scholar in Albrook wandering near the Inn.</li>
+				<li>Showing Arvis the "Ancient Documents" will allow you to learn about the Sylph. (Talk to him twice possibly, especially if it seems like the quest didn't update -Kain.)</li>
+				<li>Head to the Moogle's Cave in the Narshe Mines and speak to the Sylph there.</li>
+				<li>Speak to Arvis again and learn about the witch who lives in the Phantom Forest.</li>
+				<li>Head to the Phantom Forest, now located near Maranda, and proceed through Matoya's Cave. Defeat Astos at the end of it.</li>
+				<li>Speak with Matoya to receive the key item "Crystal Orb".</li>
+				<li>Speak with the Sylph infront of the bonfire in the Moogle's Cave.</li>
+				<li>Clear <a href="#odin">The War God Odin</a>, <a href="#leviathan">The Great Ocean King</a>, and <a href="#bahamut">King of the Dragons</a> then speak with her again.</li>
+				<li>You'll obtain a key item, the "Goddess' Bell", which allows you to enter the Labyrinth of the Ancients north of the Dragon's Neck Coliseum on a small island.</li>
+				<li>Travel through the Labyrinth of the Ancients to reach the Crystal Tower. From the room on the first floor, you may enter the Forbidden Land Eureka, but this is optional. Eureka holds powerful equipment and some other surprises.</li>
+				<li>On the top floor of the Crystal Tower you'll battle Holy Angel Ultima.</li>
+				<li>Upon winning you'll obtain the Eidolon "Ultima".</li>
+			</ol>
+		</section>
+		<section id = "soul">
+		<h2>The Soul Shrine</h2>
+		<p class = "conditions"><span class = "bold-text">Conditions:</span>Cleared the quest "Holy Angel Ultima".</p>
+		<ol>
+			<li>Upon completeing <a href="#ultima">Holy Angel Ultima</a> you'll be able to enter the Soul Shrine from an island to the north of Mobliz.</li>
+			<li>As with the GBA version you can fight against numerous monsters here, however, it's nearly double the amount. Also, the rewards are different.</li>
+			<li>The "La Seraphica" shield is rewarded the first time you clear this dungeon.</li>
+			<li>Once you've cleared the dungeon you may fight your favorite set ups thereafter.</li>
+		</ol>
+		<p class="extra-note"><span class="bold-text">Extra Note:</span>If you leave anytime before completing this dungeon, if you re-enter you will have to restart everything again. Set aside ample time before tackling this challenge.</p>
+		</section>
+		<section id = "kaihatsu">
+			<h2>Developer's Room</h2>
+			<p class = "conditions"><span class = "bold-text">Conditions:</span>Cleared the quest "Holy Angel Ultima".</p>
+			<ol>
+				<li>Upon clearing <a href="#ultima">Holy Angel Ultima</a> you'll gain access to the middle door in the far west room of the Narshe's Beginner's Hall.</li>
+				<li>NPCs here will have different dialogue and cutscenes based on who's in your party.</li>
+				<li>There's a special room here where a song selected in the Music Player becomes the BGM. Speaking to the NPC here with a different BGM playing causes different dialogue to be displayed.</li>
+				<li>By saving in the Mog House in this area you may begin playing <span style="color:#FF0000"><b>FF6 T-Edition EX Mode.</b></span><br>
+				For details please read the <a href="../EX readme.html">EX readme.html</a>.
+			</ol>
+			<p class = "extra-note"><span class="bold-text">Extra Note:</span>Events in the Developer's Room have become "things I've always wanted to see" by the author, so not everyone may enjoy it. However, otherwise, enjoy the easter eggs! </p>
+		</section>
+		<section id = "dress">
+			<h2>A Secret Present</h2>
+			<p class = "conditions"><span class="bold-text">Conditions:</span>Once you're able to enter the Labyrinth of the Ancients.</p>
+			<ol>
+				<li>Examine the tombstone found in the Forbidden Land Eureka on a hidden path in the wall to the east of the three merchants.</li>
+				<li>You'll unlock all costumes for each character.</li>
+			</ol>
+			<p class="extra-note"><span class = "bold-text">Extra Note:</span>
+			<ul>
+				<li>Your costumes will not unlock if you do not have all characters recruited.</li>
+				<li>Unlocking the costumes through this event will not carry over into New Game+. Only costumes unlocked manually with achievements will.</li>
+				<li>If you don't want your costumes to be lost during New Game+ then unlock them normally.</li>
+				<li>Hints for the tombstone's words are heard in Matoya's Cave.
+				<li>The answers on the tombstone is choice 3, then 2, then 1 (dialogue isn't translated yet, so here you go -Kain).</li>
+			</ul>
+			</p>
+		</section>
+		<section id = "albrook1">
+			<h2>Finding Food</h2>
+			<p class="conditions"><span class="bold-text">Conditions:</span>
+			<ul>
+				<li>Must be in the World of Ruin.</li>
+				<li>This quest is repeatable.</li>
+			</ul>
+			</p>
+			<ol>
+				<li>Speak with the barkeep in Albrook and select the option "Finding Food" (食材探し).</li>
+				<li>Capture fish on the beach of Solitary Island until one of them is a "Vector Sardine" (ベクターイワシ).</li>
+				<li>Return to the barkeep and you'll receive an X-Potion for your reward.</li>
+			</ol>
+		</section>
+		<section id = "albrook2">
+		<h2>Wanted! Research Materials</h2>
+		<p class="conditions"><span class="bold-text">Conditions:</span>During the World of Ruin.</p>
+		<ol>
+			<li>Speak with the barkeep in Albrook and select the option "Wanted! Research Materials" (求む！研究資料).</li>
+			<li>Speak with the scholar in the northwest part of town.</li>
+			<li>Talk to him again when you have the "Goddess's Bell" and you'll receive a reward of 5 Megalixirs.</li>
+		</ol>
+		<p class = "extra-note"><span class = "bold-text">Extra Note:</span>
+		<ul>
+			<li>The Goddess's Bell can be obtained during the quest <a href="#ultima">Holy Angel Ultima</a>.</li>
+			<li>Clearing this quest does not make you lose the Goddess's Bell.</li>
+		</ul>
+		</p>
+		</section>
+		<section id = "southfigaro3">
+			<h2>Defeat the Cave Monsters</h2>
+			<p class = "conditions"><span class = "bold-text">Conditions:</span>
+			<ul>
+				<li>During the World of Ruin.</li>
+				<li>This quest is repeatable.</li>
+			</ul>
+			</p>
+			<ol>
+				<li>Speak with the barkeep in South Figaro and select the option "Defeat the Cave Monsters" (洞窟の怪物退治) to be teleported directly to the event.</li>
+				<li>In the South Figaro Cave defeat the fixed enemy standing to the north.</li>
+				<li>Upon winning you'll be teleported back to the barkeep and receive a reward of 2 Hi-Ethers. Repeating this quest afterwards gives a reward of 2 Hi-Ethers.</li>
+			</ol>
+		</section>
+		<section id = "southfigaro4">
+		<h2>A Girl's Wish</h2>
+		<p class="conditions"><span class = "bold-text">Conditions:</span>During the World of Ruin and must have the Falcon.</p>
+		<ol>
+			<li>Speak with the barkeep in South Figaro and select the option "A Girl's Wish" (少女の願いは).</li>
+			<li>Enter the South Figaro basement via the backdoor through Duncan's House and navigate to the second floor of the basement, finding a little girl in the northeast corner.</li>
+			<li>Head back upstairs to the storage room and examine the record player for a cutscene. Afterwards, you'll be transported back to the barkeep to receive a "Ribbon" accessory as your reward.</li>
+			<li>After clearing this quest the bar's BGM changes to "Roses and Wine".</li>
+		</ol>
+		</section>
+		<section id = "southfigaro5">
+		<h2>Victory Drinks</h2>
+		<p class="conditions"><span class="bold-text">Conditions:</span>During the World of Ruin.</p>
+		<ol>
+			<li>Speak with the barkeep in South Figaro and select the option "Victory Drinks" (勝利の美酒を).</li>
+			<li>Capture fish at the Solitary Island beach until you get a "Yellow Globe" (イエローグローブ).</li>
+			<li>Return to the old man you gave the cider to originally to receive the "Hermes Sandals" accessory as a reward.</li>
+		</ol>
+		</section>
+		<section id = "nikeah2">
+			<h2>Delivery Service</h2>
+			<p class="conditions"><span class="bold-text">Conditions:</span>During the World of Ruin.</p>
+			<ol>
+				<li>Speak with the barkeep in Nikeah and select the option "Delivery Service" (物資運搬).</li>
+				<li>Talk to Duane in Mobliz.</li>
+				<li>Return to the barkeep to obtain a "Black Garb" armor as your reward.</li>
+			</ol>
+		</section>
+		<section id = "nikeah3">
+		<h2>A Dancer's Depression</h2>
+		<p class = "conditions"><span class="bold-text">Conditions:</span>During the World of Ruin and once you obtain the Falcon.</p>
+		<ol>
+			<li>Speak to the barkeep in Nikeah and then the dancer nearby, selecting "Yes" (はい).</li>
+			<li>The dancer will move to a new room on the Falcon which talking to her there starts a special event to showcase the new costume system. This allows you to change costumes by talking to her, selecting a character, and then selecting an outfit once you've unlocked it.</li>
+			<li>If you've unlocked the achievement <a href="#achievement">The Best Models</a> you'll be able to change costumes in the Narshe's Beginner's Hall or any Inn during New Game+, as well as a few other select areas.<br>
+				    ※You may revert back to original costumes sometimes for events.</li>
+		</ol>
+		<p><a href="../dressroom.html">→List of Costumes</a></p>
+		</section>
+		<section id = "nikeah4">
+		<h2>The Will to Live for Tomorrow</h2>
+		<p class="conditions"><span class="bold-text">Conditions:</span>Once you've completed "Delivery Service" and Terra rejoins in the World of Ruin.</p>
+		<ol>
+			<li>Talk to the barkeep in Nikeah and select the option "The Will to Live for Tomorrow" (明日を生きる力).</li>
+			<li>A NPC nearby mentions the Phantom Forest being moved near Maranda now. Head there and upon defeating the plant-like enemies you'll sometimes get the item "Sylkis Greens" (シルキスのやさい) after a battle.</li>
+			<li>Once you obtain this speak to Duanein Mobliz to receive the "Merit Award" accessory.</li>
+			</ol>
+		</section>
+		<section id = "kohlingen4">
+			<h2>A Restful Sleep</h2>
+			<p class="conditions"><span class="bold-text">Conditions:</span>After obtaining the Falcon.</p>
+			<ol>
+				<li>Speak with the barkeep in Kohlingen and select the option "A Restful Sleep" (安らかな眠りを).</li>
+				<li>Head to Daryl's Tomb and check her casket to finish the quest.</li>
+				<li>Return to the barkeep to receive 5 Elixirs as your reward.</li>
+			</ol>
+			<p class="extra-note"><span class="bold-text">Extra Note:</span>
+			<ul>
+				<li>Upon finishing this quest the BGM for the bar becomes "Music Box of Memories (Arranged)".</li>
+				<li>After clearing this event and if <a href="#nikeah3">A Dancer's Depression</a> is finished, Setzer will have a new costume.
+				<li>Also, the answer to the tombstone puzzle is とも  よや  すら  かに (same as vanilla Japanese).</li>
+			</ul>
+			</p>
+		</section>
+		<section id = "narshe1">
+			<h2>Imitation's Secret</h2>
+			<p class="conditions"><span class = "bold-text">Conditions:</span>
+			<ul>
+				<li>During the World of Ruin all characters have rejoined.</li>
+				<li>"The Return of the Narshe Residents" quest has been completed.</li>
+			</ul>
+			</p>
+			<ol>
+				<li>After clearing "The Return of the Narshe Residents" and obtaining the Eidolon "Ragnarok" from the Weapon Shop owner, head to the Narshe bar in the southeast building that once held all the treasure chests.</li>
+				<li>Talk to the barkeep and select the option "Imitation's Secret" (ものまねの極意).</li>
+				<li>Speak to the elder NPC here in the bar with Gogo in your party and answer all his questions correctly.</li>
+				<li>Quiz answers: 2 3 3 1 3 4 1 2 3 2 4 1 4 3.</li>
+				<li>Upon completion you'll obtain the "Mime's Dictionary" accessory.</li>
+			</ol>
+			<p class="extra-note"><span class="bold-text">Extra Note:</span>Once you clear the quest <a href="#nikeah3">A Dancer's Depression</a> Gogo will have a new costume available.</p>
+		</section>
+		<section id = "narshe2">
+			<h2>Night Patrol</h2>
+			<p class="conditions"><span class="bold-text">Conditions:</span>
+			<ul>
+				<li>Once you've cleared the quest "The Return of the Narshe Residents".</li>
+				<li>This quest is repeatable.</li>
+			</ul>
+			</p>
+			<ol>
+				<li>After clearing "The Return of the Narshe Residents" and obtaining the Eidolon "Ragnarok" from the elder at Arvis's house, head to the Narshe bar in the southeast building where all the treasure chests were once held.</li>
+				<li>Talk to the barkeep here and select the option "Night Patrol" (ナイトパトロール) to be teleported to the event.</li>
+				<li>To complete this event defeat the fixed enemies in the Narshe Snowfields to obtain a "Snow Scarf" as your reward for the first time, then 5 Reincarnations everytime after.</li>
+			</ol>
+			<p class = "extra-note"><span class="bold-text">Extra Note:</span>If the time limit runs out you won't have a Game Over, just be sent back to the barkeep.</p>
+		</section>
+		<section id = "zozo">
+			<h2>Super Doctor D</h2>
+			<p class="conditions"><span class="bold-text">Conditions:</span>During the World of Ruin.</p>
+			<ol>
+				<li>Talk to the barkeep in Zozo and select the option "Super Doctor D" (スーパードクターＤ).</li>
+				<li>Head to the room where Terra was resting to find Dadaluma who has a request.</li>
+				<li>He'll ask you to talk to him with a specific status ailment on you.</li>
+				<li>The first time you complete this you'll receive 10 Remedies (for Poison), the 2nd time the "Kachusa" accessory (for Petrification), the 3rd time the "Barrette" accessory (for Blind), and finally a 4th time the "Ribbon" accessory (for Zombie).</li>
+			</ol>
+			<p class="extra-note"><span class="bold-text">Extra Note:</span>
+			<ul>
+				<li>There are 4 specific status ailments for this quest. Poison, Stoned, Blind, and Zombie.</li>
+				<li>It's necessary for you to speak to him as the character who has the status ailment (party leader).</li>
+			</ul>
+			</p>
+		</section>
+    <div style = "text-align: right;">Final Fantasy VI T-Edition. Mod Creator: Tsushiy◆KEHt9L6ti47L</div>
+    </div> <!-- .container -->
+
+    <script>
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        }
+		//Corrected Javascript
+		function show(inputData){
+			var objID=document.getElementById( "layer_" + inputData );
+			var buttonID=document.getElementById( "category_" + inputData );
+			if(objID.className=='close') {
+				objID.style.display='block';
+				objID.className='open';
+			}else{
+				objID.style.display='none';
+				objID.className='close';
+			}
+		}
+    </script>
+</body>
+</html>

@@ -1,0 +1,3323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Fantasy VI Item Database</title>
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa; /* Light gray background */
+            color: #343a40; /* Dark gray text */
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1200px; /* Limit maximum width for readability */
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #007bff; /* Blue headings */
+            margin-bottom: 0.5em;
+        }
+        h1{
+            text-align: center;
+        }
+        h2 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-top: 2em;
+        }
+
+        /* --- Table of Contents --- */
+        #toc {
+            background-color: #e9ecef; /* Slightly darker gray */
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            position: sticky; /* Make it stick to the top */
+            top: 0;
+            z-index: 100; /* Ensure it's above other content */
+        }
+
+        #toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex; /* Horizontal layout */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            justify-content: space-around;
+        }
+
+        #toc li {
+            margin: 5px;
+        }
+
+        #toc a {
+            color: #007bff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            transition: background-color 0.2s ease; /* Smooth hover effect */
+        }
+
+        #toc a:hover {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        /* --- Item Listings --- */
+        .item-section {
+            margin-bottom: 40px;
+        }
+
+        .item-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+            gap: 20px;
+        }
+        .item-list-single{
+            margin-bottom: 1rem;
+        }
+
+        .item {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            transition: transform 0.2s ease; /* Smooth hover effect */
+        }
+
+        .item:hover {
+            transform: translateY(-5px); /* Slight lift on hover */
+        }
+
+        .item h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
+
+        .item ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .item li {
+            margin-bottom: 5px;
+        }
+
+        /* --- Back to Top Button --- */
+        #backToTop {
+            display: none; /* Hidden by default */
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 50%; /* Circular button */
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 99; /* Ensure it's above other content */
+            transition: opacity 0.3s ease; /* Smooth fade-in */
+        }
+
+        #backToTop:hover {
+            opacity: 0.8;
+        }
+        .acquire-list-item {
+            margin-left: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Final Fantasy VI Item Database</h1>
+
+        <nav id="toc">
+            <ul>
+                <li><a href="#weapons">Weapons</a></li>
+                <li><a href="#armor">Armor</a></li>
+                <li><a href="#relics">Relics</a></li>
+                <li><a href="#items">Items</a></li>
+
+            </ul>
+        </nav>
+
+        <section id="weapons" class="item-section">
+            <h2>Weapons</h2>
+            <section id="daggers" class="item-section">
+                <h3>Daggers</h3>
+                <div class="item-list">
+                    <div class="item">
+                        <h3>Dagger</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">4% Drop from PlutoAmr</li>
+                                <li class = "acquire-list-item">8% Drop from BldDance</li>
+                                <li class = "acquire-list-item">Purchased for 150 Gil from South Figaro (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 150 Gil from Unused - Armor</li>
+                                <li class = "acquire-list-item">Purchased for 150 Gil from Unused - Relics</li>
+                                <li class = "acquire-list-item">Locke initial equipment</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Mythril Knife</h3>
+                         <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">75% Steal from LesLopro</li>
+                                <li class = "acquire-list-item">75% Steal from GardLedr</li>
+                                <li class = "acquire-list-item">Purchased for 300 Gil from South Figaro (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 300 Gil from Tzen (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Coliseum bet from Dagger (vs. Goblin)</li>
+                                <li class = "acquire-list-item">Terra initial equipment</li>
+                            </ul>
+                        </ul>
+                    </div>
+                   <div class="item">
+                        <h3>Main Gauche</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                 <li class = "acquire-list-item">8% Drop from MtrDrive</li>
+                                 <li class = "acquire-list-item">25% Steal from LesLopro</li>
+                                 <li class = "acquire-list-item">25% Steal from Merchant</li>
+                                 <li class = "acquire-list-item">Purchased for 820 Gil from Vector - Weapons</li>
+                                 <li class = "acquire-list-item">Located in a treasure chest in Mt. Koltz Exterior</li>
+                                 <li class = "acquire-list-item">Coliseum bet from Mythril Knife (vs. GardLedr)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Air Knife</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">100% Steal from TunlArmr</li>
+                                <li class = "acquire-list-item">Purchased for 1050 Gil from Narshe (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 1050 Gil from Kohlingen (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 1050 Gil from Vector - Weapons</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Returner's Hideout Basement 1F Banon's Room</li>
+                                <li class = "acquire-list-item">Coliseum bet from Main Gauche (vs. MtrDrive)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                   <div class="item">
+                        <h3>Thief's Knife</h3>
+                         <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">4% Drop from VeilDanc</li>
+                                <li class = "acquire-list-item">4% Drop from DevilFst</li>
+                                <li class = "acquire-list-item">8% Drop from Amduscia</li>
+                                <li class = "acquire-list-item">8% Drop from Dadaluma</li>
+                                <li class = "acquire-list-item">4% Drop from Dadaluma</li>
+                                <li class = "acquire-list-item">Purchased for 12500 Gil from Developer's Room - Vendor (Prices x0.5)</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Coal Mine City Narshe Elder's House, Warehouse</li>
+                                <li class = "acquire-list-item">Coliseum bet from Air Knife (vs. Chimera)</li>
+                                <li class = "acquire-list-item">Coliseum bet from Thief Gloves (vs. Borghese)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Assassin's Dagger</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">4% Drop from Deathclw</li>
+                                <li class = "acquire-list-item">4% Drop from BldDance</li>
+                                <li class = "acquire-list-item">25% Steal from NeckHntr</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Sealed Cave Cave Entrance</li>
+                                <li class = "acquire-list-item">Coliseum bet from Thief's Knife (vs. DrgnZomb)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Dancing Dagger</h3>
+                         <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">Coliseum bet from Needle Dagger (vs. Amduscia)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Gladius</h3>
+                         <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">4% Drop from Outsider</li>
+                                <li class = "acquire-list-item">4% Drop from VectChim</li>
+                                <li class = "acquire-list-item">Purchased for 18500 Gil from Narshe (WoR: Before Residents Return) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 18500 Gil from Narshe (WoR: After Residents Return) - Weapons</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Ancient Castle</li>
+                                <li class = "acquire-list-item">Coliseum bet from Dancing Dagger (vs. Deathclw)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Valiant Knife</h3>
+                         <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">From Event: WOR Recruit Locke</li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+            <section id="swords" class="item-section">
+                <h3>Swords</h3>
+                 <div class="item-list">
+                    <div class="item">
+                       <h3>Mythril Sword</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">25% Steal from Corporal</li>
+                                <li class = "acquire-list-item">Purchased for 450 Gil from South Figaro (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 450 Gil from Mobliz - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 450 Gil from Tzen (WoB) - Weapons</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                       <h3>Great Sword</h3>
+                       <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">Purchased for 800 Gil from Narshe (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 800 Gil from Vector - Weapons</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in South Figaro Basement Passage</li>
+                                <li class = "acquire-list-item">Coliseum bet from Mythril Sword (vs. Fem.Sold)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Rune Blade</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">4% Drop from MTekInfa</li>
+                                <li class = "acquire-list-item">75% Steal from Numbr024</li>
+                                <li class = "acquire-list-item">Purchased for 7500 Gil from Albrook (WoR) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 7500 Gil from Nikeah (WoR) - Weapons</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Narshe Coal Mine Moogle Cave (WoB)</li>
+                                <li class = "acquire-list-item">Coliseum bet from Great Sword (vs. SandFish)</li>
+                                <li class = "acquire-list-item">Coliseum bet from Shadow Blade (vs. HvyArmor)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Flametongue</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">68% Drop from Numbr024</li>
+                                <li class = "acquire-list-item">Purchased for 12000 Gil from Albrook (WoR) - Weapons</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Magitek Factory</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Imperial Observation Post Treasure Room</li>
+                                <li class = "acquire-list-item">Coliseum bet from Thunder Blade (vs. YellowMo)</li>
+                           </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Icebrand</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">20% Drop from Numbr024</li>
+                                <li class = "acquire-list-item">Purchased for 12000 Gil from Albrook (WoR) - Weapons</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Magitek Factory</li>
+                                <li class = "acquire-list-item">Coliseum bet from Flametongue (vs. WhtJello)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Thunder Blade</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                 <li class = "acquire-list-item">8% Drop from Numbr024</li>
+                                 <li class = "acquire-list-item">4% Drop from Numbr024</li>
+                                 <li class = "acquire-list-item">Purchased for 12000 Gil from Albrook (WoR) - Weapons</li>
+                                 <li class = "acquire-list-item">Located in a treasure chest in Magitek Factory</li>
+                                 <li class = "acquire-list-item">Coliseum bet from Icebrand (vs. RedMarsh)</li>
+                             </ul>
+                         </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Enhancer Sword</h3>
+                         <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">4% Drop from Dragon</li>
+                                <li class = "acquire-list-item">Purchased for 28000 Gil from Maranda (WoR) - Weapons</li>
+                                <li class = "acquire-list-item">Coliseum bet from Gladius (vs. Baalzeph)</li>
+                                <li class = "acquire-list-item">Coliseum bet from Rune Blade (vs. Kamui)</li>
+                             </ul>
+                         </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Crystal Sword</h3>
+                         <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                 <li class = "acquire-list-item">Purchased for 32000 Gil from Jidoor (WoR) - Weapons</li>
+                                 <li class = "acquire-list-item">Coliseum bet from Enhancer Sword (vs. KilrMnts)</li>
+                             </ul>
+                         </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Stoneblade</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">4% Drop from Hundlegs</li>
+                                <li class = "acquire-list-item">8% Drop from BkLizard</li>
+                                <li class = "acquire-list-item">25% Steal from Hundlegs</li>
+                                <li class = "acquire-list-item">25% Steal from Catoblep</li>
+                                <li class = "acquire-list-item">Coliseum bet from Gaia Gear (vs. PiscoDmn)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Shadow Blade</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">Purchased for 1400 Gil from Narshe (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 1400 Gil from Vector - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 1400 Gil from Albrook (WoR) - Weapons</li>
+                            </ul>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Blood Sword</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">4% Drop from Lizard</li>
+                                <li class = "acquire-list-item">4% Drop from Basilisk</li>
+                                <li class = "acquire-list-item">25% Steal from Basilisk</li>
+                                <li class = "acquire-list-item">25% Steal from Numbr024</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Magitek Research Facility</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Collapsing House</li>
+                                <li class = "acquire-list-item">Coliseum bet from Stoneblade (vs. Valefor)</li>
+                                <li class = "acquire-list-item">Coliseum bet from Lamia Brush (vs. Haokah)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Hrunting</h3>
+                         <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">Purchased for 8500 Gil from Nikeah (WoR) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 4250 Gil from South Figaro (WoR) - Weapons (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Gram</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">Located in a treasure chest in Collapsing House</li>
+                                <li class = "acquire-list-item">Coliseum bet from Hrunting (vs. GlasyaLa)</li>
+                                <li class = "acquire-list-item">Coliseum bet from Arondight (vs. Apanda)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Arondight</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">Purchased for 38000 Gil from Narshe (WoR: Before Residents Return) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 38000 Gil from Narshe (WoR: After Residents Return) - Weapons</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Narshe Coal Mine Moogle Cave (WoR)</li>
+                                <li class = "acquire-list-item">Coliseum bet from Balmung (vs. SnwPanth)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Balmung</h3>
+                         <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">4% Drop from GtMantis</li>
+                                <li class = "acquire-list-item">25% Steal from DthRider (Monster-in-a-box: Gogo's Cave)</li>
+                                <li class = "acquire-list-item">Purchased for 48200 Gil from Esper Village - Weapons</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Phoenix's Cave Basement 1F</li>
+                                <li class = "acquire-list-item">Coliseum bet from Gram (vs. Silenus)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Defender</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">25% Steal from Chronos</li>
+                                <li class = "acquire-list-item">Purchased for 32000 Gil from Narshe (WoR: Before Residents Return) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 32000 Gil from Narshe (WoR: After Residents Return) - Weapons</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Mt. Zozo</li>
+                                <li class = "acquire-list-item">Coliseum bet from Crystal Sword (vs. Devil)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Durandal</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">25% Steal from NghtHawk</li>
+                                <li class = "acquire-list-item">25% Steal from LeoRebrn</li>
+                                <li class = "acquire-list-item">Purchased for 41000 Gil from Narshe (WoR: After Residents Return) - Weapons</li>
+                                <li class = "acquire-list-item">Located in a treasure chest in Ancient Castle Cave Basement</li>
+                                <li class = "acquire-list-item">Coliseum bet from Defender (vs. NghtHawk)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Save the Queen</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">100% Steal from Goddess</li>
+                                <li class = "acquire-list-item">Purchased for 49500 Gil from Esper Village - Weapons</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Ragnarok</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">From Event: WOR Repopulate Narshe</li>
+                            </ul>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Zantetsuken</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">Purchased for 51000 Gil from Eureka - Weapons</li>
+                                <li class = "acquire-list-item">From Event: WOR Ancient Castle Queen after Odin</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="spears" class="item-section">
+                <h3>Spears</h3>
+                <div class="item-list">
+                    <div class="item">
+                        <h3>Mythril Spear</h3>
+                         <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">Purchased for 1800 Gil from Narshe (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 1800 Gil from Nikeah (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 1800 Gil from Tzen (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Edgar initial equipment</li>
+                                <li class = "acquire-list-item">Mog initial equipment</li>
+                             </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Heavy Lance</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">Purchased for 2500 Gil from Maranda (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 2500 Gil from Narshe (WoR) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 1250 Gil from South Figaro (WoR) - Weapons (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                                <li class = "acquire-list-item">Coliseum bet from Mythril Spear (vs. PlatDrgn)</li>
+                             </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Trident</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">Purchased for 8200 Gil from Thamasa (WoB) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 4100 Gil from South Figaro (WoR) - Weapons (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                                <li class = "acquire-list-item">Coliseum bet from Heavy Lance (vs. Dante)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Partisan</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">25% Steal from TestRidr</li>
+                                <li class = "acquire-list-item">Purchased for 15600 Gil from Kohlingen (WoR) - Weapons</li>
+                                <li class = "acquire-list-item">Purchased for 15600 Gil from Jidoor (WoR) - Weapons</li>
+                                <li class = "acquire-list-item">Coliseum bet from Trident (vs. TestRidr)</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Blood Lance</h3>
+                         <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                 <li class = "acquire-list-item">4% Drop from LeapFrog</li>
+                                 <li class = "acquire-list-item">25% Steal from Gorgimer</li>
+                                 <li class = "acquire-list-item">Located in a treasure chest in Owzer's Mansion</li>
+                                 <li class = "acquire-list-item">Coliseum bet from Blood Sword (vs. DemonKht)</li>
+                                 <li class = "acquire-list-item">Coliseum bet from Chainsaw (vs. Fortis)</li>
+                                 <li class = "acquire-list-item">From Event: WOB South Figaro Post-Banquet Bar Quest</li>
+                             </ul>
+                         </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Radiant Lance</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">Purchased for 32800 Gil from Esper Village - Weapons</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Gungnir</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                <li class = "acquire-list-item">100% Steal from Demon</li>
+                                <li class = "acquire-list-item">Purchased for 51000 Gil from Eureka - Weapons</li>
+                            </ul>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Dragon Spear</h3>
+                        <ul>
+                            <li><strong>Acquire:</strong></li>
+                            <ul>
+                                 <li class = "acquire-list-item">4% Drop from TestRidr</li>
+                                 <li class = "acquire-list-item">Purchased for 32200 Gil from Narshe (WoR: Before Residents Return) - Weapons</li>
+                                 <li class = "acquire-list-item">Purchased for 32200 Gil from Narshe (WoR: After Residents Return) - Weapons</li>
+                                 <li class = "acquire-list-item">Located in a treasure chest in Ancient Castle Cave Basement</li>
+                                 <li class = "acquire-list-item">Coliseum bet from Partisan (vs. Brachios)</li>
+                             </ul>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="throw-weapons" class = "item-section">
+                <h3>Throwing Weapons</h3>
+                <div class = "item-list">
+                    <div class = "item">
+                        <h3>Kunai</h3>
+                        <ul>
+                            <li>Shadow initial equipment</li>
+                            <li>Shadow initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Kodachi</h3>
+                        <ul>
+                            <li>Purchased for 2500 Gil from Jidoor (WoB) - Weapons</li>
+                            <li>Coliseum bet from Kunai (vs. Graswyrm)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Sakura</h3>
+                        <ul>
+                            <li>25% Steal from Covert</li>
+                            <li>25% Steal from Baalzeph</li>
+                            <li>Purchased for 5100 Gil from Albrook (WoB) - Weapons</li>
+                            <li>Purchased for 5100 Gil from Narshe (WoR) - Weapons</li>
+                            <li>Coliseum bet from Kodachi (vs. Ninja)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Izayoi</h3>
+                        <ul>
+                            <li>100% Drop from Gigantos (Monster-in-a-box: Floating Continent)</li>
+                            <li>4% Drop from Baalzeph</li>
+                            <li>Purchased for 24000 Gil from Doma Castle (WoR) - Weapons</li>
+                            <li>Coliseum bet from Sakura (vs. Mykale)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Narigitsune</h3>
+                        <ul>
+                            <li>4% Drop from NinjaMas</li>
+                            <li>Located in a treasure chest in Veldt Cave</li>
+                            <li>Coliseum bet from Narigitsune (vs. Covert)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Kagenui</h3>
+                        <ul>
+                            <li>Purchased for 44000 Gil from Eureka - Weapons</li>
+                            <li>Located in a treasure chest in Fanatic's Tower Small Room</li>
+                            <li>Coliseum bet from Murasame (vs. NinjaMas)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id = "katanas" class = "item-section">
+                <h3>Katanas</h3>
+                <div class = "item-list">
+                    <div class = "item">
+                        <h3>Ashura</h3>
+                        <ul><li>Cyan initial equipment</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Kotetsu</h3>
+                        <ul>
+                            <li>Purchased for 1600 Gil from Mobliz - Weapons</li>
+                            <li>Purchased for 1600 Gil from Nikeah (WoB) - Weapons</li>
+                            <li>Coliseum bet from Ashura (vs. Sahagin)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Osafune</h3>
+                        <ul>
+                            <li>Purchased for 2500 Gil from Jidoor (WoB) - Weapons</li>
+                            <li>Purchased for 2500 Gil from Albrook (WoB) - Weapons</li>
+                            <li>Located in a treasure chest in Sealed Cave Cave</li>
+                            <li>Coliseum bet from Kotetsu (vs. Sergeant)</li>
+                        </ul>
+                    </div>
+                     <div class = "item">
+                        <h3>Kikuichimonji</h3>
+                        <ul>
+                            <li>25% Steal from Kamui</li>
+                            <li>25% Steal from Numbr128</li>
+                            <li>Purchased for 8600 Gil from Maranda (WoR) - Weapons</li>
+                            <li>Located in a treasure chest in Doma Castle 1F-1~5 King's Room 2F Warehouse</li>
+                            <li>Coliseum bet from Osafune (vs. Samurai)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Muramasa</h3>
+                        <ul>
+                            <li>Located in a treasure chest in Floating Continent</li>
+                            <li>Coliseum bet from Kikuichimonji (vs. Yojimbo)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Mutsunokami</h3>
+                        <ul><li>100% Drop from RedDragn</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Murasame</h3>
+                        <ul>
+                            <li>25% Steal from Yojimbo</li>
+                            <li>Purchased for 37500 Gil from Doma Castle (WoR) - Weapons</li>
+                                                        <li>Coliseum bet from Izayoi (vs. Chronos)</li>
+                            <li>Coliseum bet from Muramasa (vs. Sam.Soul)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Murakumo</h3>
+                        <ul><li>Located in a treasure chest in Forbidden Land Eureka 7</li></ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rods" class="item-section">
+                <h3>Rods</h3>
+                <div class="item-list">
+                    <div class="item">
+                         <h3>Battle Bamboo</h3>
+                        <ul>
+                            <li>8% Drop from Joker</li>
+                            <li>Purchased for 950 Gil from Nikeah (WoB) - Weapons</li>
+                            <li>Purchased for 950 Gil from Gau's Father's House - Vendor</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Healing Staff</h3>
+                        <ul>
+                            <li>Purchased for 12000 Gil from Esper Village - Weapons</li>
+                            <li>Located in a treasure chest in Doma Castle 1F-1~5 King's Room 2F Warehouse</li>
+                            <li>Located in a treasure chest in Esper Cave</li>
+                            <li>Coliseum bet from Holy Rod (vs. Titania)</li>
+                            <li>Coliseum bet from Diamond Bell (vs. St. Elmo)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Flame Rod</h3>
+                        <ul>
+                            <li>8% Drop from Pineappl</li>
+                            <li>8% Drop from IfritCln</li>
+                            <li>Purchased for 30000 Gil from Thamasa (WoB) - Weapons</li>
+                            <li>Located in a treasure chest in Burning House</li>
+                            <li>From Event: WOB Kohlingen Bar Quest</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Ice Rod</h3>
+                         <ul>
+                            <li>4% Drop from Spectre</li>
+                            <li>8% Drop from ShivaCln</li>
+                            <li>8% Drop from Snoll</li>
+                            <li>Purchased for 30000 Gil from Thamasa (WoB) - Weapons</li>
+                            <li>Located in a treasure chest in Burning House</li>
+                            <li>Strago initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Thunder Rod</h3>
+                        <ul>
+                            <li>8% Drop from RamuhCln</li>
+                            <li>Purchased for 30000 Gil from Thamasa (WoB) - Weapons</li>
+                            <li>Located in a treasure chest in South Figaro Cave</li>
+                            <li>Located in a treasure chest in Zozo Building Top Floor</li>
+                            <li>Located in a treasure chest in Esper Cave</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Octagon Staff</h3>
+                         <ul><li>Purchased for 32500 Gil from Tzen (WoR) - Weapons</li>
+                            <li>Coliseum bet from Battle Bamboo (vs. Imp)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Holy Rod</h3>
+                        <ul>
+                            <li>75% Steal from SeraphCl</li>
+                            <li>Purchased for 40000 Gil from Thamasa (WoR) - Weapons</li>
+                            <li>Located in a treasure chest in Collapsing House</li>
+                            <li>Coliseum bet from Flame Rod (vs. Pineappl)</li>
+                            <li>Coliseum bet from Ice Rod (vs. Traveler)</li>
+                            <li>Coliseum bet from Thunder Rod (vs. Jam)</li>
+                            <li>Coliseum bet from Magus Robe (vs. InnoSent)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Wizard Rod</h3>
+                        <ul>
+                            <li>From Event: WOR Crystals Quest</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+             <section id="brushes" class="item-section">
+                <h3>Brushes</h3>
+                <div class="item-list">
+                    <div class="item">
+                        <h3>Chocobo Brush</h3>
+                        <ul><li>Relm initial equipment</li></ul>
+                    </div>
+                    <div class="item">
+                        <h3>Magical Brush</h3>
+                        <ul>
+                            <li>Purchased for 13000 Gil from Thamasa (WoR) - Weapons</li>
+                            <li>Coliseum bet from Chocobo Brush (vs. RicardMg)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Lamia Brush</h3>
+                        <ul>
+                            <li>Located in a treasure chest in Gogo's Cave</li>
+                            <li>Coliseum bet from Blood Lance (vs. LamiaQen)</li>
+                            <li>Coliseum bet from Antares (vs. DthWarde)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Rainbow Brush</h3>
+                        <ul>
+                            <li>Located in a treasure chest in Kefka's Tower Area</li>
+                            <li>Coliseum bet from Magical Brush (vs. Maiden)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Artemis's Brush</h3>
+                        <ul>
+                            <li>Located in a treasure chest in Forbidden Land Eureka 4.3 Left</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="special" class = "item-section">
+                <h3>Special Weapons</h3>
+                <div class = "item-list">
+                     <div class="item">
+                        <h3>Kenkonken</h3>
+                        <ul><li>Located in a treasure chest in Forbidden Land Eureka 5</li></ul>
+                    </div>
+                    <div class="item">
+                        <h3>Bone Club</h3>
+                        <ul><li>100% Drop from SkulDrgn</li></ul>
+                    </div>
+                    <div class="item">
+                         <h3>Zeus Mace</h3>
+                        <ul>
+                            <li>100% Steal from Fiend</li>
+                            <li>Purchased for 43800 Gil from Eureka - Weapons</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id = "throwingstars" class = "item-section">
+                <h3>Throwing Stars</h3>
+                <div class = "item-list">
+                    <div class="item">
+                        <h3>Shuriken</h3>
+                         <ul>
+                            <li>25% Steal from Ninja</li>
+                            <li>25% Steal from MagnLodr</li>
+                            <li>25% Steal from LtlMagna</li>
+                            <li>Purchased for 2600 Gil from Albrook (WoB) - Weapons</li>
+                            <li>Purchased for 2600 Gil from Kohlingen (WoR) - Weapons</li>
+                            <li>Located in a treasure chest in Kohlingen House</li>
+                            <li>Coliseum bet from Moonring Blade (vs. Samurai)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Fuma Shuriken</h3>
+                         <ul>
+                            <li>4% Drop from Covert</li>
+                            <li>Purchased for 32500 Gil from Doma Castle (WoR) - Weapons</li>
+                            <li>Located in a treasure chest in Gogo's Cave</li>
+                            <li>Coliseum bet from Kagenui (vs. Covert)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Pinwheel</h3>
+                        <ul>
+                            <li>100% Drop from BlueDrgn</li>
+                            <li>Purchased for 42000 Gil from Esper Village - Weapons</li>
+                            <li>Located in a treasure chest in Kefka's Tower Area</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+             <section id = "tools" class = "item-section">
+                <h3>Tools</h3>
+                <div class = "item-list">
+                    <div class="item">
+                        <h3>Mythril Axe</h3>
+                        <ul>
+                            <li>Purchased for 2400 Gil from Mobliz - Weapons</li>
+                            <li>Purchased for 2400 Gil from Nikeah (WoB) - Weapons</li>
+                            <li>Purchased for 2400 Gil from Tzen (WoB) - Weapons</li>
+                            <li>Coliseum bet from Dried Meat (vs. Goetia)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Noiseblaster</h3>
+                         <ul>
+                            <li>25% Steal from Junk</li>
+                            <li>25% Steal from Crane</li>
+                            <li>Purchased for 2000 Gil from South Figaro (WoB) - Weapons</li>
+                            <li>Purchased for 1000 Gil from Figaro Castle 2-1(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 1000 Gil from Figaro Castle 2-2(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 1000 Gil from Figaro Castle 2(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Coliseum bet from Auto Crossbow (vs. Belzecue)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Bioblaster</h3>
+                         <ul>
+                            <li>8% Drop from ProtoAmr</li>
+                            <li>25% Steal from Chaser</li>
+                            <li>25% Steal from InnoSent</li>
+                            <li>Purchased for 2000 Gil from South Figaro (WoB) - Weapons</li>
+                            <li>Purchased for 1000 Gil from Figaro Castle 2-1(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 1000 Gil from Figaro Castle 2-2(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 1000 Gil from Figaro Castle 2(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Coliseum bet from Noiseblaster (vs. MTekArmr)</li>
+                        </ul>
+                    </div>
+                     <div class = "item">
+                        <h3>Flash</h3>
+                        <ul>
+                            <li>25% Steal from Dstroide</li>
+                            <li>25% Steal from DthMachi</li>
+                            <li>25% Steal from MissileB</li>
+                            <li>Purchased for 2500 Gil from South Figaro (WoR) - Weapons (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 2500 Gil from Figaro Castle 2-2(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 2500 Gil from Figaro Castle 2(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Coliseum bet from Bioblaster (vs. SkyArmor)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Chainsaw</h3>
+                        <ul>
+                            <li>4% Drop from Twinscyt</li>
+                            <li>8% Drop from DuelArmr</li>
+                            <li>Purchased for 12500 Gil from Figaro Castle 2(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Located in a treasure chest in Zozo Indoors General</li>
+                            <li>Coliseum bet from Drill (vs. Helldive)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Particle Bomb</h3>
+                        <ul>
+                            <li>25% Steal from Promethe</li>
+                            <li>Purchased for 29200 Gil from Eureka - Weapons</li>
+                            <li>Located in a treasure chest in Phoenix's Cave Basement 1F</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Drill</h3>
+                         <ul>
+                            <li>25% Steal from ArmrdWpn</li>
+                            <li>25% Steal from Fortis</li>
+                            <li>25% Steal from Crane</li>
+                            <li>Purchased for 7500 Gil from South Figaro (WoR) - Weapons (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 7500 Gil from Figaro Castle 2-2(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 7500 Gil from Figaro Castle 2(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Coliseum bet from Flash (vs. MegaArmr)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Air Anchor</h3>
+                        <ul>
+                            <li>4% Drop from Gamma</li>
+                            <li>Purchased for 34000 Gil from Eureka - Weapons</li>
+                            <li>Located in a treasure chest in Fanatic's Tower Small Room</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Auto Crossbow</h3>
+                        <ul>
+                            <li>25% Steal from Trapper</li>
+                            <li>Purchased for 900 Gil from Figaro Castle 2-1(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 900 Gil from Figaro Castle 2-2(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 900 Gil from Figaro Castle 2(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Coliseum bet from Sniper Eye (vs. LandGril)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+             <section id="scrolls" class="item-section">
+                <h3>Scrolls</h3>
+                <div class="item-list">
+                    <div class="item">
+                        <h3>Flame Scroll</h3>
+                         <ul>
+                            <li>20% Drop from Pineappl</li>
+                            <li>8% Drop from LtlMagna</li>
+                            <li>4% Drop from LtlMagna</li>
+                            <li>Purchased for 600 Gil from Kohlingen (WoB) - Weapons</li>
+                            <li>Purchased for 600 Gil from Albrook (WoB) - Weapons</li>
+                            <li>Purchased for 600 Gil from Kohlingen (WoR) - Weapons</li>
+                            <li>Purchased for 600 Gil from Doma Castle (WoR) - Weapons</li>
+                            <li>Coliseum bet from Thunder Scroll (vs. Rudra)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Water Scroll</h3>
+                         <ul>
+                            <li>8% Drop from MagnLodr</li>
+                            <li>4% Drop from MagnLodr</li>
+                            <li>75% Steal from Coolness</li>
+                            <li>Purchased for 600 Gil from Kohlingen (WoB) - Weapons</li>
+                            <li>Purchased for 600 Gil from Albrook (WoB) - Weapons</li>
+                            <li>Purchased for 600 Gil from Kohlingen (WoR) - Weapons</li>
+                            <li>Purchased for 600 Gil from Doma Castle (WoR) - Weapons</li>
+                            <li>Coliseum bet from Flame Scroll (vs. RockSlug)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Thunder Scroll</h3>
+                        <ul>
+                            <li>75% Steal from Typhon</li>
+                            <li>75% Steal from MagnLodr</li>
+                            <li>75% Steal from LtlMagna</li>
+                            <li>Purchased for 600 Gil from Kohlingen (WoB) - Weapons</li>
+                            <li>Purchased for 600 Gil from Albrook (WoB) - Weapons</li>
+                            <li>Purchased for 600 Gil from Kohlingen (WoR) - Weapons</li>
+                            <li>Purchased for 600 Gil from Doma Castle (WoR) - Weapons</li>
+                            <li>Located in a treasure chest in Imperial Base</li>
+                            <li>Coliseum bet from Water Scroll (vs. Hedgehog)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Invis Scroll</h3>
+                         <ul>
+                            <li>75% Steal from Puck</li>
+                            <li>Purchased for 400 Gil from Albrook (WoB) - Weapons</li>
+                            <li>Purchased for 400 Gil from Maranda (WoR) - Weapons</li>
+                            <li>Purchased for 400 Gil from Doma Castle (WoR) - Weapons</li>
+                            <li>Coliseum bet from Shadow Scroll (vs. Provoker)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Shadow Scroll</h3>
+                        <ul>
+                            <li>20% Drop from NinjaMas</li>
+                            <li>Purchased for 800 Gil from Albrook (WoB) - Weapons</li>
+                            <li>Purchased for 800 Gil from Maranda (WoR) - Weapons</li>
+                            <li>Purchased for 800 Gil from Doma Castle (WoR) - Weapons</li>
+                            <li>Coliseum bet from Invis Scroll (vs. Bomb)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+             <section id="whips" class="item-section">
+                <h3>Whips</h3>
+                <div class="item-list">
+                    <div class = "item">
+                        <h3>Chain Whip</h3>
+                        <ul>
+                            <li>Purchased for 950 Gil from Narshe (WoB) - Weapons</li>
+                            <li>Purchased for 950 Gil from Kohlingen (WoB) - Weapons</li>
+                            <li>Purchased for 950 Gil from Thamasa (WoB) - Weapons</li>
+                            <li>Located in a treasure chest in South Figaro B2F</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Flame Whip</h3>
+                        <ul>
+                            <li>4% Drop from Grenade</li>
+                            <li>8% Drop from Garm</li>
+                            <li>25% Steal from Grenade</li>
+                            <li>25% Steal from Mom Bomb</li>
+                            <li>Purchased for 10500 Gil from Thamasa (WoR) - Weapons</li>
+                            <li>Coliseum bet from Blitz Whip (vs. Chs.Drgn)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Blitz Whip</h3>
+                        <ul>
+                            <li>25% Steal from Thor</li>
+                            <li>Purchased for 12500 Gil from Nikeah (WoR) - Weapons</li>
+                            <li>Coliseum bet from Chain Whip (vs. Venobenu)</li>
+                            <li>Gogo initial equipment</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id = "boomerangs" class = "item-section">
+                <h3>Boomerangs</h3>
+                <div class = "item-list">
+                    <div class="item">
+                        <h3>Boomerang</h3>
+                         <ul>
+                            <li>4% Drop from Sahagin</li>
+                            <li>Purchased for 3700 Gil from Kohlingen (WoB) - Weapons</li>
+                            <li>Purchased for 3700 Gil from Thamasa (WoB) - Weapons</li>
+                            <li>Coliseum bet from Slasher (vs. SahagChf)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Rising Sun</h3>
+                         <ul>
+                            <li>4% Drop from LilMurde</li>
+                            <li>Purchased for 28000 Gil from Narshe (WoR: After Residents Return) - Weapons</li>
+                            <li>Located in a treasure chest in Phoenix's Cave Basement 1F</li>
+                            <li>Coliseum bet from Fuma Shuriken (vs. Outsider)</li>
+                            <li>Coliseum bet from Black Garb (vs. Outsider)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Moonring Blade</h3>
+                        <ul>
+                            <li>Purchased for 4500 Gil from Narshe (WoR) - Weapons</li>
+                            <li>Coliseum bet from Shuriken (vs. Harveste)</li>
+                            <li>Coliseum bet from Boomerang (vs. Ninja)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Slasher</h3>
+                        <ul>
+                            <li>Purchased for 4800 Gil from Maranda (WoB) - Weapons</li>
+                            <li>Located in a treasure chest in Magitek Factory</li>
+                            <li>Coliseum bet from Mythril Axe (vs. ImpElite)</li>
+                            <li>Umaro initial equipment</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id = "gambling" class = "item-section">
+                <h3>Gambling Weapons</h3>
+                <div class = "item-list">
+                    <div class="item">
+                        <h3>Cards</h3>
+                        <ul><li>Setzer initial equipment</li></ul>
+                    </div>
+                     <div class="item">
+                        <h3>Darts</h3>
+                        <ul>
+                            <li>Purchased for 3500 Gil from Jidoor (WoB) - Weapons</li>
+                            <li>Purchased for 3500 Gil from Kohlingen (WoR) - Weapons</li>
+                            <li>Coliseum bet from Cards (vs. Devourer)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Dice</h3>
+                        <ul>
+                            <li>Purchased for 6500 Gil from Kohlingen (WoR) - Weapons</li>
+                            <li>Coliseum bet from Darts (vs. Don)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Tarot de Bennstat</h3>
+                        <ul>
+                            <li>Located in a treasure chest in Daryl's Tomb Basement 2F</li>
+                            <li>Coliseum bet from Dice (vs. BlkDragn)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Fake Dice</h3>
+                        <ul><li>Located in a treasure chest in Kefka's Tower First Cave (Metal Floor)</li></ul>
+                    </div>
+                    <div class="item">
+                        <h3>Antares</h3>
+                         <ul>
+                            <li>Located in a treasure chest in Veldt Cave</li>
+                            <li>Coliseum bet from Rising Sun (vs. Neochu)</li>
+                            <li>Coliseum bet from Tarot de Bennstat (vs. Twinscyt)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Last Resort</h3>
+                        <ul><li>Located in a treasure chest in Forbidden Land Eureka 6.3 Right</li></ul>
+                    </div>
+                </div>
+            </section>
+            <section id = "claws" class = "item-section">
+                <h3>Claws</h3>
+                <div class = "item-list">
+                    <div class="item">
+                         <h3>Metal Knuckle</h3>
+                        <ul><li>Sabin initial equipment</li></ul>
+                    </div>
+                     <div class="item">
+                        <h3>Mythril Claw</h3>
+                         <ul>
+                            <li>25% Steal from Belmodar</li>
+                            <li>Purchased for 1200 Gil from Narshe (WoB) - Weapons</li>
+                            <li>Purchased for 1200 Gil from Mobliz - Weapons</li>
+                            <li>Purchased for 1200 Gil from Nikeah (WoB) - Weapons</li>
+                            <li>Purchased for 1200 Gil from Tzen (WoB) - Weapons</li>
+                            <li>Coliseum bet from Metal Knuckle (vs. Zaghrem)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Kaiser Knuckle</h3>
+                         <ul>
+                            <li>25% Steal from IronClaw</li>
+                            <li>Purchased for 2200 Gil from Jidoor (WoB) - Weapons</li>
+                            <li>Coliseum bet from Mythril Claw (vs. LesLopro)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Dark Claw</h3>
+                        <ul>
+                            <li>25% Steal from KilrMnts</li>
+                            <li>Purchased for 3800 Gil from Maranda (WoB) - Weapons</li>
+                            <li>Purchased for 3800 Gil from Tzen (WoR) - Weapons</li>
+                            <li>Coliseum bet from Kaiser Knuckle (vs. DrgnFosl)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Burning Knuckle</h3>
+                        <ul>
+                            <li>Purchased for 18000 Gil from Tzen (WoR) - Weapons</li>
+                            <li>Located in a treasure chest in Zozo Indoors General</li>
+                            <li>Coliseum bet from Dark Claw (vs. Balloon)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Dragon Claw</h3>
+                        <ul>
+                            <li>100% Drop from AngWhelk (Monster-in-a-box: Daryl's Tomb Basement 2F)</li>
+                            <li>100% Drop from YmirHead (Monster-in-a-box: Daryl's Tomb Basement 2F)</li>
+                            <li>25% Steal from Luminesc</li>
+                            <li>Coliseum bet from Octagon Staff (vs. Dragon)</li>
+                            <li>Coliseum bet from Burning Knuckle (vs. Dragon)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                         <h3>Tiger Fang</h3>
+                        <ul>
+                            <li>100% Drop from DthWarde (Monster-in-a-box: Veldt Cave)</li>
+                            <li>Purchased for 40000 Gil from Narshe (WoR: After Residents Return) - Weapons</li>
+                            <li>Coliseum bet from Dragon Claw (vs. GrndBehe)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+             <section id = "misc-weapons" class = "item-section">
+                <h3>Misc. Weapons</h3>
+                <div class = "item-list">
+                    <div class = "item">
+                        <h3>Marvelous Cheer</h3>
+                        <ul><li>Located in a treasure chest in Lost Road</li></ul>
+                    </div>
+                     <div class = "item">
+                        <h3>Lightbringer</h3>
+                        <ul><li>From Event: WOR Coliseum Gilgamesh event</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Gekkabijin</h3>
+                        <ul><li>Located in a treasure chest in Forbidden Land Eureka 4.3 Left</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Ultima Weapon</h3>
+                        <ul>
+                            <li>100% Drop from UltimaWe</li>
+                            <li>100% Drop from UltiBust</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Kitchen Knife</h3>
+                        <ul>
+                            <li>100% Drop from KTonberr (Monster-in-a-box: Ancient Castle Cave Basement)</li>
+                            <li>8% Drop from DonTonbe</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Needle Dagger</h3>
+                        <ul>
+                            <li>4% Drop from IronClaw</li>
+                            <li>8% Drop from Outsider</li>
+                            <li>Purchased for 6200 Gil from Narshe (WoR) - Weapons</li>
+                            <li>Located in a treasure chest in Zozo Indoors General</li>
+                            <li>Coliseum bet from Assassin's Dagger (vs. Brainpan)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Maduin's Horn</h3>
+                        <ul><li>From Event: WOR Terra Event at Esper Village</li></ul>
+                    </div>
+                    <div class = "item">
+                         <h3>Orichalcum</h3>
+                        <ul><li>From Event: WOR Crystals Quest</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Excalibur</h3>
+                        <ul><li>From Event: WOR Crystals Quest</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Soul Eater</h3>
+                        <ul><li>From Event: WOR Crystals Quest</li></ul>
+                    </div>
+                     <div class = "item">
+                        <h3>Masamune</h3>
+                        <ul><li>From Event: WOR Crystals Quest</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Sasuke's Katana</h3>
+                         <ul><li>From Event: WOR Crystals Quest</li></ul>
+                    </div>
+                   
+                    <div class = "item">
+                        <h3>Elven Darts</h3>
+                         <ul><li>From Event: WOR Crystals Quest</li></ul>
+                    </div>
+                     <div class = "item">
+                        <h3>Earthbreaker</h3>
+                        <ul><li>From Event: WOR Crystals Quest</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Dragon Whisker</h3>
+                         <ul><li>From Event: WOR Crystals Quest</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Holy Lance</h3>
+                        <ul><li>From Event: WOR Crystals Quest</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>God Hand</h3>
+                        <ul><li>From Event: WOR Crystals Quest</li></ul>
+                    </div>
+                    <div class = "item">
+                         <h3>Rune Bell</h3>
+                        <ul><li>From Event: WOR Crystals Quest</li></ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="armor" class="item-section">
+            <h2>Armor</h2>
+
+            <section id="shields" class = "item-section">
+                <h3>Shields</h3>
+                <div class = "item-list">
+                    <div class="item">
+                         <h3>Buckler</h3>
+                        <ul>
+                            <li>Purchased for 350 Gil from South Figaro (WoB) - Armor</li>
+                            <li>Purchased for 350 Gil from Mobliz - Armor</li>
+                            <li>Purchased for 350 Gil from Vector - Armor</li>
+                            <li>Terra initial equipment</li>
+                            <li>Edgar initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Large Shield</h3>
+                         <ul>
+                            <li>Purchased for 600 Gil from South Figaro (WoB) - Armor</li>
+                            <li>Purchased for 600 Gil from Mobliz - Armor</li>
+                            <li>Purchased for 600 Gil from Nikeah (WoB) - Armor</li>
+                            <li>Purchased for 600 Gil from Vector - Armor</li>
+                            <li>Located in a treasure chest in South Figaro Basement Passage</li>
+                            <li>Coliseum bet from Buckler (vs. SOLDIER)</li>
+                            <li>Cyan initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Mythril Shield</h3>
+                        <ul>
+                            <li>25% Steal from Sahagin</li>
+                            <li>25% Steal from General</li>
+                            <li>Purchased for 2200 Gil from Narshe (WoB) - Armor</li>
+                            <li>Purchased for 2200 Gil from Kohlingen (WoB) - Armor</li>
+                            <li>Purchased for 2200 Gil from Jidoor (WoB) - Armor</li>
+                            <li>Purchased for 2200 Gil from Vector - Armor</li>
+                            <li>Purchased for 2200 Gil from Tzen (WoB) - Armor</li>
+                            <li>Located in a treasure chest in Imperial Base</li>
+                            <li>Coliseum bet from Large Shield (vs. Templar)</li>
+                            <li>Setzer initial equipment</li>
+                            <li>Mog initial equipment</li>
+                            <li>Gogo initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Gold Shield</h3>
+                        <ul>
+                            <li>4% Drop from Sergeant</li>
+                            <li>Purchased for 3900 Gil from Thamasa (WoB) - Armor</li>
+                            <li>Purchased for 3900 Gil from Narshe (WoR) - Armor</li>
+                            <li>Purchased for 3900 Gil from Albrook (WoR) - Armor</li>
+                            <li>Purchased for 3900 Gil from Tzen (WoR) - Armor</li>
+                            <li>Purchased for 3900 Gil from Nikeah (WoR) - Armor</li>
+                            <li>Located in a treasure chest in Magitek Factory</li>
+                            <li>Coliseum bet from Mythril Shield (vs. MTekInfa)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Flame Shield</h3>
+                         <ul>
+                            <li>Purchased for 25000 Gil from Esper Village - Armor</li>
+                            <li>Located in a treasure chest in Dream Phantom Train Train Car #3</li>
+                            <li>Located in a treasure chest in Phoenix's Cave Deepest Area</li>
+                            <li>Located in a treasure chest in Kefka's Tower Area</li>
+                            <li>Coliseum bet from Thunder Shield (vs. FlameDog)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Ice Shield</h3>
+                         <ul>
+                            <li>8% Drop from Kraken</li>
+                            <li>Purchased for 25000 Gil from Esper Village - Armor</li>
+                            <li>Located in a treasure chest in Dream Phantom Train Car 2</li>
+                            <li>Located in a treasure chest in Kefka's Tower Area</li>
+                            <li>Coliseum bet from Flame Shield (vs. Frostbst)</li>
+                            <li>From Event: WOR Recruit Locke</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Thunder Shield</h3>
+                         <ul>
+                            <li>25% Steal from Inferno</li>
+                            <li>Purchased for 25000 Gil from Esper Village - Armor</li>
+                            <li>Located in a treasure chest in Mt. Zozo</li>
+                            <li>Located in a treasure chest in Kefka's Tower Inferno's Room (Top)</li>
+                            <li>Coliseum bet from Ice Shield (vs. MuudSuud)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Diamond Shield</h3>
+                        <ul>
+                            <li>8% Drop from Dragon</li>
+                            <li>Purchased for 3300 Gil from South Figaro (WoR) - Armor (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 6600 Gil from Kohlingen (WoR) - Armor</li>
+                            <li>Purchased for 6600 Gil from Maranda (WoR) - Armor</li>
+                            <li>Coliseum bet from Gold Shield (vs. Mindflyr)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Crystal Shield</h3>
+                        <ul>
+                            <li>4% Drop from NeckHntr</li>
+                            <li>Purchased for 13000 Gil from Narshe (WoR: Before Residents Return) - Armor</li>
+                            <li>Purchased for 13000 Gil from Narshe (WoR: After Residents Return) - Armor</li>
+                            <li>Coliseum bet from Diamond Shield (vs. Crawler)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Aegis Shield</h3>
+                         <ul>
+                            <li>4% Drop from Emeraldi</li>
+                            <li>Purchased for 47500 Gil from Eureka - Armor</li>
+                            <li>Located in a treasure chest in Mt. Zozo</li>
+                            <li>Located in a treasure chest in Kefka's Tower Inferno's Room (Bottom)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Force Shield</h3>
+                         <ul>
+                            <li>100% Drop from FrzeDrgn</li>
+                            <li>Purchased for 40000 Gil from Eureka - Armor</li>
+                            <li>Located in a treasure chest in Fanatic's Tower Small Room</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Genji Shield</h3>
+                         <ul>
+                            <li>8% Drop from ShldDrgn</li>
+                            <li>Purchased for 42000 Gil from Eureka - Armor</li>
+                            <li>Located in a treasure chest in Dream Phantom Train Train Car #3</li>
+                            <li>Coliseum bet from Genji Armor (vs. Alv)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Cursed Shield</h3>
+                         <ul><li>From Event: WOR Narshe Man in house behind Relic Shop</li></ul>
+                    </div>
+                    <div class="item">
+                        <h3>Hero's Shield</h3>
+                         <ul><li>From Event: WOR Uncurse the Cursed Shield</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>La Seraphica</h3>
+                        <ul>
+                            <li>From Event: WOR Complete the Soul Shrine</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id = "helmets" class = "item-section">
+                <h3>Helmets</h3>
+                <div class = "item-list">
+                    <div class = "item">
+                        <h3>Leather Hat</h3>
+                         <ul>
+                            <li>8% Drop from NutEater</li>
+                            <li>25% Steal from NutEater</li>
+                            <li>Purchased for 320 Gil from South Figaro (WoB) - Armor</li>
+                            <li>Terra initial equipment</li>
+                            <li>Locke initial equipment</li>
+                            <li>Edgar initial equipment</li>
+                            <li>Sabin initial equipment</li>
+                            <li>Gau initial equipment</li>
+                        </ul>
+                                        </div>
+                    <div class = "item">
+                         <h3>Plumed Hat</h3>
+                         <ul>
+                            <li>4% Drop from Cockatri</li>
+                            <li>75% Steal from Merchant</li>
+                            <li>Purchased for 400 Gil from South Figaro (WoB) - Armor</li>
+                            <li>Purchased for 400 Gil from Mobliz - Armor</li>
+                            <li>Purchased for 400 Gil from Nikeah (WoB) - Armor</li>
+                            <li>Coliseum bet from Leather Hat (vs. Cockatri)</li>
+                            <li>Coliseum bet from Tent (vs. NutEater)</li>
+                            <li>Relm initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                         <h3>Headgear</h3>
+                         <ul>
+                            <li>4% Drop from Goblin</li>
+                            <li>25% Steal from Zaghrem</li>
+                            <li>Purchased for 1000 Gil from Narshe (WoB) - Armor</li>
+                            <li>Purchased for 1000 Gil from Nikeah (WoB) - Armor</li>
+                            <li>Purchased for 1000 Gil from Kohlingen (WoB) - Armor</li>
+                            <li>Purchased for 1000 Gil from Maranda (WoB) - Armor</li>
+                            <li>Located in a treasure chest in Sabin's House Indoors</li>
+                            <li>Coliseum bet from Plumed Hat (vs. Onion)</li>
+                            <li>Shadow initial equipment</li>
+                            <li>Setzer initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Magus Hat</h3>
+                         <ul>
+                            <li>Purchased for 1200 Gil from Narshe (WoB) - Armor</li>
+                            <li>Purchased for 1200 Gil from Mobliz - Armor</li>
+                            <li>Purchased for 1200 Gil from Nikeah (WoB) - Armor</li>
+                            <li>Purchased for 1200 Gil from Kohlingen (WoB) - Armor</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Priest's Miter</h3>
+                        <ul>
+                            <li>25% Steal from Wizard</li>
+                            <li>Purchased for 4900 Gil from Albrook (WoB) - Armor</li>
+                            <li>Purchased for 4900 Gil from Maranda (WoB) - Armor</li>
+                            <li>Purchased for 4900 Gil from Narshe (WoR) - Armor</li>
+                            <li>Purchased for 4900 Gil from Albrook (WoR) - Armor</li>
+                            <li>Purchased for 4900 Gil from Kohlingen (WoR) - Armor</li>
+                            <li>Coliseum bet from Magus Hat (vs. Phoebe)</li>
+                            <li>Strago initial equipment</li>
+                        </ul>
+                    </div>
+                     <div class = "item">
+                        <h3>Green Beret</h3>
+                         <ul>
+                            <li>100% Drop from Satellit (Monster-in-a-box: Imperial Base)</li>
+                            <li>4% Drop from Don</li>
+                            <li>Purchased for 6000 Gil from Thamasa (WoB) - Armor</li>
+                            <li>Purchased for 6000 Gil from Narshe (WoR) - Armor</li>
+                            <li>Purchased for 6000 Gil from Albrook (WoR) - Armor</li>
+                            <li>Purchased for 6000 Gil from Kohlingen (WoR) - Armor</li>
+                            <li>Located in a treasure chest in Serpent Trench Cave</li>
+                            <li>Coliseum bet from Headgear (vs. IronClaw)</li>
+                            <li>Gogo initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Twist Headband</h3>
+                        <ul>
+                            <li>20% Drop from Dadaluma</li>
+                            <li>25% Steal from MtrDrive</li>
+                            <li>Purchased for 2500 Gil from Kohlingen (WoB) - Armor</li>
+                            <li>Purchased for 2500 Gil from Jidoor (WoB) - Armor</li>
+                            <li>Purchased for 2500 Gil from Albrook (WoB) - Armor</li>
+                            <li>Purchased for 2500 Gil from Tzen (WoR) - Armor</li>
+                            <li>Purchased for 2500 Gil from Nikeah (WoR) - Armor</li>
+                            <li>Located in a treasure chest in Coal Mine City Narshe Elder's House, Warehouse</li>
+                            <li>Coliseum bet from Green Beret (vs. MtrDrive)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                         <h3>Gold Hairpin</h3>
+                         <ul>
+                            <li>4% Drop from Lilith</li>
+                            <li>25% Steal from GilTurtl</li>
+                            <li>75% Steal from Kefka</li>
+                            <li>Located in a treasure chest in Ancient Castle</li>
+                            <li>From Event: WOB Narshe Mog Sacrifice</li>
+                        </ul>
+                    </div>
+                     <div class = "item">
+                         <h3>Mystery Veil</h3>
+                        <ul>
+                            <li>Purchased for 8800 Gil from Thamasa (WoB) - Armor</li>
+                            <li>Purchased for 8800 Gil from Thamasa (WoR) - Armor</li>
+                            <li>Purchased for 8800 Gil from Jidoor (WoR) - Armor</li>
+                            <li>Coliseum bet from Priest's Miter (vs. Lamia)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Black Cowl</h3>
+                         <ul>
+                            <li>8% Drop from Covert</li>
+                            <li>Purchased for 12200 Gil from Thamasa (WoR) - Armor</li>
+                            <li>Purchased for 12200 Gil from Jidoor (WoR) - Armor</li>
+                            <li>Purchased for 12200 Gil from Maranda (WoR) - Armor</li>
+                            <li>Coliseum bet from Twist Headband (vs. SandFish)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Oath Veil</h3>
+                         <ul>
+                            <li>25% Steal from Azrael</li>
+                            <li>Purchased for 18000 Gil from Maranda (WoR) - Armor</li>
+                            <li>Coliseum bet from Circlet (vs. Joker)</li>
+                            <li>Coliseum bet from White Dress (vs. Misty)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Djinn's Cap</h3>
+                         <ul>
+                            <li>Purchased for 39500 Gil from Narshe (WoR: After Residents Return) - Armor</li>
+                            <li>Purchased for 39500 Gil from Esper Village - Armor</li>
+                            <li>Located in a treasure chest in Gogo's Cave</li>
+                            <li>Coliseum bet from Ward Bangle (vs. GtMantis)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                         <h3>Cat Hood</h3>
+                         <ul>
+                            <li>4% Drop from Tonberry</li>
+                            <li>Located in a treasure chest in Umaro's Cave</li>
+                            <li>Coliseum bet from Rainbow Brush (vs. Tonberry)</li>
+                            <li>Coliseum bet from Moogle Suit (vs. AlurRide)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                         <h3>Lambent Hat</h3>
+                        <ul>
+                            <li>100% Drop from YlloDrgn</li>
+                            <li>Located in a treasure chest in Forbidden Land Eureka 6.3 Right</li>
+                        </ul>
+                    </div>
+                     <div class = "item">
+                        <h3>Iron Helm</h3>
+                         <ul>
+                            <li>8% Drop from HvyArmor</li>
+                            <li>4% Drop from HvyArmor</li>
+                            <li>25% Steal from Fem.Sold</li>
+                            <li>Purchased for 1800 Gil from Narshe (WoB) - Armor</li>
+                            <li>Purchased for 1800 Gil from Mobliz - Armor</li>
+                            <li>Purchased for 1800 Gil from Nikeah (WoB) - Armor</li>
+                            <li>Purchased for 1800 Gil from Kohlingen (WoB) - Armor</li>
+                            <li>Purchased for 1800 Gil from Vector - Armor</li>
+                            <li>Purchased for 1800 Gil from Maranda (WoB) - Armor</li>
+                            <li>Cyan initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Mythril Helm</h3>
+                        <ul>
+                            <li>Purchased for 3200 Gil from Tzen (WoB) - Armor</li>
+                            <li>Purchased for 3200 Gil from Narshe (WoR) - Armor</li>
+                            <li>Coliseum bet from Iron Helm (vs. Fem.Sold)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                         <h3>Gold Helm</h3>
+                        <ul>
+                            <li>Purchased for 6100 Gil from Thamasa (WoB) - Armor</li>
+                            <li>Purchased for 6100 Gil from Narshe (WoR) - Armor</li>
+                            <li>Purchased for 6100 Gil from Albrook (WoR) - Armor</li>
+                            <li>Purchased for 6100 Gil from Tzen (WoR) - Armor</li>
+                            <li>Purchased for 6100 Gil from Nikeah (WoR) - Armor</li>
+                            <li>Located in a treasure chest in Magitek Factory</li>
+                            <li>Coliseum bet from Mythril Helm (vs. ProtoAmr)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Diamond Helm</h3>
+                        <ul>
+                            <li>8% Drop from Dante</li>
+                            <li>4% Drop from PlatDrgn</li>
+                            <li>Purchased for 7250 Gil from South Figaro (WoR) - Armor (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 14500 Gil from Kohlingen (WoR) - Armor</li>
+                            <li>Purchased for 14500 Gil from Maranda (WoR) - Armor</li>
+                            <li>Located in a treasure chest in Figaro Castle B3</li>
+                            <li>Located in a treasure chest in Imperial Observation Post Treasure Room</li>
+                            <li>Coliseum bet from Gold Helm (vs. Apocryph)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                         <h3>Circlet</h3>
+                        <ul>
+                            <li>4% Drop from Punisher</li>
+                            <li>Purchased for 13500 Gil from Thamasa (WoR) - Armor</li>
+                            <li>Purchased for 13500 Gil from Jidoor (WoR) - Armor</li>
+                            <li>Located in a treasure chest in Daryl's Tomb Basement 2F</li>
+                            <li>Located in a treasure chest in Imperial Observation Post Treasure Room</li>
+                            <li>Coliseum bet from Dragoon Boots (vs. LunarWlf)</li>
+                        </ul>
+                    </div>
+                     <div class = "item">
+                        <h3>Crystal Helm</h3>
+                         <ul>
+                            <li>4% Drop from OniDashr</li>
+                            <li>25% Steal from OniDashr</li>
+                            <li>Purchased for 23000 Gil from Narshe (WoR: Before Residents Return) - Armor</li>
+                            <li>Purchased for 23000 Gil from Narshe (WoR: After Residents Return) - Armor</li>
+                            <li>Located in a treasure chest in Daryl's Tomb Basement 2F</li>
+                            <li>Coliseum bet from Crystal Shield (vs. Wild Cat)</li>
+                            <li>Coliseum bet from Diamond Helm (vs. Vampires)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                         <h3>Royal Crown</h3>
+                        <ul>
+                            <li>Located in a treasure chest in Figaro Castle B2 Small Room</li>
+                            <li>Located in a treasure chest in Kefka's Tower Area</li>
+                            <li>Coliseum bet from Durandal (vs. Alv)</li>
+                        </ul>
+                    </div>
+                     <div class = "item">
+                         <h3>Genji Helm</h3>
+                        <ul>
+                            <li>Located in a treasure chest in Lost Road Entrance</li>
+                            <li>Coliseum bet from Genji Shield (vs. GrtMalbo)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Grand Helm</h3>
+                        <ul><li>100% Drop from Ahriman</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Barrette</h3>
+                        <ul>
+                            <li>4% Drop from LamiaQen</li>
+                            <li>Purchased for 12000 Gil from Esper Village - Armor</li>
+                            <li>Located in a treasure chest in South Figaro B2F</li>
+                            <li>Coliseum bet from Cachusha (vs. Maiden)</li>
+                            <li>From Event: WOR Zozo Bar Quest</li>
+                        </ul>
+                    </div>
+                     <div class = "item">
+                         <h3>Cachusha</h3>
+                         <ul>
+                            <li>4% Drop from UndCheru</li>
+                            <li>Purchased for 14000 Gil from Esper Village - Armor</li>
+                            <li>Located in a treasure chest in South Figaro Cave (Figaro Castle Entrance)</li>
+                            <li>Located in a treasure chest in Returner's Hideout Basement 1F</li>
+                            <li>Located in a treasure chest in Crystal Tower 1</li>
+                            <li>Coliseum bet from Barrette (vs. UndCheru)</li>
+                            <li>From Event: WOR Zozo Bar Quest</li>
+                            <li>From Event: WOB Kohlingen Bar Quest</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                         <h3>Ribbon</h3>
+                        <ul>
+                            <li>Located in a treasure chest in Forbidden Land Eureka 2</li>
+                            <li>From Event: WOR Zozo Bar Quest</li>
+                            <li>From Event: WOR South Figaro Bar Quest</li>
+                            <li>From Event: WOB Imperial Banquet Perfect Score</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+             <section id = "body-armor" class = "item-section">
+                <h3>Body Armor</h3>
+                <div class = "item-list">
+                    <div class="item">
+                        <h3>Cotton Robe</h3>
+                        <ul>
+                            <li>4% Drop from SteelBat</li>
+                            <li>Purchased for 450 Gil from South Figaro (WoB) - Armor</li>
+                         </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Kenpo Gi</h3>
+                         <ul>
+                            <li>Purchased for 510 Gil from South Figaro (WoB) - Armor</li>
+                            <li>Purchased for 510 Gil from Mobliz - Armor</li>
+                            <li>Purchased for 510 Gil from Nikeah (WoB) - Armor</li>
+                            <li>Sabin initial equipment</li>
+                            <li>Gau initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Mythril Plate</h3>
+                         <ul>
+                            <li>100% Steal from HellRidr</li>
+                            <li>25% Steal from Sergeant</li>
+                            <li>Purchased for 2400 Gil from Jidoor (WoB) - Armor</li>
+                            <li>Purchased for 2400 Gil from Tzen (WoB) - Armor</li>
+                            <li>Purchased for 2400 Gil from Maranda (WoB) - Armor</li>
+                            <li>Purchased for 2400 Gil from Narshe (WoR) - Armor</li>
+                            <li>Coliseum bet from Kenpo Gi (vs. Al Jabr)</li>
+                            <li>Setzer initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Ninja Gear</h3>
+                        <ul>
+                            <li>4% Drop from Bomb</li>
+                            <li>Purchased for 2300 Gil from Jidoor (WoB) - Armor</li>
+                            <li>Purchased for 2300 Gil from Albrook (WoB) - Armor</li>
+                            <li>Coliseum bet from Mythril Plate (vs. StrayCat)</li>
+                            <li>Shadow initial equipment</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>White Dress</h3>
+                         <ul>
+                            <li>Purchased for 4500 Gil from Jidoor (WoB) - Armor</li>
+                            <li>Coliseum bet from Mystery Veil (vs. Fawn)</li>
+                            <li>Coliseum bet from White Cape (vs. NeckHntr)</li>
+                            <li>Relm initial equipment</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Gaia Gear</h3>
+                         <ul>
+                            <li>4% Drop from Mindflyr</li>
+                            <li>25% Steal from Ankheg</li>
+                            <li>25% Steal from Oceanus</li>
+                            <li>Purchased for 10000 Gil from Thamasa (WoB) - Armor</li>
+                            <li>Purchased for 10000 Gil from Thamasa (WoR) - Armor</li>
+                            <li>Located in a treasure chest in Esper Cave</li>
+                            <li>Strago initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Moogle Suit</h3>
+                        <ul>
+                            <li>25% Steal from Misty</li>
+                            <li>25% Steal from Kum Kum</li>
+                            <li>Purchased for 28000 Gil from Narshe (WoR: After Residents Return) - Armor</li>
+                            <li>Coliseum bet from Cat Hood (vs. Lukhavi)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Power Sash</h3>
+                        <ul>
+                            <li>Purchased for 8500 Gil from Thamasa (WoB) - Armor</li>
+                            <li>Purchased for 8500 Gil from Narshe (WoR) - Armor</li>
+                            <li>Purchased for 8500 Gil from Tzen (WoR) - Armor</li>
+                            <li>Purchased for 8500 Gil from Nikeah (WoR) - Armor</li>
+                            <li>Purchased for 8500 Gil from Kohlingen (WoR) - Armor</li>
+                            <li>Coliseum bet from Ninja Gear (vs. Gorgimer)</li>
+                            <li>Gogo initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Black Garb</h3>
+                         <ul>
+                            <li>8% Drop from Apanda</li>
+                            <li>25% Steal from CloudWth</li>
+                            <li>Purchased for 25000 Gil from Jidoor (WoR) - Armor</li>
+                            <li>Purchased for 25000 Gil from Maranda (WoR) - Armor</li>
+                            <li>Located in a treasure chest in Gogo's Cave</li>
+                            <li>Located in a treasure chest in Daryl's Tomb Basement 2F</li>
+                            <li>Coliseum bet from Black Cowl (vs. Carrot)</li>
+                            <li>Coliseum bet from Power Sash (vs. B. Lamia)</li>
+                            <li>From Event: WOR Nikeah Bar Quest</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Magus Robe</h3>
+                        <ul>
+                            <li>Purchased for 19000 Gil from Thamasa (WoR) - Armor</li>
+                            <li>Located in a treasure chest in Mt. Zozo</li>
+                            <li>Coliseum bet from Oath Veil (vs. MagiDrgn)</li>
+                            <li>Coliseum bet from Cotton Robe (vs. Shade)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>White Robe</h3>
+                         <ul>
+                            <li>100% Drop from Proserpi (Monster-in-a-box: Phoenix's Cave Deepest Area)</li>
+                            <li>4% Drop from Maiden</li>
+                            <li>25% Steal from SeraphCl</li>
+                            <li>Purchased for 50000 Gil from Esper Village - Armor</li>
+                            <li>Coliseum bet from Black Robe (vs. Vilia)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Black Robe</h3>
+                         <ul>
+                            <li>100% Drop from DthRider (Monster-in-a-box: Gogo's Cave)</li>
+                            <li>4% Drop from BlkForce</li>
+                            <li>Purchased for 50000 Gil from Esper Village - Armor</li>
+                            <li>Coliseum bet from White Robe (vs. BlkForce)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Mirage Vest</h3>
+                        <ul>
+                            <li>75% Steal from MistDrgn</li>
+                            <li>25% Steal from MistDrgn</li>
+                            <li>Purchased for 48000 Gil from Eureka - Armor</li>
+                            <li>Coliseum bet from Minerva Bustier (vs. CrysDrgn)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Minerva Bustier</h3>
+                        <ul>
+                            <li>8% Drop from Tonberri (Monster-in-a-box: Umaro's Cave)</li>
+                            <li>8% Drop from Marilith</li>
+                            <li>Purchased for 46000 Gil from Eureka - Armor</li>
+                            <li>Located in a treasure chest in Kefka's Tower First Cave</li>
+                            <li>Coliseum bet from Mirage Vest (vs. Alchymia)</li>
+                            <li>Coliseum bet from Floral Fallal (vs. Vivian)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Pheasant Netsuke</h3>
+                        <ul>
+                            <li>Located in a treasure chest in Matoya's Cave</li>
+                            <li>Coliseum bet from Heiji's Jitte (vs. Haniel)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Rubber Suit</h3>
+                         <ul>
+                            <li>100% Drop from ErthDrgn</li>
+                            <li>8% Drop from Lich</li>
+                            <li>Located in a treasure chest in Forbidden Land Eureka 4.3 Left</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Snow Scarf</h3>
+                        <ul>
+                            <li>4% Drop from GrndBehe</li>
+                            <li>Located in a treasure chest in Kefka's Tower Area</li>
+                            <li>Coliseum bet from Behemoth Suit (vs. Thor)</li>
+                            <li>From Event: WOR Narshe Bar Quest</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Behemoth Suit</h3>
+                        <ul>
+                            <li>100% Drop from KingBehe</li>
+                            <li>4% Drop from DarkBehe</li>
+                            <li>Coliseum bet from Tiger Fang (vs. DarkBehe)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Leather Armor</h3>
+                         <ul>
+                            <li>Terra initial equipment</li>
+                            <li>Locke initial equipment</li>
+                            <li>Edgar initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Iron Armor</h3>
+                         <ul>
+                            <li>25% Steal from HvyArmor</li>
+                            <li>Purchased for 1300 Gil from Narshe (WoB) - Armor</li>
+                            <li>Purchased for 1300 Gil from Mobliz - Armor</li>
+                            <li>Purchased for 1300 Gil from Nikeah (WoB) - Armor</li>
+                            <li>Purchased for 1300 Gil from Kohlingen (WoB) - Armor</li>
+                            <li>Purchased for 1300 Gil from Vector - Armor</li>
+                            <li>Purchased for 1300 Gil from Maranda (WoB) - Armor</li>
+                            <li>Located in a treasure chest in South Figaro Basement Passage</li>
+                            <li>Coliseum bet from Leather Armor (vs. Dstroide)</li>
+                            <li>Cyan initial equipment</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Mythril Armor</h3>
+                         <ul>
+                            <li>25% Steal from ProtoAmr</li>
+                            <li>Purchased for 5400 Gil from Tzen (WoB) - Armor</li>
+                            <li>Purchased for 5400 Gil from Narshe (WoR) - Armor</li>
+                            <li>Coliseum bet from Iron Armor (vs. HilGigas)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Gold Armor</h3>
+                         <ul>
+                            <li>8% Drop from Chimera</li>
+                            <li>8% Drop from ImpElite</li>
+                            <li>Purchased for 18000 Gil from Thamasa (WoB) - Armor</li>
+                            <li>Purchased for 18000 Gil from Albrook (WoR) - Armor</li>
+                            <li>Purchased for 18000 Gil from Tzen (WoR) - Armor</li>
+                            <li>Purchased for 18000 Gil from Nikeah (WoR) - Armor</li>
+                            <li>Located in a treasure chest in Magitek Factory</li>
+                            <li>Coliseum bet from Mythril Armor (vs. Chaser)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Diamond Armor</h3>
+                         <ul>
+                            <li>Purchased for 15000 Gil from South Figaro (WoR) - Armor (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 30000 Gil from Kohlingen (WoR) - Armor</li>
+                            <li>Purchased for 30000 Gil from Maranda (WoR) - Armor</li>
+                            <li>Located in a treasure chest in Doma Castle 1F-6</li>
+                            <li>Located in a treasure chest in Floating Continent</li>
+                            <li>Coliseum bet from Gold Armor (vs. Behemoth)</li>
+                            <li>Coliseum bet from Gigas Glove (vs. Revnant)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Crystal Mail</h3>
+                         <ul>
+                            <li>4% Drop from FlameDog</li>
+                            <li>8% Drop from Sprinter</li>
+                            <li>8% Drop from MtlHitmn</li>
+                            <li>25% Steal from FendDrgn</li>
+                            <li>Purchased for 32000 Gil from Narshe (WoR: Before Residents Return) - Armor</li>
+                            <li>Purchased for 32000 Gil from Narshe (WoR: After Residents Return) - Armor</li>
+                            <li>Located in a treasure chest in Mt. Zozo</li>
+                            <li>Coliseum bet from Crystal Helm (vs. Mahadeva)</li>
+                            <li>Coliseum bet from Diamond Armor (vs. Sorath)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Reflect Mail</h3>
+                         <ul>
+                            <li>4% Drop from IrnGiant</li>
+                            <li>Purchased for 36500 Gil from Narshe (WoR: After Residents Return) - Armor</li>
+                            <li>Located in a treasure chest in Phoenix's Cave Deepest Area</li>
+                            <li>Coliseum bet from Crystal Mail (vs. DuelArmr)</li>
+                            <li>Coliseum bet from Reflect Ring (vs. MtlHitmn)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Force Armor</h3>
+                        <ul>
+                            <li>100% Drop from StrmDrgn</li>
+                            <li>Purchased for 46000 Gil from Eureka - Armor</li>
+                            <li>Located in a treasure chest in Fanatic's Tower Small Room</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                         <h3>Genji Armor</h3>
+                        <ul>
+                            <li>Purchased for 47500 Gil from Eureka - Armor</li>
+                            <li>Located in a treasure chest in Lost Road</li>
+                            <li>Coliseum bet from Genji Helm (vs. SkullEtr)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Maximillian</h3>
+                         <ul><li>100% Drop from 2HedDrgn</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Lordly Robes</h3>
+                        <ul><li>100% Drop from Echidna</li></ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Zeidrich</h3>
+                        <ul>
+                            <li>100% drop from formation #688 (LeoRebrn)</li>
+                            <li>100% drop from formation #691 (LeoRebrn)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+        </section>
+
+        <section id="relics" class="item-section">
+            <h2>Relics</h2>
+            <div class = "item-list">
+                <div class="item">
+                    <h3>Silver Spectacles</h3>
+                    <ul>
+                        <li>25% Steal from Harveste</li>
+                        <li>Purchased for 1300 Gil from Narshe (WoB) - Relics</li>
+                        <li>Purchased for 1300 Gil from South Figaro (WoB) - Relics</li>
+                        <li>Purchased for 1300 Gil from Nikeah (WoR) - Relics</li>
+                        <li>Purchased for 650 Gil from South Figaro (WoR) - Relics (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                        <li>Located in a treasure chest in Dream/Phantom Train Guest Room Train Car #1</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>White Cape</h3>
+                    <ul>
+                        <li>4% Drop from Illuyank</li>
+                        <li>25% Steal from Fawn</li>
+                        <li>25% Steal from Ultros</li>
+                        <li>Purchased for 8000 Gil from Mobliz - Relics</li>
+                        <li>Purchased for 8000 Gil from Nikeah (WoB) - Relics</li>
+                        <li>Purchased for 8000 Gil from Nikeah (WoR) - Relics</li>
+                        <li>Located in a treasure chest in Returner's Hideout Basement 1F Banon's Room</li>
+                        <li>Coliseum bet from Silver Spectacles (vs. Mandrago)</li>
+                        <li>Coliseum bet from Antidote (vs. Bld.Fang)</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>Jeweled Ring</h3>
+                    <ul>
+                        <li>25% Steal from Devil</li>
+                        <li>Purchased for 2000 Gil from Mobliz - Relics</li>
+                        <li>Purchased for 2000 Gil from Thamasa (WoB) - Relics</li>
+                        <li>Purchased for 2000 Gil from Albrook (WoR) - Relics</li>
+                        <li>Purchased for 2000 Gil from Nikeah (WoR) - Relics</li>
+                        <li>Located in a treasure chest in South Figaro Area (WoB)</li>
+                        <li>Coliseum bet from Protect Ring (vs. Bonnacon)</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>Protect Ring</h3>
+                     <ul>
+                        <li>8% Drop from Thor</li>
+                        <li>25% Steal from FlameDog</li>
+                        <li>Purchased for 25000 Gil from Jidoor (WoR) - Relics</li>
+                        <li>Purchased for 25000 Gil from Esper Village - Relics</li>
+                        <li>Purchased for 25000 Gil from Eureka - Relics</li>
+                        <li>Located in a treasure chest in Coal Mine City Narshe Elder's House, Warehouse</li>
+                        <li>Located in a treasure chest in Gogo's Cave</li>
+                        <li>Located in a treasure chest in Imperial Observation Post Treasure Room</li>
+                        <li>Coliseum bet from Earrings (vs. DsrtSaha)</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>Hermes Sandals</h3>
+                     <ul>
+                        <li>Purchased for 45000 Gil from Narshe (WoR: After Residents Return) - Relics</li>
+                        <li>Purchased for 45000 Gil from Esper Village - Relics</li>
+                        <li>Purchased for 45000 Gil from Eureka - Relics</li>
+                        <li>Located in a treasure chest in Returner's Hideout Basement 1F</li>
+                        <li>Located in a treasure chest in Kefka's Tower Area</li>
+                        <li>Located in a treasure chest in Labrynth of the Ancients 3</li>
+                        <li>From Event: WOR South Figaro Bar Quest</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>Reflect Ring</h3>
+                    <ul>
+                        <li>25% Steal from Wrexsoul</li>
+                        <li>25% Steal from Carbuncl</li>
+                        <li>Purchased for 40000 Gil from Thamasa (WoR) - Relics</li>
+                        <li>Purchased for 40000 Gil from Jidoor (WoR) - Relics</li>
+                        <li>Purchased for 40000 Gil from Narshe (WoR: After Residents Return) - Relics</li>
+                        <li>Purchased for 40000 Gil from Esper Village - Relics</li>
+                        <li>Purchased for 40000 Gil from Eureka - Relics</li>
+                        <li>Located in a treasure chest in Narshe Coal Mine (WoR)</li>
+                        <li>Located in a treasure chest in Kefka's Tower Inferno's Room (Bottom)</li>
+                        <li>Located in a treasure chest in Crystal Tower 4</li>
+                        <li>Coliseum bet from Reflect Mail (vs. Deep One)</li>
+                        <li>Coliseum bet from Peace Ring (vs. Hecto)</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                     <h3>Winged Boots</h3>
+                    <ul>
+                        <li>25% Steal from Seraphim</li>
+                        <li>Purchased for 20000 Gil from Thamasa (WoR) - Relics</li>
+                        <li>Purchased for 20000 Gil from Esper Village - Relics</li>
+                        <li>Located in a treasure chest in Sealed Cave Cave</li>
+                        <li>Located in a treasure chest in Crystal Tower 4</li>
+                        <li>From Event: Jidoor Auction House</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Gyshal Potpourri</h3>
+                     <ul>
+                        <li>Purchased for 4800 Gil from Nikeah (WoB) - Relics</li>
+                        <li>Purchased for 4800 Gil from Tzen (WoB) - Relics</li>
+                        <li>Purchased for 4800 Gil from Narshe (WoR) - Relics</li>
+                        <li>Purchased for 4800 Gil from Tzen (WoR) - Relics</li>
+                        <li>Located in a treasure chest in Phoenix's Cave Deepest Area</li>
+                        <li>Located in a treasure chest in Imperial Observation Post Treasure Room</li>
+                        <li>Coliseum bet from Amulet (vs. CloudWth)</li>
+                        <li>Coliseum bet from Holy Water (vs. LitworCh)</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Knight's Code</h3>
+                     <ul>
+                        <li>Purchased for 3500 Gil from Narshe (WoB) - Relics</li>
+                        <li>Purchased for 3500 Gil from South Figaro (WoB) - Relics</li>
+                        <li>Purchased for 3500 Gil from Mobliz - Relics</li>
+                        <li>Purchased for 3500 Gil from Jidoor (WoB) - Relics</li>
+                        <li>Purchased for 3500 Gil from Albrook (WoB) - Relics</li>
+                        <li>Purchased for 3500 Gil from Albrook (WoR) - Relics</li>
+                        <li>Located in a treasure chest in Returner's Hideout Basement 1F Banon's Room</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Dragoon Boots</h3>
+                     <ul>
+                        <li>4% Drop from Harveste</li>
+                        <li>4% Drop from Wyvern</li>
+                        <li>4% Drop from Aeronite</li>
+                        <li>25% Steal from Wyvern</li>
+                        <li>25% Steal from PlatDrgn</li>
+                        <li>Purchased for 16500 Gil from Narshe (WoR) - Relics</li>
+                        <li>Purchased for 16500 Gil from Tzen (WoR) - Relics</li>
+                        <li>Located in a treasure chest in Figaro Castle B3</li>
+                        <li>Located in a treasure chest in Crystal Tower 5</li>
+                        <li>Coliseum bet from Dragon Spear (vs. Aeronite)</li>
+                    </ul>
+                </div>
+                <div class = "item">
+                     <h3>Zephyr Cloak</h3>
+                    <ul>
+                        <li>8% Drop from Tiamat</li>
+                        <li>Purchased for 25000 Gil from Thamasa (WoR) - Relics</li>
+                        <li>Located in a treasure chest in Magitek Factory</li>
+                        <li>Located in a treasure chest in Gogo's Cave</li>
+                        <li>Coliseum bet from Winged Boots (vs. Minity)</li>
+                    </ul>
+                </div>
+                <div class = "item">
+                    <h3>Earrings</h3>
+                    <ul>
+                        <li>25% Steal from Brainpan</li>
+                        <li>25% Steal from DesrtTrp</li>
+                        <li>Purchased for 8000 Gil from Jidoor (WoB) - Relics</li>
+                                                <li>Purchased for 8000 Gil from Narshe (WoR) - Relics</li>
+                        <li>Purchased for 8000 Gil from Thamasa (WoB) - Relics</li>
+                        <li>Purchased for 8000 Gil from Albrook (WoR) - Relics</li>
+                        <li>Purchased for 8000 Gil from Thamasa (WoR) - Relics</li>
+                        <li>Located in a treasure chest in South Figaro Basement Passage</li>
+                        <li>Located in a treasure chest in Phantom Train Train Car #4</li>
+                        <li>Located in a treasure chest in South Figaro Cave Monster Extermination Sidequest</li>
+                        <li>Coliseum bet from Star Pendant (vs. ChipRabb)</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>Gigas Glove</h3>
+                     <ul>
+                        <li>4% Drop from HilGigas</li>
+                        <li>25% Steal from GlasyaLa</li>
+                        <li>Purchased for 12000 Gil from Albrook (WoR) - Relics</li>
+                        <li>Located in a treasure chest in Mt. Koltz Cave</li>
+                        <li>Located in a treasure chest in Dragon's Neck Coliseum Indoors</li>
+                        <li>Coliseum bet from Hyper Wrist (vs. Lycaon)</li>
+                        <li>Umaro initial equipment</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                     <h3>Thief's Bracer</h3>
+                    <ul>
+                        <li>25% Steal from Mugbear</li>
+                        <li>25% Steal from Dadaluma</li>
+                        <li>Purchased for 20000 Gil from Albrook (WoB) - Relics</li>
+                        <li>Purchased for 20000 Gil from Tzen (WoR) - Relics</li>
+                        <li>Purchased for 10000 Gil from Developer's Room - Vendor (Prices x0.5)</li>
+                        <li>Purchased for 20000 Gil from Eureka - Relics</li>
+                        <li>Located in a treasure chest in Coal Mine City Narshe Elder's House, Warehouse</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                     <h3>Mjolnir</h3>
+                    <ul><li>Located in a treasure chest in Forbidden Land Eureka 4.3 Left</li></ul>
+                </div>
+                 <div class="item">
+                     <h3>Thief Gloves</h3>
+                    <ul>
+                        <li>25% Steal from DevilFst</li>
+                        <li>25% Steal from Typhon</li>
+                        <li>Purchased for 18200 Gil from Albrook (WoB) - Relics</li>
+                        <li>Purchased for 18200 Gil from Jidoor (WoR) - Relics</li>
+                        <li>Purchased for 9100 Gil from Developer's Room - Vendor (Prices x0.5)</li>
+                        <li>Located in a treasure chest in Zozo Indoors General</li>
+                        <li>Coliseum bet from Thief's Bracer (vs. Mugbear)</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>Gauntlet</h3>
+                    <ul>
+                        <li>25% Steal from Behemoth</li>
+                        <li>Purchased for 15000 Gil from Eureka - Relics</li>
+                        <li>Located in a treasure chest in Sealed Cave Cave</li>
+                        <li>Coliseum bet from Genji Glove (vs. VectorLy)</li>
+                        <li>From Event: WOB Returner's Hideout, Banon Yes</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                     <h3>Genji Glove</h3>
+                     <ul>
+                        <li>100% Steal from Gilgames</li>
+                        <li>Purchased for 49000 Gil from Eureka - Relics</li>
+                        <li>Located in a treasure chest in Labrynth of the Ancients 2</li>
+                        <li>Coliseum bet from Gauntlet (vs. Azrael)</li>
+                        <li>From Event: WOB Returner's Hideout, Banon 3xNo</li>
+                    </ul>
+                </div>
+                <div class="item">
+                     <h3>Hyper Wrist</h3>
+                     <ul>
+                        <li>100% Drop from Appariti (Monster-in-a-box: Dream/Phantom Train Guest Room Train Car #1)</li>
+                        <li>25% Steal from Chimera</li>
+                        <li>25% Steal from DemonKht</li>
+                        <li>Purchased for 16000 Gil from Nikeah (WoR) - Relics</li>
+                        <li>Located in a treasure chest in South Figaro B2F</li>
+                        <li>Located in a treasure chest in Collapsing House</li>
+                        <li>Coliseum bet from Knight's Code (vs. Oceanus)</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Heiji's Jitte</h3>
+                    <ul>
+                        <li>Located in a treasure chest in Sealed Cave Cave</li>
+                        <li>Coliseum bet from Gale Hairpin (vs. Schmidt)</li>
+                    </ul>
+                </div>
+                <div class="item">
+                   <h3>Merit Award</h3>
+                   <ul>
+                        <li>25% Steal from Odin</li>
+                        <li>From Event: WOR Nikeah Bar Quest</li>
+                    </ul>
+                </div>
+                <div class="item">
+                   <h3>Memento Ring</h3>
+                   <ul>
+                        <li>Relm initial equipment</li>
+                        <li>From Event: WOR Thamasa Event with Strago and Relm</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Molulu's Charm</h3>
+                   <ul><li>From Event: WOR Talk to Molulu with Mog and Umaro</li></ul>
+                </div>
+                <div class="item">
+                    <h3>Ward Bangle</h3>
+                    <ul>
+                        <li>25% Steal from Ochiudo</li>
+                        <li>Purchased for 16800 Gil from Narshe (WoR: Before Residents Return) - Relics</li>
+                        <li>Purchased for 16800 Gil from Narshe (WoR: After Residents Return) - Relics</li>
+                        <li>Coliseum bet from Djinn's Cap (vs. Soulflyr)</li>
+                        <li>Coliseum bet from Hermes Sandals (vs. LeapFrog)</li>
+                        <li>From Event: WOB Imperial Banquet High Score</li>
+                    </ul>
+                </div>
+                <div class = "item">
+                    <h3>Alarm Earring</h3>
+                     <ul>
+                        <li>25% Steal from Misfit</li>
+                        <li>Purchased for 10000 Gil from Tzen (WoR) - Relics</li>
+                        <li>Located in a treasure chest in Imperial Castle</li>
+                        <li>Located in a treasure chest in Imperial Observation Post Treasure Room</li>
+                    </ul>
+                </div>
+                <div class = "item">
+                    <h3>Gale Hairpin</h3>
+                     <ul>
+                        <li>Purchased for 12000 Gil from Jidoor (WoR) - Relics</li>
+                        <li>Located in a treasure chest in Imperial Castle</li>
+                        <li>Coliseum bet from Pheasant Netsuke (vs. Ochiudo)</li>
+                        <li>Coliseum bet from Zephyr Cloak (vs. Sprinter)</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>Sniper Eye</h3>
+                    <ul>
+                        <li>Purchased for 8200 Gil from Jidoor (WoB) - Relics</li>
+                        <li>Purchased for 8200 Gil from Tzen (WoB) - Relics</li>
+                        <li>Purchased for 8200 Gil from Albrook (WoR) - Relics</li>
+                        <li>Located in a treasure chest in Dream/Phantom Train Guest Room Train Car #1</li>
+                        <li>Coliseum bet from Alarm Earring (vs. Aepyorni)</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Star Pendant</h3>
+                     <ul>
+                        <li>4% Drop from Mandrago</li>
+                        <li>Purchased for 1200 Gil from Narshe (WoB) - Relics</li>
+                        <li>Purchased for 1200 Gil from South Figaro (WoB) - Relics</li>
+                        <li>Purchased for 1200 Gil from Nikeah (WoB) - Relics</li>
+                        <li>Purchased for 600 Gil from South Figaro (WoR) - Relics (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                        <li>Located in a treasure chest in South Figaro B2F</li>
+                        <li>Coliseum bet from Gyshal Potpourri (vs. Belmodar)</li>
+                    </ul>
+                </div>
+                <div class="item">
+                     <h3>Amulet</h3>
+                    <ul>
+                        <li>8% Drop from CloudWth</li>
+                        <li>Purchased for 9500 Gil from Nikeah (WoB) - Relics</li>
+                        <li>Purchased for 9500 Gil from Nikeah (WoR) - Relics</li>
+                        <li>Located in a treasure chest in Sealed Cave Cave</li>
+                        <li>Coliseum bet from Lunar Curtain (vs. Necroman)</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Tynar Rouge</h3>
+                    <ul>
+                        <li>Purchased for 47000 Gil from Eureka - Relics</li>
+                        <li>From Event: WOR Cid Event with Celes and Locke</li>
+                    </ul>
+                </div>
+                <div class = "item">
+                    <h3>Lunar Curtain</h3>
+                    <ul>
+                        <li>8% Drop from MoonGodd</li>
+                        <li>4% Drop from MoonGodd</li>
+                        <li>25% Steal from Apocryph</li>
+                        <li>Purchased for 13000 Gil from Thamasa (WoR) - Relics</li>
+                        <li>Coliseum bet from Remedy (vs. Malboro)</li>
+                        <li>From Event: Jidoor Auction House</li>
+                        <li>From Event: WOB Mobliz Letters Quest</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Peace Ring</h3>
+                    <ul>
+                        <li>100% Drop from Kefka</li>
+                        <li>Purchased for 6500 Gil from Jidoor (WoB) - Relics</li>
+                        <li>Purchased for 6500 Gil from Tzen (WoB) - Relics</li>
+                        <li>Purchased for 6500 Gil from Thamasa (WoB) - Relics</li>
+                        <li>Purchased for 6500 Gil from Tzen (WoR) - Relics</li>
+                        <li>Purchased for 3250 Gil from South Figaro (WoR) - Relics (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                        <li>Coliseum bet from Jeweled Ring (vs. DiveEagl)</li>
+                    </ul>
+                </div>
+                <div class="item">
+                     <h3>Power Belt</h3>
+                    <ul>
+                        <li>4% Drop from Valefor</li>
+                        <li>Located in a treasure chest in Ancient Castle</li>
+                        <li>Coliseum bet from Snow Scarf (vs. Tonber.M)</li>
+                    </ul>
+                </div>
+                <div class="item">
+                     <h3>Berserker Ring</h3>
+                    <ul>
+                        <li>4% Drop from OldDrago</li>
+                        <li>From Event: WOR Umaro's Cave after Deathgaze</li>
+                    </ul>
+                </div>
+                <div class = "item">
+                     <h3>Floral Fallal</h3>
+                    <ul>
+                        <li>25% Steal from Diabolos</li>
+                        <li>Purchased for 42500 Gil from Esper Village - Relics</li>
+                        <li>From Event: WOR Owzer after Deathgaze</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Omega Weapon</h3>
+                    <ul><li>From Event: WOR Narshe Weapon Shop after 3 Superbosses</li></ul>
+                </div>
+                <div class = "item">
+                   <h3>Hero's Ring</h3>
+                    <ul>
+                        <li>Located in a treasure chest in Owzer's Mansion</li>
+                        <li>Located in a treasure chest in South Figaro Cave Monster Extermination Sidequest</li>
+                        <li>100% drop from formation #451 (Nelapa)</li>
+                    </ul>
+                </div>
+                <div class="item">
+                     <h3>Guard Bracelet</h3>
+                    <ul>
+                        <li>Located in a treasure chest in Labrynth of the Ancients 3</li>
+                        <li>100% drop from formation #290 (StllLife)</li>
+                        <li>100% drop from formation #698 (Asura)</li>
+                        <li>100% drop from formation #699 (Asura)</li>
+                        <li>100% drop from formation #722 (Asura)</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Dead Soul</h3>
+                    <ul>
+                        <li>Located in a treasure chest in Lost Road</li>
+                        <li>100% drop from formation #570 (2x Erebus, Hidon, 2x Nyx)</li>
+                    </ul>
+                </div>
+                <div class = "item">
+                   <h3>Prayer Beads</h3>
+                    <ul><li>100% drop from formation #354 (Samurai)</li></ul>
+                </div>
+                <div class = "item">
+                    <h3>Black Belt</h3>
+                    <ul><li>100% drop from formation #409 (Captain)</li></ul>
+                </div>
+                <div class = "item">
+                   <h3>Dragon Horn</h3>
+                    <ul><li>100% drop from formation #687 (LastWyrm)</li></ul>
+                </div>
+                 <div class="item">
+                    <h3>Celestriad</h3>
+                    <ul><li>Located in a treasure chest in Lost Road</li></ul>
+                </div>
+                <div class="item">
+                    <h3>Master's Scroll</h3>
+                    <ul>
+                        <li>100% drop from formation #571 (Sam.Soul)</li>
+                        <li>100% drop from formation #624 (Nightmar)</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>Bacchus's Bracer</h3>
+                    <ul><li>Located in a treasure chest in Gogo's Cave</li></ul>
+                </div>
+                <div class="item">
+                     <h3>Safety Bit</h3>
+                    <ul>
+                        <li>Located in a treasure chest in Forbidden Land Eureka 4.3 Left</li>
+                        <li>Located in a treasure chest in Mirage Tower</li>
+                        <li>100% drop from formation #525 (HolyDrgn)</li>
+                    </ul>
+                </div>
+                <div class = "item">
+                    <h3>Mime's Dictionary</h3>
+                    <ul><li>Located in a treasure chest in WoR Narshe Bar Treasure Room</li></ul>
+                </div>
+                <div class = "item">
+                     <h3>Bracer</h3>
+                     <ul><li>100% drop from formation #667 (Cerberus)</li></ul>
+                </div>
+                 <div class="item">
+                     <h3>Tetra Elemental</h3>
+                     <ul>
+                        <li>Located in a treasure chest in Lost Road</li>
+                        <li>Located in a treasure chest in Crystal Tower 1</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Embroidered Tippet</h3>
+                     <ul><li>100% drop from formation #648 (Alv, Vilia)</li></ul>
+                </div>
+                <div class = "item">
+                    <h3>Soul of Thamasa</h3>
+                     <ul><li>Located in a treasure chest in Fanatic's Tower Top Floor Small Room</li></ul>
+                </div>
+                <div class = "item">
+                    <h3>Flame Cape</h3>
+                    <ul><li>100% drop from formation #682 (2x Rubicant)</li></ul>
+                </div>
+                <div class = "item">
+                    <h3>Wind Corsage</h3>
+                    <ul><li>100% drop from formation #680 (2x Barbaric)</li></ul>
+                </div>
+                <div class = "item">
+                    <h3>Earth Greaves</h3>
+                    <ul><li>100% drop from formation #677 (2x Scarmili)</li></ul>
+                </div>
+                <div class = "item">
+                     <h3>Water Cuffs</h3>
+                    <ul><li>100% drop from formation #678 (2x Cagnazzo)</li></ul>
+                </div>
+                <div class = "item">
+                    <h3>Maiden's Prayer</h3>
+                     <ul><li>Located in a treasure chest in Ancient Castle</li></ul>
+                </div>
+                <div class = "item">
+                    <h3>Imp's Feelings</h3>
+                     <ul>
+                        <li>Located in a treasure chest in Matoya's Room</li>
+                        <li>Located in a treasure chest in Undersea Cave</li>
+                        <li>Located in a treasure chest in Lost Road Entrance</li>
+                    </ul>
+                </div>
+                 <div class="item">
+                    <h3>Piggy's Badge</h3>
+                    <ul><li>Located in a treasure chest in Developer's Room Esper Village Room</li></ul>
+                </div>
+                 <div class="item">
+                    <h3>Experience Egg</h3>
+                    <ul>
+                        <li>Located in a treasure chest in Mirage Tower</li>
+                        <li>100% drop from formation #696 (Kefka)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="items" class="item-section">
+            <h2>Items</h2>
+             <section id="recovery-items" class="item-section">
+                <h3>Recovery Items</h3>
+                <div class="item-list">
+                     <div class="item">
+                        <h3>Strength Tab</h3>
+                        <ul>
+                            <li>100% Steal from UltiBust</li>
+                            <li>100% Steal from Marilith</li>
+                            <li>100% Steal from 2HedDrgn</li>
+                            <li>100% Steal from Rubicant</li>
+                            <li>75% Steal from Sam.Soul (Monster-in-a-box: Ancient Castle)</li>
+                            <li>25% Steal from Rahu</li>
+                            <li>75% Steal from FrzeDrgn</li>
+                            <li>75% Steal from ErthDrgn</li>
+                            <li>Located in a treasure chest in South Figaro Area (WoR)</li>
+                            <li>Located in a treasure chest in Field Room</li>
+                            <li>Located in a treasure chest in Serpent Trench Cave</li>
+                            <li>Located in a treasure chest in Zozo Indoors General</li>
+                            <li>Located in a treasure chest in Imperial Castle</li>
+                            <li>Located in a treasure chest in Imperial Observation Post Treasure Room</li>
+                            <li>Located in a treasure chest in Floating Continent</li>
+                            <li>Coliseum bet from Magic Tab (vs. Cartagra)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                         <h3>X-Potion</h3>
+                        <ul>
+                            <li>100% Drop from AirForce</li>
+                            <li>4% Drop from Behemoth</li>
+                            <li>4% Drop from Landworm</li>
+                            <li>4% Drop from Gatling</li>
+                            <li>4% Drop from GrtDemon</li>
+                            <li>4% Drop from Abaddon</li>
+                            <li>4% Drop from Silenus</li>
+                            <li>25% Steal from Peeper</li>
+                            <li>25% Steal from Landworm</li>
+                            <li>25% Steal from Gigantos (Monster-in-a-box: Floating Continent)</li>
+                            <li>25% Steal from Dullahan</li>
+                            <li>Located in a treasure chest in Figaro Castle B3</li>
+                            <li>Located in a treasure chest in South Figaro Cave</li>
+                            <li>Located in a treasure chest in South Figaro Area (WoR)</li>
+                            <li>Located in a treasure chest in Doma Castle 1F-1~5 King's Room 2F Warehouse</li>
+                            <li>Located in a treasure chest in Dream Phantom Train Car 2</li>
+                            <li>Located in a treasure chest in Imperial Observation Post Treasure Room</li>
+                            <li>Located in a treasure chest in Sealed Cave Cave</li>
+                            <li>Located in a treasure chest in Ancient Castle Cave Basement</li>
+                            <li>Located in a treasure chest in Labrynth of the Ancients 1.5</li>
+                            <li>Coliseum bet from X-Ether (vs. Vanguard)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Ether</h3>
+                        <ul>
+                            <li>100% Drop from Ymir</li>
+                            <li>100% Steal from Rt.Blade</li>
+                            <li>8% Drop from Ninja</li>
+                            <li>8% Drop from BlkForce</li>
+                            <li>4% Drop from St. Elmo</li>
+                            <li>4% Drop from PiscoDmn</li>
+                            <li>8% Drop from Rafflesi</li>
+                            <li>8% Drop from NghtHawk</li>
+                            <li>4% Drop from BlueFlan</li>
+                            <li>20% Drop from Mover</li>
+                            <li>4% Drop from Fawn</li>
+                            <li>4% Drop from Devil</li>
+                            <li>4% Drop from Dropper</li>
+                            <li>8% Drop from AlurRide</li>
+                            <li>4% Drop from AlurRide</li>
+                            <li>4% Drop from Mykale</li>
+                            <li>4% Drop from PurpBava</li>
+                            <li>4% Drop from YellowMo</li>
+                            <li>8% Drop from Spitfire</li>
+                            <li>8% Drop from LamiaQen</li>
+                            <li>4% Drop from Cassie</li>
+                            <li>4% Drop from RedMarsh</li>
+                            <li>4% Drop from RicardMg</li>
+                            <li>4% Drop from MagiDrgn</li>
+                            <li>8% Drop from Titania</li>
+                            <li>4% Drop from Shade</li>
+                            <li>8% Drop from Yama</li>
+                            <li>4% Drop from Traveler</li>
+                            <li>8% Drop from Alchymia</li>
+                            <li>4% Drop from Deep One</li>
+                            <li>8% Drop from PitFiend</li>
+                            <li>20% Drop from Nightmar</li>
+                            <li>25% Steal from PiscoDmn</li>
+                            <li>25% Steal from Cactus</li>
+                            <li>25% Steal from SkyArmor</li>
+                            <li>25% Steal from Mover</li>
+                            <li>25% Steal from Phoebe</li>
+                            <li>25% Steal from Malboro</li>
+                            <li>25% Steal from Maiden</li>
+                            <li>75% Steal from Dropper</li>
+                            <li>25% Steal from Twinscyt</li>
+                            <li>25% Steal from Minity</li>
+                            <li>75% Steal from Spitfire</li>
+                            <li>25% Steal from Jam</li>
+                            <li>25% Steal from RedMarsh</li>
+                            <li>25% Steal from WilloWsp</li>
+                            <li>25% Steal from RicardMg</li>
+                            <li>25% Steal from Yama</li>
+                            <li>25% Steal from Vilia (Monster-in-a-box: Daryl's Tomb Basement 2F)</li>
+                            <li>25% Steal from Alchymia</li>
+                            <li>25% Steal from RamuhCln</li>
+                            <li>25% Steal from ShivaCln</li>
+                            <li>25% Steal from KirinCln</li>
+                            <li>25% Steal from UnicoCln</li>
+                            <li>25% Steal from Snoll</li>
+                            <li>25% Steal from LilMurde</li>
+                            <li>Purchased for 3000 Gil from Thamasa (WoB) - Items</li>
+                            <li>Purchased for 3000 Gil from Narshe (WoR) - Items</li>
+                            <li>Purchased for 3000 Gil from Tzen (WoR) - Items</li>
+                            <li>Purchased for 3000 Gil from Nikeah (WoR) - Items</li>
+                            <li>Purchased for 3000 Gil from Thamasa (WoR) - Items</li>
+                            <li>Purchased for 3000 Gil from Jidoor (WoR) - Items</li>
+                            <li>Purchased for 4500 Gil from Unknown - Items (Prices x1.5)</li>
+                            <li>Purchased for 3000 Gil from Unused - Items</li>
+                            <li>Purchased for 3000 Gil from Narshe (WoR: Before Residents Return) - Items</li>
+                            <li>Purchased for 3000 Gil from Narshe (WoR: After Residents Return) - Items</li>
+                            <li>Purchased for 3000 Gil from Moogle Cave (WoR) - Items</li>
+                            <li>Located in a treasure chest in Coal Mine City Narshe Exterior 1 (WoB)</li>
+                            <li>Located in a treasure chest in South Figaro Cave</li>
+                            <li>Located in a treasure chest in South Figaro Cave</li>
+                            <li>Located in a treasure chest in Returner's Hideout Basement 1F Banon's Room</li>
+                            <li>Located in a treasure chest in Zozo Indoors General</li>
+                            <li>Located in a treasure chest in Imperial Castle</li>
+                            <li>Located in a treasure chest in Magitek Factory</li>
+                            <li>Located in a treasure chest in Maranda Area</li>
+                            <li>Located in a treasure chest in Collapsing House</li>
+                            <li>Located in a treasure chest in Albrook Weapon Shop</li>
+                            <li>Located in a treasure chest in Sealed Cave Cave</li>
+                            <li>Located in a treasure chest in Ancient Castle Cave Basement</li>
+                            <li>Located in a treasure chest in South Figaro Cave Monster Extermination Sidequest</li>
+                            <li>Coliseum bet from Hi-Potion (vs. Lunatys)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Hi-Ether</h3>
+                         <ul>
+                            <li>4% Drop from NghtHawk</li>
+                            <li>8% Drop from Kum Kum</li>
+                            <li>8% Drop from Mover</li>
+                            <li>4% Drop from Jam</li>
+                            <li>8% Drop from GrtDemon</li>
+                            <li>4% Drop from Yama</li>
+                            <li>4% Drop from Alchymia</li>
+                            <li>8% Drop from Deep One</li>
+                            <li>8% Drop from SeraphCl</li>
+                            <li>8% Drop from LilMurde</li>
+                            <li>8% Drop from Azrael</li>
+                            <li>75% Steal from Soulflyr</li>
+                            <li>25% Steal from ErthGurd</li>
+                            <li>25% Steal from LaserUni</li>
+                            <li>75% Steal from Kefka</li>
+                            <li>25% Steal from Hecto</li>
+                            <li>75% Steal from Emeraldi</li>
+                            <li>25% Steal from Nightmar</li>
+                            <li>Purchased for 10000 Gil from Narshe (WoR: After Residents Return) - Items</li>
+                            <li>Purchased for 10000 Gil from Moogle Cave (WoR) - Items</li>
+                            <li>Purchased for 20000 Gil from Fanatic's Tower - Vendor (Prices x2)</li>
+                            <li>Located in a treasure chest in Figaro Castle B3</li>
+                            <li>Located in a treasure chest in South Figaro Cave</li>
+                            <li>Located in a treasure chest in Dream Doma Castle Inside</li>
+                            <li>Located in a treasure chest in Mobliz Basement Room</li>
+                            <li>Located in a treasure chest in Imperial Observation Post Treasure Room</li>
+                            <li>Located in a treasure chest in Sealed Cave Cave</li>
+                            <li>Located in a treasure chest in Sealed Cave Cave</li>
+                            <li>Located in a treasure chest in Ancient Castle Cave Basement</li>
+                            <li>Located in a treasure chest in Labrynth of the Ancients 3</li>
+                            <li>Located in a treasure chest in South Figaro Cave Monster Extermination Sidequest</li>
+                            <li>Located in a treasure chest in South Figaro Basement 2F WoR</li>
+                            <li>Coliseum bet from Ether (vs. Coolness)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>X-Ether</h3>
+                        <ul>
+                            <li>100% Drop from DesrtTrp</li>
+                            <li>4% Drop from Kum Kum</li>
+                            <li>4% Drop from Mover</li>
+                            <li>4% Drop from Soulflyr</li>
+                            <li>4% Drop from Vilia (Monster-in-a-box: Daryl's Tomb Basement 2F)</li>
+                            <li>25% Steal from Soulflyr</li>
+                            <li>25% Steal from Emeraldi</li>
+                            <li>25% Steal from Skulnant</li>
+                            <li>Located in a treasure chest in Umaro's Cave</li>
+                            <li>Located in a treasure chest in Labrynth of the Ancients 1.5</li>
+                            <li>Coliseum bet from X-Potion (vs. Colossus)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Elixir</h3>
+                         <ul>
+                            <li>100% Drop from TunlArmr</li>
+                            <li>4% Drop from Lunatys</li>
+                            <li>4% Drop from Tonber.M</li>
+                            <li>4% Drop from CrysDrgn</li>
+                            <li>8% Drop from Hecto</li>
+                            <li>25% Steal from Lamia</li>
+                            <li>25% Steal from Dropper</li>
+                            <li>25% Steal from Spitfire</li>
+                            <li>25% Steal from LamiaQen</li>
+                            <li>75% Steal from AirForce</li>
+                            <li>25% Steal from ManaJamr</li>
+                            <li>25% Steal from Kefka</li>
+                            <li>75% Steal from ShortArm</li>
+                            <li>75% Steal from Long Arm</li>
+                            <li>75% Steal from Face</li>
+                            <li>75% Steal from Tiger</li>
+                            <li>75% Steal from Machine</li>
+                            <li>75% Steal from Magic</li>
+                            <li>75% Steal from Power</li>
+                            <li>75% Steal from Maria</li>
+                            <li>75% Steal from Rest</li>
+                            <li>25% Steal from Hidon</li>
+                            <li>25% Steal from Astos</li>
+                            <li>25% Steal from Proserpi (Monster-in-a-box: Phoenix's Cave Deepest Area)</li>
+                            <li>25% Steal from DonTonbe</li>
+                            <li>Located in a treasure chest in Coal Mine City Narshe Elder's House, Warehouse</li>
+                            <li>Located in a treasure chest in Coal Mine City Narshe Elder's House, Warehouse</li>
+                            <li>Located in a treasure chest in Narshe Coal Mine (WoR)</li>
+                            <li>Located in a treasure chest in Narshe Coal Mine Moogle Cave (WoR)</li>
+                            <li>Located in a treasure chest in South Figaro Area (WoR)</li>
+                            <li>Located in a treasure chest in South Figaro Mansion Backroom Basement Duncan's House</li>
+                            <li>Located in a treasure chest in Returner's Hideout Basement 1F</li>
+                            <li>Located in a treasure chest in Doma Castle 1F-1~5 King's Room 2F Warehouse</li>
+                            <li>Located in a treasure chest in Port City Nikeah Inn</li>
+                            <li>Located in a treasure chest in Kohlingen Rachel's House</li>
+                            <li>Located in a treasure chest in Albrook Bar & Accessory Shop</li>
+                            <li>Located in a treasure chest in Imperial Observation Post Treasure Room</li>
+                            <li>Located in a treasure chest in Sealed Cave Cave</li>
+                            <li>Located in a treasure chest in Labrynth of the Ancients 1.5</li>
+                            <li>Located in a treasure chest in Forbidden Land Eureka 1</li>
+                            <li>Located in a treasure chest in Forbidden Land Eureka 1</li>
+                            <li>Located in a treasure chest in Crystal Tower 1</li>
+                            <li>Located in a treasure chest in Crystal Tower 7</li>
+                            <li>Coliseum bet from Healing Staff (vs. Daedalus)</li>
+                            <li>Coliseum bet from Smelling Salts (vs. IrnGiant)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Megalixir</h3>
+                        <ul>
+                            <li>100% Drop from BnTyrant</li>
+                            <li>100% Steal from Shinryu</li>
+                            <li>100% Steal from Omega</li>
+                            <li>100% Steal from Ultima</li>
+                            <li>4% Drop from DonTonbe</li>
+                            <li>75% Steal from Kefka</li>
+                            <li>25% Steal from GstTrain</li>
+                            <li>Located in a treasure chest in Kefka's Tower Area</li>
+                            <li>Located in a treasure chest in Crystal Tower 3</li>
+                            <li>Located in a treasure chest in Crystal Tower 3</li>
+                            <li>Located in a treasure chest in Mirage Tower</li>
+                            <li>Coliseum bet from Elixir (vs. Kum Kum)</li>
+                            <li>Coliseum bet from Reincarnation (vs. SoulEatr)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Phoenix Down</h3>
+                        <ul>
+                            <li>100% Steal from DarkBehe</li>
+                            <li>100% Steal from Coeurl</li>
+                            <li>100% Steal from SnwPanth</li>
+                            <li>4% Drop from Aepyorni</li>
+                            <li>8% Drop from Lamia</li>
+                            <li>4% Drop from Anguifor</li>
+                            <li>8% Drop from Rudra</li>
+                            <li>8% Drop from Ourobors</li>
+                            <li>8% Drop from Face</li>
+                            <li>8% Drop from Zeveak</li>
+                            <li>8% Drop from DiveEagl</li>
+                            <li>4% Drop from DiveEagl</li>
+                            <li>8% Drop from Chs.Drgn</li>
+                            <li>4% Drop from Venobenu</li>
+                            <li>8% Drop from Abaddon</li>
+                            <li>20% Drop from Rt.Blade</li>
+                            <li>20% Drop from Vargas</li>
+                            <li>68% Drop from Astos</li>
+                            <li>75% Steal from Fidor</li>
+                            <li>25% Steal from St. Elmo</li>
+                            <li>25% Steal from Rudra</li>
+                            <li>25% Steal from DrgnZomb</li>
+                            <li>25% Steal from Imp</li>
+                            <li>25% Steal from Ourobors</li>
+                            <li>25% Steal from Face</li>
+                            <li>25% Steal from Zeveak</li>
+                            <li>25% Steal from Belzecue</li>
+                            <li>25% Steal from Balloon</li>
+                            <li>25% Steal from Chs.Drgn</li>
+                            <li>25% Steal from Necroman</li>
+                            <li>25% Steal from SirenCln</li>
+                            <li>25% Steal from IfritCln</li>
+                            <li>25% Steal from Apanda</li>
+                            <li>Purchased for 800 Gil from Narshe (WoB) - Items</li>
+                            <li>Purchased for 400 Gil from Unknown - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 800 Gil from South Figaro (WoB) - Items</li>
+                            <li>Purchased for 800 Gil from Mobliz - Items</li>
+                            <li>Purchased for 800 Gil from Nikeah (WoB) - Items</li>
+                            <li>Purchased for 800 Gil from Kohlingen (WoB) - Items</li>
+                            <li>Purchased for 800 Gil from Jidoor (WoB) - Items</li>
+                            <li>Purchased for 800 Gil from Albrook (WoB) - Items</li>
+                            <li>Purchased for 800 Gil from Tzen (WoB) - Items</li>
+                            <li>Purchased for 800 Gil from Thamasa (WoB) - Items</li>
+                            <li>Purchased for 800 Gil from Returner's Hideout - Items</li>
+                            <li>Purchased for 800 Gil from Gau's Father's House - Vendor</li>
+                            <li>Purchased for 800 Gil from Narshe (WoR) - Items</li>
+                            <li>Purchased for 800 Gil from Blackjack Shop - Items</li>
+                            <li>Purchased for 400 Gil from Figaro Castle 1(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 800 Gil from Albrook (WoR) - Items</li>
+                            <li>Purchased for 800 Gil from Nikeah (WoR) - Items</li>
+                            <li>Purchased for 400 Gil from South Figaro (WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 400 Gil from Figaro Castle 1(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 800 Gil from Kohlingen (WoR) - Items</li>
+                            <li>Purchased for 800 Gil from Unknown - Items</li>
+                            <li>Purchased for 800 Gil from Thamasa (WoR) - Items</li>
+                            <li>Purchased for 800 Gil from Jidoor (WoR) - Items</li>
+                            <li>Purchased for 800 Gil from Phantom Train - Items</li>
+                            <li>Purchased for 1200 Gil from Unknown - Items (Prices x1.5)</li>
+                            <li>Purchased for 800 Gil from Unused - Items</li>
+                            <li>Purchased for 1600 Gil from Small Stores in Various Places - Items (Prices x2)</li>
+                            <li>Purchased for 800 Gil from Unused - Items</li>
+                            <li>Purchased for 1600 Gil from Unused - Items (Prices x2)</li>
+                                                        <li>Located in a treasure chest in Narshe Coal Mine (WoB)</li>
+                            <li>Located in a treasure chest in Figaro Castle Inside</li>
+                            <li>Located in a treasure chest in South Figaro Cave</li>
+                            <li>Located in a treasure chest in South Figaro Area (WoR)</li>
+                            <li>Located in a treasure chest in South Figaro Area (WoB)</li>
+                            <li>Located in a treasure chest in Returner's Hideout Basement 1F Banon's Room</li>
+                            <li>Located in a treasure chest in Returner's Hideout Basement 1F Banon's Room</li>
+                            <li>Located in a treasure chest in Dream/Phantom Train Guest Room Train Car #1</li>
+                            <li>Located in a treasure chest in Thamasa (WoB) Area</li>
+                            <li>Located in a treasure chest in Labrynth of the Ancients 2</li>
+                            <li>Located in a treasure chest in Crystal Tower 1</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Speed Tab</h3>
+                        <ul>
+                            <li>100% Steal from Cerberus</li>
+                            <li>100% Steal from Tiamat</li>
+                            <li>100% Steal from Barbaric</li>
+                            <li>75% Steal from StrmDrgn</li>
+                            <li>Purchased for 2 Gil from Unknown - Items</li>
+                            <li>Located in a treasure chest in Figaro Castle Treasure Room</li>
+                            <li>Located in a treasure chest in South Figaro Basement Warehouse</li>
+                            <li>Located in a treasure chest in Collapsing House</li>
+                            <li>Located in a treasure chest in Kefka's Tower First Cave</li>
+                            <li>Located in a treasure chest in Sealed Cave Cave</li>
+                            <li>Coliseum bet from Strength Tab (vs. IrnGiant)</li>
+                            <li>Coliseum bet from Phoenix Down (vs. Outcast)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Stamina Tab</h3>
+                         <ul>
+                            <li>100% Steal from Lich</li>
+                            <li>100% Steal from Ahriman</li>
+                            <li>100% Steal from Scarmili</li>
+                            <li>75% Steal from Tricerat</li>
+                            <li>Located in a treasure chest in Coal Mine City Narshe Elder's House, Warehouse</li>
+                            <li>Located in a treasure chest in Imperial Base</li>
+                            <li>Located in a treasure chest in Zozo Indoors General</li>
+                            <li>Located in a treasure chest in Albrook Armor Shop</li>
+                            <li>Located in a treasure chest in Esper Cave</li>
+                            <li>Coliseum bet from Speed Tab (vs. Kum Kum)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Magic Tab</h3>
+                        <ul>
+                            <li>100% Steal from Kraken</li>
+                            <li>100% Steal from Echidna</li>
+                            <li>100% Steal from Cagnazzo</li>
+                            <li>75% Steal from YlloDrgn</li>
+                            <li>75% Steal from HolyDrgn</li>
+                            <li>Located in a treasure chest in Mt. Koltz Cave</li>
+                            <li>Located in a treasure chest in Owzer's Mansion</li>
+                            <li>Located in a treasure chest in Magitek Factory</li>
+                            <li>Located in a treasure chest in Gogo's Cave</li>
+                            <li>Located in a treasure chest in Kefka's Tower Inferno's Room (Top)</li>
+                            <li>Located in a treasure chest in Thamasa (WoB) Area</li>
+                            <li>Coliseum bet from Stamina Tab (vs. CrysDrgn)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                        <h3>Golden Apple</h3>
+                        <ul>
+                            <li>100% Steal from Bahamut</li>
+                            <li>4% Drop from Brachios</li>
+                            <li>4% Drop from Intangir</li>
+                            <li>8% Drop from Adamanti</li>
+                            <li>25% Steal from KTonberr (Monster-in-a-box: Ancient Castle Cave Basement)</li>
+                            <li>75% Steal from SkulDrgn</li>
+                            <li>75% Steal from RedDragn</li>
+                            <li>75% Steal from Bahamut</li>
+                            <li>Located in a treasure chest in South Figaro Area (WoR)</li>
+                            <li>Located in a treasure chest in South Figaro B2F</li>
+                            <li>Located in a treasure chest in Mobliz Delivery Service House</li>
+                            <li>Located in a treasure chest in Kefka's Tower Switch Room</li>
+                            <li>Located in a treasure chest in Phoenix's Cave Basement 1F</li>
+                            <li>Located in a treasure chest in Fanatic's Tower Small Room</li>
+                            <li>Located in a treasure chest in Labrynth of the Ancients 1.5</li>
+                            <li>Located in a treasure chest in South Figaro Cave Monster Extermination Sidequest</li>
+                            <li>Located in a treasure chest in Developer's Room Main Room</li>
+                            <li>Located in a treasure chest in Crystal Tower 1</li>
+                            <li>Coliseum bet from Soma Drop (vs. Coeurl)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                         <h3>Remedy</h3>
+                        <ul>
+                            <li>100% Drop from Rhizopas</li>
+                            <li>8% Drop from Borghese</li>
+                            <li>68% Drop from HellRidr</li>
+                            <li>4% Drop from Malboro</li>
+                            <li>8% Drop from Lilith</li>
+                            <li>8% Drop from Chronos</li>
+                            <li>8% Drop from Myrmecol</li>
+                            <li>25% Steal from DdlyHorr</li>
+                            <li>25% Steal from DrgnFosl</li>
+                            <li>25% Steal from Ochu</li>
+                            <li>25% Steal from Rafflesi</li>
+                            <li>25% Steal from Slagworm</li>
+                            <li>25% Steal from Crawler</li>
+                            <li>25% Steal from Demiurok</li>
+                            <li>25% Steal from PoisnLch</li>
+                            <li>25% Steal from Mandrake</li>
+                            <li>25% Steal from Devourer</li>
+                            <li>25% Steal from DsrtRabb</li>
+                            <li>25% Steal from Neochu</li>
+                            <li>75% Steal from Myrmecol</li>
+                            <li>Purchased for 2500 Gil from Narshe (WoR) - Items</li>
+                            <li>Purchased for 2500 Gil from Tzen (WoR) - Items</li>
+                            <li>Purchased for 2500 Gil from Nikeah (WoR) - Items</li>
+                            <li>Purchased for 1250 Gil from South Figaro (WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 1250 Gil from Figaro Castle 1(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 2500 Gil from Unknown - Items</li>
+                            <li>Purchased for 2500 Gil from Thamasa (WoR) - Items</li>
+                            <li>Purchased for 2500 Gil from Jidoor (WoR) - Items</li>
+                            <li>Purchased for 2500 Gil from Unused - Items</li>
+                            <li>Purchased for 2500 Gil from Narshe (WoR: After Residents Return) - Items</li>
+                            <li>Purchased for 2500 Gil from Unused - Items</li>
+                            <li>Purchased for 5000 Gil from Unused - Items (Prices x2)</li>
+                            <li>Located in a treasure chest in South Figaro Area (WoR)</li>
+                            <li>Located in a treasure chest in Doma Castle 1F-1~5 King's Room 2F Warehouse</li>
+                            <li>Located in a treasure chest in Magitek Factory</li>
+                            <li>Located in a treasure chest in Maranda Area</li>
+                         </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Soma Drop</h3>
+                         <ul>
+                            <li>100% Steal from Leviatha</li>
+                            <li>4% Drop from FendDrgn</li>
+                            <li>4% Drop from Alv (Monster-in-a-box: Daryl's Tomb Basement 2F)</li>
+                            <li>8% Drop from MistDrgn</li>
+                            <li>25% Steal from Tonberri (Monster-in-a-box: Umaro's Cave)</li>
+                            <li>25% Steal from UltimaWe</li>
+                            <li>25% Steal from Ketu</li>
+                            <li>75% Steal from Valigarm</li>
+                            <li>75% Steal from BlueDrgn</li>
+                            <li>25% Steal from Leviatha</li>
+                            <li>75% Steal from Valigarm</li>
+                            <li>Located in a treasure chest in Doma Castle 1F-1~5 King's Room 2F Warehouse</li>
+                            <li>Located in a treasure chest in Zozo Building Top Floor</li>
+                            <li>Located in a treasure chest in Thamasa Strago's House</li>
+                            <li>Located in a treasure chest in Kefka's Tower Inferno's Room (Bottom)</li>
+                            <li>Located in a treasure chest in Crystal Tower 1</li>
+                            <li>Located in a treasure chest in Mirage Tower</li>
+                            <li>Coliseum bet from Golden Apple (vs. LilMurde)</li>
+                        </ul>
+                    </div>
+                     <div class="item">
+                         <h3>Tent</h3>
+                         <ul>
+                            <li>100% Drop from PhaTrain</li>
+                            <li>100% Drop from Numbr128</li>
+                            <li>100% Steal from Domovoi</li>
+                            <li>8% Drop from Oversoul</li>
+                            <li>4% Drop from Oversoul</li>
+                            <li>8% Drop from BlueFlan</li>
+                            <li>8% Drop from Slug</li>
+                            <li>8% Drop from Sergeant</li>
+                            <li>8% Drop from BlkDragn</li>
+                            <li>8% Drop from RedMarsh</li>
+                            <li>20% Drop from SandFish</li>
+                            <li>25% Steal from LitworCh</li>
+                            <li>25% Steal from Slug</li>
+                            <li>Purchased for 2000 Gil from Narshe (WoB) - Items</li>
+                            <li>Purchased for 1000 Gil from Unknown - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 2000 Gil from South Figaro (WoB) - Items</li>
+                            <li>Purchased for 2000 Gil from Mobliz - Items</li>
+                            <li>Purchased for 2000 Gil from Nikeah (WoB) - Items</li>
+                            <li>Purchased for 2000 Gil from Kohlingen (WoB) - Items</li>
+                            <li>Purchased for 2000 Gil from Jidoor (WoB) - Items</li>
+                            <li>Purchased for 2000 Gil from Albrook (WoB) - Items</li>
+                            <li>Purchased for 2000 Gil from Tzen (WoB) - Items</li>
+                            <li>Purchased for 2000 Gil from Thamasa (WoB) - Items</li>
+                            <li>Purchased for 2000 Gil from Returner's Hideout - Items</li>
+                            <li>Purchased for 2000 Gil from Gau's Father's House - Vendor</li>
+                            <li>Purchased for 2000 Gil from Blackjack Shop - Items</li>
+                            <li>Purchased for 1000 Gil from Figaro Castle 1(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 2000 Gil from Albrook (WoR) - Items</li>
+                            <li>Purchased for 2000 Gil from Tzen (WoR) - Items</li>
+                            <li>Purchased for 2000 Gil from Nikeah (WoR) - Items</li>
+                            <li>Purchased for 1000 Gil from South Figaro (WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 1000 Gil from Figaro Castle 1(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 2000 Gil from Kohlingen (WoR) - Items</li>
+                            <li>Purchased for 2000 Gil from Unknown - Items</li>
+                            <li>Purchased for 2000 Gil from Thamasa (WoR) - Items</li>
+                            <li>Purchased for 2000 Gil from Jidoor (WoR) - Items</li>
+                            <li>Purchased for 2000 Gil from Phantom Train - Items</li>
+                            <li>Purchased for 3000 Gil from Unknown - Items (Prices x1.5)</li>
+                            <li>Purchased for 2000 Gil from Unused - Items</li>
+                            <li>Purchased for 4000 Gil from Small Stores in Various Places - Items (Prices x2)</li>
+                            <li>Purchased for 2000 Gil from Unused - Items</li>
+                            <li>Purchased for 4000 Gil from Unused - Items (Prices x2)</li>
+                            <li>Located in a treasure chest in Narshe Coal Mine (WoB)</li>
+                            <li>Located in a treasure chest in Mt. Koltz Exterior</li>
+                            <li>Located in a treasure chest in Battle Room</li>
+                            <li>Located in a treasure chest in Dream/Phantom Train Conductor Control Room</li>
+                            <li>Located in a treasure chest in Dream/Phantom Train Guest Room Train Car #1</li>
+                            <li>Located in a treasure chest in Magitek Factory</li>
+                            <li>Located in a treasure chest in Sealed Cave Cave</li>
+                            <li>Located in a treasure chest in Labrynth of the Ancients 3</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Reincarnation</h3>
+                         <ul>
+                            <li>100% Drop from Dullahan</li>
+                            <li>100% Steal from DthWarde (Monster-in-a-box: Veldt Cave)</li>
+                            <li>4% Drop from Cactuar</li>
+                            <li>8% Drop from Astos</li>
+                            <li>Purchased for 60000 Gil from Moogle Cave (WoR) - Items</li>
+                            <li>Located in a treasure chest in South Figaro Area (WoR)</li>
+                            <li>Located in a treasure chest in Mobliz Area (WoR)</li>
+                            <li>Located in a treasure chest in Phoenix's Cave Deepest Area</li>
+                            <li>Located in a treasure chest in Labrynth of the Ancients 4</li>
+                            <li>Located in a treasure chest in Crystal Tower 5</li>
+                            <li>Located in a treasure chest in Crystal Tower 7</li>
+                            <li>Coliseum bet from Megalixir (vs. DonTonbe)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Holy Water</h3>
+                        <ul>
+                            <li>20% Drop from DdlyHorr</li>
+                            <li>4% Drop from Lamia</li>
+                            <li>8% Drop from PiscoDmn</li>
+                            <li>8% Drop from FigaroLz</li>
+                            <li>8% Drop from Provoker</li>
+                            <li>4% Drop from Sorath</li>
+                            <li>8% Drop from Graswyrm</li>
+                            <li>4% Drop from Exoray</li>
+                            <li>4% Drop from Neochu</li>
+                            <li>8% Drop from Revnant</li>
+                            <li>4% Drop from Revnant</li>
+                            <li>75% Steal from DrgnFosl</li>
+                            <li>25% Steal from VampThrn</li>
+                            <li>75% Steal from DrgnZomb</li>
+                            <li>75% Steal from LandGril</li>
+                            <li>75% Steal from UndCheru</li>
+                            <li>Purchased for 140 Gil from Unknown - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 280 Gil from Kohlingen (WoB) - Items</li>
+                            <li>Purchased for 280 Gil from Jidoor (WoB) - Items</li>
+                            <li>Purchased for 280 Gil from Albrook (WoB) - Items</li>
+                            <li>Purchased for 280 Gil from Tzen (WoB) - Items</li>
+                            <li>Purchased for 280 Gil from Narshe (WoR) - Items</li>
+                            <li>Purchased for 280 Gil from Blackjack Shop - Items</li>
+                            <li>Purchased for 140 Gil from Figaro Castle 1(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 280 Gil from Albrook (WoR) - Items</li>
+                            <li>Purchased for 280 Gil from Tzen (WoR) - Items</li>
+                            <li>Purchased for 140 Gil from South Figaro (WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 140 Gil from Figaro Castle 1(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 280 Gil from Kohlingen (WoR) - Items</li>
+                            <li>Purchased for 280 Gil from Unknown - Items</li>
+                            <li>Purchased for 280 Gil from Jidoor (WoR) - Items</li>
+                            <li>Purchased for 420 Gil from Unknown - Items (Prices x1.5)</li>
+                            <li>Purchased for 560 Gil from Small Stores in Various Places - Items (Prices x2)</li>
+                            <li>Purchased for 280 Gil from Unused - Items</li>
+                            <li>Purchased for 560 Gil from Unused - Items (Prices x2)</li>
+                            <li>Located in a treasure chest in South Figaro Area (WoR)</li>
+                            <li>Located in a treasure chest in Imperial Castle</li>
+                            <li>Located in a treasure chest in Thamasa (WoB) Area</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Smoke Bomb</h3>
+                        <ul>
+                            <li>8% Drop from VampThrn</li>
+                            <li>4% Drop from ArmrdWpn</li>
+                            <li>8% Drop from Kamui</li>
+                            <li>8% Drop from LandGril</li>
+                            <li>8% Drop from Cassie</li>
+                            <li>4% Drop from Haniel</li>
+                            <li>Purchased for 300 Gil from Narshe (WoB) - Items</li>
+                            <li>Purchased for 300 Gil from Blackjack Shop - Items</li>
+                            <li>Purchased for 150 Gil from Figaro Castle 1(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 300 Gil from Albrook (WoR) - Items</li>
+                            <li>Purchased for 300 Gil from Nikeah (WoR) - Items</li>
+                            <li>Purchased for 300 Gil from Thamasa (WoR) - Items</li>
+                            <li>Purchased for 300 Gil from Unused - Items</li>
+                            <li>Purchased for 600 Gil from Small Stores in Various Places - Items (Prices x2)</li>
+                            <li>Purchased for 300 Gil from Unused - Items</li>
+                            <li>Purchased for 600 Gil from Unused - Items (Prices x2)</li>
+                            <li>Located in a treasure chest in Labrynth of the Ancients 1.5</li>
+                            <li>Coliseum bet from Gold Needle (vs. LivingDe)</li>
+                        </ul>
+                    </div>
+                    <div class="item">
+                        <h3>Gold Needle</h3>
+                         <ul>
+                            <li>100% Steal from Cactuar</li>
+                            <li>8% Drop from Cockatri</li>
+                            <li>8% Drop from AnglWhis</li>
+                            <li>8% Drop from Lizard</li>
+                            <li>8% Drop from LitworCh</li>
+                            <li>4% Drop from LitworCh</li>
+                            <li>8% Drop from RockSlug</li>
+                            <li>8% Drop from General</li>
+                            <li>8% Drop from Gorgias</li>
+                            <li>8% Drop from BrnCandy</li>
+                            <li>8% Drop from Basilisk</li>
+                            <li>8% Drop from MedsaChk</li>
+                            <li>8% Drop from OniDashr</li>
+                            <li>8% Drop from Coeurl</li>
+                            <li>8% Drop from Silenus</li>
+                            <li>75% Steal from Cockatri</li>
+                            <li>75% Steal from Lizard</li>
+                            <li>75% Steal from B. Lamia</li>
+                            <li>75% Steal from BrnCandy</li>
+                            <li>75% Steal from SahagChf</li>
+                            <li>75% Steal from Basilisk</li>
+                            <li>75% Steal from MedsaChk</li>
+                            <li>75% Steal from BkLizard</li>
+                            <li>75% Steal from Mykale</li>
+                            <li>75% Steal from DiveEagl</li>
+                            <li>75% Steal from Illuyank</li>
+                            <li>75% Steal from Wizard</li>
+                            <li>75% Steal from Bug</li>
+                            <li>75% Steal from Hecto</li>
+                            <li>Purchased for 200 Gil from Narshe (WoB) - Items</li>
+                            <li>Purchased for 100 Gil from Unknown - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 200 Gil from South Figaro (WoB) - Items</li>
+                            <li>Purchased for 200 Gil from Mobliz - Items</li>
+                            <li>Purchased for 200 Gil from Nikeah (WoB) - Items</li>
+                            <li>Purchased for 200 Gil from Kohlingen (WoB) - Items</li>
+                            <li>Purchased for 200 Gil from Jidoor (WoB) - Items</li>
+                            <li>Purchased for 200 Gil from Albrook (WoB) - Items</li>
+                            <li>Purchased for 200 Gil from Tzen (WoB) - Items</li>
+                            <li>Purchased for 200 Gil from Thamasa (WoB) - Items</li>
+                            <li>Purchased for 200 Gil from Returner's Hideout - Items</li>
+                            <li>Purchased for 200 Gil from Narshe (WoR) - Items</li>
+                            <li>Purchased for 200 Gil from Blackjack Shop - Items</li>
+                            <li>Purchased for 100 Gil from Figaro Castle 1(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 200 Gil from Albrook (WoR) - Items</li>
+                            <li>Purchased for 200 Gil from Tzen (WoR) - Items</li>
+                            <li>Purchased for 100 Gil from South Figaro (WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 100 Gil from Figaro Castle 1(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))</li>
+                            <li>Purchased for 200 Gil from Kohlingen (WoR) - Items</li>
+                            <li>Purchased for 200 Gil from Phantom Train - Items</li>
+                            <li>Purchased for 300 Gil from Unknown - Items (Prices x1.5)</li>
+                            <li>Purchased for 400 Gil from Small Stores in Various Places - Items (Prices x2)</li>
+                            <li>Located in a treasure chest in Figaro Castle Inside</li>
+                            <li>Located in a treasure chest in South Figaro Area (WoB)</li>
+                            <li>Located in a treasure chest in South Figaro Area (WoB)</li>
+                            <li>Located in a treasure chest in Returner's Hideout Basement 1F</li>
+                            <li>Located in a treasure chest in Thamasa (WoB) Area</li>
+                            <li>Coliseum bet from Smoke Bomb (vs. WilloWsp)</li>
+                        </ul>
+                    </div>
+                    <div class = "item">
+                        <h3>Dried Meat</h3>
+                         <ul>
+                            <li>100% Drop from Yeti</li>
+                            <li>100% Steal from MuudSuud</li>
+                            <li>100% Steal from Yeti</li>
+                            <li>8% Drop from Bld.Fang</li>
+                            <li>8% Drop from GrndBehe</li>
+                            <li>8% Drop from Haniel</li>
+                            <li>8% Drop from ErthEatr</li>
+                            <li>4% Drop from ErthEatr</li>
+                            <li>25% Steal from SkullEtr</li>
+                            <li>25% Steal from VectorLy</li>
+                            <li>75% Steal from OldDrago</li>
+                            <li>75% Steal from Ultros</li>
+                            <li>75% Steal from DesrtTrp</li>
+                            <li>Purchased for 150 Gil from Mobliz - Items</li>
+                            <li>Purchased for 150 Gil from Unused - Items</li>
+                            <li>Purchased for 150 Gil from Mobliz (WoR) - Vendor</li>
+                            <li>Coliseum bet from Hi-Ether (vs. Stunner)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <button id="backToTop" title="Go to top">↑</button>
+    </div>
+
+    <script>
+        // --- Smooth Scrolling ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // --- Back to Top Button ---
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("backToTop").style.display = "block";
+            } else {
+                document.getElementById("backToTop").style.display = "none";
+            }
+        }
+
+        document.getElementById("backToTop").addEventListener("click", function(){
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        });
+
+    </script>
+</body>
+</html>

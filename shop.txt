@@ -1,0 +1,792 @@
+
+* Narshe (WoB) - Weapons
+    Great Sword
+    Shadow Blade
+    Mythril Claw
+    Mythril Spear
+    Air Knife
+    Chain Whip
+
+* Narshe (WoB) - Armor
+    Mythril Shield
+    Magus Hat
+    Headgear
+    Iron Helm
+    Iron Armor
+
+* Narshe (WoB) - Relics
+    Star Pendant
+    Silver Spectacles
+    Knight's Code
+
+* Narshe (WoB) - Items
+    Potion
+    Hi-Potion
+    Antidote
+    Gold Needle
+    Phoenix Down
+    Smoke Bomb
+    Tent
+
+* Unknown - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))
+    Potion
+    Hi-Potion
+    Antidote
+    Gold Needle
+    Holy Water
+    Phoenix Down
+    Tent
+
+* South Figaro (WoB) - Weapons
+    Dagger
+    Mythril Knife
+    Mythril Sword
+    Noiseblaster
+    Bioblaster
+
+* South Figaro (WoB) - Armor
+    Buckler
+    Large Shield
+    Leather Hat
+    Plumed Hat
+    Cotton Robe
+    Kenpo Gi
+
+* South Figaro (WoB) - Relics
+    Silver Spectacles
+    Star Pendant
+    Knight's Code
+
+* South Figaro (WoB) - Items
+    Potion
+    Antidote
+    Gold Needle
+    Phoenix Down
+    Tent
+
+* Mobliz - Weapons
+    Mythril Sword
+    Mythril Axe
+    Mythril Claw
+    Kotetsu
+
+* Mobliz - Armor
+    Buckler
+    Large Shield
+    Plumed Hat
+    Magus Hat
+    Iron Helm
+    Kenpo Gi
+    Iron Armor
+
+* Mobliz - Relics
+    Knight's Code
+    Jeweled Ring
+    White Cape
+
+* Mobliz - Items
+    Dried Meat
+    Potion
+    Hi-Potion
+    Antidote
+    Gold Needle
+    Phoenix Down
+    Tent
+
+* Nikeah (WoB) - Weapons
+    Mythril Axe
+    Mythril Claw
+    Mythril Spear
+    Kotetsu
+    Battle Bamboo
+
+* Nikeah (WoB) - Armor
+    Large Shield
+    Plumed Hat
+    Magus Hat
+    Headgear
+    Iron Helm
+    Kenpo Gi
+    Iron Armor
+
+* Nikeah (WoB) - Items
+    Potion
+    Hi-Potion
+    Antidote
+    Gold Needle
+    Phoenix Down
+    Tent
+
+* Nikeah (WoB) - Relics
+    Amulet
+    Star Pendant
+    Gyshal Potpourri
+    White Cape
+
+* Kohlingen (WoB) - Weapons
+    Air Knife
+    Chain Whip
+    Boomerang
+    Flame Scroll
+    Water Scroll
+    Thunder Scroll
+
+* Kohlingen (WoB) - Armor
+    Mythril Shield
+    Magus Hat
+    Headgear
+    Twist Headband
+    Iron Helm
+    Iron Armor
+
+* Kohlingen (WoB) - Items
+    Potion
+    Hi-Potion
+    Antidote
+    Gold Needle
+    Holy Water
+    Phoenix Down
+    Tent
+
+* Jidoor (WoB) - Weapons
+    Osafune
+    Kaiser Knuckle
+    Kodachi
+    Darts
+
+* Jidoor (WoB) - Armor
+    Mythril Shield
+    Twist Headband
+    Mythril Plate
+    Ninja Gear
+    White Dress
+
+* Jidoor (WoB) - Items
+    Potion
+    Hi-Potion
+    Antidote
+    Gold Needle
+    Holy Water
+    Phoenix Down
+    Tent
+
+* Jidoor (WoB) - Relics
+    Earrings
+    Peace Ring
+    Knight's Code
+    Sniper Eye
+
+* Albrook (WoB) - Items
+    Potion
+    Hi-Potion
+    Antidote
+    Gold Needle
+    Holy Water
+    Phoenix Down
+    Tent
+
+* Albrook (WoB) - Weapons
+    Osafune
+    Sakura
+    Shuriken
+    Flame Scroll
+    Water Scroll
+    Thunder Scroll
+    Invis Scroll
+    Shadow Scroll
+
+* Albrook (WoB) - Armor
+    Twist Headband
+    Priest's Miter
+    Ninja Gear
+
+* Vector - Weapons
+    Main Gauche
+    Air Knife
+    Great Sword
+    Shadow Blade
+
+* Vector - Armor
+    Buckler
+    Large Shield
+    Mythril Shield
+    Iron Helm
+    Iron Armor
+
+* Tzen (WoB) - Weapons
+    Mythril Knife
+    Mythril Sword
+    Mythril Spear
+    Mythril Axe
+    Mythril Claw
+
+* Tzen (WoB) - Armor
+    Mythril Shield
+    Mythril Helm
+    Mythril Plate
+    Mythril Armor
+
+* Tzen (WoB) - Items
+    Potion
+    Hi-Potion
+    Antidote
+    Gold Needle
+    Smelling Salts
+    Holy Water
+    Phoenix Down
+    Tent
+
+* Tzen (WoB) - Relics
+    Gyshal Potpourri
+    Peace Ring
+    Sniper Eye
+
+* Thamasa (WoB) - Weapons
+    Flame Rod
+    Ice Rod
+    Thunder Rod
+    Chain Whip
+    Trident
+    Boomerang
+
+* Thamasa (WoB) - Armor
+    Gold Shield
+    Green Beret
+    Mystery Veil
+    Gold Helm
+    Power Sash
+    Gaia Gear
+    Gold Armor
+
+* Thamasa (WoB) - Items
+    Potion
+    Hi-Potion
+    Ether
+    Antidote
+    Gold Needle
+    Smelling Salts
+    Phoenix Down
+    Tent
+
+* Returner's Hideout - Items
+    Potion
+    Hi-Potion
+    Antidote
+    Gold Needle
+    Phoenix Down
+    Tent
+
+* Maranda (WoB) - Weapons
+    Heavy Lance
+    Slasher
+    Dark Claw
+
+* Maranda (WoB) - Armor
+    Headgear
+    Priest's Miter
+    Iron Helm
+    Mythril Plate
+    Iron Armor
+
+* Gau's Father's House - Vendor
+    Potion
+    Phoenix Down
+    Tent
+    Battle Bamboo
+
+* Albrook (WoB) - Relics
+    Knight's Code
+    Thief's Bracer
+    Thief Gloves
+
+* Narshe (WoR) - Weapons
+    Needle Dagger
+    Heavy Lance
+    Sakura
+    Moonring Blade
+
+* Narshe (WoR) - Armor
+    Gold Shield
+    Priest's Miter
+    Green Beret
+    Mythril Helm
+    Gold Helm
+    Mythril Plate
+    Mythril Armor
+    Power Sash
+
+* Narshe (WoR) - Relics
+    Earrings
+    Gyshal Potpourri
+    Dragoon Boots
+
+* Narshe (WoR) - Items
+    Hi-Potion
+    Ether
+    Antidote
+    Smelling Salts
+    Gold Needle
+    Holy Water
+    Remedy
+    Phoenix Down
+
+* Thamasa (WoB) - Relics
+    Earrings
+    Jeweled Ring
+    Peace Ring
+
+* Blackjack Shop - Items
+    Potion
+    Hi-Potion
+    Antidote
+    Gold Needle
+    Holy Water
+    Smoke Bomb
+    Phoenix Down
+    Tent
+
+* Figaro Castle 1(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))
+    Potion
+    Antidote
+    Gold Needle
+    Holy Water
+    Smoke Bomb
+    Phoenix Down
+    Tent
+
+* Albrook (WoR) - Items
+    Hi-Potion
+    Antidote
+    Smelling Salts
+    Gold Needle
+    Holy Water
+    Smoke Bomb
+    Phoenix Down
+    Tent
+
+* Albrook (WoR) - Weapons
+    Rune Blade
+    Shadow Blade
+    Flametongue
+    Icebrand
+    Thunder Blade
+
+* Albrook (WoR) - Armor
+    Gold Shield
+    Priest's Miter
+    Green Beret
+    Gold Helm
+    Gold Armor
+
+* Albrook (WoR) - Relics
+    Earrings
+    Gigas Glove
+    Knight's Code
+    Jeweled Ring
+    Sniper Eye
+
+* Tzen (WoR) - Weapons
+    Dark Claw
+    Burning Knuckle
+    Octagon Staff
+
+* Tzen (WoR) - Armor
+    Gold Shield
+    Twist Headband
+    Gold Helm
+    Power Sash
+    Gold Armor
+
+* Tzen (WoR) - Items
+    Hi-Potion
+    Ether
+    Antidote
+    Smelling Salts
+    Gold Needle
+    Holy Water
+    Remedy
+    Tent
+
+* Tzen (WoR) - Relics
+    Gyshal Potpourri
+    Peace Ring
+    Alarm Earring
+    Dragoon Boots
+    Thief's Bracer
+
+* Nikeah (WoR) - Weapons
+    Rune Blade
+    Hrunting
+    Blitz Whip
+
+* Nikeah (WoR) - Armor
+    Gold Shield
+    Twist Headband
+    Gold Helm
+    Power Sash
+    Gold Armor
+
+* Nikeah (WoR) - Items
+    Potion
+    Hi-Potion
+    Ether
+    Remedy
+    Smoke Bomb
+    Phoenix Down
+    Tent
+
+* Nikeah (WoR) - Relics
+    Silver Spectacles
+    Jeweled Ring
+    Hyper Wrist
+    White Cape
+    Amulet
+
+* South Figaro (WoR) - Weapons (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))
+    Heavy Lance
+    Trident
+    Hrunting
+    Flash
+    Drill
+
+* South Figaro (WoR) - Armor (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))
+    Diamond Shield
+    Diamond Helm
+    Diamond Armor
+
+* South Figaro (WoR) - Relics (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))
+    Silver Spectacles
+    Star Pendant
+    Peace Ring
+
+* South Figaro (WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))
+    Hi-Potion
+    Antidote
+    Smelling Salts
+    Gold Needle
+    Holy Water
+    Remedy
+    Phoenix Down
+    Tent
+
+* Figaro Castle 1(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))
+    Hi-Potion
+    Antidote
+    Smelling Salts
+    Gold Needle
+    Holy Water
+    Remedy
+    Phoenix Down
+    Tent
+
+* Kohlingen (WoR) - Weapons
+    Partisan
+    Cards
+    Darts
+    Dice
+    Shuriken
+    Flame Scroll
+    Water Scroll
+    Thunder Scroll
+
+* Kohlingen (WoR) - Armor
+    Diamond Shield
+    Priest's Miter
+    Green Beret
+    Diamond Helm
+    Power Sash
+    Diamond Armor
+
+* Kohlingen (WoR) - Items
+    Potion
+    Hi-Potion
+    Antidote
+    Smelling Salts
+    Gold Needle
+    Holy Water
+    Phoenix Down
+    Tent
+
+* Unused - Items
+    Dried Meat
+
+* Unused - Armor
+    Dagger
+
+* Unused - Relics
+    Dagger
+
+* Unknown - Items
+    Potion
+    Hi-Potion
+    Phoenix Down
+    Speed Tab
+    Remedy
+    Holy Water
+    Tent
+
+* Thamasa (WoR) - Weapons
+    Magical Brush
+    Diamond Bell
+    Holy Rod
+    Flame Whip
+
+* Thamasa (WoR) - Armor
+    Mystery Veil
+    Circlet
+    Black Cowl
+    Gaia Gear
+    Magus Robe
+
+* Thamasa (WoR) - Items
+    Hi-Potion
+    Ether
+    Remedy
+    Smoke Bomb
+    Phoenix Down
+    Tent
+
+* Thamasa (WoR) - Relics
+    Earrings
+    Reflect Ring
+    Zephyr Cloak
+    Feather Boots
+    Lunar Curtain
+
+* Jidoor (WoR) - Weapons
+    Partisan
+    Crystal Sword
+
+* Jidoor (WoR) - Armor
+    Circlet
+    Black Cowl
+    Mystery Veil
+    Black Garb
+
+* Jidoor (WoR) - Items
+    Hi-Potion
+    Ether
+    Holy Water
+    Remedy
+    Phoenix Down
+    Tent
+
+* Jidoor (WoR) - Relics
+    Protect Ring
+    Reflect Ring
+    Thief Gloves
+    Gale Hairpin
+
+* Maranda (WoR) - Weapons
+    Kikuichimonji
+    Enhancer Sword
+    Invis Scroll
+    Shadow Scroll
+
+* Maranda (WoR) - Armor
+    Diamond Shield
+    Oath Veil
+    Black Cowl
+    Diamond Helm
+    Black Garb
+    Diamond Armor
+
+* Figaro Castle 2-1(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))
+    Auto Crossbow
+    Noiseblaster
+    Bioblaster
+
+* Figaro Castle 2-2(WoB) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))
+    Auto Crossbow
+    Noiseblaster
+    Bioblaster
+    Flash
+    Drill
+
+* Figaro Castle 2(WoR) - Items (Prices x0.5 with Edgar/Sabin Lead (x1 otherwise))
+    Auto Crossbow
+    Noiseblaster
+    Bioblaster
+    Flash
+    Drill
+    Chainsaw
+
+* Phantom Train - Items
+    Potion
+    Hi-Potion
+    Antidote
+    Gold Needle
+    Phoenix Down
+    Tent
+
+* Unknown - Items (Prices x1.5)
+    Hi-Potion
+    Ether
+    Antidote
+    Smelling Salts
+    Gold Needle
+    Holy Water
+    Phoenix Down
+    Tent
+
+* Unused - Items
+    Hi-Potion
+    Ether
+    Remedy
+    Smoke Bomb
+    Phoenix Down
+    Tent
+
+* Narshe (WoR: Before Residents Return) - Weapons
+    Gladius
+    Defender
+    Arondight
+    Dragon Spear
+
+* Narshe (WoR: After Residents Return) - Weapons
+    Gladius
+    Defender
+    Durandal
+    Arondight
+    Dragon Spear
+    Tiger Fang
+    Rising Sun
+
+* Narshe (WoR: Before Residents Return) - Armor
+    Crystal Shield
+    Crystal Helm
+    Crystal Mail
+
+* Narshe (WoR: After Residents Return) - Armor
+    Crystal Shield
+    Crystal Helm
+    Crystal Mail
+    Reflect Mail
+    Djinn's Cap
+    Moogle Suit
+
+* Narshe (WoR: Before Residents Return) - Items
+    Potion
+    Hi-Potion
+    Ether
+
+* Narshe (WoR: After Residents Return) - Items
+    Potion
+    Hi-Potion
+    Ether
+    Hi-Ether
+    Remedy
+
+* Narshe (WoR: Before Residents Return) - Relics
+    Ward Bangle
+
+* Narshe (WoR: After Residents Return) - Relics
+    Ward Bangle
+    Hermes Sandals
+    Reflect Ring
+
+* Moogle Cave (WoR) - Items
+    Ether
+    Hi-Ether
+    Phoenix Down
+    Reincarnation
+
+* Doma Castle (WoR) - Weapons
+    Murasame
+    Izayoi
+    Fuma Shuriken
+    Flame Scroll
+    Water Scroll
+    Thunder Scroll
+    Invis Scroll
+    Shadow Scroll
+
+* Mobliz (WoR) - Vendor
+    Dried Meat
+
+* Small Stores in Various Places - Items (Prices x2)
+    Hi-Potion
+    Antidote
+    Smelling Salts
+    Gold Needle
+    Holy Water
+    Smoke Bomb
+    Phoenix Down
+    Tent
+
+* Fanatic's Tower - Vendor (Prices x2)
+    Hi-Ether
+
+* Esper Village - Weapons
+    Save the Queen
+    Balmung
+    Radiant Lance
+    Healing Staff
+    Gaia Hammer
+    Pinwheel
+
+* Esper Village - Armor
+    Flame Shield
+    Ice Shield
+    Thunder Shield
+    Djinn's Cap
+    Cachusha
+    Barrette
+    White Robe
+    Black Robe
+
+* Esper Village - Relics
+    Protect Ring
+    Reflect Ring
+    Feather Boots
+    Hermes Sandals
+    Floral Fallal
+
+* Unused - Items
+    Potion
+    Hi-Potion
+    Holy Water
+    Remedy
+    Smoke Bomb
+    Phoenix Down
+    Tent
+
+* Unused - Items (Prices x2)
+    Potion
+    Hi-Potion
+    Holy Water
+    Remedy
+    Smoke Bomb
+    Phoenix Down
+    Tent
+
+* Developer's Room - Vendor (Prices x0.5)
+    Thief's Knife
+    Thief's Bracer
+    Thief Gloves
+
+* Eureka - Weapons
+    Zantetsuken
+    Gungnir
+    Kagenui
+    Zeus Mace
+    Particle Bomb
+    Air Anchor
+
+* Eureka - Armor
+    Force Shield
+    Genji Shield
+    Aegis Shield
+    Mirage Vest
+    Minerva Bustier
+    Force Armor
+    Genji Armor
+
+* Eureka - Relics
+    Tynar Rouge
+    Thief's Bracer
+    Gauntlet
+    Genji Glove
+    Hermes Sandals
+    Reflect Ring
+    Protect Ring

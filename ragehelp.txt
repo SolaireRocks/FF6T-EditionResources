@@ -1,0 +1,374 @@
+=========
+Physical
+=========
+KilrMnts: Shrapnel
+Twinscyt: Shrapnel
+
+=========
+Mixed Element
+=========
+FendDrgn: Southern Cross (Fire, Light)
+MuudSuud: Southern Cross
+Bonnacon: Acid Rain (Dark, Water)
+Chaser: Plasma (Thunder, Wind)
+DuelArmr: Diffractive Laser (Fire, Thunder, Wind)
+Gamma: Diffractive Laser
+Tyranosa: Galaxy (All-Element)
+Slagworm: Sandstorm (Wind, Earth)
+DrgnFosl: Sandstorm
+TestRidr: Flash Rain (Thunder, Water)
+Zeveak: Flash Rain
+Exoray: Poison Fog (Wind, Dark)
+InnoSent: Poison Fog
+
+=========
+Fixed/Fractional
+=========
+AnglWhis: Gravity
+Belzecue: Gravity
+Brainpan: 1000 Needles
+Cactuar: 1000 Needles
+Cactus: 1000 Needles
+Face: 1000 Needles
+Gatling: 1000 Needles
+Dragon: Revenge Blast
+GlasyaLa: Revenge Blast
+Pandora: Revenge Blast
+Crawler: Traveler
+Fafnir: Traveler
+OniDashr: Traveler
+Pineappl: Self-Destruct
+Balloon: Self-Destruct
+DiveEagl: Shamshir
+Satellit: Shamshir
+Yojimbo: Tachi: Tiger
+Mover: Tornado
+Sorath: Cave-In
+Io: Flare Star
+
+=========
+Leech/Mana Burn
+=========
+Bld.Fang: Drain
+Vampires: Drain
+NtWalker: Drain
+VampThrn: Drain
+Samurai: Tachi: Dragon
+Outcast: Lifeshaver
+Misfit: Lifeshaver
+
+Mindflyr: Mind Blast
+Soulflyr: Mind Blast
+BldDance: Rasp
+Dropper: Magic Hammer
+Junk: Magic Hammer
+
+=========
+Non-Elemental Magic
+=========
+HvyArmor: Magitek Laser
+MTekArmr: Magitek Laser
+SkyArmor: Magitek Laser
+PlutoAmr: Magitek Missile
+GrndBehe: Meteor
+DemonKht: Shockwave
+Intangir: Comet
+Lunatys: Comet
+Ninja: Leaf Swirl
+Wyvern: Leaf Swirl
+Trapper: Level 3 Flare
+Outsider: Flare
+SkullEtr: Flare
+ArmrdWpn: Mustard Bomb
+Tonberry: Everyone's Grudge
+
+=========
+Defense-Piercing
+=========
+Trapper: Level 3 Flare
+Outsider: Flare
+SkullEtr: Flare
+GrndBehe: Meteor
+DarkBehe: Shadow Flare
+ArmrdWpn: Mustard Bomb
+
+=========
+Fire
+=========
+MtrDrive: Phoenix Dance
+FlameDog: Firaga
+OldDrago: Firaga
+Grenade: Fireball
+LesLopro: Fireball
+RedMarsh: Fireball
+Templar: Fira
+Wizard: Fira
+Imp.Sold: Fire
+Spectre: Fire
+Coolness: Elf Fire
+DevilFst: Elf Fire
+Oversoul: Elf Fire
+
+=========
+Blizzard
+=========
+Spitfire: Absolute Zero
+Gorgimer: Avalanche
+BlkDragn: Snowstorm
+Frostbst: Blizzaga
+Baalzeph: Blizzaga
+Chs.Drgn: Blizzaga
+WhtJello: Blizzaga
+Darkside: Blizzara
+VeilDanc: Blizzara
+Megalodo: Blizzard
+Lukhavi: Blizzard
+
+=========
+Thunder
+=========
+Ghost: Thundara
+Joker: Thundara
+Belmodar: 10,000 Volts [Big Bang in EX]
+Punisher: Thundaga
+Devil: Thundaga
+Corpse: Thundaga
+Al Jabr: Thundaga
+Imp: Thundaga
+Illuyank: 1,000,000 Volts
+Thor: Thunder Call
+
+==========
+Water
+==========
+Anguifor: Aqua Breath
+Chimera: Aqua Breath
+DsrtSaha: Flood
+Slug: Aqua Breath
+VectChim: El Nino
+Mandrake: Poison
+Venobenu: Poison
+Wererat: Poison
+Scorpion: Poison
+Antares: Poison
+
+=========
+Earth
+=========
+Ankheg: Magnitude 8
+Gigantos: Magnitude 8
+HilGigas: Magnitude 8
+Landworm: Magnitude 8
+Oceanus: Magnitude 8
+Hundlegs: Quake
+MedsaChk: Quake
+LitworCh: Quake
+Ourobors: Quake
+Purusa: Cliff Collapse
+Commande: Break
+Lizard: Break
+LunarWlf: Break
+Basilisk: Break
+
+==========
+Wind
+==========
+Covert: Wind Slash 
+GardLedr: Wind Slash 
+GtMantis: Wind Slash 
+Jam: Wind Slash 
+PlatDrgn: Aeroga
+Sprinter: Aeroga
+
+==========
+Light
+==========
+B. Lamia: Level 2 Holy
+Borghese: Holy
+Maiden: Holy
+St. Elmo: Holy
+
+===========
+Darkness
+===========
+GrtMalbo: Scourge
+Mahadeva: Scourge
+Neochu: Scourge
+PiscoDmn: Bio
+PoisnLch: Bio
+PurpBava: Bio
+DarkBehe: Shadow Flare (Disease)
+
+===========
+Support
+===========
+Goetia: Libra
+BlkForce: Ancient Prayer
+Brachios: Mighty Guard
+ErthGurd: Mighty Guard
+ChipRabb: Raise
+Harveste: Haste
+Sergeant: Reflect
+ImpElite: Protect
+MagicPot: Curaga
+DsrtRabb: Cura
+Misty: Cura
+Phoebe: Cure
+Peeper: White Wind
+Rudra: White Wind
+VectorLy: White Wind
+Mandrago: Sunbath (Heal HP, cure Frozen)
+Mu: Forest Bath (Heal all status, recover MP)
+Cheshire: Raccoon (Heal all, cure all statuses)
+Mykale: Meerkat (Protect, Shell, Haste, Regen to all allies)
+SnwPanth: Snow Bunny (Heal all, grant Blink)
+
+===========
+Status Ailments / Instant Death (Damage)
+===========
+Commande: Break (Petrify)
+Lizard: Break
+LunarWlf: Break
+Basilisk: Break
+Coolness: Elf Fire (Confuse)
+DevilFst: Elf Fire
+Oversoul: Elf Fire
+Slagworm: Sandstorm (Blind)
+DrgnFosl: Sandstorm
+TestRidr: Flash Rain (Blind)
+Zeveak: Flash Rain
+GrtMalbo: Scourge (Poison, Disease)
+Mahadeva: Scourge
+Neochu: Scourge
+Mindflyr: Mind Blast (MP Burn, Silence, Disease)
+Soulflyr: Mind Blast
+PiscoDmn: Bio (Disease)
+PoisnLch: Bio
+PurpBava: Bio
+Sorath: Cave-In (Disease)
+DarkBehe: Shadow Flare (Disease)
+Mandrake: Poison (Poison)
+Venobenu: Poison
+Wererat: Poison
+Scorpion: Poison
+Antares: Poison
+Exoray: Poison Fog (Poison)
+InnoSent: Poison Fog
+ArmrdWpn: Mustard Bomb (Poison)
+Tonberry: Everyone's Grudge (Instant Death)
+
+===========
+Status Ailments / Instant Death (No Damage)
+===========
+Cassie: Bad Breath (Poison, Sleep, Blind, Confuse, Silence, Toad)
+Malboro: Bad Breath
+Daedalus: Diabolic Whistle (One of: Blind, Poison, Toad, Condemn, Berserk, Confuse, Disease, Slow)
+Fortis: Confuser (AOE Confuse)
+Coco: Confuse
+Lamia: Confuse
+Minity: Night (Ally+Enemy Sleep)
+Rafflesi: Lullaby (AOE Sleep)
+FigaroLz: Dischord (Level halved)
+MtlHitmn: Dischord
+Coeurl: Blaster (AOE Instant Death)
+DdlyHorr: X-Zone (AOE Instant Death)
+Rust: Banisher (ST Instant Death)
+DthMachi: Level ? Death
+CloudWth: Death
+Necroman: Death
+Weredrgn: Death
+Gigntoad: Frog Song (AOE Toad, will not untoad)
+NeckHntr: Toad
+Onion: Toad
+Provoker: Toad
+Tzakmaqi: Toad
+Schmidt: Mega Berserk (AOE Berserk)
+Zaghrem: Berserk
+NetlHopr: Berserk
+Graswyrm: Berserk
+DrgnZomb: Death Sentence
+AlurRide: Death Sentence
+Kamui: Death Sentence
+LeapFrog: Slowga
+Amduscia: Slowga
+General: Slow
+Apocryph: Level 4 Hold (AOE Stop and Slow vs Lev. Mult of 4)
+Bug: Stop
+
+===========
+Specials: Status Ailments
+===========
+Aepyorni: Special 'Featherdust' [Inflict Poison]
+Alacran: Special 'Paralyzing Thorn' [Inflict Stop]
+BlueFlan: Special 'Slip Gunk' [Inflict Poison]
+BrnCandy: Special 'Sleep Stinger' [Inflict Sleep]
+Cartagra: Special 'Poison Needle' [Inflict Poison]
+Cockatri: Special 'Petrifying Beak' [Inflict Stone]
+Demiurok: Special 'Digestive Fluid' [Apply Slow]
+Kum Kum: Special 'Breakga' [100% Inflict Stone]
+LamiaQen: Special 'Snuggle Up' [100% Deal 1x Damage + Inflict Muddle]
+LandGril: Special 'Beetlejuice' [Inflict Berserk]
+Lilith: Special 'Melty Kiss' [100% Deal 1x Damage + Inflict Muddle]
+LivingDe: Special 'Heretic Blade' [Deal 1x Damage + Inflict Poison]
+Knotty: Special 'Soft Tail' [Inflict Toad]
+Nautiloi: Special 'Ink' [Inflict Blind]
+Ochu: Special 'Tentacle' [Deal 1x Damage + Inflict Poison]
+RockSlug: Special 'Slime' [Apply Slow]
+Stunner: Special 'Filthy Incisor' [Inflict Poison]
+Vampyr: Special 'Zombie Kiss' [Deal 1x Damage + Inflict Zombie]
+YellowMo: Special 'Gunk' [Apply Slow]
+
+===========
+Specials: Damage
+===========
+NghtHawk: Special 'Fatality Claw' [Deal 3.5x Damage]
+
+Behemoth: Special 'Beatdown' [Deal 3x Damage]
+Dante: Special 'Crystal Lance' [Deal 3x Damage]
+Domovoi: Special 'Goblin Rush' [Deal 3x Damage]
+HellRidr: Special 'Silver Lance' [Deal 3x Damage]
+
+SoulEatr: Special 'Soul Eater' [100% Deal 2.5x Damage]
+Haokah: Special 'Teeth Shredder' [Deal 2.5x Damage]
+StrayCat: Special 'Cat Scratch' [Deal 2.5x Damage]
+Wild Cat: Special 'Cat Claw' [Deal 2.5x Damage]
+Dstroide: Special 'Mighty Hit' [Deal 2.5x Damage]
+Garm: Special 'Hell Bite' [Deal 2.5x Damage]
+GoldBear: Special 'Gouge' [Deal 2.5x Damage]
+IronClaw: Special 'Iron Claw' [Deal 2.5x Damage]
+Luminesc: Special 'Backstab' [Deal 2.5x Damage]
+Lycaon: Special 'Scratch' [Deal 2.5x Damage]
+Mugbear: Special 'Jugular Scratch' [Deal 2.5x Damage]
+
+Bogy: Special 'Growl' [Deal 2x Damage]
+BkLizard: Special 'Long Tongue' [Deal 2x Damage]
+Corporal: Special 'Swing' [Deal 2x Damage]
+Deathclw: Special 'Death Claw' [Deal 2x Damage]
+Fawn: Special 'Elven Dart' [Deal 2x Damage]
+Fidor: Special 'Pounce' [Deal 2x Damage]
+Goblin: Special 'Goblin Punch' [Deal 2x Damage]
+Gorgias: Special 'Gore' [Deal 2x Damage]
+
+Hedgehog: Special 'Needle Launch' [100% Deal 1.5x Damage]
+Bomb: Special 'Small Explosion' [Deal 1.5x Damage]
+DesertSa: Special 'Tail Attack' [Deal 1.5x Damage]
+Devourer: Special 'Shell Slam' [Deal 1.5x Damage]
+Doberman: Special 'Bite' [Deal 1.5x Damage]
+Don: Special 'Tackle' [Deal 1.5x Damage]
+Fem.Sold: Special 'Smash' [Deal 1.5x Damage]
+Guard: Special 'Full Strength' [Deal 1.5x Damage]
+HntHound: Special 'Throat Attack' [Deal 1.5x Damage]
+Hornet: Special 'Iron Stinger' [Deal 1.5x Damage]
+LeafBunn: Special 'Incisor' [Deal 1.5x Damage]
+NutEater: Special 'Nut Throw' [Deal 1.5x Damage]
+SahagChf: Special 'Triangle Kick' [Deal 1.5x Damage]
+Sahagin: Special 'Kick' [Deal 1.5x Damage]
+SlvrLobo: Special 'Fang' [Deal 1.5x Damage]
+VectorHn: Special 'Pounce' [Deal 1.5x Damage]
+Vivian: Special 'Malboro Germs' [Deal 1.5x Damage]
+
+BloodBat: Special 'Bloodsuck' [Deal 1x Damage+Drain]
+LivingDe: Special 'Heretic Blade' [Deal 1x Damage+Poison]
+Ochu: Special 'Tentacle' [Deal 1x Damage+Poison]
+SteelBat: Special 'Bloodsuck' [Deal 1x Damage+Drain]
+Vampyr: Special 'Zombie Kiss' [Deal 1x Damage+Zombie]

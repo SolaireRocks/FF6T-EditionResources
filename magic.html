@@ -1,0 +1,2734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic List</title>
+    <style>
+        /*  Resets (Normalize.css inspired -  more comprehensive) */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+            font-size: 16px; /* Slightly larger base font size */
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #323232;
+            text-align: center;
+            margin-bottom: 0.5em;
+            font-size: 2.5em; /* Larger heading */
+            letter-spacing: 0.05em;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px solid blue;
+            margin: 1em 0;
+        }
+
+        .last-updated {
+            text-align: right;
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 1em;
+        }
+
+        .version-info {
+            text-align: right;
+            font-size: 0.9em;
+            color:#666;
+        }
+
+
+        .nav-table {
+            width: 100%;
+            table-layout: fixed; /* Equal width columns */
+            margin-bottom: 20px;
+            border-collapse: collapse; /* Remove spacing between cells */
+            position: sticky;  /*  Sticky header */
+            top: 0;  /* Stick to the top */
+            background-color: rgba(244, 244, 244, 0.95); /* Slightly transparent background */
+            z-index: 100; /* Ensure it's above other content */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+
+        }
+
+       .nav-table td {
+           padding: 8px;
+           text-align: center;
+           border: 1px solid #ddd;
+           transition: background-color 0.2s; /* Smooth transition */
+        }
+
+        .nav-table td:hover {
+           background-color: #ddd;
+        }
+
+        .nav-table a {
+            text-decoration: none;
+            color: #333;
+            display: block; /* Make the link fill the cell */
+            font-size: 0.9em;
+        }
+        .nav-table td:nth-child(odd){
+            background-color: #ddddff;
+        }
+
+
+        h2 {
+            font-size: 1.8em;
+            color: #383838;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+            display: flex;         /* Use flexbox for alignment */
+            align-items: center; /* Vertically center content */
+            justify-content: space-between; /* Space out the title and link */
+        }
+
+        h2 a {
+            font-size: 0.6em; /* Smaller "top" link */
+            text-decoration: none;
+            color: #007bff; /* Link color */
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+            overflow-x: auto;  /*  Horizontal scrolling on small screens */
+        }
+
+         th,  td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            font-size: 0.85em; /* Reduce font size slightly for table content */
+        }
+
+         th {
+            background-color: #dfdfdf;
+            font-weight: bold;
+            position: sticky;
+            top: 55px; /*nav-table Height plus a buffer*/
+            z-index: 50;
+        }
+        tr > td:first-child{
+            text-align: center;
+        }
+
+         /*  Color coding rows - more semantic */
+        .black-magic  td { background-color: #e0e0e0; }
+        .white-magic  td { background-color: #f8f8ff; }
+        .time-magic   td { background-color: #f0f0f0; }
+        .summon-magic td { background-color: #f5f0ff; }
+        .blue-magic   td { background-color: #e8f8ff; }
+        .enemy-magic  td { background-color: #ffe8f8; }
+        .ex-magic     td { background-color: #fff8dc; }
+
+         /*  Attribute color coding (optional, but enhances readability) */
+        .attr-fire     { color: red; }
+        .attr-ice      { color: blue; }
+        .attr-thunder  { color: goldenrod; }
+        .attr-water    { color: deepskyblue; }
+        .attr-earth    { color: saddlebrown; }
+        .attr-wind     { color: seagreen; }
+        .attr-darkness { color: purple; }
+        .attr-light    { color: orange; } /*  "light" is hard to read.  */
+
+        /*  Responsive Table Adjustments */
+        @media (max-width: 768px) {
+             th,  td {
+                display: block;  /* Stack cells vertically */
+                width: 100%;    /* Full width */
+                box-sizing: border-box; /* Include padding/border in width */
+            }
+            th{
+                top:0px;
+            }
+
+            /* Hide less important columns on small screens */
+             td:nth-child(7),   /* Effect Value  */
+             td:nth-child(10),  /* Reflect */
+             td:nth-child(11)   /* Runic */
+              {
+                display: none;
+            }
+        }
+          /*  Footer */
+          footer{
+            text-align: right;
+            font-size: 0.9em;
+            color: #666;
+          }
+        .mastery-item{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Magic List</h1>
+    <hr color="blue">
+
+    <div class="last-updated">Last Updated: 12/8/2022</div>
+    <div class="version-info">Version: 3.0.5<br>EX: 2.0.5</div>
+
+    <table class="nav-table">
+        <tr>
+            <td><a href="#black">Black Magic</a></td>
+            <td><a href="#white">White Magic</a></td>
+            <td><a href="#time">Time Magic</a></td>
+            <td><a href="#summon">Eidolons</a></td>
+            <td><a href="#blue">Blue Magic</a></td>
+            <td><a href="#monster">Enemy Magic/Techniques</a></td>
+            <td><a href="#ex">EX Magic/Techniques</a></td>
+        </tr>
+    </table>
+
+    <h2 id="black">Black Magic <a href="#top">▲</a></h2>
+    <table class="magic-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Target</th>
+                <th colspan="3">Attribute</th>
+                <th>Effect Value</th>
+                <th>Ability Description</th>
+                <th>Status Effect</th>
+                <th>Reflect</th>
+                <th>Runic</th>
+                <th>Magic Mastery</th>
+            </tr>
+        </thead>
+        <tbody class="black-magic">
+            <tr>
+                <td>●Fire</td>
+                <td>4</td>
+                <td>Single/All</td>
+                <td colspan="3" class="attr-fire">Fire</td>
+                <td>18</td>
+                <td>Deals low power fire-elemental damage.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Ifrit (×5)　<br><span class="mastery-item">Earrings (×1)</span></td>
+            </tr>
+            <tr>
+                <td>●Blizzard</td>
+                <td>5</td>
+                <td>Single/All</td>
+                <td colspan="3" class="attr-ice">Ice</td>
+                <td>19</td>
+                <td>Deals low power ice-elemental damage.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Shiva (×5)</td>
+            </tr>
+            <tr>
+                <td>●Thunder</td>
+                <td>6</td>
+                <td>Single/All</td>
+                <td colspan="3" class="attr-thunder">Thunder</td>
+                <td>17</td>
+                <td>Deals low power thunder-elemental damage.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Ramuh (×5)</td>
+            </tr>
+            <tr>
+                <td>●Poison</td>
+                <td>8</td>
+                <td>Single/All</td>
+                <td colspan="3" class="attr-water">Water</td>
+                <td>22</td>
+                <td>Deals low power water-elemental damage. Additional effect: Poison.</td>
+                <td>Poison</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Phantom (×4)　　<br><span class="mastery-item">Black Cowl (×2)</span></td>
+            </tr>
+            <tr>
+                <td>●Drain</td>
+                <td>16</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>28</td>
+                <td>Absorbs the target's HP and restores your own. Still does damage even if you're full HP.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Maduin (×2)</td>
+            </tr>
+            <tr>
+                <td>●Sleep</td>
+                <td>7</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Puts the target to sleep.</td>
+                <td>Sleep</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Siren (×4)</td>
+            </tr>
+            <tr>
+                <td>●Fira</td>
+                <td>30</td>
+                <td>Single/All</td>
+                <td colspan="3" class="attr-fire">Fire</td>
+                <td>50</td>
+                <td>Deals medium power fire-elemental damage.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Ifrit (×2)　　<br><span class="mastery-item">Flame Shield (×5)</span></td>
+            </tr>
+            <tr>
+                <td>●Blizzara</td>
+                <td>31</td>
+                <td>Single/All</td>
+                <td colspan="3" class="attr-ice">Ice</td>
+                <td>52</td>
+                <td>Deals medium power ice-elemental damage.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Shiva (×2)　　<br><span class="mastery-item">Ice Shield (×5)</span></td>
+            </tr>
+            <tr>
+                <td>●Thundara</td>
+                <td>32</td>
+                <td>Single/All</td>
+                <td colspan="3" class="attr-thunder">Thunder</td>
+                <td>51</td>
+                <td>Deals medium power thunder-elemental damage.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Ramuh (×2)　　<br><span class="mastery-item">Thunder Shield (×5)</span></td>
+            </tr>
+            <tr>
+                <td>●Break</td>
+                <td>36</td>
+                <td>Single</td>
+                <td colspan="3" class="attr-earth">Earth</td>
+                <td>46</td>
+                <td>Deals medium power earth-elemental damage. Additional effect: Petrification.</td>
+                <td>Petrify</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Catoblepas (×3)　　<br><span class="mastery-item">Aegis Shield (×5)</span></td>
+            </tr>
+            <tr>
+                <td>●Toad</td>
+                <td>15</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Turns the target into a toad or cancels toad if target is already one.</td>
+                <td>Toad</td>
+                <td>○</td>
+                <td>×</td>
+                <td>Cait Sith (×2)</td>
+            </tr>
+            <tr>
+                <td>●Bio</td>
+                <td>42</td>
+                <td>Single/All</td>
+                <td colspan="3" class="attr-darkness">Darkness</td>
+                <td>53</td>
+                <td>Deals medium power dark-elemental damage. Additional effect: Disease.</td>
+                <td>Disease</td>
+                <td>○</td>
+                <td>○</td>
+                <td>PuPu (×2)</td>
+            </tr>
+            <tr>
+                <td>●Firaga</td>
+                <td>71</td>
+                <td>Single/All</td>
+                <td colspan="3" class="attr-fire">Fire</td>
+                <td>86</td>
+                <td>Deals high power fire-elemental damage.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Valigarm (×3)</td>
+            </tr>
+            <tr>
+                <td>●Blizzaga</td>
+                <td>72</td>
+                <td>Single/All</td>
+                <td colspan="3" class="attr-ice">Ice</td>
+                <td>87</td>
+                <td>Deals high power ice-elemental damage.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Valigarm (×3)　　<br><span class="mastery-item">Snow Scarf (×1)</span></td>
+            </tr>
+            <tr>
+                <td>●Thundaga</td>
+                <td>73</td>
+                <td>Single/All</td>
+                <td colspan="3" class="attr-thunder">Thunder</td>
+                <td>85</td>
+                <td>Deals high power thunder-elemental damage.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Valigarm (×3)　　<br><span class="mastery-item">Fiend's Cap (×1)</span></td>
+            </tr>
+            <tr>
+                <td>●Dispel</td>
+                <td>36</td>
+                <td>Single/All</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Removes Slow, Reraise, Berserk, Stop, Float, Reflect, Regen, Blink, Protect, Vanish, and Shell from the target.</td>
+                <td>－</td>
+                <td>×</td>
+                <td>○</td>
+                <td>Diabolos (×5)<br><span class="mastery-item">Lambent Hat (×2)</span></td>
+            </tr>
+            <tr>
+                <td>●Death</td>
+                <td>44</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Instantly kills the target.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Catoblepas (×1)　　<br><span class="mastery-item">Black Garb (×2)</span></td>
+            </tr>
+            <tr>
+                <td>●Rasp</td>
+                <td>24</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>15</td>
+                <td>Deals MP damage to the target.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Maduin (×3)</td>
+            </tr>
+            <tr>
+                <td>●Quake</td>
+                <td>90</td>
+                <td>All Enemies/Allies</td>
+                <td colspan="3" class="attr-earth">Earth</td>
+                <td>82</td>
+                <td>Deals high power earth-elemental damage to all enemies/allies that ignores defense.<br>This will not hit floating/flying targets.</td>
+                <td>－</td>
+                <td>×</td>
+                <td>×</td>
+                <td>Titan (×1)</td>
+            </tr>
+            <tr>
+                <td>●Flood</td>
+                <td>81</td>
+                <td>All</td>
+                <td colspan="3" class="attr-water">Water</td>
+                <td>112</td>
+                <td>Deals high power water-elemental damage.</td>
+                <td>－</td>
+                <td>×</td>
+                <td>×</td>
+                <td>Leviathan (×2)</td>
+            </tr>
+            <tr>
+                <td>●Scourge</td>
+                <td>82</td>
+                <td>All</td>
+                <td colspan="3" class="attr-darkness">Darkness</td>
+                <td>94</td>
+                <td>Deals high power darkness-elemental damage. Additional effects: Poison, Disease.</td>
+                <td>Poison, Disease</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Crusader (×4)</td>
+            </tr>
+            <tr>
+                <td>●Aspir</td>
+                <td>10</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>5</td>
+                <td>Drains MP from the target and restores your own.</td>
+                <td>－</td>
+                <td>×</td>
+                <td>○</td>
+                <td>Diabolos (×2)</td>
+            </tr>
+            <tr>
+                <td>●Flare</td>
+                <td>99</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>66</td>
+                <td>Deals high power non-elemental defense-ignoring damage.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Bahamut (×5)　　<br><span class="mastery-item">Black Robe (×2)</span></td>
+            </tr>
+            <tr>
+                <td>●Ultima</td>
+                <td>140</td>
+                <td>All</td>
+                <td colspan="3">－</td>
+                <td>122</td>
+                <td>Ultimate magic. Deals high power non-elemental defense-ignoring damage.</td>
+                <td>－</td>
+                <td>×</td>
+                <td>○</td>
+                <td>Ultima (×3)<br><span class="mastery-item">Lordly Robes (x1)</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 id="white">White Magic <a href="#top">▲</a></h2>
+        <table class="magic-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Cost</th>
+                <th>Target</th>
+                <th colspan="3">Attribute</th>
+                <th>Effect Value</th>
+                <th>Ability Description</th>
+                <th>Status Effect</th>
+                <th>Reflect</th>
+                <th>Runic</th>
+                <th>Magic Mastery</th>
+            </tr>
+        </thead>
+        <tbody class="white-magic">
+            <tr>
+                <td>○Cure</td>
+                <td>5</td>
+                <td>Single/All</td>
+                <td colspan="3">－</td>
+                <td>10</td>
+                <td>Low power magic that restores HP.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Kirin (×5)　<br>Seraphim (×10)<br><span class="mastery-item">Priest's Miter (×1)</span></td>
+            </tr>
+            <tr>
+                <td>○Libra</td>
+                <td>3</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Shows the target's HP and MP values plus any weaknesses.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Cait Sith (×10)<br>Ragnarok (×10)</td>
+            </tr>
+            <tr>
+                <td>○Poisona</td>
+                <td>3</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Cures the target of Poison and Disease.</td>
+                <td>－</td>
+                <td>×</td>
+                <td>○</td>
+                <td>Unicorn (×8)　　<br><span class="mastery-item">Magus Hat (×1)</span></td>
+            </tr>
+            <tr>
+                <td>○Silence</td>
+                <td>14</td>
+                <td>Single/All</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Stops the target from casting spells.</td>
+                <td>Silence</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Siren (×3)</td>
+            </tr>
+            <tr>
+                <td>○Protect</td>
+                <td>20</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Increases the target's defense.</td>
+                <td>Protect</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Golem (×5)　　<br><span class="mastery-item">Gigas Glove (×1)</span></td>
+            </tr>
+            <tr>
+                <td>○Shell</td>
+                <td>22</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Increases the target's magic defense.</td>
+                <td>Shell</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Golem (×5)　<br>PuPu (×4)<br><span class="mastery-item">Force Shield (×3)　<br>Force Armor (×5)</span></td>
+            </tr>
+            <tr>
+                <td>○Cura</td>
+                <td>22</td>
+                <td>Single/All</td>
+                <td colspan="3">－</td>
+                <td>28</td>
+                <td>Medium power magic that restores HP.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Seraphim (×3)　　<br><span class="mastery-item">Mystery Veil (×2)<br>Magus Robe (×5)</span></td>
+            </tr>
+            <tr>
+                <td>○Berserk</td>
+                <td>18</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Makes the target ignore commands and use Fight only, but strength is increased.</td>
+                <td>Berserk</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Fenrir (×5)</td>
+            </tr>
+            <tr>
+                <td>○Confuse</td>
+                <td>15</td>
+                <td>Single/All</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Confuses and makes the target attack friend or foe.</td>
+                <td>Confuse</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Cait Sith (×4)　　<br><span class="mastery-item">Moogle Suit (×5)</span></td>
+            </tr>
+            <tr>
+                <td>○Raise</td>
+                <td>30</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>2/16</td>
+                <td>Revives the fallen target.</td>
+                <td>－</td>
+                <td>×</td>
+                <td>○</td>
+                <td>Seraphim (×2)　<br>Asura (×20)<br>Phoenix (×25)<br><span class="mastery-item">Oath Veil (×2)　<br>Memento Ring (×3)</span></td>
+            </tr>
+            <tr>
+                <td>○Esuna</td>
+                <td>28</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Removes most status ailments from the target. Confusion, Silence, Slow, Disease, Stop, Sleep, Poison, Blind, and Petrify.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>○</td>
+                <td>Unicorn (×2)　<br><span class="mastery-item">Circlet (×5)</span></td>
+            </tr>
+            <tr>
+                <td>○Vanish</td>
+                <td>23</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Makes the target invisible.</td>
+                <td>Vanish</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Phantom (×3)</td>
+            </tr>
+            <tr>
+                <td>○Curaga</td>
+                <td>46</td>
+                <td>Single/All</td>
+                <td colspan="3">－</td>
+                <td>66</td>
+                <td>High power magic that restores HP.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Asura (×4)　　<br><span class="mastery-item">Floral Fallal (×1)</span></td>
+            </tr>
+            <tr>
+                <td>○Reflect</td>
+                <td>33</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Rebounds most spells cast on the target.</td>
+                <td>Reflect</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Carbuncle (×2)　<br><span class="mastery-item">Lunar Curtain (×1)<br>Reflect Ring (×3)</span></td>
+            </tr>
+            <tr>
+                <td>○Blink</td>
+                <td>65</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>－</td>
+                <td>Shrouds the target in magical copies of themselves that absorb physical hits for them.</td>
+                <td>Blink</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Mist Dragon (×4)　　<br><span class="mastery-item">Mirage Vest (×3)</span></td>
+            </tr>
+            <tr>
+                <td>○Arise</td>
+                <td>90</td>
+                <td>Single</td>
+                <td colspan="3">－</td>
+                <td>16/16</td>
+                <td>Revives and fully restores all HP of the target.</td>
+                <td>－</td>
+                <td>×</td>
+                <td>○</td>
+                <td>Phoenix (×3)　<br><span class="mastery-item">Tynar Rouge (×5)<br>Embroided Tippet (×1)</span></td>
+            </tr>
+            <tr>
+                <td>○Tornado</td>
+                <td>105</td>
+                <td>All</td>
+                <td colspan="3">－</td>
+                <td>15/16</td>
+                <td>Puts all targets into a critical state.</td>
+                <td>－</td>
+                <td>×</td>
+                <td>×</td>
+                <td>Asura (×2)</td>
+            </tr>
+            <tr>
+                <td>○Holy</td>
+                <td>92</td>
+                <td>Single</td>
+                <td colspan="3" class="attr-light">Light</td>
+                <td>104</td>
+                <td>Deals high power light-elemental damage.</td>
+                <td>－</td>
+                <td>○</td>
+                <td>○</td>
+                <td>Mist Dragon (×5)　　<br><span class="mastery-item">White Robe (×2)</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+<h2 id="time">Time Magic <a href="#top">▲</a></h2>
+<table class="magic-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Cost</th>
+            <th>Target</th>
+            <th colspan="3">Attribute</th>
+            <th>Effect Value</th>
+            <th>Ability Description</th>
+            <th>Status Effect</th>
+            <th>Reflect</th>
+            <th>Runic</th>
+            <th>Magic Mastery</th>
+        </tr>
+    </thead>
+    <tbody class="time-magic">
+    <tr>
+        <td><span style="color:#808080">●</span>Slow</td>
+        <td>10</td>
+        <td>Single</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Slows down the target making their turns come slower.</td>
+        <td>Slow</td>
+        <td>○</td>
+        <td>○</td>
+        <td>Catoblepas (×5)</td>
+    </tr>
+     <tr>
+        <td><span style="color:#808080">●</span>Haste</td>
+        <td>12</td>
+        <td>Single</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Speeds up the target making their turns come faster.</td>
+        <td>Haste</td>
+        <td>○</td>
+        <td>○</td>
+        <td>Maduin (×4)</td>
+    </tr>
+     <tr>
+        <td><span style="color:#808080">●</span>Stop</td>
+        <td>24</td>
+        <td>Single</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Freezes a target making them unable to do anything.</td>
+        <td>Stop</td>
+        <td>○</td>
+        <td>○</td>
+        <td>Phantom (×3)</td>
+    </tr>
+     <tr>
+        <td><span style="color:#808080">●</span>Teleport</td>
+        <td>20</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Allows for escape from a battle or dungeon.</td>
+        <td>－</td>
+        <td>×</td>
+        <td>×</td>
+        <td>Carbuncle (×4)<br>Ragnarok (×10)<br><span class="mastery-item">Cat Hood (×3)</span></td>
+    </tr>
+     <tr>
+        <td><span style="color:#808080">●</span>Regen</td>
+        <td>15</td>
+        <td>Single</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Gradually restores HP to the target.</td>
+        <td>Regen</td>
+        <td>○</td>
+        <td>○</td>
+        <td>Kirin (×2)　　<br><span class="mastery-item">Gold Hairpin (×1)</span></td>
+    </tr>
+     <tr>
+        <td><span style="color:#808080">●</span>Float</td>
+        <td>31</td>
+        <td>Single/All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Makes you float avoiding earth damage.</td>
+        <td>Float</td>
+        <td>×</td>
+        <td>○</td>
+        <td>Carbuncle (×3)</td>
+    </tr>
+     <tr>
+        <td><span style="color:#808080">●</span>Gravity</td>
+        <td>43</td>
+        <td>Single</td>
+        <td colspan="3">－</td>
+        <td>8/16</td>
+        <td>Deals half current HP damage.</td>
+        <td>－</td>
+        <td>×</td>
+        <td>○</td>
+        <td>Titan (×5)</td>
+    </tr>
+     <tr>
+        <td><span style="color:#808080">●</span>X-Zone</td>
+        <td>61</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Kills the target.</td>
+        <td>－</td>
+        <td>×</td>
+        <td>×</td>
+        <td>Crusader (×2)</td>
+    </tr>
+     <tr>
+        <td><span style="color:#808080">●</span>Comet</td>
+        <td>52</td>
+        <td>Single</td>
+        <td colspan="3">－</td>
+        <td>58</td>
+        <td>Deals medium power non-elemental damage.</td>
+        <td>－</td>
+        <td>×</td>
+        <td>○</td>
+        <td>Fenrir (×3)　<br><span class="mastery-item">Behemoth Suit (×2)</span></td>
+    </tr>
+     <tr>
+        <td><span style="color:#808080">●</span>Slowga</td>
+        <td>41</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Slows down all targets making their turns come slower.</td>
+        <td>Slow</td>
+        <td>○</td>
+        <td>○</td>
+        <td>Leviathan (×5)</td>
+    </tr>
+     <tr>
+        <td><span style="color:#808080">●</span>Hastega</td>
+        <td>48</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Speeds up all targets making their turns come faster.</td>
+        <td>Haste</td>
+        <td>○</td>
+        <td>○</td>
+        <td>Odin (×3)</td>
+    </tr>
+    <tr>
+        <td><span style="color:#808080">●</span>Meteor</td>
+        <td>220</td>
+        <td>Random</td>
+        <td colspan="3">－</td>
+        <td>36</td>
+        <td>Deals non-elemental damage that ignores defense and attacks 2-4 times.</td>
+        <td>－</td>
+        <td>×</td>
+        <td>×</td>
+        <td>Odin (×2) 　<br><span class="mastery-item">Hero's Shield (×1)</span></td>
+    </tr>
+    </tbody>
+</table>
+
+<h2 id="summon">Eidolons <a href="#top">▲</a></h2>
+    <table class="magic-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Cost</th>
+            <th>Target</th>
+            <th colspan="3">Attribute</th>
+            <th>Effect Value</th>
+            <th>Attack Name</th>
+            <th>Ability Description</th>
+            <th>Status Effect</th>
+            <th>Magic Mastery Teaching</th>
+        </tr>
+    </thead>
+    <tbody class="summon-magic">
+    <tr>
+        <td>Ramuh</td>
+        <td>75</td>
+        <td>All</td>
+        <td colspan="3" class="attr-thunder">Thunder</td>
+        <td>64</td>
+        <td>Judgment Bolt</td>
+        <td>Deals powerful thunder-elemental damage to all targets.</td>
+        <td>－</td>
+        <td>●Thunder (×5)<br>●Thundara (×2)</td>
+    </tr>
+     <tr>
+        <td>Kirin</td>
+        <td>42</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>12</td>
+        <td>Holy Aura</td>
+        <td>Gives all party members the effect of Regen and heals them a small amount.</td>
+        <td>Regen</td>
+        <td>○Cure (×5)<br><span style="color:#808080">●</span>Regen (<span style="color:#808080">●</span>リジェネ) (×2)</td>
+    </tr>
+     <tr>
+        <td>Siren</td>
+        <td>62</td>
+        <td>All</td>
+        <td colspan="3" class="attr-wind">Wind</td>
+        <td>52</td>
+        <td>Silent Voice</td>
+        <td>Deals powerful wind-elemental damage and silences all targets.</td>
+        <td>Silence</td>
+        <td>○Silence (×3)<br>●Sleep (×4)</td>
+    </tr>
+     <tr>
+        <td>Cait Sith</td>
+        <td>60</td>
+        <td>All</td>
+        <td colspan="3" class="attr-light">Light</td>
+        <td>50</td>
+        <td>Cat Rain</td>
+        <td>Deals powerful light-elemental damage to all targets and sets Blind and Disease.</td>
+        <td>Blind <br>Disease</td>
+        <td>○Confuse (×4)<br>○Libra (×10)<br>●Toad (×2)</td>
+    </tr>
+    <tr>
+        <td>Ifrit</td>
+        <td>76</td>
+        <td>All</td>
+        <td colspan="3" class="attr-fire">Fire</td>
+        <td>64</td>
+        <td>Hellfire</td>
+        <td>Deals powerful fire-elemental damage to all targets.</td>
+        <td>－</td>
+        <td>●Fire (×5)<br>●Fira (×2)</td>
+    </tr>
+    <tr>
+        <td>Shiva</td>
+        <td>77</td>
+        <td>All</td>
+        <td colspan="3" class="attr-ice">Ice</td>
+        <td>64</td>
+        <td>Diamond Dust</td>
+        <td>Deals powerful ice-elemental damage to all targets.</td>
+        <td>－</td>
+        <td>●Blizzard (×5)<br>●Blizzara (×2)</td>
+    </tr>
+     <tr>
+        <td>Unicorn</td>
+        <td>66</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Healing Horn</td>
+        <td>Cures various status ailments for all party members. Confusion, Silence, Slow, Toad, Disease, Berserk, Stop, Sleep, Poison, Zombie, Rage, Blind, Frozen, and Petrify.</td>
+        <td>-</td>
+        <td>○Poisona (×8)<br>○Esuna (×2)</td>
+    </tr>
+     <tr>
+        <td>Maduin</td>
+        <td>81</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>72</td>
+        <td>Chaos Wave</td>
+        <td>Deals powerful non-elemental damage to all targets and extra damage to human enemies.</td>
+        <td>－</td>
+        <td>●Drain (×2)<br><span style="color:#808080">●</span>Haste (×4)<br>●Rasp (×3)</td>
+    </tr>
+     <tr>
+        <td>Catoblepas</td>
+        <td>66</td>
+        <td>All</td>
+        <td colspan="3" class="attr-darkness">Darkness</td>
+        <td>55</td>
+        <td>Demon Eye</td>
+        <td>Deals powerful dark-elemental damage to all targets.</td>
+        <td>Petrify</td>
+        <td>●Break (×3)<br>●Death (×1)<br><span style="color:#808080">●</span>Slow (×5)</td>
+    </tr>
+     <tr>
+        <td>Phantom</td>
+        <td>62</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Ghostly Veil</td>
+        <td>Gives all party members the effect of Vanish.</td>
+        <td>Vanish</td>
+        <td>●Poison (×4)<br><span style="color:#808080">●</span>Stop (×3)<br>○Vanish (×3)</td>
+    </tr>
+     <tr>
+        <td>Carbuncle</td>
+        <td>58</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Ruby Light</td>
+        <td>Gives all party members the effect of Reflect.</td>
+        <td>Reflect</td>
+        <td>○Reflect (×2)<br><span style="color:#808080">●</span>Float (×3)<br>○Teleport (×4)</td>
+    </tr>
+     <tr>
+        <td>Leviathan</td>
+        <td>150</td>
+        <td>All</td>
+        <td colspan="3" class="attr-water">Water</td>
+        <td>128</td>
+        <td>Tidal Wave</td>
+        <td>Deals powerful water-elemental damage to all targets.</td>
+        <td>－</td>
+        <td>●Flood (×2)<br><span style="color:#808080">●</span>Slowga (×5)</td>
+    </tr>
+     <tr>
+        <td>Golem</td>
+        <td>88</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Earthen Wall</td>
+        <td>Grants all party members a special defense that absorbs x amount of physical damage.</td>
+        <td>－</td>
+        <td>○Protect (×5)<br>○Shell (×5)</td>
+    </tr>
+     <tr>
+        <td>PuPu</td>
+        <td>45</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Space Barrier</td>
+        <td>Gives all party members the effect of Shell.</td>
+        <td>Shell</td>
+        <td>○Shell (×4)<br>●Bio (×2)</td>
+    </tr>
+    <tr>
+        <td>Seraphim</td>
+        <td>55</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>44</td>
+        <td>Angel Feathers</td>
+        <td>Recovers HP of all party members.</td>
+        <td>－</td>
+        <td>○Cure (×10)<br>○Cura (×3)<br>○Raise (×2)</td>
+    </tr>
+     <tr>
+        <td>Mist Dragon</td>
+        <td>115</td>
+        <td>All</td>
+        <td colspan="3" class="attr-light attr-water">Light <br>Water</td>
+        <td>91</td>
+        <td>Radiant Breath</td>
+        <td>Deals powerful light and water-elemental damage to all targets.</td>
+        <td>－</td>
+        <td>○Holy (×5)<br>○Blink (×4)</td>
+    </tr>
+     <tr>
+        <td>Fenrir</td>
+        <td>42</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Lunatic High</td>
+        <td>Gives all party members the effects of Haste and Berserk.</td>
+        <td>Haste <br>Berserk</td>
+        <td>○Berserk (×5)<br><span style="color:#808080">●</span>Comet (×3)</td>
+    </tr>
+     <tr>
+        <td>Valigarmanda</td>
+        <td>121</td>
+        <td>All</td>
+        <td colspan="3" class="attr-fire attr-ice attr-thunder">Fire <br>Ice <br>Thunder</td>
+        <td>110</td>
+        <td>Tri-Disaster</td>
+        <td>Deals powerful fire, ice, and thunder-elemental damage to all targets.</td>
+        <td>－</td>
+        <td>●Firaga (×3)<br>●Blizzaga (×3)<br>●Thundaga (×3)</td>
+    </tr>
+    <tr>
+        <td>Titan</td>
+        <td>98</td>
+        <td>All</td>
+        <td colspan="3" class="attr-earth">Earth</td>
+        <td>88</td>
+        <td>Earth's Fury</td>
+        <td>Deals powerful earth-elemental damage to all targets.<br>Does not affect floating/flying targets.</td>
+        <td>－</td>
+        <td>●Quake (×1)<br><span style="color:#808080">●</span>Gravity (×5)</td>
+    </tr>
+     <tr>
+        <td>Asura</td>
+        <td>101</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>51</td>
+        <td>Queen's Aegis</td>
+        <td>Randomly gives all party members either Protect, Blink, or Reraise.</td>
+        <td>Protect <br>Blink <br>Reraise</td>
+        <td>○Raise (×20)<br>○Curaga (×4)<br>○Tornado (×2)</td>
+    </tr>
+     <tr>
+        <td>Diabolos</td>
+        <td>92</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>3/4</td>
+        <td>Dark Messenger</td>
+        <td>Deals massive Gravity damage to all targets.</td>
+        <td>－</td>
+        <td>●Dispel (×5)<br>●Aspir (×2)</td>
+    </tr>
+     <tr>
+        <td>Phoenix</td>
+        <td>131</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>10/16</td>
+        <td>Flames of Rebirth</td>
+        <td>Revives all fallen party members.</td>
+        <td>－</td>
+        <td>○Raise (×25)<br>○Arise (×3)</td>
+    </tr>
+    <tr>
+        <td>Odin</td>
+        <td>108</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Zantetsuken</td>
+        <td>Cuts through all enemies causing instant death.</td>
+        <td>－</td>
+        <td>●Meteor (×2)<br><span style="color:#808080">●</span>Hastega (×3)</td>
+    </tr>
+     <tr>
+        <td>Bahamut</td>
+        <td>162</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>118</td>
+        <td>Mega Flare</td>
+        <td>Deals powerful non-elemental defense-ignoring damage to all targets.</td>
+        <td>－</td>
+        <td>●Flare (×5)</td>
+    </tr>
+     <tr>
+        <td>Ragnarok</td>
+        <td>30</td>
+        <td>Single</td>
+        <td colspan="3">－</td>
+        <td>－</td>
+        <td>Metamorphosis</td>
+        <td>Morphs an enemy into an item.</td>
+        <td>－</td>
+        <td>○Libra (×10)<br><span style="color:#808080">●</span>Teleport (×10)</td>
+    </tr>
+    <tr>
+        <td>Crusader</td>
+        <td>136</td>
+        <td>All Enemies/Allies</td>
+        <td colspan="3" class="attr-fire attr-ice attr-thunder attr-darkness attr-wind attr-light attr-earth attr-water">Fire <br>Ice <br>Thunder <br>Darkness <br>Wind <br>Light <br> Earth <br>Water</td>
+        <td>190</td>
+        <td>Armaggedon</td>
+        <td>Deals powerful all-elemental defense-ignoring damage to all enemies and allies.</td>
+        <td>－</td>
+        <td>●Scourge (×4)<br><span style="color:#808080">●</span>X-Zone (×2)</td>
+    </tr>
+     <tr>
+        <td>Ultima</td>
+        <td>250</td>
+        <td>All</td>
+        <td colspan="3">－</td>
+        <td>156</td>
+        <td>Perfect Ultima</td>
+        <td>Ultimate magic. Deals powerful non-elemental defense-ignoring damage to all targets.</td>
+        <td>－</td>
+        <td>●Ultima (×3)</td>
+    </tr>
+    </tbody>
+    </table>
+
+<h2 id="blue">Blue Magic <a href="#top">▲</a></h2>
+<p>Note: The enemies that teach Blue Magic in the list here either give the spell from them casting it, Gau using them as a Rage, casting Confuse on them (very rarely), or via Sketch. Not all methods will work, so experiment to find out.</p>
+<table class="magic-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Cost</th>
+            <th>Target</th>
+            <th colspan="3">Attribute</th>
+            <th>Effect Value</th>
+            <th>Ability Description</th>
+            <th>Status Effect</th>
+            <th>Reflect</th>
+            <th>Runic</th>
+            <th>Learned From</th>
+        </tr>
+    </thead>
+    <tbody class="blue-magic">
+        <tr>
+            <td>Death Sentence</td>
+            <td>20</td>
+            <td>Single</td>
+            <td colspan="3">－</td>
+            <td>－</td>
+            <td>Causes death after the countdown ends.<br>Ignores death resistance.</td>
+            <td>Condemn</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>Abaddon</div><div>Ahriman</div><div>AlurRide</div><div>BlkForce</div><div>DrgnZomb</div><div>DthWarde</div><div>Garm</div><div>Kamui</div><div>SkulDrgn</div><div>StllLife</div><div>Valefor</div><div>Vampires</div><div>Wrexsoul</div><div>Yama</div><div>Yojimbo</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Death Roulette</td>
+            <td>10</td>
+            <td>Random</td>
+            <td colspan="3">－</td>
+            <td>－</td>
+            <td>Causes death to whoever the hand lands on, friend or foe.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>Ahriman</div><div>AlurRide</div><div>BlkForce</div><div>Nelapa</div><div>Onion</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Mind Blast</td>
+            <td>32</td>
+            <td>All</td>
+            <td colspan="3">－</td>
+            <td>9</td>
+            <td>Deals MP damage that ignores defense and sets Silence/Disease.</td>
+            <td>Silence <br> Disease</td>
+            <td>×</td>
+            <td>○</td>
+            <td class="monster-list">
+                <div>Bahamut</div><div>Deep One</div><div>Diabolos</div><div>Fiend</div><div>Garm</div><div>Mindflyr</div><div>Mom Bomb</div><div>Ramuhcln</div><div>RedMarsh</div><div>Rubicant</div><div>SkulDrgn</div><div>Soulflyr</div><div>Valigarm</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Aqua Breath</td>
+            <td>38</td>
+            <td>All</td>
+            <td colspan="3" class="attr-water attr-wind">Water <br>Wind</td>
+            <td>71</td>
+            <td>Deals water and wind-elemental damage to all targets.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>○</td>
+            <td class="monster-list">
+                <div>Adamanti</div><div>Anguifor</div><div>BlueDrgn</div><div>Cagnazzo</div><div>Chimera</div><div>Emeraldi</div><div>Goetia</div><div>Gorgimer</div><div>Korpokkr</div><div>Kraken</div><div>Leviathan</div><div>Numb024</div><div>Slug</div><div>Ultros #3</div><div>VectChim</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Aeroga</td>
+            <td>68</td>
+            <td>All</td>
+            <td colspan="3" class="attr-wind">Wind</td>
+            <td>92</td>
+            <td>Deals high power wind-elemental damage to all targets.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>○</td>
+            <td class="monster-list">
+                <div>Aeronite</div><div>Astaroth</div><div>Barbaric</div><div>BlkForce</div><div>Demon</div><div>GrtDemon</div><div>Haokah</div><div>Imp</div><div>KTonberr</div><div>Minity</div><div>PitFiend</div><div>PlatDrgn</div><div>SirenCln</div><div>Sprinter</div><div>StrmDrgn</div><div>Tiamat</div><div>UltiBust</div>
+            </td>
+        </tr>
+        <tr>
+            <td>1000 Needles</td>
+            <td>50</td>
+            <td>Single</td>
+            <td colspan="3">－</td>
+            <td>1*1000</td>
+            <td>Deals 1000 non-elemental damage.</td>
+            <td>1</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+               <div>Alchymia</div><div>AngWhelk</div><div>BlkForce</div><div>Brainpan</div><div>Cactuar</div><div>Cactus</div><div>Gatling</div><div>Humbaba</div><div>LamiaQen</div><div>Mover</div><div>Sam.Soul</div><div>Valefor</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Mighty Guard</td>
+            <td>120</td>
+            <td>All</td>
+            <td colspan="3">－</td>
+            <td>－</td>
+            <td>Grants all party memebers the effects of Protect, Shell, and Regen.</td>
+            <td>Protect <br>Shell <br>Regen</td>
+            <td>×</td>
+            <td>○</td>
+            <td class="monster-list">
+                <div>Adamanti</div><div>Brachios</div><div>Cagnazzo</div><div>DarkBehe</div><div>ErthGurd</div><div>Guardian</div><div>Ironclad</div><div>Leviathan</div><div>Mindy</div><div>Mover</div><div>Shinryu</div><div>YlloDrgn</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Revenge Blast</td>
+            <td>31</td>
+            <td>Single</td>
+            <td colspan="3">－</td>
+            <td>1*HP Difference</td>
+            <td>Deals non-elemental damage equal to HP lost of the user.</td>
+            <td>1</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>Asura</div><div>BkLizard</div><div>BlkForce</div><div>Cagnazzo</div><div>Dragon</div><div>Garm</div><div>Gigantos</div><div>GlasyaLa</div><div>Pandora</div><div>RuneClaw</div><div>Shinryu</div>
+            </td>
+        </tr>
+        <tr>
+            <td>White Wind</td>
+            <td>55</td>
+            <td>All</td>
+            <td colspan="3">－</td>
+            <td>1*Current HP</td>
+            <td>Restores HP of all party members based on the user's current HP and cures Sleep.</td>
+            <td>1</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>BlkForce</div><div>Diabolos</div><div>Imp</div><div>Kamui</div><div>Minity</div><div>MistDrgn</div><div>Peeper</div><div>Rudra</div><div>Sandy</div><div>Soulflyr</div><div>StrmDrgn</div><div>Titania</div><div>VectorLy</div><div>Venobenu</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Level ? Death</td>
+            <td>22</td>
+            <td>All</td>
+            <td colspan="3">－</td>
+            <td>－</td>
+            <td>Causes death to all enemies if their level matches the last digit of your Gil total, multiplied (example: 4=Level 4, 8, 12, 16 etc). Fails if immune.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>Abaddon</div><div>Apocryph</div><div>BlkForce</div><div>Daedalus</div><div>DethGaze</div><div>Devil</div><div>DthMachi</div><div>Shinryu</div><div>SkulDrgn</div><div>Tantaria</div><div>Trapper</div><div>Yama</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Level 3 Flare</td>
+            <td>42</td>
+            <td>All</td>
+            <td colspan="3">－</td>
+            <td>66</td>
+            <td>Deals the magic Flare to enemies with a level multiple of 3 that doesn't split damage.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>Aeronite</div><div>Alchymia</div><div>Apocryph</div><div>Bahamut</div><div>BlkForce</div><div>Demon</div><div>Devil</div><div>DuelArmr</div><div>Gilgamesh (WoR)</div><div>Kefka (Final)</div><div>RedDragn</div><div>Rubicant</div><div>Tantaria</div><div>Trapper</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Level 4 Hold</td>
+            <td>28</td>
+            <td>All</td>
+            <td colspan="3">－</td>
+            <td>－</td>
+            <td>Deals the magics Stop and Slow to enemies with a level multiple of 4. Fails if immune.</td>
+            <td>Stop <br>Slow</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>Apocryph</div><div>BlkForce</div><div>Dante</div><div>Devil</div><div>DuelArmr</div><div>Goddess</div><div>RicardMg</div><div>Shinryu</div><div>Tantaria</div><div>Trapper</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Night</td>
+            <td>38</td>
+            <td>All Enemies/Allies</td>
+            <td colspan="3">－</td>
+            <td>－</td>
+            <td>Casts Sleep on all party members and enemies. Fails if immune.</td>
+            <td>Sleep</td>
+            <td>×</td>
+            <td>○</td>
+            <td class="monster-list">
+                <div>Alv</div><div>Fiend</div><div>Echidna</div><div>Minity</div><div>Mykale</div><div>Nyx</div>
+            </td>
+       </tr>
+        <tr>
+            <td>Level 2 Holy</td>
+            <td>50</td>
+            <td>All</td>
+            <td colspan="3" class = "attr-light">Light</td>
+            <td>120</td>
+            <td>Deals the magic Holy to enemies with a level multiple of 2 that doesn't split damage.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>AlurRide</div><div>Azrael</div><div>B. Lamia</div><div>BlkForce</div><div>Dullahan</div><div>InnoSent</div><div>MagiDrgn</div><div>Proserpi</div><div>Tantaria</div><div>Wrexsoul</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Traveler</td>
+            <td>Playtime -1</td>
+            <td>Single</td>
+            <td colspan="3">－</td>
+            <td>Step Count/48</td>
+            <td>Deals non-elemental defense-ignoring damage according to the total number of steps divided by 48.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>BlkForce</div><div>Brachios</div><div>Crawler</div><div>Fafnir</div><div>Intangir</div><div>OniDashr</div><div>Tantaria</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Force Field</td>
+            <td>48</td>
+            <td>All Enemies/Allies</td>
+            <td colspan="3">－</td>
+            <td>－</td>
+            <td>Randomly nulls 1 element's damage. Continuous casts stack until all elements are nulled.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>DonTonbe</div><div>Fiend</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Dischord</td>
+            <td>68</td>
+            <td>Single</td>
+            <td colspan="3">－</td>
+            <td>－</td>
+            <td>Halves an enemy's level. Fails if immune to Death.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>Apanda</div><div>BlkForce</div><div>BnTyrant</div><div>Chaser</div><div>Crawler</div><div>DsrtSaha</div><div>FigaroLz</div><div>Gilgamesh (WoR)</div><div>Kraken</div><div>Lizard</div><div>MagiDrgn</div><div>MtlHitmn</div><div>Omega</div><div>Satellit</div><div>Ultima</div>
+           </td>
+       </tr>
+        <tr>
+            <td>Bad Breath</td>
+            <td>56</td>
+            <td>Single</td>
+            <td colspan="3" class="attr-darkness">Darkness</td>
+            <td>64</td>
+            <td>Deals dark-elemental damage and sets various status ailments.</td>
+            <td>Poison <br>Blind <br>Sleep <br>Confuse <br>Silence <br>Toad</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>BlkForce</div><div>BnTyrant</div><div>Carrot</div><div>Cassie</div><div>Goetia</div><div>GrtMalbo</div><div>Haniel</div><div>Hecto</div><div>Mandrake</div><div>Malboro</div><div>Neochu</div><div>Scarmili</div><div>Vivian</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Magic Hammer</td>
+            <td>25</td>
+            <td>Single</td>
+            <td colspan="3">－</td>
+            <td>2/16</td>
+            <td>Absorbs 1/8 of an enemy's MP.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>Alchymia</div><div>BlkForce</div><div>Cindy</div><div>Deep One</div><div>Diabolos</div><div>Dropper</div><div>Hecto</div><div>Junk</div><div>Pineappl</div><div>Ultros #3</div><div>YellowMo</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Rippler</td>
+            <td>66</td>
+            <td>Single</td>
+            <td colspan="3">－</td>
+            <td>－</td>
+            <td>Exchange statuses with the target. Will not bypass resistances and apply them.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>BlkForce</div><div>Blue Dragon</div><div>Gigntoad</div><div>LeapFrog</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Ancient Prayer</td>
+            <td>10</td>
+            <td>?</td>
+            <td colspan="3">?</td>
+            <td>?</td>
+            <td>Calls a random Eidolon.<br>Will not summon Ultima.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>BlkForce</div><div>Demon</div><div>Fiend</div><div>Goddess</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Quasar</td>
+            <td>99</td>
+            <td>All</td>
+            <td colspan="3">－</td>
+            <td>57</td>
+            <td>Deals non-elemental damage, sets various status ailements and ignores defense.<br>Will only pick one from the list.</td>
+            <td>Blind <br>Berserk <br>Poison <br>Toad <br>Silence <br>Confuse <br> Disease <br>Sleep <br> Slow <br>Zombie</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>Ahriman</div><div>BlkForce</div><div>Goddess</div><div>Shinryu</div><div>Ultima</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Grand Delta</td>
+            <td>121</td>
+            <td>All</td>
+            <td colspan="3">－</td>
+            <td>93</td>
+            <td>Deals non-elemental damage and erases any beneficial effects on all targets, ignoring defense. Haste, Float, Reflect, Regen, Trance, Blink, Protect, Vanish, and Shell.</td>
+            <td>-</td>
+            <td>×</td>
+            <td>×</td>
+            <td class="monster-list">
+                <div>Hidon</div>
+            </td>
+        </tr>
+        <tr>
+            <td>Self-Destruct</td>
+            <td>1</td>
+            <td>Single</td>
+            <td colspan="3">－</td>
+            <td>1*Current HP</td>
+            <td>Deals non-elemental damage based on remaining HP, but kills the user.</td>
+            <td>－</td>
+            <td>×</td>
+            <td>×</td>
+             <td class="monster-list">
+                <div>Balloon</div><div>Bomb</div><div>Gamma</div><div>Grenade</div><div>Junk</div><div>Onion</div><div>Pineappl</div><div>Snoll</div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<style>
+.monster-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 5px; /* Spacing between items */
+}
+.monster-list div{
+    white-space: nowrap; /*keep names on one line*/
+}
+</style>
+
+<h2 id="monster">Enemy Magic/Techniques <a href="#top">▲</a></h2>
+        <table class = "magic-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Cost</th>
+                    <th>Target</th>
+                    <th colspan="3">Attribute</th>
+                    <th>Effect Value</th>
+                    <th>Ability Description</th>
+                    <th>Status Effect</th>
+                    <th>Reflect</th>
+                    <th>Runic</th>
+                </tr>
+            </thead>
+            <tbody class="enemy-magic">
+                <tr>
+                    <td>50x Gravity</td>
+                    <td>20</td>
+                    <td>Single/All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Cancels Float and Vanish</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>10,000 Volts</td>
+                    <td>8</td>
+                    <td>Single/All</td>
+                    <td colspan="3" class="attr-thunder">Thunder</td>
+                    <td>20</td>
+                    <td>Deals thunder-elemental damage.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>1,000,000 Volts</td>
+                    <td>24</td>
+                    <td>Single/All</td>
+                    <td colspan="3" class="attr-thunder">Thunder</td>
+                    <td>110</td>
+                    <td>Deals thunder-elemental damage.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Absolute Zero</td>
+                    <td>25</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-ice">Ice</td>
+                    <td>110</td>
+                    <td>Deals ice-elemental damage to all targets.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Acid Rain</td>
+                    <td>11</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-darkness attr-water">Darkness <br> Water</td>
+                    <td>25</td>
+                    <td>Deals dark and water-elemental damage to all targets that doesn't split damage.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Atomic Ray</td>
+                    <td>38</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-fire attr-thunder">Fire <br> Thunder</td>
+                    <td>80</td>
+                    <td>Deals fire and thunder-elemental damage to all targets.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Attract</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Sets Slow on the target.</td>
+                    <td>Slow</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Barrier Change</td>
+                    <td>0</td>
+                    <td>Self</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Changes your own elemental weakness to a different element.<br>All other elements are absorbed.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Big Explosion</td>
+                    <td>0</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-fire">Fire</td>
+                    <td>108</td>
+                    <td>Deals fire-elemental defense-ignoring damage to all targets.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Blaster</td>
+                    <td>59</td>
+                    <td>Single/All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Kills the target.<br>Stamina value affects the chance to evade. Fails if immune to Death.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Blizzard</td>
+                    <td>4</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-ice">Ice</td>
+                    <td>25</td>
+                    <td>Deals ice-elemental damage to all targets.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Capture</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Makes the target unable to act and removes Slow.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Cloudy Heaven</td>
+                    <td>42</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Sets Condemn on all targets and when killed Zombie status is set.<br>Fails if Death immune.</td>
+                    <td>Condemn <br> Zombie</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Crypt Dust</td>
+                    <td>15</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Turns the target into a Zombie, but only if they're incapacitated.</td>
+                    <td>Zombie</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Deathblow</td>
+                    <td>0</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-wind">Wind</td>
+                    <td>15</td>
+                    <td>Deals wind-elemental damage.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Diabolic Whistle</td>
+                    <td>12</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Sets various status ailments to all targets. Selects one from the list.<br>Stamina value helps evade chance.</td>
+                    <td>Blind <br>Poison <br>Toad <br>Condemn <br>Berserk <br>Confuse <br>Disease <br>Slow</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Diffractive Laser</td>
+                    <td>10</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-fire attr-thunder attr-wind">Fire <br> Thunder <br> Wind</td>
+                    <td>62</td>
+                    <td>Deals fire, thunder, and wind-elemental damage to all targets.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Disaster</td>
+                    <td>44</td>
+                    <td>Single/All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Sets various status ailments.<br>Stamina value helps evade chance.</td>
+                    <td>Blind <br>Toad <br>Condemn <br>Silence <br>Confuse <br>Stop <br>Float</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Divine Judgment</td>
+                    <td>80</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-light attr-thunder attr-fire">Light <br> Thunder <br> Fire</td>
+                    <td>160</td>
+                    <td>Deals light, thunder, and fire-elemental damage to all targets that ignores defense and sets a random status.<br>Only one is chosen.</td>
+                    <td>Silence <br> Slow</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Dread Gaze</td>
+                    <td>15</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Sets Petrify on the target.</td>
+                    <td>Petrify</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Engulf</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Devour the target and make them leave the battle.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Entice</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Makes the target attack its own team until they're killed.<br>Stamina value helps with the evade chance.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Escape</td>
+                    <td>0</td>
+                    <td>Self</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Lets the target flee the battle.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Everyone's Grudge</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>60</td>
+                    <td>Deals non-elemental damage to a target and sometimes instantly kills.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Fallen One</td>
+                    <td>0</td>
+                    <td>Single/All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Reduces HP to 1.<br>Stamina value increases the evade chance.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Fireball</td>
+                    <td>11</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-fire">Fire</td>
+                    <td>50</td>
+                    <td>Deals fire-elemental damage.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Firebird Arts</td>
+                    <td>60</td>
+                    <td>Single/All</td>
+                    <td colspan="3" class="attr-fire attr-wind">Fire <br> Wind</td>
+                    <td>168</td>
+                    <td>Deals fire and wind-elemental defense-ignoring damage and sets Disease.</td>
+                    <td>Disease</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Flare Star</td>
+                                        <td>60</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>42</td>
+                    <td>Deals non-elemental defense-ignoring damage based on level x 42.</td>
+                    <td>－</td>
+                    <td>×</td>
+                    <td>×</td>
+                </tr>
+                <tr>
+                    <td>Flash</td>
+                    <td>28</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>－</td>
+                    <td>Sets Blind on all targets.</td>
+                    <td>Blind</td>
+                    <td>×</td>
+                    <td>×</td>
+                </tr>
+                 <tr>
+                    <td>Freezing Dust</td>
+                    <td>28</td>
+                    <td>Single</td>
+                    <td colspan="3" class="attr-ice">Ice</td>
+                    <td>-</td>
+                    <td>Freezes target. Wears off after a long time, but can be cured with any fire-elemental attack.</td>
+                    <td>Frozen</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Frog Song</td>
+                    <td>12</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Turns all targets to toads.<br>Even if the target is a toad it will not revert them.</td>
+                    <td>Toad</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Fury</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Possesses the target, removes Vanish, and disappears from the battle.<br>Does not reappear until target is killed.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Galaxy</td>
+                    <td>53</td>
+                    <td>All</td>
+ <td colspan="3" class="attr-fire attr-ice attr-thunder attr-darkness attr-wind attr-light attr-earth attr-water">Fire <br>Ice <br>Thunder <br>Darkness <br>Wind <br>Light <br> Earth <br>Water</td>
+                    <td>60</td>
+                    <td>Deals all-elemental defense-ignoring damage to all targets that doesn't split damage.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Goner</td>
+                    <td>100</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>118</td>
+                    <td>Deals non-elemental damage to all targets that doesn't split damage, ignores defense, makes them weak to 1 element, and removes Haste, Reraise, Reflect, Regen, Blink, Safe, and Shell.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Gravija</td>
+                    <td>38</td>
+                    <td>All Enemies/Allies</td>
+                    <td colspan="3">－</td>
+                    <td>6/16</td>
+                    <td>Deals 3/8 HP non-elemental damage that ignores defense to all party members and enemies.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Humbaba Breath</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Makes the target leave the battle.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Hyperdrive</td>
+                    <td>38</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>118</td>
+                    <td>Deals non-elemental defense-ignoring damage to the target.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Kill</td>
+                    <td>44</td>
+                    <td>Single</td>
+                    <td colspan="3">-</td>
+                    <td>-</td>
+                    <td>Kills target.<br>Ignores Death resistance.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Launcher</td>
+                    <td>0</td>
+                    <td>Random</td>
+                    <td colspan="3">－</td>
+                    <td>4/16</td>
+                    <td>Deals 1/4 HP non-elemental defense-ignoring damage 4 times to a random target.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Lifeshaver</td>
+                    <td>14</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>42</td>
+                    <td>Absorbs target's HP. Reversed on Undead.<br>Stamina value determines evade chance.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Love Token</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Force the target to take damage for you when you're attacked physically.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Lullaby</td>
+                    <td>18</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Puts all targets to sleep.</td>
+                    <td>Sleep</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Magitek Barrier</td>
+                    <td>10</td>
+                    <td>Self</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Gives the user the effect of Protect and Reflect.</td>
+                    <td>Protect <br> Reflect</td>
+                    <td>○</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Magitek Laser</td>
+                    <td>5</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>20</td>
+                    <td>Deals non-elemental damage to the target.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Mega Berserk</td>
+                    <td>25</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Casts Berserk on all targets.</td>
+                    <td>Berserk</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Merton</td>
+                    <td>85</td>
+                    <td>All Enemies/Allies</td>
+                    <td colspan="3" class="attr-fire attr-wind">Fire <br> Wind</td>
+                    <td>118</td>
+                    <td>Deals fire and wind-elemental defense-ignoring damage to all party members and enemies.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Missile</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>8/16</td>
+                    <td>Halves the target's HP and sets Confuse.<br>Fails if Death immune.</td>
+                    <td>Confuse</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                 <tr>
+                    <td>Mustard Bomb</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>49</td>
+                    <td>Deals non-elemental defense-ignoring damage and sets Poison.</td>
+                    <td>Poison</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Net</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Sets Stop on the target.</td>
+                    <td>Stop</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Northern Cross</td>
+                    <td>33</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-ice attr-light">Ice<br>Light</td>
+                    <td>95</td>
+                    <td>Deals ice and light-elemental damage to all targets that doesn't split damage and also causes Frozen.<br>Stamina value determines chance to evade.</td>
+                    <td>Frozen</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                 <tr>
+                    <td>Poltergeist</td>
+                    <td>30</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Sets Disease on all targets.</td>
+                    <td>Disease</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Rampage</td>
+                    <td>0</td>
+                    <td>All</td>
+                    <td colspan="3">-</td>
+                    <td>96</td>
+                    <td>Deals defense-ignoring physical damage to all targets.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Reflect????</td>
+                    <td>26</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>15</td>
+                    <td>Deals 3/4 of all target's MP if they have Reflect.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Revenger</td>
+                    <td>0</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Removes all beneficial status effects from all targets. Haste, Reraise, Float, Reflect, Regen, Blink, Protect, Vanish, and Shell.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                 <tr>
+                    <td>Reverse Polarity</td>
+                    <td>0</td>
+                    <td>Single/All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Causes the targets to switch rows.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Shadow Flare</td>
+                    <td>80</td>
+                    <td>Single</td>
+                    <td colspan="3" class="attr-darkness">Darkness</td>
+                    <td>110</td>
+                    <td>Deals dark-elemental defense-ignoring damage and sets Disease.</td>
+                    <td>Disease</td>
+                    <td>○</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Shockwave</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>25</td>
+                    <td>Deals non-elemental damage.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Shrapnel</td>
+                    <td>0</td>
+                    <td>Single/All</td>
+                    <td colspan="3">－</td>
+                    <td>120</td>
+                    <td>Deals non-elemental damage.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Snort</td>
+                    <td>0</td>
+                    <td>Single/All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Removes the targets from battle.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Soul Extraction</td>
+                    <td>4</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Sets Zombie on the target.</td>
+                    <td>Zombie</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Southern Cross</td>
+                    <td>34</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-fire attr-light">Fire<br> Light</td>
+                    <td>120</td>
+                    <td>Deals fire and light-elemental damage that doesn't split damage to all targets.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>S. Triangle</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3" class="attr-ice">Ice</td>
+                    <td>70</td>
+                    <td>Deals physical ice-elemental damage and has a chance to petrify.</td>
+                    <td>Petrify</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Sword Rain</td>
+                    <td>0</td>
+                    <td>Random</td>
+                    <td colspan="3">－</td>
+                    <td>93</td>
+                    <td>Deals defense-ignoring physical damage 4 times to a random target.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Tentacle</td>
+                    <td>0</td>
+                    <td>Single/All</td>
+                    <td colspan="3">－</td>
+                    <td>146</td>
+                    <td>Deals physical damage.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Throw Away</td>
+                    <td>0</td>
+                    <td>Self</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Releases the target from "Capture" and deals physical damage.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Thunder Call</td>
+                    <td>25</td>
+                    <td>Random</td>
+                    <td colspan="3" class="attr-light attr-thunder">Light<br> Thunder</td>
+                    <td>162</td>
+                    <td>Deals light and thunder-elemental damage 4 times to a random target.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Tidal Wave</td>
+                    <td>50</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-water">Water</td>
+                    <td>130</td>
+                    <td>Deals water-elemental defense-ignoring damage to all targets that doesn't split damage.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Trine</td>
+                    <td>26</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-thunder attr-light">Thunder<br> Light</td>
+                    <td>69</td>
+                    <td>Deals thunder and light-elemental damage and sets Blind/Silence.</td>
+                    <td>Blind <br> Silence</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Wave Cannon</td>
+                    <td>0</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>77</td>
+                    <td>Deals 9/16 HP non-elemental damage to all party members.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+            </tbody>
+        </table>
+    <h2 id="ex">EX Magic/Techniques <a href="#top">▲</a></h2>
+        <table class = "magic-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Cost</th>
+                    <th>Target</th>
+                    <th colspan="3">Attribute</th>
+                    <th>Effect Value</th>
+                    <th>Ability Description</th>
+                    <th>Status Effect</th>
+                    <th>Reflect</th>
+                    <th>Runic</th>
+                </tr>
+            </thead>
+            <tbody class="ex-magic">
+                <tr>
+                    <td>Earthquake</td>
+                    <td>105</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>90</td>
+                    <td>Deals non-elemental defense-ignoring damage to all targets that doesn't split damage.<br>Has no effect on Floating/Flying targets.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Meteorite</td>
+                    <td>99</td>
+                    <td>Random</td>
+                    <td colspan="3">－</td>
+                    <td>33</td>
+                    <td>Deals non-elemental defense-ignoring damage 8 times to a random target that doesn't split damage.</td>
+                    <td>x</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Aura Ball</td>
+                    <td>80</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>14/16</td>
+                    <td>Deals 14/16 HP damage to all targets.<br>Cancels Shell effect.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Fusillade Particle Beam</td>
+                    <td>55</td>
+                    <td>Random</td>
+                    <td colspan="3">－</td>
+                    <td>109</td>
+                    <td>Deals non-elemental damage 4 times to a random target.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Reflective Particle Beam</td>
+                    <td>28</td>
+                    <td>Single</td>
+                    <td colspan="3">-</td>
+                    <td>85</td>
+                    <td>Deals non-elemental damage. Stamina helps chance to evade.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Nightglow</td>
+                    <td>59</td>
+                    <td>Single/All</td>
+                    <td colspan="3">－</td>
+                    <td>10/16</td>
+                    <td>Deals 10/16 HP damage and puts targets to sleep. Stamina helps with evasion chance.</td>
+                    <td>Sleep</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Genesis Rock</td>
+                    <td>52</td>
+                    <td>Single</td>
+                    <td colspan="3" class="attr-earth attr-wind">Earth<br> Wind</td>
+                    <td>98</td>
+                    <td>Deals earth and wind-elemental defense-ignoring damage and causes Petrify.</td>
+                    <td>Petrify</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Artillery Drone</td>
+                    <td>52</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>55</td>
+                    <td>Deals non-elemental damage twice to all targets that doesn't split damage.<br>Cancels Float effect.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Black Hole</td>
+                    <td>125</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>29</td>
+                    <td>Absorbs the HP of all targets, ignoring defense, and cancels Haste, Reraise, Float, Reflect, Rage, Regen, Blink, Protect, Shell, and Vanish.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Whirl</td>
+                    <td>30</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>15/16</td>
+                    <td>Deals 15/16 HP damage to the target.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Big Bang</td>
+                    <td>150</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>99</td>
+                    <td>Deals non-elemental defense-ignoring damage to all targets that doesn't split damage and sets Disease.</td>
+                    <td>Disease</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Hurricane</td>
+                    <td>-</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>38</td>
+                    <td>Sets the HP of the target to 1. Stamina helps with the chance to evade.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Zombie Breath</td>
+                    <td>52</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>33</td>
+                    <td>Deals non-elemental damage to all targets that doesn't split damage and sets Zombie. Stamina helps with evasion chance.</td>
+                    <td>Zombie</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                 <tr>
+                    <td>Grand Cross</td>
+                    <td>115</td>
+                    <td>All</td>
+                    <td colspan="3">-</td>
+                    <td>-</td>
+                    <td>Randomly applies Confusion, Toad, Berserk, Stop, Condemned, or Frozen to all targets.</td>
+                    <td>Confuse <br>Toad <br>Berserk <br>Stop <br>Condemn <br>Frozen</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Almagest</td>
+                    <td>85</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-light attr-darkness">Light<br> Darkness</td>
+                    <td>89</td>
+                    <td>Deals light and dark-elemental defense-ignoring damage to all targets that doesn't split damage and sets Disease.<br>Removes Haste effect.</td>
+                    <td>Disease</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Pale Horse</td>
+                    <td>33</td>
+                    <td>Random</td>
+                    <td colspan="3">－</td>
+                    <td>12/16</td>
+                    <td>Deals 12/16 HP damage 8 times to a random target and sets Toad.<br>Stamina value determines evade chance.</td>
+                    <td>Toad</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Supernova</td>
+                    <td>108</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>130</td>
+                    <td>Deals non-elemental defense-ignoring damage that doesn't split damage to all targets and sets Slow, Confuse, and Silence.</td>
+                    <td>Slow <br> Confuse <br> Silence</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                 <tr>
+                    <td>Weakness</td>
+                    <td>85</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Makes all targets weak to 1 element.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Magic Annihilation</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>1*1000</td>
+                    <td>Deals 1000 MP damage and sets Silence.</td>
+                    <td>Silence</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Time Compression</td>
+                    <td>0</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>-</td>
+                    <td>Removes target from the battle.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Apocalypse</td>
+                    <td>250</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>128</td>
+                    <td>Deals non-elemental defense-ignoring damage to all targets and sets Poison, Disease, and Condemn.</td>
+                    <td>Poison <br> Disease <br> Condemn</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                 <tr>
+                    <td>Holy Star</td>
+                    <td>100</td>
+                    <td>All</td>
+                    <td colspan="3" class="attr-light">Light</td>
+                    <td>66</td>
+                    <td>Deals light-elemental damage via Level x 66 to all targets and inflicts Toad.</td>
+                    <td>Toad</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>C. Dimension</td>
+                    <td>0</td>
+                    <td>Random</td>
+                    <td colspan="3">－</td>
+                    <td>32</td>
+                    <td>Deals non-elemental damage 4 times to a random target and sets Petrify and Confuse.<br>Absorbed by Undead.</td>
+                    <td>Petrify <br> Confuse</td>
+                    <td>x</td>
+                    <td>○</td>
+                </tr>
+                <tr>
+                    <td>Great Whirlwind</td>
+                    <td>0</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>125</td>
+                    <td>Deals defense-ignoring physical damage to all targets that doesn't split damage and sets Slow.</td>
+                    <td>Slow</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Omega Javelin</td>
+                    <td>30</td>
+                    <td>Single</td>
+                    <td colspan="3">－</td>
+                    <td>165</td>
+                    <td>Deals defense-ignoring physical damage and sets Petrify.<br>Sets Air Anchor effect.</td>
+                    <td>Petrify</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Stellar Blast</td>
+                    <td>100</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>150</td>
+                    <td>Deals non-elemental defense-ignoring damage to all targets that doesn't split damage and sets Zombie, Disease, or Silence.</td>
+                    <td>Zombie <br> Disease <br> Silence</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Dragonfall</td>
+                    <td>0</td>
+                    <td>Random</td>
+                    <td colspan="3">－</td>
+                    <td>118</td>
+                    <td>Deals physical damage 3 times randomly to a target and sets Blind.</td>
+                    <td>Blind</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Cross Reaver</td>
+                    <td>0</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>32</td>
+                    <td>Deals defense-ignoring non-elemental damage to all targets and sets Stop/Slow.</td>
+                    <td>Stop <br> Slow</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Arrogance Incarnate</td>
+                    <td>0</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>128</td>
+                    <td>Deals non-elemental damage that ignores defense based on current HP remaining to all targets. Stamina helps chance to evade.</td>
+                    <td>-</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Amon Drive</td>
+                    <td>0</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>130</td>
+                    <td>Deals MP damage to all targets and sets Petrify.</td>
+                    <td>Petrify</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Havoc Spiral</td>
+                    <td>0</td>
+                    <td>All</td>
+                    <td colspan="3">－</td>
+                    <td>122</td>
+                    <td>Deals physical damage to all targets and sets Sleep/Slow.</td>
+                    <td>Sleep <br> Slow</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+
+            </tbody>
+        </table>
+
+    <footer>
+        Final Fantasy VI T-Edition. Mod Creator: Tsushiy◆KEHt9L6ti47L
+    </footer>
+</body>
+</html>

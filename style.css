@@ -1,0 +1,138 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden; /* Prevents content overflow */
+}
+
+nav {
+    width: 250px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-right: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin-bottom: 10px;
+}
+nav hr{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+nav a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #e0e0e0;
+    color: #0056b3;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Allow scrolling within main content */
+}
+
+/* Style for the content sections */
+main h1 {
+    color: #0056b3;
+    margin-top: 0;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+main h2 {
+    color: #0056b3;
+    margin-top: 1.5em;
+    border-bottom: 1px solid #0056b3;
+    padding-bottom: 3px;
+}
+
+main h3 {
+    color: #333;
+    margin-top: 1.2em;
+}
+
+main p {
+    margin-bottom: 1em;
+}
+
+main ul {
+    margin-bottom: 1em;
+}
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+main th,
+main td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+main th {
+    background-color: #f0f0f0;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Prevents extra space below inline images */
+    margin: 10px auto;
+}
+
+main a {
+    color: #0056b3;
+    text-decoration: none;
+}
+main a:hover {
+    text-decoration: underline;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+}
+/* Styles for show/hide functionality within content*/
+.spoiler-link {
+    cursor: pointer;
+    color: #0056b3;
+    text-decoration: underline;
+}
+.spoiler-content.hidden {
+    display: none;
+}

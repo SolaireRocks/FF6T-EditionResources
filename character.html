@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Fantasy VI T-Edition - Character List</title>
+    <style>
+        body, td, th {
+            font-family: sans-serif; /* Simplified for cross-platform consistency */
+            font-size: 14px;
+        }
+
+        div {
+            letter-spacing: 0.1em;
+        }
+
+        h1 {
+            text-align: center;
+        }
+		h4 {
+			text-align: center; /* Centers all h4 elements */
+            margin-bottom: 0.5em; /* Adds some space below h4 headings */
+		}
+
+        table {
+            border-collapse: collapse;
+            /* width: 500px;  Removed fixed width, using max-width on outer tables */
+            margin: 1em auto; /* Centered with top/bottom margin */
+        }
+		/* General table styles*/
+        th, td {
+            padding: 5px;
+            border: 1px solid #000; /*Consistent borders*/
+            text-align: left; /* Left-align text for readability */
+        }
+
+        th {
+            background-color: #D2D4E8; /* Consistent header background */
+        }
+
+        hr {
+            color: blue;
+        }
+        .version-info {
+            text-align: right;
+            margin-bottom: 1em;
+        }
+
+        /* Character Index Table */
+        .character-index {
+            width: auto; /* Let the index table size itself */
+            max-width: 800px;  /* But don't let it get too wide */
+			margin-bottom: 0; /*Removed bottom margin*/
+        }
+		.character-index td {
+			text-align: center; /* Centers the text*/
+		}
+        .character-index a {
+            text-decoration: none; /* Removes underline */
+            color: inherit;
+        }
+		.character-index-colour {
+			width: 8px;
+			background-color: #ddddff;
+			border: none;
+		}
+        /* Character Heading Tables (Terra, Locke, etc.) */
+        .character-heading-table {
+            /* background-color: #E2B5FF;  Set per character with inline styles */
+            /* height: 40px; Not needed */
+            max-width: 500px; /* Added max-width */
+            width: 100%;      /* Fill available space */
+        }
+		.character-heading-table td {
+			border: none;
+		}
+
+        .character-subheading-table {
+            /*  background-color: #EBDEFF; Set per character */
+            max-width: 500px;
+            width: 100%;
+        }
+		.character-subheading-table td{
+			border: none;
+		}
+
+        /* Character Info Tables (Stats, Equipment) */
+        .character-info-table {
+			width: 90%; /* Consistent width */
+            max-width: 500px;
+            /* background-color: #EBDEFF;  Set per character */
+        }
+		.character-info-table td {
+			text-align: center;
+		}
+
+        /* HP/MP and Skill Tables */
+        .growth-table, .skill-table {
+            /*width: 400px; REMOVED FIXED WIDTH*/
+            max-width: 100%; /* Use max-width instead */
+            width: 100%;       /* Fill the available width */
+            table-layout: auto; /* Let the browser handle column widths */
+             /* background-color set per table */
+        }
+        .growth-table td, .skill-table td {
+            word-break: break-word; /* Allow long words to break */
+        }
+
+		.growth-table th, .skill-table th {
+			text-align: center;
+		}
+
+		/* Special heading rows in the large tables */
+		.section-heading {
+			text-align: center;
+			background-color: #D2D4E8;
+        }
+
+        /* Text sections */
+        .text-section {
+            /* background-color: #E2B5FF; Set per character */
+            line-height: 1.5;
+            padding: 10px;
+			text-align: left; /* Aligns Text to the left*/
+            max-width: 500px;
+            width: 100%;
+        }
+
+		.text-section div {
+			text-align: center;
+		}
+		.desperation-table {
+			text-align: left; /*Left-align text*/
+            max-width: 500px;
+            width: 100%;
+		}
+
+		/*Back to top styling*/
+        .back-to-top {
+            text-align: center;
+            margin: 1em 0; /*Consistent spacing*/
+        }
+		.back-to-top a {
+			text-decoration: none;
+			color: inherit;
+		}
+
+        /* Image centering */
+        .image-container {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+		.image-container img {
+            vertical-align: middle; /*Keeps the image alligned*/
+        }
+		/* Javascript */
+		.hidden {
+			display: none;
+		}
+    </style>
+
+	<!-- Javascript is fine. No changes needed. -->
+    <script>
+        function show(inputData) {
+            const objID = document.getElementById( "layer_" + inputData );
+            const buttonID = document.getElementById( "category_" + inputData );
+			if(objID.classList.contains('hidden')) {
+                objID.classList.remove('hidden');
+            } else {
+                objID.classList.add('hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h1>Character List</h1>
+<hr>
+
+<div class="version-info">
+    <div>Last Updated: 12/8/2022</div>
+    <div>Version: 3.0.5</div>
+    <div>EX: 2.0.5</div>
+</div>
+
+<table class="character-index">
+	<tr>
+	<td class="character-index-colour"> </td><td><a href="#tina">Terra</a></td>
+	<td class="character-index-colour"> </td><td><a href="#rocke">Locke</a></td>
+	<td class="character-index-colour"> </td><td><a href="#cyan">Cyan</a></td>
+	<td class="character-index-colour"> </td><td><a href="#shadow">Shadow</a></td>
+	<td class="character-index-colour"> </td><td><a href="#edgar">Edgar</a></td>
+	<td class="character-index-colour"> </td><td><a href="#mash">Sabin</a></td>
+	<td class="character-index-colour"> </td><td><a href="#celes">Celes</a></td>
+	</tr>
+	<tr>
+	<td class="character-index-colour"> </td><td><a href="#stragos">Strago</a></td>
+	<td class="character-index-colour"> </td><td><a href="#relm">Relm</a></td>
+	<td class="character-index-colour"> </td><td><a href="#setzer">Setzer</a></td>
+	<td class="character-index-colour"> </td><td><a href="#mog">Mog</a></td>
+	<td class="character-index-colour"> </td><td><a href="#gau">Gau</a></td>
+	<td class="character-index-colour"> </td><td><a href="#gogo">Gogo</a></td>
+	<td class="character-index-colour"> </td><td><a href="#umaro">Umaro</a></td>
+	</tr>
+</table>
+
+<table class="character-heading-table" style="background-color: #E2B5FF;" id="tina">
+    <tr>
+        <td><b>Terra</b></td>
+    </tr>
+</table>
+<table class="character-subheading-table" style="background-color: #EBDEFF;">
+    <tr>
+        <td><h4>Magitek Elite</h4></td>
+    </tr>
+</table>
+<table class="text-section" style="background-color: #E2B5FF;">
+	<tr>
+		<td>
+			<div class="image-container">
+				<img src="img/tina.gif" alt="Terra Sprite 1"><br><br><br>
+				<img src="img/tina2.gif" alt="Terra Sprite 2"><br>
+			</div>
+		</td>
+		<td>
+		<table class="character-info-table" style="background-color:#EBDEFF">
+			<tr><th colspan="2">Status</th></tr>
+			<tr><td>Strength</td><td>28</td></tr>
+			<tr><td>Speed</td><td>33</td></tr>
+			<tr><td>Stamina</td><td>28</td></tr>
+			<tr><td>Magic</td><td>41</td></tr>
+			<tr><th colspan="2">Starting Gear</th></tr>
+			<tr><td>Right Hand</td><td>Mythril Knife</td></tr>
+			<tr><td>Left Hand</td><td>Buckler</td></tr>
+			<tr><td>Head</td><td>Leather Hat</td></tr>
+			<tr><td>Body</td><td>Leather Armor</td></tr>
+			<tr><td>Accessory 1</td><td>－</td></tr>
+			<tr><td>Accessory 2</td><td>－</td></tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<div style="margin-top: 10px;">
+			<a href="javascript:void(0)" id="category_1" onclick="show('1');"><b>HP/MP Growth</b></a>
+			<div id="layer_1" class="growth-table hidden">
+				<table>
+				<tr><th>Level</th><th>HP</th><th>MP</th></tr>
+				<tr><td>1</td><td>40</td><td>23</td></tr>
+				<tr><td>20</td><td>429</td><td>267</td></tr>
+				<tr><td>40</td><td>1840</td><td>516</td></tr>
+				<tr><td>60</td><td>4645</td><td>666</td></tr>
+				<tr><td>99</td><td>7810</td><td>999</td></tr>
+				</table>
+			</div>
+	
+			<a href="javascript:void(0)" id="category_2" onclick="show('2');"><b>Naturally Learned Magic</b></a>
+			<div id="layer_2" class="skill-table hidden">
+				<table>
+					<tr><th>Level</th><th>Magic</th><th>Level</th><th>Magic</th></tr>
+					<tr><td>1</td><td>Cure</td><td>30</td><td>Dispel</td></tr>
+					<tr><td>3</td><td>Fire</td><td>33</td><td>Firaga</td></tr>
+					<tr><td>6</td><td>Poisona</td><td>37</td><td>Arise</td></tr>
+					<tr><td>12</td><td>Drain</td><td>39</td><td>Holy</td></tr>
+					<tr><td>15</td><td>Raise</td><td>41</td><td>Break</td></tr>
+					<tr><td>18</td><td>Fira</td><td>46</td><td>Quake</td></tr>
+					<tr><td>23</td><td>Teleport</td><td>58</td><td>Aspir</td></tr>
+					<tr><td>26</td><td>Cura</td><td>62</td><td>Ultima</td></tr>
+				</table>
+			</div>
+		</div>
+		</td>
+	</tr>
+</table>
+	
+<table class="text-section" style="background-color:#EBDEFF">
+	<tr>
+		<td>
+		<b>Trance</b><br>
+		During the state of "Trance" Terra's attack, magic attack, and physical defense are increased by 1.5x. This was changed from the original game at a 2x increase.<br><br>
+		The duration is increased for every spell she knows up to a value of 128 and is doubled past this once Humbaba is defeated in the World of Ruin.<br><br>
+		<b>Shock</b><br>
+		Once you obtain the accessory "Zeidrich", Terra can use "Shock" over "Trance". "Shock" is a non-elemental damage attack to all targets with a 128 effect value.
+		</td>
+	</tr>
+</table>
+	
+<table class="text-section" style="background-color:#E2B5FF">
+	<tr>
+		<td>
+			Due to the decreased learn-rate of Eidolon's magic spells, Terra has an advantage to learning stronger spells much faster from natural leveling.<br><br>
+			She can use Swords and Knight Swords as well as Helmets, Hats, Robes, and Armor. Along with this she can also learn magic spells from various equipment.<br><br>
+			Even though "Trance" has been slightly weakened, if you increase your Magic stat and attack the enemy's weakpoints you'll notice a very large increase in damage.
+		</td>
+	</tr>
+</table>
+
+<table class="desperation-table" style="background-color:#EBDEFF">
+  <tr>
+    <td colspan="2"><b>Riot Blade</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/riotsword.gif" alt = "Riot Sword"></td>
+    <td>
+      <b>Effect Value： 65<br>Additional effect: Disease.</b><br><br>A special technique where the user channels magic into their sword and releases it in a shockwave, dealing non-elemental damage and ignoring defense.<br><br>This now deals extra damage to flying units and sets Disease.
+    </td>
+  </tr>
+</table>
+<div class="back-to-top"><a href="#top">▲</a></div>
+<!-- Locke -->
+<table class="character-heading-table" style="background-color: #8ED0FF;" id="rocke">
+  <tr>
+    <td><b>Locke</b></td>
+  </tr>
+</table>
+
+<table class="character-subheading-table" style="background-color: #B8F9FD;">
+  <tr>
+    <td>
+      <h4>Adventurer</h4>
+    </td>
+  </tr>
+</table>
+
+<table class="text-section" style="background-color: #8ED0FF;">
+	<tr>
+		<td>
+			<div class="image-container">
+			<img src="img/rocke.gif" alt="Locke Sprite 1"><br><br><br>
+			<img src="img/rocke2.gif" alt="Locke Sprite 2"><br>
+			</div>
+		</td>
+		<td>
+			<table class="character-info-table" style="background-color:#B8F9FD">
+			  <tr><th colspan="2">Status</th></tr>
+			  <tr><td>Strength</td><td>37</td></tr>
+			  <tr><td>Speed</td><td>40</td></tr>
+			  <tr><td>Stamina</td><td>31</td></tr>
+			  <tr><td>Magic</td><td>28</td></tr>
+			  <tr><th colspan="2">Starting Gear</th></tr>
+			  <tr><td>Right Hand</td><td>Dagger</td></tr>
+			  <tr><td>Left Hand</td><td>－</td></tr>
+			  <tr><td>Head</td><td>Leather Hat</td></tr>
+			  <tr><td>Body</td><td>Leather Armor</td></tr>
+			  <tr><td>Accessory 1</td><td>－</td></tr>
+			  <tr><td>Accessory 2</td><td>－</td></tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<div style="margin-top: 10px;">
+			<a href="javascript:void(0)" id="category_3" onclick="show('3');"><b>HP/MP Growth</b></a>
+			<div id="layer_3" class="growth-table hidden">
+				<table>
+				  <tr><th>Level</th><th>HP</th><th>MP</th></tr>
+				  <tr><td>1</td><td>48</td><td>7</td></tr>
+				  <tr><td>20</td><td>673</td><td>130</td></tr>
+				  <tr><td>40</td><td>2469</td><td>315</td></tr>
+				  <tr><td>60</td><td>4833</td><td>382</td></tr>
+				  <tr><td>99</td><td>8221</td><td>487</td></tr>
+				</table>
+			</div>
+		</div>
+		</td>
+	</tr>
+</table>
+
+<table class="text-section" style="background-color:#B8F9FD">
+  <tr>
+    <td>
+      <b>Steal</b><br>
+      Allows you to steal an enemy's items. If the outcome isn't above 70 from the formula, you won't steal 100% of the time.<br><br><div style = "text-align: center;">User's Level＋70－Target's Level/99</div><br>
+      You can double the chance of stealing by equipping the accessory "Thief's Bracer".<br>
+      <b>Mug</b><br>
+      When you equip the accessory "Thief's Glove", "Steal" becomes "Mug".<br><br>
+      This allows you to attack and steal at the same time. The formula for the damage calculation of this attack ingores the weapon's properties, however, any additional effect magic will remain.
+    </td>
+  </tr>
+</table>
+<table class="text-section" style="background-color:#8ED0FF">
+	<tr>
+		<td>
+In the original game, Locke could equip Swords, Knight Swords, Helmets, and Armor. However, this makes very little sense given that he's a thief.<br><br>
+I've changed it so now he can only use items flagged as Daggers, Swords, some Knight Swords, Hats, and Clothes, basically any light armor.<br><br>
+Although Daggers have a very low attack power, it makes up for this with giving high Evasion, and one of the 12 ultimate weapons, Orichalcum, has its power increase based on the number of successful "Steal" results. Also, the boomerang/throwing weapons don't have their power changed if you're in the back row.
+		</td>
+	</tr>
+</table>
+
+<table class="desperation-table" style="background-color:#B8F9FD">
+  <tr>
+    <td colspan="2"><b>Mirage Dive</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/miragedive.gif" alt="Mirage Dive"></td>
+    <td>
+      <b>Effect Value: 178<br>Additional effect: Steal.</b><br><br>The user performs a great leap at the enemy with many illusions of themselves, dealing physical damage and ignoring defense.<br><br>As an extra bonus, "Steal" may sometimes activate, but it's not a 100% chance at the item.<br><br>
+    </td>
+  </tr>
+</table>
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Cyan -->
+
+<table class="character-heading-table" style="background-color:#828AE8" id="cyan">
+  <tr>
+    <td><b>Cyan</b></td>
+  </tr>
+</table>
+
+<table class="character-subheading-table" style="background-color:#97BDFF">
+	<tr>
+		<td>
+			<h4>Samurai</h4>
+		</td>
+	</tr>
+</table>
+
+<table class="text-section" style="background-color:#828AE8">
+	<tr>
+		<td>
+			<div class="image-container">
+				<img src="img/cyan.gif" alt="Cyan Sprite 1"><br><br><br>
+				<img src="img/cyan2.gif" alt="Cyan Sprite 2"><br>
+			</div>
+		</td>
+		<td>
+			<table class="character-info-table" style="background-color:#97BDFF">
+			  <tr><th colspan="2">Status</th></tr>
+			  <tr><td>Strength</td><td>42</td></tr>
+			  <tr><td>Speed</td><td>31</td></tr>
+			  <tr><td>Stamina</td><td>33</td></tr>
+			  <tr><td>Magic</td><td>25</td></tr>
+			  <tr><th colspan="2">Starting Gear</th></tr>
+			  <tr><td>Right Hand</td><td>Ashura</td></tr>
+			  <tr><td>Left Hand</td><td>Large Shield</td></tr>
+			  <tr><td>Head</td><td>Iron Helm</td></tr>
+			  <tr><td>Body</td><td>Iron Armor</td></tr>
+			  <tr><td>Accessory 1</td><td>－</td></tr>
+			  <tr><td>Accessory 2</td><td>－</td></tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">
+		<div style = "margin-top: 10px;">
+			<a href="javascript:void(0)" id="category_4" onclick="show('4');"><b>HP/MP Growth</b></a>
+			<div id="layer_4" class="growth-table hidden">
+				<table>
+					<tr><th>Level</th><th>HP</th><th>MP</th></tr>
+					<tr><td>1</td><td>62</td><td>5</td></tr>
+					<tr><td>20</td><td>981</td><td>103</td></tr>
+					<tr><td>40</td><td>3413</td><td>236</td></tr>
+					<tr><td>60</td><td>5570</td><td>303</td></tr>
+					<tr><td>99</td><td>9364</td><td>414</td></tr>
+				</table>
+			</div>
+
+			<a href="javascript:void(0)" id="category_5" onclick="show('5');"><b>Iaido Acquisition Levels</b></a>
+			<div id="layer_5" class="skill-table hidden">
+				<table>
+				  <tr><th>Level</th><th>Iaido Learned</th><th>Level</th><th>Iaido Learned</th></tr>
+				  <tr><td>1</td><td>Tachi: Fang</td><td>24</td><td>Tachi: Dragon</td></tr>
+				  <tr><td>6</td><td>Tachi: Sky</td><td>34</td><td>Tachi: Snow</td></tr>
+				  <tr><td>12</td><td>Tachi: Tiger</td><td>44</td><td>Tachi: Moon</td></tr>
+				  <tr><td>15</td><td>Tachi: Dance</td><td>99</td><td>Tachi: Flower</td></tr>
+				</table>
+			</div>
+		</div>
+		</td>
+	</tr>
+</table>
+
+<table class="text-section" style="background-color:#97BDFF">
+	<tr>
+		<td>
+			<b>Iaido</b><br>
+			Align the gauge with the number to select which attack you'd like. The speed that the gauge moves has been greatly increased from the original game.<br><br>
+			Katanas are required to use "Iaido". Without one you're not able to use this.<br><br>
+			Although you can learn "Flower" at Level 99 more than likely you'll have it unlocked via the event before that happens.<br><br>
+      <a href="technique.html#swdtech">→Iaido List</a>
+		</td>
+	</tr>
+</table>
+
+<table class="text-section" style="background-color:#828AE8">
+	<tr>
+		<td>
+			Cyan's a strong front line attacker that can equip Katanas, Helmets, and Armor, granting him high attack and defense, but at the cost of magic evasion and magic defense.<br><br>
+			Due to how good "Fang" was in the original game the performance of it has been lowered so that a normal attack isn't always outclassed by it.<br><br>
+			The techniques "Dragon", which can absorb HP and MP of an enemy, and "Moon", which can cause Stop, are very useful now.
+		</td>
+	</tr>
+</table>
+
+<table class = "desperation-table" style="background-color:#97BDFF">
+  <tr>
+    <td colspan="2"><b>Tsubame Gaeshi</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/tsubamegaeshi.gif" alt="Tsubame Gaeshi"></td>
+    <td>
+      <b>Effect Value: 185<br>Additional effect: Sometimes procs "Zantetsuken".</b><br><br>A secret technique used at the brink of death, where the user executes a single lightning-fast slash, causing a brilliant flash of light, dealing physical damage and ignoring defense.<br><br>As an additional effect, the wound caused from this slice may instantly kill the enemy, undead included.
+    </td>
+  </tr>
+</table>
+
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Shadow -->
+
+<table class = "character-heading-table" style = "background-color:#6787CD" id = "shadow">
+    <tr>
+        <td><b>Shadow</b></td>
+    </tr>
+</table>
+
+<table class = "character-subheading-table" style = "background-color:#9FB4DF">
+	<tr>
+		<td>
+			<h4>Assassin</h4>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style="background-color:#6787CD">
+    <tr>
+        <td>
+			<div class = "image-container">
+				<img src="img/shadow.gif" alt = "Shadow Sprite 1"><br><br><br>
+				<img src="img/shadow2.gif" alt = "Shadow Sprite 2"><br>
+			</div>
+        </td>
+		<td>
+			<table class = "character-info-table" style="background-color:#9FB4DF">
+			  <tr><th colspan="2">Status</th></tr>
+			  <tr><td>Strength</td><td>39</td></tr>
+			  <tr><td>Speed</td><td>41</td></tr>
+			  <tr><td>Stamina</td><td>30</td></tr>
+			  <tr><td>Magic</td><td>33</td></tr>
+			  <tr><th colspan="2">Starting Gear</th></tr>
+			  <tr><td>Right Hand</td><td>Kunai</td></tr>
+			  <tr><td>Left Hand</td><td>Kunai</td></tr>
+			  <tr><td>Head</td><td>Headgear</td></tr>
+			  <tr><td>Body</td><td>Ninja Gear</td></tr>
+			  <tr><td>Accessory 1</td><td>－</td></tr>
+			  <tr><td>Accessory 2</td><td>－</td></tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan = "2">
+		<div style = "margin-top:10px">
+			<a href="javascript:void(0)" id="category_6" onclick="show('6');"><b>HP/MP Growth</b></a>
+				<div id="layer_6" class="growth-table hidden">
+					<table>
+					  <tr><th>Level</th><th>HP</th><th>MP</th></tr>
+					  <tr><td>1</td><td>51</td><td>6</td></tr>
+					  <tr><td>20</td><td>687</td><td>106</td></tr>
+					  <tr><td>40</td><td>2426</td><td>298</td></tr>
+					  <tr><td>60</td><td>5018</td><td>358</td></tr>
+					  <tr><td>99</td><td>8659</td><td>458</td></tr>
+					</table>
+				</div>
+		</div>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style = "background-color:#9FB4DF">
+    <tr>
+        <td>
+          <b>Throw</b><br>
+            Throw weapons to deal defense-ignoring damage that also ignores row.<br><br>
+            The amount of damage dealt is based on Strength with accessories like "Gigas Glove" increasing their effect.<br><br>
+            Ninjutsu items can cast various magic spells with additional effects.<br><br>
+            The damage for ninjutsu is affected by Magic with accessories like "Earrings" increasing the effect further.<br><br>
+          <a href="technique.html#ninjutsu">→Throw List</a>
+        </td>
+    </tr>
+</table>
+
+<table class = "text-section" style="background-color:#6787CD">
+    <tr>
+        <td>
+          As a change to how Shadow should've appeared, all Ninjato now possess the "Dual Wield" (Genji Glove effect) ability. However, since Ninjato are weaker, and Genji Glove's effect's damage output is now 0.75% per hand, try using accessories to buff physical attack.<br><br>
+        "Throw" uses items, but it's a very powerful way to attack. Not only can you use defense and row-ignoring attacks, but the magic attacks and buffs (self only) cost no MP.<br><br>
+        Also with about a 1/3 chance, Interceptor will parry an attack, then with a very high chance make a counterattack with Shadow called "Twin Fang". Interceptor is extremely useful in avoiding physical attacks now.<br><br>
+        In the original game Shadow would at random chance leave the party if you hired him. This has been removed, so please enjoy. Finally, when escaping from the Floating Continent, Shadow will now immediately reappear as you reach the airship and can no longer be left behind to die.<br><br>
+        <a href="technique.html#other">→Other List</a>
+        </td>
+    </tr>
+</table>
+
+<table class = "desperation-table" style="background-color:#9FB4DF">
+  <tr>
+    <td colspan="2"><b>Shadow Fang</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/shadowfang.gif" alt="Shadow Fang"></td>
+    <td>
+     <b>Effect Value: 162<br>Additional effect: Poison.</b><br><br>A special technique where the user runs through the dark soundless, making cuts as they go, dealing physical damage and ignoring defense.<br><br>As an additional effect, Poison is applied.
+    </td>
+  </tr>
+</table>
+
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Edgar -->
+<table class = "character-heading-table" style = "background-color:#FFF464" id = "edgar">
+    <tr>
+        <td><b>Edgar</b></td>
+    </tr>
+</table>
+
+<table class="character-subheading-table" style="background-color: #FFFFC5;">
+	<tr>
+		<td>
+			<h4>Machinist</h4>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style="background-color:#FFF464">
+	<tr>
+		<td>
+			<div class = "image-container">
+				<img src="img/edgar.gif" alt = "Edgar Sprite 1"><br><br><br>
+				<img src="img/edgar2.gif" alt = "Edgar Sprite 2"><br>
+			</div>
+		</td>
+		<td>
+		 <table class="character-info-table" style="background-color:#FFFFC5">
+			  <tr><th colspan="2">Status</th></tr>
+			  <tr><td>Strength</td><td>39</td></tr>
+			  <tr><td>Speed</td><td>30</td></tr>
+			  <tr><td>Stamina</td><td>34</td></tr>
+			  <tr><td>Magic</td><td>29</td></tr>
+			  <tr><th colspan="2">Starting Gear</th></tr>
+			  <tr><td>Right Hand</td><td>Mythril Spear</td></tr>
+			  <tr><td>Left Hand</td><td>Buckler</td></tr>
+			  <tr><td>Head</td><td>Leather Hat</td></tr>
+			  <tr><td>Body</td><td>Leather Armor</td></tr>
+			  <tr><td>Accessory 1</td><td>－</td></tr>
+			  <tr><td>Accessory 2</td><td>－</td></tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan = "2">
+		<div style = "margin-top:10px">
+			<a href="javascript:void(0)" id="category_7" onclick="show('7');"><b>HP/MP Growth</b></a>
+				<div id="layer_7" class="growth-table hidden">
+				<table>
+				  <tr><th>Level</th><th>HP</th><th>MP</th></tr>
+				  <tr><td>1</td><td>49</td><td>6</td></tr>
+				  <tr><td>20</td><td>756</td><td>110</td></tr>
+				  <tr><td>40</td><td>2822</td><td>229</td></tr>
+				  <tr><td>60</td><td>5191</td><td>403</td></tr>
+				  <tr><td>99</td><td>8820</td><td>482</td></tr>
+				</table>
+			</div>
+		</div>
+		</td>
+	</tr>
+</table>
+<table class="text-section" style="background-color:#FFFFC5">
+    <tr>
+        <td>
+          <b>Tools</b><br>
+            Edgar uses various tools for many different types of attacks.<br><br>
+            In the original game the attacks would always land if the enemy wasn't resistant, which would cause problems due to how they set the hit rate.<br><br>
+            The machinery that relies on physical damage is affected by Strength, where as the ones relying on magical damage are affected by Magic.<br><br>
+            The more powerful machinery items are expensive and also can be found as drops from enemies.<br><br>
+            <a href="technique.html#tools">→Tools List</a>
+        </td>
+    </tr>
+</table>
+
+<table class = "text-section" style="background-color:#FFF464">
+	<tr>
+		<td>
+			Edgar can equip Swords and Spears as his weapons of choice. The stat increases are decent, but later on you can focus on using "Tools" exclusively. Also since he can use spears, it's compatible for use with the accessory "Dragoon Boots" and later the Multi-Jump accessory "Dragon Horn".<br><br>
+			As an additional bonus, if Edgar is your leading character when talking to shop owners in Figaro Castle or South Figaro, you'll receive a 1/2 off discount.
+		</td>
+	</tr>
+</table>
+<table class = "desperation-table" style="background-color:#FFFFC5">
+  <tr>
+    <td colspan="2"><b>Royal Shock</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/royalshock.gif" alt="Royal Shock"></td>
+    <td>
+      <b>Effect Value: 66<br>Additional effect: Sleep.</b><br><br>A secret royal technique where the user sends a shockwave rising up from around the enemy's feet, dealing non-elemental damage and ignoring defense.<br><br>As an additional effect, the target is put to sleep.
+    </td>
+  </tr>
+</table>
+
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Sabin -->
+<table class="character-heading-table" style="background-color:#F98F25" id="mash">
+  <tr>
+    <td><b>Sabin</b></td>
+  </tr>
+</table>
+<table class="character-subheading-table" style="background-color:#FFD691">
+	<tr>
+		<td>
+			<h4>Brawler</h4>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style="background-color:#F98F25">
+	<tr>
+		<td>
+			<div class = "image-container">
+				<img src="img/mash.gif" alt="Sabin Sprite 1"><br><br><br>
+				<img src="img/mash2.gif" alt="Sabin Sprite 2"><br>
+			</div>
+		</td>
+		<td>
+			<table class = "character-info-table" style="background-color:#FFD691">
+			  <tr><th colspan="2">Status</th></tr>
+			  <tr><td>Strength</td><td>47</td></tr>
+			  <tr><td>Speed</td><td>37</td></tr>
+			  <tr><td>Stamina</td><td>42</td>			  
+			  <tr><td>Magic</td><td>18</td></tr>
+			  <tr><th colspan="2">Starting Gear</th></tr>
+			  <tr><td>Right Hand</td><td>Metal Knuckle</td></tr>
+			  <tr><td>Left Hand</td><td>－</td></tr>
+			  <tr><td>Head</td><td>Leather Hat</td></tr>
+			  <tr><td>Body</td><td>Kenpo Gi</td></tr>
+			  <tr><td>Accessory 1</td><td>－</td></tr>
+			  <tr><td>Accessory 2</td><td>－</td></tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan = "2">
+			<div style = "margin-top:10px">
+				<a href="javascript:void(0)" id="category_8" onclick="show('8');"><b>HP/MP Growth</b></a>
+				<div id="layer_8" class="growth-table hidden">
+					<table>
+					  <tr><th>Level</th><th>HP</th><th>MP</th></tr>
+					  <tr><td>1</td><td>58</td><td>3</td></tr>
+					  <tr><td>20</td><td>1191</td><td>46</td></tr>
+					  <tr><td>40</td><td>3326</td><td>128</td></tr>
+					  <tr><td>60</td><td>6541</td><td>175</td></tr>
+					  <tr><td>99</td><td>9999</td><td>316</td></tr>
+					</table>
+				</div>
+				<a href="javascript:void(0)" id="category_9" onclick="show('9');"><b>Blitz Acquisition Levels</b></a>
+				<div id="layer_9" class="skill-table hidden">
+					<table>
+						<tr><th>Level</th><th>Blitz Learned</th><th>Level</th><th>Blitz Learned</th></tr>
+						<tr><td>1</td><td>Pummel</td><td>23</td><td>Chakra</td></tr>
+						<tr><td>6</td><td>Aura Cannon</td><td>30</td><td>Vacuum Wave</td></tr>
+						<tr><td>10</td><td>Suplex</td><td>49</td><td>Tiger Rush</td></tr>
+						<tr><td>15</td><td>Phoenix Dance</td><td>99</td><td>Phantom Rush</td></tr>
+					</table>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style="background-color:#FFD691">
+    <tr>
+        <td>
+           <b>Blitz</b><br>
+            "Blitz" attacks are entered like combo moves in fighting games.<br><br>
+            In the original game these would always land and problems would arise if the hit rate was changed. Another problem was you could never select your target; it was always random.<br><br>
+            The physical damage attacks are based on your Strength value while the magical ones are based on Magic.<br><br>
+            Although you can learn "Phantom Rush" from leveling, it's more than likely you'll unlock it via the event first.<br><br>
+          <a href="technique.html#bliz">→Blitz List</a>
+        </td>
+    </tr>
+</table>
+
+<table class = "text-section" style="background-color:#F98F25">
+	<tr>
+		<td>
+			Sabin can use Claws and Staves as his choice weapons. He has high Strength and Speed, but his Magic is extremely low.<br><br>
+			"Blitz" offers physical, magical, and recovery techniques, which are extremely powerful/useful just like in the original game. He's also one of the few to naturally hit 9999 HP.<br><br>
+			His one downside is his equipment options are rather low, as well as his Magic stat and his MP.
+		</td>
+	</tr>
+</table>
+
+<table class = "desperation-table" style="background-color:#FFD691">
+  <tr>
+    <td colspan="2"><b>Tiger Break</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/tigerbreak.gif" alt="Tiger Break"></td>
+    <td>
+      <b>Effect Value: 190<br>Additional effects: Death.</b><br><br>An ultimate finishing move where the user launches themselves with a tiger's fighting spirit at the enemy, mauling them, dealing physical damage and ignoring defense.<br><br>"Death" is sometimes activated as an additional effect.
+    </td>
+  </tr>
+</table>
+
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Celes -->
+<table class = "character-heading-table" style = "background-color:#FFF875" id = "celes">
+    <tr>
+        <td><b>Celes</b></td>
+    </tr>
+</table>
+
+<table class = "character-subheading-table" style = "background-color:#FFFACD">
+    <tr>
+        <td>
+            <h4>Rune Knight</h4>
+        </td>
+    </tr>
+</table>
+
+<table class="text-section" style="background-color:#FFF875">
+    <tr>
+        <td>
+            <div class = "image-container">
+                <img src="img/celes.gif" alt = "Celes Sprite 1"><br><br><br>
+                <img src="img/celes2.gif" alt = "Celes Sprite 2"><br>
+            </div>
+        </td>
+		<td>
+		<table class="character-info-table" style="background-color:#FFFACD">
+              <tr><th colspan="2">Status</th></tr>
+              <tr><td>Strength</td><td>34</td></tr>
+              <tr><td>Speed</td><td>34</td></tr>
+              <tr><td>Stamina</td><td>31</td></tr>
+              <tr><td>Magic</td><td>39</td></tr>
+              <tr><th colspan="2">Starting Gear</th></tr>
+              <tr><td>Right Hand</td><td>－</td></tr>
+              <tr><td>Left Hand</td><td>－</td></tr>
+              <tr><td>Head</td><td>－</td></tr>
+              <tr><td>Body</td><td>－</td></tr>
+              <tr><td>Accessory 1</td><td>－</td></tr>
+              <tr><td>Accessory 2</td><td>－</td></tr>
+        </table>
+		</td>
+	</tr>
+	<tr>
+	 <td colspan = "2">
+	 <div style = "margin-top:10px">
+		<a href="javascript:void(0)" id="category_10" onclick="show('10');"><b>HP/MP Growth</b></a>
+		<div id="layer_10" class="growth-table hidden">
+			<table>
+				<tr><th>Level</th><th>HP</th><th>MP</th></tr>
+				<tr><td>1</td><td>44</td><td>20</td></tr>
+				<tr><td>20</td><td>480</td><td>247</td></tr>
+				<tr><td>40</td><td>2160</td><td>544</td></tr>
+				<tr><td>60</td><td>4497</td><td>709</td></tr>
+				<tr><td>99</td><td>8402</td><td>870</td></tr>
+			</table>
+		</div>
+
+		<a href="javascript:void(0)" id="category_11" onclick="show('11');"><b>Naturally Learned Magic</b></a>
+		<div id="layer_11" class="skill-table hidden">
+			<table>
+				<tr><th>Level</th><th>Magic</th><th>Level</th><th>Magic</th></tr>
+				<tr><td>1</td><td>Blizzard</td><td>28</td><td>Haste</td></tr>
+				<tr><td>4</td><td>Cure</td><td>32</td><td>Berserk</td></tr>
+				<tr><td>8</td><td>Poisona</td><td>35</td><td>Blizzaga</td></tr>
+				<tr><td>13</td><td>Toad</td><td>37</td><td>Blink</td></tr>
+				<tr><td>15</td><td>Libra</td><td>41</td><td>Hastega</td></tr>
+				<tr><td>18</td><td>Protect</td><td>45</td><td>Holy</td></tr>
+				<tr><td>21</td><td>Blizzara</td><td>49</td><td>Flare</td></tr>
+				<tr><td>24</td><td>Confuse</td><td>52</td><td>Meteor</td></tr>
+			</table>
+		</div>
+	  </div>
+	 </td>
+	</tr>
+</table>
+
+<table class = "text-section" style = "background-color:#FFFACD">
+    <tr>
+        <td>
+          <b>Runic</b><br>
+            Runic allows Celes to null one enemy's spell and absorb the MP cost of it to heal her own MP. However, the draw back to this is while Runic is activated, using any other action with her will cancel Runic. Also, there's some magic she can't absorb so be careful. Runic can only be used when equipped with Swords or Knight Swords.<br>
+            <br>
+          <b>Pray</b><br>
+            By equipping the accessory "Maiden's Prayer", "Runic" becomes "Pray".<br><br>
+            This is the same ability Banon uses in the original game, however, it's been modified so it will never be reflected (Banon's ability was literally just Cura, this is why it's been fixed to not be reflectable).<br>
+        </td>
+    </tr>
+</table>
+
+<table class = "text-section" style = "background-color:#FFF875">
+    <tr>
+        <td>
+           Like Terra, Celes also learns various spells upon leveling up. Compared to Terra, Celes learns more offensive spells.<br><br>
+            Celes mainly uses Swords, Dark Swords, and Knight Swords as her weapons of choice. In the original game some weapons like Ultima Weapon were able to use "Runic" despite not being set to do so.<br><br>
+            For the first half of the game Runic is useful for recovering MP, but in the later half it becomes incredibly useful for locking out an enemy's spells. Please take note of this.<br><br>
+            "Pray" is useful now due to being able to go through Reflect. However, the healing effect may be low, but it can be useful for emergency due to its speed and free cost.
+        </td>
+    </tr>
+</table>
+
+<table class = "desperation-table" style = "background-color:#FFFACD">
+  <tr>
+    <td colspan="2"><b>Moulin Rouge</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/moulinrouge.gif" alt = "Moulin Rouge"></td>
+    <td>
+      <b>Effect Value: 175<br>Additional effect: Extra damage to humans.</b><br><br>A violent technique where the user repeatively slashes at the enemy causing blood to fly everywhere, with a crimson rose scattering across the battlefield, dealing physical damage and ignoring defense.<br><br>As an additional effect human enemies take more damage.<br>This effect was changed along with the name of the attack.
+    </td>
+  </tr>
+</table>
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Strago -->
+<table class = "character-heading-table" style = "background-color:#D8FF7F" id = "stragos">
+    <tr>
+        <td><b>Strago</b></td>
+    </tr>
+</table>
+<table class = "character-subheading-table" style="background-color:#F0FBB3">
+    <tr>
+        <td>
+            <h4>Blue Mage</h4>
+        </td>
+    </tr>
+</table>
+<table class = "text-section" style = "background-color:#D8FF7F">
+	<tr>
+		<td>
+			<div class = "image-container">
+				<img src="img/stragos.gif" alt = "Strago Sprite 1"><br><br><br>
+				<img src="img/stragos2.gif" alt = "Strago Sprite 2"><br>
+			</div>
+		</td>
+		<td>
+		 <table class="character-info-table" style = "background-color:#F0FBB3">
+			  <tr><th colspan="2">Status</th></tr>
+			  <tr><td>Strength</td><td>28</td></tr>
+			  <tr><td>Speed</td><td>28</td></tr>
+			  <tr><td>Stamina</td><td>19</td></tr>
+			  <tr><td>Magic</td><td>43</td></tr>
+			  <tr><th colspan="2">Starting Gear</th></tr>
+			  <tr><td>Right Hand</td><td>Ice Rod</td></tr>
+			  <tr><td>Left Hand</td><td>－</td></tr>
+			  <tr><td>Head</td><td>Priest's Miter</td></tr>
+			  <tr><td>Body</td><td>Gaia Gear</td></tr>
+			  <tr><td>Accessory 1</td><td>－</td></tr>
+			  <tr><td>Accessory 2</td><td>－</td></tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan = "2">
+			<div style = "margin-top:10px">
+				<a href="javascript:void(0)" id="category_12" onclick="show('12');"><b>HP/MP Growth</b></a>
+				<div id="layer_12" class="growth-table hidden">
+				<table>
+				  <tr><th>Level</th><th>HP</th><th>MP</th></tr>
+				  <tr><td>1</td><td>35</td><td>19</td></tr>
+				  <tr><td>20</td><td>394</td><td>341</td></tr>
+				  <tr><td>40</td><td>1074</td><td>507</td></tr>
+				  <tr><td>60</td><td>2510</td><td>536</td></tr>
+				  <tr><td>99</td><td>6871</td><td>906</td></tr>
+				</table>
+			</div>
+
+			<a href="javascript:void(0)" id="category_13" onclick="show('13');"><b>WoB/WoR Blue Magic List</b></a>
+				<div id="layer_13" class="skill-table hidden">
+					<table>
+						<tr><th>World of Balance</th><th>World of Ruin</th></tr> (Note: No spell is missable. Any WoB spell can be learned in the WoR.)
+						<tr><td>Death Sentence</td><td>Mighty Guard</td></tr>
+						<tr><td>Death Roulette</td><td>Night</td></tr>
+						<tr><td>Mind Blast</td><td>Level 2 Holy</td></tr>
+						<tr><td>Aqua Breath</td><td>Force Field</td></tr>
+						<tr><td>Aeroga</td><td>Rippler</td></tr>
+						<tr><td>1000 Needles</td><td>Ancient Prayer</td></tr>
+						<tr><td>Revenge Blast</td><td>Quasar</td></tr>
+						<tr><td>White Wind</td><td>Grand Delta</td></tr>
+						<tr><td>Level ? Death</td><td>-</td></tr>
+						<tr><td>Level 3 Flare</td><td>-</td></tr>
+						<tr><td>Level 4 Hold</td><td>-</td></tr>
+						<tr><td>Traveler</td><td>-</td></tr>
+						<tr><td>Dischord</td><td>-</td></tr>
+						<tr><td>Bad Breath</td><td>-</td></tr>
+						<tr><td>Magic Hammer</td><td>-</td></tr>
+						<tr><td>Self-Destruct</td><td>-</td></tr>
+					</table>
+				</div>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style = "background-color:#F0FBB3">
+    <tr>
+        <td>
+          <b>Blue Magic</b><br>
+           Strago's unique ability is Blue Magic which allows him to learn enemy techniques.<br><br>
+            In order to learn spells Strago must "see" the attack while in a normal state. That's to say he can't be petrified, blinded, slept, stopped, zombied, confused, berserked, or dead, but he doesn't also have to personally be hit with the spell either. As long as the attack goes off and he's not any of these statuses, he'll learn it once the battle ends. Also, if you meet these conditions and then Strago dies, he can still learn it, as long as he saw the spell while in a normal state.<br><br>
+            There's many different spells not used normally by other characters making some of these very useful.<br><br>
+          <a href="magic.html#blue">→Blue Magic List</a>
+        </td>
+    </tr>
+</table>
+
+<table class = "text-section" style = "background-color:#D8FF7F">
+	<tr>
+		<td>
+			A real mage. Strago has the best Magic stat out of everyone and he prefers Rods as his weapon of choice.<br><br>
+			"Blue Magic" is extremely good. Not only can you learn via enemies using the abilities, but also if Gau uses it with "Rage" or Relm with "Sketch".<br><br>
+			His MP growth is super high, however, his HP growth is rather low.
+		</td>
+	</tr>
+</table>
+
+<table class = "desperation-table" style = "background-color:#F0FBB3">
+  <tr>
+    <td colspan="2"><b>Saber Soul</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/sabresoul.gif" alt = "Saber Soul"></td>
+    <td>
+      <b>Effect Value: 74<br>Additional effect: Deals MP damage.</b><br><br>A forbidden technique that draws out the target's spirit and damages it.<br><br>Doesn't deal HP damage, but instead MP damage.
+    </td>
+  </tr>
+</table>
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Relm -->
+<table class = "character-heading-table" style = "background-color:#FFC0FF" id = "relm">
+    <tr>
+        <td><b>Relm</b></td>
+    </tr>
+</table>
+<table class="character-subheading-table" style="background-color:#FFE9FF">
+    <tr>
+        <td>
+            <h4>Pictomancer</h4>
+        </td>
+    </tr>
+</table>
+<table class = "text-section" style = "background-color:#FFC0FF">
+    <tr>
+        <td>
+            <div class = "image-container">
+                <img src="img/relm.gif" alt = "Relm Sprite 1"><br><br><br>
+                <img src="img/relm2.gif" alt = "Relm Sprite 2"><br>
+            </div>
+        </td>
+        <td>
+            <table class = "character-info-table" style="background-color:#FFE9FF">
+              <tr><th colspan="2">Status</th></tr>
+              <tr><td>Strength</td><td>26</td></tr>
+              <tr><td>Speed</td><td>39</td></tr>
+              <tr><td>Stamina</td><td>22</td></tr>
+              <tr><td>Magic</td><td>35</td></tr>
+              <tr><th colspan="2">Starting Gear</th></tr>
+              <tr><td>Right Hand</td><td>Chocobo Brush</td></tr>
+              <tr><td>Left Hand</td><td>－</td></tr>
+              <tr><td>Head</td><td>Plumed Hat</td></tr>
+              <tr><td>Body</td><td>White Dress</td></tr>
+              <tr><td>Accessory 1</td><td>Memento Ring</td></tr>
+              <tr><td>Accessory 2</td><td>－</td></tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan = "2">
+        <div style = "margin-top: 10px">
+            <a href="javascript:void(0)" id="category_14" onclick="show('14');"><b>HP/MP Growth</b></a>
+              <div id="layer_14" class="growth-table hidden">
+                <table>
+                  <tr><th>Level</th><th>HP</th><th>MP</th></tr>
+                  <tr><td>1</td><td>37</td><td>21</td></tr>
+                  <tr><td>20</td><td>473</td><td>149</td></tr>
+                  <tr><td>40</td><td>1647</td><td>309</td></tr>
+                  <tr><td>60</td><td>3948</td><td>454</td></tr>
+                  <tr><td>99</td><td>7464</td><td>769</td></tr>
+                </table>
+              </div>
+    
+            <a href="javascript:void(0)" id="category_15" onclick="show('15');"><b>Naturally Learned Magic</b></a>
+              <div id="layer_15" class="skill-table hidden">
+                <table>
+                    <tr><th>Level</th><th>Magic</th><th>Level</th><th>Magic</th></tr>
+                    <tr><td>1</td><td>Cure</td><td>32</td><td>Reflect</td></tr>
+                    <tr><td>3</td><td>Thunder</td><td>36</td><td>Thundaga</td></tr>
+                    <tr><td>8</td><td>Slow</td><td>38</td><td>Curaga</td></tr>
+                    <tr><td>12</td><td>Thundara</td><td>41</td><td>Slowga</td></tr>
+                    <tr><td>18</td><td>Gravity</td><td>45</td><td>Comet</td></tr>
+                    <tr><td>22</td><td>Silence</td><td>48</td><td>Tornado</td></tr>
+                    <tr><td>26</td><td>Bio</td><td>53</td><td>Scourge</td></tr>
+                    <tr><td>28</td><td>Cura</td><td>59</td><td>Flare</td></tr>
+                </table>
+            </div>
+         </div>
+        </td>
+    </tr>
+</table>
+
+<table class = "text-section" style = "background-color:#FFE9FF">
+    <tr>
+        <td>
+             <b>Sketch</b><br>
+            Paints an exact copy of an enemy and uses its special attack as your own. The effect of this attack is now based off Relm's stats rather than the enemy's.<br><br>
+            3/4 of the time you'll get the enemy's special attack, but new to T-Edition you'll now have a 1/4 chance to trigger "Wishing Star", a new ability for Relm.<br><br>
+            Sketch can now be used even without a Brush equipped. Brushes now increse the accuracy of Sketch working.<br><br>
+            <a href="technique.html#other">→Other List</a>
+          <br>
+          <b>Spirit</b><br>
+            When using the accessory "Embroidered Tippet", "Sketch" now becomes "Spirit".<br><br>
+            This ability gives a party-wide small MP restoral.<br><br>
+            Due to how important MP is now, this is a very useful ability in longer battles.
+        </td>
+    </tr>
+</table>
+
+<table class = "text-section" style = "background-color:#FFC0FF">
+	<tr>
+		<td>
+			Like Terra and Celes, Relm now also learns magic naturally at various levels. She fills in the spell list these two are missing (Thunder spells, etc).<br><br>
+			Relm's weapons of choice besides Brushes are Rods, Whips, and Bells.<br><br>
+			"Sketch" costs no MP and is useful if you know what the enemy's special attack will be. Also, "Wishing Star" may proc 1/4 of the time, calling in Interceptor to help.<br><br>
+			On some enemies "Sketch" will fail to work, so in this case it may be better to use "Spirit".
+		</td>
+	</tr>
+</table>
+
+<table class = "desperation-table" style = "background-color:#FFE9FF">
+  <tr>
+    <td colspan="2"><b>Star Prism</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/starprism.gif" alt = "Star Prism"></td>
+    <td>
+      <b>Effect Value: 63<br>Additional effect: Toad.</b><br><br>Mysterious secret stars that protects Relm with its glow, erasing any threats, dealing non-elemental damage, and ignoring defense.<br><br>As an additional effect, Toad is also cast on the enemy.
+    </td>
+  </tr>
+</table>
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Setzer -->
+<table class = "character-heading-table" style = "background-color:#BDBDBD" id = "setzer">
+    <tr>
+        <td><b>Setzer</b></td>
+    </tr>
+</table>
+<table class = "character-subheading-table" style = "background-color:#E4E4E4">
+	<tr>
+		<td>
+			<h4>Gambler</h4>
+		</td>
+	</tr>
+</table>
+<table class = "text-section" style="background-color:#BDBDBD">
+    <tr>
+        <td>
+            <div class = "image-container">
+                <img src="img/setzer.gif" alt = "Setzer Sprite 1"><br><br><br>
+                <img src="img/setzer2.gif" alt = "Setzer Sprite 2"><br>
+            </div>
+        </td>
+        <td>
+           <table class = "character-info-table" style="background-color:#E4E4E4">
+              <tr><th colspan="2">Status</th></tr>
+              <tr><td>Strength</td><td>36</td></tr>
+              <tr><td>Speed</td><td>32</td></tr>
+              <tr><td>Stamina</td><td>38</td></tr>
+              <tr><td>Magic</td><td>29</td></tr>
+              <tr><th colspan="2">Starting Gear</th></tr>
+              <tr><td>Right Hand</td><td>Cards</td></tr>
+              <tr><td>Left Hand</td><td>Mythril Shield</td></tr>
+              <tr><td>Head</td><td>Headgear</td></tr>
+              <tr><td>Body</td><td>Mythril Plate</td></tr>
+              <tr><td>Accessory 1</td><td>－</td></tr>
+              <tr><td>Accessory 2</td><td>－</td></tr>
+           </table>
+        </td>
+    </tr>
+	<tr>
+		<td colspan = "2">
+			<div style = "margin-top:10px">
+				<a href="javascript:void(0)" id="category_16" onclick="show('16');"><b>HP/MP Growth</b></a>
+					<div id="layer_16" class="growth-table hidden">
+						<table>
+						  <tr><th>Level</th><th>HP</th><th>MP</th></tr>
+						  <tr><td>1</td><td>46</td><td>9</td></tr>
+						  <tr><td>20</td><td>708</td><td>161</td></tr>
+						  <tr><td>40</td><td>2680</td><td>313</td></tr>
+						  <tr><td>60</td><td>5445</td><td>370</td></tr>
+						  <tr><td>99</td><td>9093</td><td>518</td></tr>
+						</table>
+					</div>
+			</div>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style = "background-color:#E4E4E4">
+    <tr>
+        <td>
+          <b>Slots</b><br>
+          Roll the Slots and land 3 of the same picture to get a special technique.<br><br>
+          The chance of success for each outcome is set and powerful ones are very hard to get, with landing all 3 even with perfect timing sometimes just won't happen.<br><br>
+          Although the chance of 777's "Joker Death" is extremely low, if you manage to get it, it will bypass all death resistance and kill even bosses.<br><br>
+          <a href="technique.html#Slots">→Slots List</a><br>
+          <b>Gil Toss</b><br>
+            By equipping the accessory "Heiji's Jitte", "Slots" becomes "Gil Toss".<br><br>
+            The amount of Gil consumed is Level x 180/2. It doesn't reduce the damage based on targets like in the original game and can't miss. It will also bypass any defense.<br><br>
+            While "Slots" is random, "Gil Toss" isn't and will allow you to deal static damage at the cost of Gil.<br>
+        </td>
+    </tr>
+</table>
+<table class = "text-section" style="background-color:#BDBDBD">
+	<tr>
+		<td>
+			Setzer's weapons of choice are Dice, Darts, and Cards, basically gambler-like items. Dice mostly are a random damage attack much like "Slots".<br><br>
+			Since Setzer can attack freely from the back row, his defenses are solid despite he can only wear light armor. Not to mention Cards and Darts have increased damage towards flying enemies.
+		</td>
+	</tr>
+</table>
+
+<table class = "desperation-table" style="background-color:#E4E4E4">
+  <tr>
+    <td colspan="2"><b>Bloody Cards</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/bloodycard.gif" alt="Bloody Cards"></td>
+    <td>
+      <b>Effect Value: 140<br>Additional effect: Absorbs HP.</b><br><br>An ultimate trump card where the user unleashes throwing cards in their own blood to absorb an enemy's HP, dealing physical damage, and ignoring defense.<br><br>As an additional effect, Setzer absorbs the HP of the damage dealt.<br>The effect was changed to red to match the name "Bloody Cards".
+    </td>
+  </tr>
+</table>
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Mog -->
+<table class = "character-heading-table" style = "background-color:#85FFD4" id = "mog">
+    <tr>
+        <td><b>Mog</b></td>
+    </tr>
+</table>
+<table class = "character-subheading-table" style = "background-color:#D7FFF1">
+    <tr>
+        <td>
+            <h4>Moogle Knight</h4>
+        </td>
+    </tr>
+</table>
+<table class = "text-section" style="background-color:#85FFD4">
+    <tr>
+        <td>
+            <div class = "image-container">
+                <img src="img/mog.gif" alt = "Mog Sprite 1"><br><br><br>
+                <img src="img/mog2.gif" alt = "Mog Sprite 2"><br>
+            </div>
+        </td>
+        <td>
+            <table class = "character-info-table" style = "background-color:#D7FFF1">
+              <tr><th colspan="2">Status</th></tr>
+              <tr><td>Strength</td><td>40</td></tr>
+              <tr><td>Speed</td><td>37</td></tr>
+              <tr><td>Stamina</td><td>26</td></tr>
+              <tr><td>Magic</td><td>29</td></tr>
+              <tr><th colspan="2">Starting Gear</th></tr>
+              <tr><td>Right Hand</td><td>Mythril Spear</td></tr>
+              <tr><td>Left Hand</td><td>Mythril Shield</td></tr>
+              <tr><td>Head</td><td>－</td></tr>
+              <tr><td>Body</td><td>－</td></tr>
+              <tr><td>Accessory 1</td><td>－</td></tr>
+              <tr><td>Accessory 2</td><td>－</td></tr>
+           </table>
+        </td>
+    </tr>
+	<tr>
+		<td colspan = "2">
+		    <div style = "margin-top:10px">
+			    <a href="javascript:void(0)" id="category_17" onclick="show('17');"><b>HP/MP Growth</b></a>
+			    <div id="layer_17" class="growth-table hidden">
+				    <table>
+					    <tr><th>Level</th><th>HP</th><th>MP</th></tr>
+					    <tr><td>1</td><td>39</td><td>16</td></tr>
+					    <tr><td>20</td><td>658</td><td>192</td></tr>
+					    <tr><td>40</td><td>1911</td><td>370</td></tr>
+					    <tr><td>60</td><td>4667</td><td>511</td></tr>
+					    <tr><td>99</td><td>7903</td><td>642</td></tr>
+				    </table>
+			    </div>
+		    </div>
+		</td>
+	</tr>
+</table>
+<table class = "text-section" style = "background-color:#D7FFF1">
+    <tr>
+        <td>
+          <b>Dance</b><br>
+            Mog performs one of eight unique dances, each with four abilities that have a varying chance to be used over the other.<br><br>
+            To master a specific "Dance" Mog must be in the party and win a battle in that specific background (desert, mountains, etc). If you change the background with another "Dance" you won't learn that specific dance for that battle.<br><br>
+            In T-Edition "Dance" now only lasts 1 action before you can pick something new to do. It will also no longer fail.<br><br>
+            <a href="technique.html#dance">→Dance List</a>
+          <br>
+          <b>Animal</b><br>
+            When using the accessory "Pheasant Netsuke", "Dance" becomes "Animal".<br><br>
+            With this ability Mog can call one of the random animals from his dances to assist the party. Normally these are a very low chance of procing off "Dance".<br>
+        </td>
+    </tr>
+</table>
+<table class = "text-section" style="background-color:#85FFD4">
+    <tr>
+        <td>
+           Mog's "Dance" ability has undergone a huge change from the original making it more like "Gaia" from FF5. His main choice of weapons are Spears, but he can now also use the new weapon, Bells.<br><br>
+            Despite his looks Mog is a strong physical attacker especially with "Jump" via the accessory "Dragoon's Boots".<br><br>
+            In order to recruit Mog in the WoB you have to choose between saving him or Lone Wolf the Pickpocket. Saving the latter gives a "Gold Hairpin", but you lose Mog until the WoR. Since you can learn "Water's Harmony" in the WoR now I'll never force Mog into your party in the WoB, although he'd be useful for the Floating Continent with "Sunbath" for party-wide healing or "Cliff Collapse" for non-elemental damage.<br><br>
+            As you get further into the game "Dance" may start to lose its appeal, so switching to "Animal" is suggested. Each animal's skills are very useful, such as "Tapir" for party-wide Reraise, "Snow Bunny" for party-wide HP restore and Blink, and "Meerkat" for party-wide Protect, Shell, Haste, and Regen.
+        </td>
+    </tr>
+</table>
+
+<table class = "desperation-table" style="background-color:#D7FFF1">
+  <tr>
+    <td colspan="2"><b>Moogle Dance</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/moogleranbu.gif" alt = "Moogle Dance"></td>
+    <td>
+     <b>Effect Value: 168<br>Additional effect: Confuse.</b><br><br>A secret technique passed down in the Moogle tribes taught to only 1 child, dealing physical damage and ignoring defense.<br><br>As an additional effect it also sets Confuse.<br><br>The effect animation has been changed to "Phantom Rush".
+    </td>
+  </tr>
+</table>
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Gau -->
+<table class = "character-heading-table" style = "background-color:#61DD88" id = "gau">
+    <tr>
+        <td><b>Gau</b></td>
+    </tr>
+</table>
+<table class = "character-subheading-table" style = "background-color:#ADFFAD">
+	<tr>
+		<td>
+			<h4>Feral Youth</h4>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style="background-color:#61DD88">
+    <tr>
+        <td>
+            <div class = "image-container">
+                <img src="img/gau.gif" alt = "Gau Sprite 1"><br><br><br>
+                <img src="img/gau2.gif" alt = "Gau Sprite 2"><br>
+            </div>
+        </td>
+		<td>
+		<table class="character-info-table" style="background-color:#ADFFAD">
+			  <tr><th colspan="2">Status</th></tr>
+			  <tr><td>Strength</td><td>38</td></tr>
+			  <tr><td>Speed</td><td>41</td></tr>
+			  <tr><td>Stamina</td><td>36</td></tr>
+			  <tr><td>Magic</td><td>22</td></tr>
+			  <tr><th colspan="2">Starting Gear</th></tr>
+			  <tr><td>Right Hand</td><td>－</td></tr>
+			  <tr><td>Left Hand</td><td>－</td></tr>
+			  <tr><td>Head</td><td>Leather Hat</td></tr>
+			  <tr><td>Body</td><td>Kenpo Gi</td></tr>
+			  <tr><td>Accessory 1</td><td>－</td></tr>
+			  <tr><td>Accessory 2</td><td>－</td></tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan = "2">
+		<div style = "margin-top:10px">
+			<a href="javascript:void(0)" id="category_18" onclick="show('18');"><b>HP/MP Growth</b></a>
+				<div id="layer_18" class="growth-table hidden">
+					<table>
+					  					  <tr><th>Level</th><th>HP</th><th>MP</th></tr>
+					  <tr><td>1</td><td>45</td><td>10</td></tr>
+					  <tr><td>20</td><td>1122</td><td>54</td></tr>
+					  <tr><td>40</td><td>3128</td><td>139</td></tr>
+					  <tr><td>60</td><td>6210</td><td>258</td></tr>
+					  <tr><td>99</td><td>9999</td><td>390</td></tr>
+					</table>
+				</div>
+		</div>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style="background-color:#ADFFAD">
+    <tr>
+        <td>
+           <b>Rage</b><br>
+            Mimics the enemy you select. Not only do you use their attacks, but your weaknesses, absorbs, status conditions, etc are just as theirs are.<br><br>
+            "Rage" is somewhat difficult to use/master, because you're locked into whatever enemy you take until either the battle ends or Gau is killed (or later on using Unicorn to remove Rage status). However, you have access to some very strong attacks early in the game and at the end also.<br><br>
+          <a href="rage.html">→Rage Location List</a>
+        </td>
+    </tr>
+</table>
+
+<table class = "text-section" style="background-color:#61DD88">
+	<tr>
+		<td>
+			In the original game Gau couldn't equip any weapons normally. This has been changed so he can now use Claws and Axes, as well as "Fight", which he was incredibly lacking before if you didn't want him to use "Rage".<br><br>
+			In the Rage Menu outside of battle, you can now see the special technique of each "Rage". Remember which are useful, then use whatever you'd like in battle.<br><br>
+			Originally, "Leap" worked by you'd only learn the attacks of the enemies you used it on and the group you beat as Gau returned. This is no longer the case. "Leap" has been deleted and you can now simply learn all "Rage" abilities anywhere in the game as long as Gau's in the party. Enjoy!<br><br>
+			Gau has a great offensive abilitiy with high HP, but low MP. To counter this he's been given high Magic and it's suggested to increase his low MP by using "Soma Drop" items on him.
+		</td>
+	</tr>
+</table>
+
+<table class = "desperation-table" style="background-color:#ADFFAD">
+  <tr>
+    <td colspan="2"><b>Wild Buster</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/wildbuster.gif" alt = "Wild Buster"></td>
+    <td>
+      <b>Effect Value: 178<br>Additional effect: Petrify.</b><br><br>An attack where the user grabs the enemy and leaps high up into the air, then slams them into the ground with a falling rock adding to the damage as well, dealing physical damage and ignoring defense.<br><br>As an addition effect this sets Petrify.<br><br>This is a new technique that wasn't in the original game as Gau didn't have a Desperation Attack. The animation used is "Suplex".
+    </td>
+  </tr>
+</table>
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Gogo -->
+
+<table class = "character-heading-table" style = "background-color:#FF8787" id = "gogo">
+    <tr>
+        <td><b>Gogo</b></td>
+    </tr>
+</table>
+<table class = "character-subheading-table" style = "background-color:#FFC9C9">
+	<tr>
+		<td>
+			<h4>Mime</h4>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style="background-color:#FF8787">
+    <tr>
+        <td>
+            <div class = "image-container">
+                <img src="img/gogo.gif" alt = "Gogo Sprite 1"><br><br><br>
+                <img src="img/gogo2.gif" alt = "Gogo Sprite 2"><br>
+            </div>
+        </td>
+        <td>
+           <table class = "character-info-table" style="background-color:#FFC9C9">
+              <tr><th colspan="2">Status</th></tr>
+              <tr><td>Strength</td><td>25</td></tr>
+              <tr><td>Speed</td><td>30</td></tr>
+              <tr><td>Stamina</td><td>20</td></tr>
+              <tr><td>Magic</td><td>26</td></tr>
+              <tr><th colspan="2">Starting Gear</th></tr>
+              <tr><td>Right Hand</td><td>Blitz Whip</td></tr>
+              <tr><td>Left Hand</td><td>Mythril Shield</td></tr>
+              <tr><td>Head</td><td>Green Beret</td></tr>
+              <tr><td>Body</td><td>Power Vest</td></tr>
+              <tr><td>Accessory 1</td><td>－</td></tr>
+              <tr><td>Accessory 2</td><td>－</td></tr>
+           </table>
+        </td>
+    </tr>
+	<tr>
+		<td colspan = "2">
+		  <div style = "margin-top:10px">
+			<a href="javascript:void(0)" id="category_19" onclick="show('19');"><b>HP/MP Growth</b></a>
+			<div id="layer_19" class="growth-table hidden">
+				<table>
+				  <tr><th>Level</th><th>HP</th><th>MP</th></tr>
+				  <tr><td>1</td><td>36</td><td>12</td></tr>
+				  <tr><td>20</td><td>966</td><td>58</td></tr>
+				  <tr><td>40</td><td>2295</td><td>105</td></tr>
+				  <tr><td>60</td><td>4971</td><td>157</td></tr>
+				  <tr><td>99</td><td>7550</td><td>638</td></tr>
+				</table>
+			</div>
+		  </div>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style = "background-color:#FFC9C9">
+	<tr>
+		<td>
+			<b>Mimic</b><br>
+			This ability allows you to copy almost any action the last party member executed. The only things you can't Mimic are "Trance" and a Desperation Attack.<br><br>
+			Even if you "Mimic" a magic spell, Blue Magic, or use an item, it won't consume MP or the item used.<br>
+		</td>
+	</tr>
+</table>
+<table class = "text-section" style = "background-color:#FF8787">
+	<tr>
+		<td>
+			The ability to "Mimic" the last action of a party member for free is extremely powerful. To offset this Gogo has fairly low stats. His weapons of choice are Rods, various types of the Sword classes, and Whips. For armor his selection is limited to Clothing or light armor.<br><br>
+			As another bonus to Gogo he can equip the commands of any party member. He can replace Fight, Magic, and Item with whichever you'd like. The only things he can't use are "Trance" and any ability of a party member not yet recruited in the WoB (Mog for example if you missed him in the WoB you must get him in the WoR before Gogo can use "Dance" and "Animal").<br><br>
+			New to T-Edition is the ability for Gogo to now equip Eidolons and summon them in battle, as well as now learn magic like any other party member.<br><br>
+			Although he is a very useful character, his HP, MP, and stats are rather low to offset and balance him.
+		</td>
+	</tr>
+</table>
+
+<table class = "desperation-table" style="background-color:#FFC9C9">
+  <tr>
+    <td colspan="2"><b>Punishing Meteor</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/oshiokimeteo.gif" alt = "Punishing Meteor"></td>
+    <td>
+      <b>Effect Value: 62<br>Additional effect: 16x damage if same level as the target.</b><br><br>A terrible spell that calls a Meteor from space to slam into the enemy's head, dealing non-elemental damage and ignoring defense.<br><br>As an additional effect if the enemy's level is the same as yours the damage is multiplied by 16.
+    </td>
+  </tr>
+</table>
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<!-- Umaro -->
+<table class = "character-heading-table" style = "background-color:#D7E3FB" id = "umaro">
+    <tr>
+        <td><b>Umaro</b></td>
+    </tr>
+</table>
+<table class="character-subheading-table" style="background-color:#ECF0FE">
+    <tr>
+        <td>
+            <h4>Yeti</h4>
+        </td>
+    </tr>
+</table>
+<table class = "text-section" style="background-color:#D7E3FB">
+	<tr>
+		<td>
+			<div class = "image-container">
+				<img src="img/umaro.gif" alt = "Umaro Sprite 1"><br><br><br>
+				<img src="img/umaro2.gif" alt = "Umaro Sprite 2"><br>
+			</div>
+		</td>
+		<td>
+			<table class = "character-info-table" style="background-color:#ECF0FE">
+              <tr><th colspan="2">Status</th></tr>
+              <tr><td>Strength</td><td>57</td></tr>
+              <tr><td>Speed</td><td>33</td></tr>
+              <tr><td>Stamina</td><td>46</td></tr>
+              <tr><td>Magic</td><td>26</td></tr>
+              <tr><th colspan="2">Starting Gear</th></tr>
+              <tr><td>Right Hand</td><td>Slasher</td></tr>
+              <tr><td>Left Hand</td><td>－</td></tr>
+              <tr><td>Head</td><td>－</td></tr>
+              <tr><td>Body</td><td>－</td></tr>
+              <tr><td>Accessory 1</td><td>Gigas Glove</td></tr>
+              <tr><td>Accessory 2</td><td>－</td></tr>
+            </table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan = "2">
+		<div style = "margin-top:10px">
+			<a href="javascript:void(0)" id="category_20" onclick="show('20');"><b>HP/MP Growth</b></a>
+			<div id="layer_20" class="growth-table hidden">
+				<table>
+					<tr><th>Level</th><th>HP</th><th>MP</th></tr>
+					<tr><td>1</td><td>60</td><td>0</td></tr>
+					<tr><td>20</td><td>1227</td><td>30</td></tr>
+					<tr><td>40</td><td>4551</td><td>112</td></tr>
+					<tr><td>60</td><td>8622</td><td>225</td></tr>
+					<tr><td>99</td><td>9999</td><td>243</td></tr>
+				</table>
+			</div>
+		</div>
+		</td>
+	</tr>
+</table>
+
+<table class = "text-section" style = "background-color:#ECF0FE">
+    <tr>
+        <td>
+          <b>Snowstorm</b><br>
+            Deals ice-elemental damage to all enemies with an Effect Value of 71.<br><br>
+            Although Umaro can't use Magic during battle this attack is useful even if it's only for ice-elemental damage.
+          <br>
+          <b>Throw Ally</b><br>
+            By equipping the accessory "Berserker Ring" Umaro gains the chance to throw an ally for extra damage when using the Fight command.<br><br>
+            This is a powerful attack that ignores defense.<br>
+          <br>
+          <b>Rampage</b><br>
+            By equipping the accessory "Power Belt" the ability "Rampage" may activate when using the Fight command.<br> 
+            This technique hits all enemies with physical damage. Useful in normal battles.<br>
+        </td>
+    </tr>
+</table>
+
+<table class = "text-section" style="background-color:#D7E3FB">
+	<tr>
+		<td>
+			Unlike the original game Umaro can now change equipment as well as be controlled in battle making him much more useful.<br><br>
+			On top of being able to now equip Axes he can also equip even more accessories than in the original.<br><br>
+			If you equip both the accessories "Berserker Ring" and "Power Belt" the "Ally Throw" command will activate rarely over Rampage and a normal attack.<br><br>
+			Umaro can now equip Eidolons to summon them in battle just like Gogo, as well as learn magic just like any other character now.<br><br>
+			Umaro's best feature is his beastly HP and Strength which will reach 9999 earlier than any other character.
+		</td>
+	</tr>
+</table>
+<table class = "desperation-table" style = "background-color:#ECF0FE">
+  <tr>
+    <td colspan="2"><b>Aura Boost</b></td>
+  </tr>
+  <tr>
+    <td><img src="img/auraboost.gif" alt = "Aura Boost"></td>
+    <td>
+     <b>Effect Value: 61<br>Additional effect: Berserk.</b><br><br>A technique that releases energy from the body at the enemy, dealing non-elemental damage and ignoring defense.<br><br>As an additional effect it also sets Berserk.<br><br>This is a new Desperation Attack added for Umaro since he didn't have one in the original game.
+    </td>
+  </tr>
+</table>
+<div class="back-to-top"><a href="#top">▲</a></div>
+
+<div class="version-info">Final Fantasy VI T-Edition. Mod Creator: Tsushiy◆KEHt9L6ti47L</div>
+</body>
+</html>

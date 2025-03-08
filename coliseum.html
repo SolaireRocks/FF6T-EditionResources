@@ -1,0 +1,1707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFVI T-Edition Coliseum Bets</title>
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #323232;
+            text-align: center;
+            margin-bottom: 1em;
+            font-size: 2.5em;
+            letter-spacing: 0.05em;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            color: #383838;
+            margin-top: 1.5em;
+            margin-bottom: 0.8em;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.25em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        .bet-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Responsive columns */
+          gap: 1em;
+          list-style: none;
+            padding-left: 0;
+        }
+
+        .bet-item {
+            margin-bottom: 0.75em; /*Reduced margin*/
+            padding: 0.75em;    /*Reduced padding*/
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;            /* Use flexbox */
+            justify-content: space-between; /* Space out the items */
+            align-items: center;     /* Vertically center content */
+        }
+
+        .bet-item > * { /*targets direct children of the bet-item class */
+            margin: 0 0.25em;
+        }
+
+        .bet-input {
+            font-weight: bold;
+        }
+
+        .bet-arrow {
+            font-size: 1.2em; /* Larger arrow */
+            color: #007bff; /* Arrow color */
+        }
+
+        .bet-output {
+          font-style: italic;
+        }
+
+        .bet-opponent {
+            color: #666;
+        }
+        .bet-punishment{
+            color: red;
+            font-weight: bold;
+        }
+
+        .note {
+            font-style: italic;
+            color: #800000;
+            margin-top: 0.5em;
+        }
+        @media (max-width: 768px){
+            body{
+                padding: 5px;
+            }
+            .bet-list {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>FFVI T-Edition Coliseum Bets</h1>
+
+    <p class="note">
+        <strong>Note:</strong> Anything with a blank reward here is just a "Bet Punishment" fight against Typhon. You won't lose your item if you fight him, but you will waste your time.
+    </p>
+
+    <ul class="bet-list">
+        <li class="bet-item">
+            <span class="bet-input">Dagger</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Mythril Knife</span>
+            <span class="bet-opponent">[vs. Goblin]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Mythril Knife</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Main Gauche</span>
+            <span class="bet-opponent">[vs. GardLedr]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Main Gauche</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Air Knife</span>
+            <span class="bet-opponent">[vs. MtrDrive]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Air Knife</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Thief's Knife</span>
+            <span class="bet-opponent">[vs. Chimera]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Thief's Knife</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Assassin's Dagger</span>
+            <span class="bet-opponent">[vs. DrgnZomb]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Assassin's Dagger</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Needle Dagger</span>
+            <span class="bet-opponent">[vs. Brainpan]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Dancing Dagger</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Gladius</span>
+            <span class="bet-opponent">[vs. Deathclw]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Gladius</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Enhancer Sword</span>
+            <span class="bet-opponent">[vs. Baalzeph]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Valiant Knife</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Mythril Sword</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Great Sword</span>
+            <span class="bet-opponent">[vs. Fem.Sold]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Great Sword</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Rune Blade</span>
+            <span class="bet-opponent">[vs. SandFish]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Rune Blade</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Enhancer Sword</span>
+            <span class="bet-opponent">[vs. Kamui]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Flametongue</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Icebrand</span>
+            <span class="bet-opponent">[vs. WhtJello]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Icebrand</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Thunder Blade</span>
+            <span class="bet-opponent">[vs. RedMarsh]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Thunder Blade</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Flametongue</span>
+            <span class="bet-opponent">[vs. YellowMo]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Enhancer Sword</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Crystal Sword</span>
+            <span class="bet-opponent">[vs. KilrMnts]</span>
+        </li>
+    <li class="bet-item">
+            <span class="bet-input">Crystal Sword</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Defender</span>
+            <span class="bet-opponent">[vs. Devil]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Stoneblade</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Blood Sword</span>
+            <span class="bet-opponent">[vs. Valefor]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Shadow Blade</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Rune Blade</span>
+            <span class="bet-opponent">[vs. HvyArmor]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Blood Sword</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Blood Lance</span>
+            <span class="bet-opponent">[vs. DemonKht]</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Hrunting</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Gram</span>
+            <span class="bet-opponent">[vs. GlasyaLa]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Gram</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Balmung</span>
+            <span class="bet-opponent">[vs. Silenus]</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Arondight</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Gram</span>
+            <span class="bet-opponent">[vs. Apanda]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Balmung</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Arondight</span>
+            <span class="bet-opponent">[vs. SnwPanth]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Defender</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Durandal</span>
+            <span class="bet-opponent">[vs. NghtHawk]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Durandal</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Royal Crown</span>
+            <span class="bet-opponent">[vs. Alv]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Save the Queen</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+        </li>
+     <li class="bet-item">
+            <span class="bet-input">Ragnarok</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+        </li>
+    <li class="bet-item">
+            <span class="bet-input">Zantetsuken</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Mythril Spear</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Heavy Lance</span>
+            <span class="bet-opponent">[vs. PlatDrgn]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Heavy Lance</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Trident</span>
+            <span class="bet-opponent">[vs. Dante]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Trident</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Partisan</span>
+            <span class="bet-opponent">[vs. TestRidr]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Partisan</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Dragon Spear</span>
+            <span class="bet-opponent">[vs. Brachios]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Blood Lance</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Lamia Brush</span>
+            <span class="bet-opponent">[vs. LamiaQen]</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Radiant Lance</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Gungnir</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Dragon Spear</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Dragoon Boots</span>
+            <span class="bet-opponent">[vs. Aeronite]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Kunai</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Kodachi</span>
+            <span class="bet-opponent">[vs. Graswyrm]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Kodachi</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Sakura</span>
+            <span class="bet-opponent">[vs. Ninja]</span>
+    </li>
+    <li class="bet-item">
+        <span class="bet-input">Sakura</span>
+        <span class="bet-arrow">=></span>
+        <span class="bet-output">Izayoi</span>
+        <span class="bet-opponent">[vs. Mykale]</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Izayoi</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Murasame</span>
+            <span class="bet-opponent">[vs. Chronos]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Narigitsune</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Narigitsune (Shadow)</span>
+            <span class="bet-opponent">[vs. Covert]</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Kagenui</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Fuma Shuriken</span>
+            <span class="bet-opponent">[vs. Covert]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Ashura</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Kotetsu</span>
+            <span class="bet-opponent">[vs. Sahagin]</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Kotetsu</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Osafune</span>
+            <span class="bet-opponent">[vs. Sergeant]</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Osafune</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Kikuichimonji</span>
+            <span class="bet-opponent">[vs. Samurai]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Kikuichimonji</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Muramasa</span>
+            <span class="bet-opponent">[vs. Yojimbo]</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Muramasa</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Murasame</span>
+            <span class="bet-opponent">[vs. Sam.Soul]</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Mutsunokami</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Murasame</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Kagenui</span>
+            <span class="bet-opponent">[vs. NinjaMas]</span>
+    </li>
+     <li class="bet-item">
+           <span class="bet-input">Murakumo</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Battle Bamboo</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Octagon Staff</span>
+            <span class="bet-opponent">[vs. Imp]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Healing Staff</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Elixir</span>
+            <span class="bet-opponent">[vs. Daedalus]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Flame Rod</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Holy Rod</span>
+            <span class="bet-opponent">[vs. Pineappl]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Ice Rod</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Holy Rod</span>
+            <span class="bet-opponent">[vs. Traveler]</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Thunder Rod</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Holy Rod</span>
+            <span class="bet-opponent">[vs. Jam]</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Octagon Staff</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Dragon Claw</span>
+            <span class="bet-opponent">[vs. Dragon]</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Holy Rod</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Healing Staff</span>
+            <span class="bet-opponent">[vs. Titania]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Kenkonken</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Bone Club</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Mace of Zeus</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Chocobo Brush</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Magical Brush</span>
+            <span class="bet-opponent">[vs. RicardMg]</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Magical Brush</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Rainbow Brush</span>
+            <span class="bet-opponent">[vs. Maiden]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Lamia Brush</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Blood Sword</span>
+            <span class="bet-opponent">[vs. Haokah]</span>
+        </li>
+       <li class="bet-item">
+            <span class="bet-input">Rainbow Brush</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Cat Hood</span>
+            <span class="bet-opponent">[vs. Tonberry]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Shuriken</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Moonring Blade</span>
+            <span class="bet-opponent">[vs. Harveste]</span>
+        </li>
+       <li class="bet-item">
+            <span class="bet-input">Fuma Shuriken</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Rising Sun</span>
+            <span class="bet-opponent">[vs. Outsider]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Pinwheel</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+        </li>
+       <li class="bet-item">
+            <span class="bet-input">Mythril Axe</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Slasher</span>
+            <span class="bet-opponent">[vs. ImpElite]</span>
+        </li>
+        <li class="bet-item">
+           <span class="bet-input">Rising Sun</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Antares</span>
+            <span class="bet-opponent">[vs. Neochu]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Flame Whip</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Diamond Bell</span>
+            <span class="bet-opponent">[vs. Purusa]</span>
+        </li>
+         <li class="bet-item">
+            <span class="bet-input">Boomerang</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Moonring Blade</span>
+            <span class="bet-opponent">[vs. Ninja]</span>
+        </li>
+       <li class="bet-item">
+            <span class="bet-input">Moonring Blade</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Shuriken</span>
+            <span class="bet-opponent">[vs. Samurai]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Slasher</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Boomerang</span>
+            <span class="bet-opponent">[vs. SahagChf]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Chain Whip</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Blitz Whip</span>
+            <span class="bet-opponent">[vs. Venobenu]</span>
+        </li>
+      <li class="bet-item">
+            <span class="bet-input">Blitz Whip</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Flame Whip</span>
+            <span class="bet-opponent">[vs. Chs.Drgn]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Gaia Hammer</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Diamond Bell</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Healing Staff</span>
+            <span class="bet-opponent">[vs. St. Elmo]</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Cards</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Darts</span>
+            <span class="bet-opponent">[vs. Devourer]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Darts</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Dice</span>
+            <span class="bet-opponent">[vs. Don]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Dice</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Tarot de Bennstat</span>
+            <span class="bet-opponent">[vs. BlkDragn]</span>
+        </li>
+    <li class="bet-item">
+           <span class="bet-input">Tarot de Bennstat</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Antares</span>
+            <span class="bet-opponent">[vs. Twinscyt]</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Fixed Dice</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Antares</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Lamia Brush</span>
+            <span class="bet-opponent">[vs. DthWarde]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Last Resort</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Metal Knuckle</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Mythril Claw</span>
+            <span class="bet-opponent">[vs. Zaghrem]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Mythril Claw</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Kaiser Knuckle</span>
+            <span class="bet-opponent">[vs. LesLopro]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Kaiser Knuckle</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Dark Claw</span>
+            <span class="bet-opponent">[vs. DrgnFosl]</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Dark Claw</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Burning Knuckle</span>
+            <span class="bet-opponent">[vs. Balloon]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Burning Knuckle</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Dragon Claw</span>
+            <span class="bet-opponent">[vs. Dragon]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Buckler</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Large Shield</span>
+            <span class="bet-opponent">[vs. SOLDIER]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Large Shield</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Mythril Shield</span>
+            <span class="bet-opponent">[vs. Templar]</span>
+    </li>
+      <li class="bet-item">
+            <span class="bet-input">Dragon Claw</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Tiger Fang</span>
+            <span class="bet-opponent">[vs. GrndBehe]</span>
+      </li>
+    <li class="bet-item">
+            <span class="bet-input">Tiger Fang</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Behemoth Suit</span>
+            <span class="bet-opponent">[vs. DarkBehe]</span>
+        </li>
+      <li class="bet-item">
+            <span class="bet-input">Marvelous Cheer</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Lightbringer</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Gekkabijin</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Ultima Weapon</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+          <span class="bet-input">Artemis's Brush</span>
+          <span class="bet-arrow">=></span>
+          <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+          <span class="bet-input">Kitchen Knife</span>
+          <span class="bet-arrow">=></span>
+          <span class = "bet-punishment">Typhon</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Needle Dagger</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Dancing Dagger</span>
+            <span class="bet-opponent">[vs. Amduscia]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Maduin's Horn</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Orichalcum</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Excalibur</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Soul Eater</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Masamune</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Sasuke's Katana</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Wizard Rod</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Elven Darts</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+   <li class="bet-item">
+            <span class="bet-input">Earthbreaker</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Dragon Whisker</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Holy Lance</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">God Hand</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+</li>
+
+<li class="bet-item">
+<span class="bet-input">Rune Bell</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Mythril Shield</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Gold Shield</span>
+<span class="bet-opponent">[vs. MTekInfa]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Gold Shield</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Diamond Shield</span>
+<span class="bet-opponent">[vs. Mindflyr]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Flame Shield</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Ice Shield</span>
+<span class="bet-opponent">[vs. Frostbst]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Ice Shield</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Thunder Shield</span>
+<span class="bet-opponent">[vs. MuudSuud]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Thunder Shield</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Flame Shield</span>
+<span class="bet-opponent">[vs. FlameDog]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Diamond Shield</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Crystal Shield</span>
+<span class="bet-opponent">[vs. Crawler]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Crystal Shield</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Crystal Helm</span>
+<span class="bet-opponent">[vs. Wild Cat]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Aegis Shield</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Force Shield</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Genji Shield</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Genji Helm</span>
+<span class="bet-opponent">[vs. GrtMalbo]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Cursed Shield</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Hero's Shield</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">La Seraphica</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Leather Hat</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Plumed Hat</span>
+<span class="bet-opponent">[vs. Cockatri]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Plumed Hat</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Headgear</span>
+<span class="bet-opponent">[vs. Onion]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Headgear</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Green Beret</span>
+<span class="bet-opponent">[vs. IronClaw]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Magus Hat</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Priest's Miter</span>
+<span class="bet-opponent">[vs. Phoebe]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Priest's Miter</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Mystery Veil</span>
+<span class="bet-opponent">[vs. Lamia]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Green Beret</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Twist Headband</span>
+<span class="bet-opponent">[vs. MtrDrive]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Twist Headband</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Black Cowl</span>
+<span class="bet-opponent">[vs. SandFish]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Gold Hairpin</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Mystery Veil</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">White Dress</span>
+<span class="bet-opponent">[vs. Fawn]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Black Cowl</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Black Garb</span>
+<span class="bet-opponent">[vs. Carrot]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Oath Veil</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Magus Robe</span>
+<span class="bet-opponent">[vs. MagiDrgn]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Djinn's Cap</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Ward Bangle</span>
+<span class="bet-opponent">[vs. Soulflyr]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Cat Hood</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Moogle Suit</span>
+<span class="bet-opponent">[vs. Lukhavi]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Lambent Hat</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Iron Helm</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Mythril Helm</span>
+<span class="bet-opponent">[vs. Fem.Sold]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Mythril Helm</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Gold Helm</span>
+<span class="bet-opponent">[vs. ProtoAmr]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Gold Helm</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Diamond Helm</span>
+<span class="bet-opponent">[vs. Apocryph]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Diamond Helm</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Crystal Helm</span>
+<span class="bet-opponent">[vs. Vampires]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Circlet</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Oath Veil</span>
+<span class="bet-opponent">[vs. Joker]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Crystal Helm</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Crystal Mail</span>
+<span class="bet-opponent">[vs. Mahadeva]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Royal Crown</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Genji Helm</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Genji Armor</span>
+<span class="bet-opponent">[vs. SkullEtr]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Grand Helm</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Barrette</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Cachusha</span>
+<span class="bet-opponent">[vs. UndCheru]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Cachusha</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Barrette</span>
+<span class="bet-opponent">[vs. Maiden]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Ribbon</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Cotton Robe</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Magus Robe</span>
+<span class="bet-opponent">[vs. Shade]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Kenpo Gi</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Mythril Plate</span>
+<span class="bet-opponent">[vs. Al Jabr]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Mythril Plate</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Ninja Gear</span>
+<span class="bet-opponent">[vs. StrayCat]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Ninja Gear</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Power Sash</span>
+<span class="bet-opponent">[vs. Gorgimer]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">White Dress</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Oath Veil</span>
+<span class="bet-opponent">[vs. Misty]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Gaia Gear</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Stoneblade</span>
+<span class="bet-opponent">[vs. PiscoDmn]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Moogle Suit</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Cat Hood</span>
+<span class="bet-opponent">[vs. AlurRide]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Power Sash</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Black Garb</span>
+<span class="bet-opponent">[vs. B. Lamia]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Black Garb</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Rising Sun</span>
+<span class="bet-opponent">[vs. Outsider]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Magus Robe</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Holy Rod</span>
+<span class="bet-opponent">[vs. InnoSent]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Noiseblaster</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Bioblaster</span>
+<span class="bet-opponent">[vs. MTekArmr]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Bioblaster</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Flash</span>
+<span class="bet-opponent">[vs. SkyArmor]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Flash</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Drill</span>
+<span class="bet-opponent">[vs. MegaArmr]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Chainsaw</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Blood Lance</span>
+<span class="bet-opponent">[vs. Fortis]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Particle Bomb</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Drill</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Chainsaw</span>
+<span class="bet-opponent">[vs. Helldive]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Air Anchor</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Auto Crossbow</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Noiseblaster</span>
+<span class="bet-opponent">[vs. Belzecue]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Flame Scroll</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Water Scroll</span>
+<span class="bet-opponent">[vs. RockSlug]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Water Scroll</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Thunder Scroll</span>
+<span class="bet-opponent">[vs. Hedgehog]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Thunder Scroll</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Flame Scroll</span>
+<span class="bet-opponent">[vs. Rudra]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Invi Scroll</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Shadow Scroll</span>
+<span class="bet-opponent">[vs. Bomb]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Shadow Scroll</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Invisibility Scroll</span>
+<span class="bet-opponent">[vs. Provoker]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">White Robe</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Black Robe</span>
+<span class="bet-opponent">[vs. BlkForce]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Black Robe</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">White Robe</span>
+<span class="bet-opponent">[vs. Vilia]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Mirage Vest</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Minerva Bustier</span>
+<span class="bet-opponent">[vs. Alchymia]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Minerva Bustier</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Mirage Vest</span>
+<span class="bet-opponent">[vs. CrysDrgn]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Pheasant Netsuke</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Gale Hairpin</span>
+<span class="bet-opponent">[vs. Ochiudo]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Rubber Suit</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Snow Scarf</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Power Belt</span>
+<span class="bet-opponent">[vs. Tonber.M]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Behemoth Suit</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Snow Scarf</span>
+<span class="bet-opponent">[vs. Thor]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Leather Armor</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Iron Armor</span>
+<span class="bet-opponent">[vs. Dstroide]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Iron Armor</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Mythril Armor</span>
+<span class="bet-opponent">[vs. HilGigas]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Mythril Armor</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Gold Armor</span>
+<span class="bet-opponent">[vs. Chaser]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Gold Armor</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Diamond Armor</span>
+<span class="bet-opponent">[vs. Behemoth]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Diamond Armor</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Crystal Mail</span>
+<span class="bet-opponent">[vs. Sorath]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Crystal Mail</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Reflect Mail</span>
+<span class="bet-opponent">[vs. DuelArmr]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Reflect Mail</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Reflect Ring</span>
+<span class="bet-opponent">[vs. Deep One]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Force Armor</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Genji Armor</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Genji Shield</span>
+<span class="bet-opponent">[vs. Alv]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Maximillian</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Silver Spectacles</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">White Cape</span>
+<span class="bet-opponent">[vs. Mandrago]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">White Cape</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">White Dress</span>
+<span class="bet-opponent">[vs. NeckHntr]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Jeweled Ring</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Peace Ring</span>
+<span class="bet-opponent">[vs. DiveEagl]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Protect Ring</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Jeweled Ring</span>
+<span class="bet-opponent">[vs. Bonnacon]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Hermes Sandals</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Ward Bangle</span>
+<span class="bet-opponent">[vs. LeapFrog]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Reflect Ring</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Reflect Mail</span>
+<span class="bet-opponent">[vs. MtlHitmn]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Feather Boots</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Zephyr Cloak</span>
+<span class="bet-opponent">[vs. Minity]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Gyshal Potpourri</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Star Pendant</span>
+<span class="bet-opponent">[vs. Belmodar]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Knight's Code</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Hyper Wrist</span>
+<span class="bet-opponent">[vs. Oceanus]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Dragoon Boots</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Circlet</span>
+<span class="bet-opponent">[vs. LunarWlf]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Zephyr Cloak</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Gale Hairpin</span>
+<span class="bet-opponent">[vs. Sprinter]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Earrings</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Protect Ring</span>
+<span class="bet-opponent">[vs. DsrtSaha]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Gigas Glove</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Diamond Armor</span>
+<span class="bet-opponent">[vs. Revnant]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Thief's Bracer</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Thief Gloves</span>
+<span class="bet-opponent">[vs. Mugbear]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Mjolnir</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Thief Gloves</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Thief's Knife</span>
+<span class="bet-opponent">[vs. Borghese]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Gauntlet</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Genji Glove</span>
+<span class="bet-opponent">[vs. Azrael]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Genji Glove</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Gauntlet</span>
+<span class="bet-opponent">[vs. VectorLy]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Hyper Wrist</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Gigas Glove</span>
+<span class="bet-opponent">[vs. Lycaon]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Heiji's Jitte</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Pheasant Netsuke</span>
+<span class="bet-opponent">[vs. Haniel]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Merit Award</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Memento Ring</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Molulu's Charm</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Ward Bangle</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Djinn's Cap</span>
+<span class="bet-opponent">[vs. GtMantis]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Alarm Earring</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Sniper Eye</span>
+<span class="bet-opponent">[vs. Aepyorni]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Gale Hairpin</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Heiji's Jitte</span>
+<span class="bet-opponent">[vs. Schmidt]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Sniper Eye</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Auto Crossbow</span>
+<span class="bet-opponent">[vs. LandGril]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Star Pendant</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Earrings</span>
+<span class="bet-opponent">[vs. ChipRabb]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Amulet</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Gyshal Potpourri</span>
+<span class="bet-opponent">[vs. CloudWth]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Tynar Rouge</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Lunar Curtain</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Amulet</span>
+<span class="bet-opponent">[vs. Necroman]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Peace Ring</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Reflect Ring</span>
+<span class="bet-opponent">[vs. Hecto]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Power Belt</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Berserker Ring</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Floral Fallal</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Minerva Bustier</span>
+<span class="bet-opponent">[vs. Vivian]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Lordly Robes</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Omega Weapon</span>
+<span class="bet-arrow">=></span>
+<span class = "bet-punishment">Typhon</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Strength Tab</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Speed Tab</span>
+<span class="bet-opponent">[vs. IrnGiant]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Potion</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Hi-Potion</span>
+<span class="bet-opponent">[vs. Domovoi]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Hi-Potion</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Ether</span>
+<span class="bet-opponent">[vs. Lunatys]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">X-Potion</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">X-Ether</span>
+<span class="bet-opponent">[vs. Colossus]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Ether</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Hi-Ether</span>
+<span class="bet-opponent">[vs. Coolness]</span>
+</li>
+<li class="bet-item">
+<span class="bet-input">Hi-Ether</span>
+<span class="bet-arrow">=></span>
+<span class="bet-output">Dried Meat</span>
+<span class="bet-opponent">[vs. Stunner]</span>
+</li>
+<li class="bet-item">
+            <span class="bet-input">X-Ether</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">X-Potion</span>
+            <span class="bet-opponent">[vs. Vanguard]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Elixir</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Megalixir</span>
+            <span class="bet-opponent">[vs. Kum Kum]</span>
+        </li>
+         <li class="bet-item">
+            <span class="bet-input">Megalixir</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Reincarnation</span>
+            <span class="bet-opponent">[vs. DonTonbe]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Phoenix Down</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Speed Tab</span>
+            <span class="bet-opponent">[vs. Outcast]</span>
+        </li>
+       <li class="bet-item">
+            <span class="bet-input">Speed Tab</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Stamina Tab</span>
+            <span class="bet-opponent">[vs. Kum Kum]</span>
+        </li>
+       <li class="bet-item">
+            <span class="bet-input">Stamina Tab</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Magic Tab</span>
+            <span class="bet-opponent">[vs. CrysDrgn]</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Magic Tab</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Strength Tab</span>
+            <span class="bet-opponent">[vs. Cartagra]</span>
+        </li>
+       <li class="bet-item">
+            <span class="bet-input">Golden Apple</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Soma Drop</span>
+            <span class="bet-opponent">[vs. LilMurde]</span>
+        </li>
+       <li class="bet-item">
+            <span class="bet-input">Remedy</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Lunar Curtain</span>
+            <span class="bet-opponent">[vs. Malboro]</span>
+        </li>
+        <li class="bet-item">
+            <span class="bet-input">Soma Drop</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Golden Apple</span>
+            <span class="bet-opponent">[vs. Coeurl]</span>
+        </li>
+         <li class="bet-item">
+            <span class="bet-input">Tent</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Plumed Hat</span>
+            <span class="bet-opponent">[vs. NutEater]</span>
+        </li>
+        <li class="bet-item">
+           <span class="bet-input">Antidote</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">White Cape</span>
+            <span class="bet-opponent">[vs. Bld.Fang]</span>
+        </li>
+       <li class="bet-item">
+            <span class="bet-input">Smelling Salts</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Elixir</span>
+            <span class="bet-opponent">[vs. IrnGiant]</span>
+        </li>
+        <li class="bet-item">
+           <span class="bet-input">Reincarnation</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Megalixir</span>
+            <span class="bet-opponent">[vs. SoulEatr]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Holy Water</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Gyshal Potpourri</span>
+            <span class="bet-opponent">[vs. LitworCh]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Smoke Bomb</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Gold Needle</span>
+            <span class="bet-opponent">[vs. WilloWsp]</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Gold Needle</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Smoke Bomb</span>
+            <span class="bet-opponent">[vs. LivingDe]</span>
+        </li>
+       <li class="bet-item">
+            <span class="bet-input">Dried Meat</span>
+            <span class="bet-arrow">=></span>
+            <span class="bet-output">Mythril Axe</span>
+            <span class="bet-opponent">[vs. Goetia]</span>
+    </li>
+        <li class="bet-item">
+            <span class="bet-input">Nothing</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+          <span class="bet-input">Hero's Ring</span>
+          <span class="bet-arrow">=></span>
+          <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+          <span class="bet-input">Guard Bracelet</span>
+          <span class="bet-arrow">=></span>
+          <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+          <span class="bet-input">Dead Soul</span>
+          <span class="bet-arrow">=></span>
+          <span class = "bet-punishment">Typhon</span>
+        </li>
+        <li class="bet-item">
+           <span class="bet-input">Prayer Beads</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Black Belt</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Dragon Horn</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Celestriad</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Master's Scroll</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+        </li>
+    <li class="bet-item">
+           <span class="bet-input">Bacchus's Bracer</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+   <li class="bet-item">
+           <span class="bet-input">Safety Bit</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Mime's Dictionary</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Bracer</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Tetra Elemental</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+   <li class="bet-item">
+          <span class="bet-input">Embroidered Tippet</span>
+          <span class="bet-arrow">=></span>
+          <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Soul of Thamasa</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Zeidrich</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+        </li>
+    <li class="bet-item">
+            <span class="bet-input">Flame Cape</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+           <span class="bet-input">Wind Corsage</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+     <li class="bet-item">
+            <span class="bet-input">Earth Greaves</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+        </li>
+    <li class="bet-item">
+           <span class="bet-input">Water Cuffs</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    <li class="bet-item">
+            <span class="bet-input">Maiden's Prayer</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+        </li>
+      <li class="bet-item">
+            <span class="bet-input">Imp's Feelings</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+        </li>
+     <li class="bet-item">
+            <span class="bet-input">Piggy's Badge</span>
+            <span class="bet-arrow">=></span>
+            <span class = "bet-punishment">Typhon</span>
+    </li>
+    </ul>
+</body>
+</html>

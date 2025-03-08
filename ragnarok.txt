@@ -1,0 +1,400 @@
+** T-Edition Ragnarok Metamorphosis Guide **
+
+Ragnarok is a mid-to-late-game Eidolon that allows you to transform enemies into
+items. Each enemy is assigned a "morph group", and an x/256 chance to be successfully 
+morphed, and nothing can affect this success rate. If it succeeds, they are then
+transformed randomly into one of the four items within the morph group, each with
+equal odds at 25%, also with nothing affecting this.
+This guide sorts every morphable enemy by their morph group, and then their success rate.
+If available, the Celestriad's MP Cost reduction is very useful for grinding Morphs, and
+Gogo's Mimic can let you double up on summoning Ragnarok. Don't forget Auto-Haste and
+other speed-boosting equipment and costumes, as well as pre-emptive chance up relics!
+Remember, summoning eidolons is prevented while X-Magic equipment is worn!
+
+        Status Cures: Antidote, Gold Needle, Smelling Salts, Remedy
+         Consumables: Tent, Phoenix Down, Holy Water, Remedy
+          Dried Meat: Dried Meat, Dried Meat, Dried Meat, Dried Meat
+              Remedy: Remedy, Remedy, Remedy, Remedy
+        Mythril Gear: Mythril Sword, Mythril Helm, Mythril Armor, Mythril Shield
+           Gold Gear: Heavy Lance, Gold Helm, Gold Armor, Gold Shield
+        Diamond Gear: Rune Blade, Diamond Helm, Diamond Armor, Diamond Shield
+        Crystal Gear: Crystal Sword, Crystal Helm, Crystal Mail, Crystal Shield
+             Daggers: Main Gauche, Assassin's Dagger, Gladius, Kitchen Knife
+             Katanas: Kotetsu, Osafune, Kikuichimonji, Muramasa
+           Shurikens: Shuriken, Shuriken, Fuma Shuriken, Fuma Shuriken
+              Spears: Heavy Lance, Trident, Partisan, Dragon Spear
+           Fire Gear: Flametongue, Flame Rod, Flame Whip, Flame Shield
+            Ice Gear: Icebrand, Ice Rod, Arondight, Ice Shield
+        Thunder Gear: Thunder Blade, Thunder Rod, Blitz Whip, Thunder Shield
+               Claws: Mythril Claw, Dark Claw, Dragon Claw, Tiger Fang
+             Brushes: Chocobo Brush, Magical Brush, Lamia Brush, Rainbow Brush
+    1/4 Strength Tab: Potion, Potion, Strength Tab, Strength Tab
+       1/4 Speed Tab: Potion, Potion, Speed Tab, Speed Tab
+     1/4 Stamina Tab: Potion, Potion, Stamina Tab, Stamina Tab
+       1/4 Magic Tab: Potion, Potion, Magic Tab, Magic Tab
+    1/2 Force Shield: Ether, Ether, Force Shield, Force Shield
+     1/2 Force Armor: Ether, Ether, Force Armor, Force Armor
+    1/2 Golden Apple: Hi-Potion, X-Potion, Golden Apple, Golden Apple
+       1/2 Soma Drop: Hi-Ether, X-Ether, Soma Drop, Soma Drop
+1/2 Megalixir/Elixir: Potion, Potion, Elixir, Megalixir
+
+
+
+  == Extra Info about Morphs == 
+  * Crystal and Diamond Gear, especially the Mails, sell for quite a lot.
+  * Crystal Mail can be bet for Reflect Mail, worth 18,250g when sold.
+  * The Tiger Fang may be bet for the Behemoth Suit, a powerful armor for Strago and Relm.
+  * The Rainbow Brush may be bet for the Cat Hood, a female-only helm that grants Auto-Regen 
+     and 2x Gil from battles.
+  * Force Shields sell for 20,000g, with a 25% morph success rate from Magic Pots atop
+    Fanatic's Tower.
+  * Soma Drop and Golden Apples bet into each other at the Coliseum, with Soma Drop
+     having a 100% morph success rate from MuudSuud, who can be found 50% of the time
+     in Kefka's Tower, in the screen where you fall just past the toilets with group 2.
+  * Tabs can be bet for other Tabs at the Coliseum.
+  * X-Potions sell for 18,000g.
+  * X-Ethers sell for 21,000g, also with a 100% morph success rate from MuudSuud.    
+  * Elixirs can bet into Megalixirs at the Coliseum, making successful morphs essentially 
+     50% Megalixir if you're willing to fight.
+  * Megalixirs bet into Reincarnation at the Coliseum, which sells for 30,000g.
+
+
+  == Status Cures ==  
+    Guard: 100.0%   [256/256]
+ Graswyrm: 100.0%   [256/256]
+ SahagChf: 100.0%   [256/256]
+ Devourer: 100.0%   [256/256]
+ BrnCandy: 100.0%   [256/256]
+ Bld.Fang: 100.0%   [256/256]
+ HntHound: 100.0%   [256/256]
+ ChipRabb: 100.0%   [256/256]
+  Stunner: 100.0%   [256/256]
+ Mandrago: 100.0%   [256/256]
+  Spectre: 100.0%   [256/256]
+ Scorpion: 100.0%   [256/256]
+      Bug: 100.0%   [256/256]
+  Antares: 100.0%   [256/256]
+ LandGril: 100.0%   [256/256]
+ LivingDe: 100.0%   [256/256]
+   Zeveak: 100.0%   [256/256]
+ Bonnacon: 100.0%   [256/256]
+    Shade: 100.0%   [256/256]
+ DethGaze: 100.0%   [256/256]
+ PoisnLch: 100.0%   [256/256]
+   Goblin: 100.0%   [256/256]
+ Aepyorni: 100.0%   [256/256]
+   Hornet: 100.0%   [256/256]
+ DdlyHorr: 100.0%   [256/256]
+ Fem.Sold: 100.0%   [256/256]
+  Zaghrem: 100.0%   [256/256]
+ Imp.Sold: 100.0%   [256/256]
+ Provoker: 100.0%   [256/256]
+ NetlHopr: 100.0%   [256/256]
+ Nautiloi: 100.0%   [256/256]
+  Alacran: 100.0%   [256/256]
+ Demiurok: 100.0%   [256/256]
+ Cartagra: 100.0%   [256/256]
+ DesertSa: 100.0%   [256/256]
+ SteelBat: 100.0%   [256/256]
+ RockSlug: 100.0%   [256/256]
+  Sahagin: 100.0%   [256/256]
+ VectorHn:  50.0%   [128/256]
+
+  == Consumables ==  
+ AnglWhis: 100.0%   [256/256]
+ NtWalker: 100.0%   [256/256]
+     Slug: 100.0%   [256/256]
+ DrgnZomb: 100.0%   [256/256]
+ Illuyank: 100.0%   [256/256]
+   Wizard: 100.0%   [256/256]
+   Knotty: 100.0%   [256/256]
+ SandFish: 100.0%   [256/256]
+ CloudWth: 100.0%   [256/256]
+ Darkside: 100.0%   [256/256]
+ DrgnFosl: 100.0%   [256/256]
+ MtrDrive: 100.0%   [256/256]
+   Ankheg: 100.0%   [256/256]
+   Carrot: 100.0%   [256/256]
+   Lizard: 100.0%   [256/256]
+  Crawler:  50.0%   [128/256]
+
+  == Dried Meat ==  
+ Cockatri: 100.0%   [256/256]
+  Lukhavi: 100.0%   [256/256]
+   Goetia: 100.0%   [256/256]
+     Bogy: 100.0%   [256/256]
+ Tzakmaqi: 100.0%   [256/256]
+ DiveEagl: 100.0%   [256/256]
+ LunarWlf: 100.0%   [256/256]
+ DsrtRabb: 100.0%   [256/256]
+   Purusa: 100.0%   [256/256]
+ Venobenu: 100.0%   [256/256]
+ Opinicus: 100.0%   [256/256]
+ Chs.Drgn: 100.0%   [256/256]
+ MagiDrgn: 100.0%   [256/256]
+ GoldBear: 100.0%   [256/256]
+     Garm: 100.0%   [256/256]
+   Apanda: 100.0%   [256/256]
+   Lycaon: 100.0%   [256/256]
+  Gatling: 100.0%   [256/256]
+ StrayCat: 100.0%   [256/256]
+    Fidor: 100.0%   [256/256]
+   Haokah: 100.0%   [256/256]
+ LeafBunn: 100.0%   [256/256]
+       Mu: 100.0%   [256/256]
+  Wererat: 100.0%   [256/256]
+ LitworCh: 100.0%   [256/256]
+ NutEater: 100.0%   [256/256]
+    Rudra: 100.0%   [256/256]
+ Hedgehog: 100.0%   [256/256]
+ Gigntoad: 100.0%   [256/256]
+ Sprinter: 100.0%   [256/256]
+      Don: 100.0%   [256/256]
+ MedsaChk: 100.0%   [256/256]
+ ErthEatr:  6.25%   [ 16/256]
+  Revnant:  3.12%   [  8/256]
+
+  == Remedy ==  
+ Necroman: 100.0%   [256/256]
+  Malboro: 100.0%   [256/256]
+   Fafnir: 100.0%   [256/256]
+ GrtMalbo: 100.0%   [256/256]
+   Misfit:  75.0%   [192/256]
+   Cactus:  75.0%   [192/256]
+     Ochu:  75.0%   [192/256]
+ Mandrake:  50.0%   [128/256]
+ VampThrn:  50.0%   [128/256]
+ Ourobors:  25.0%   [ 64/256]
+  Outcast:  12.5%   [ 32/256]
+ Doberman:  12.5%   [ 32/256]
+
+  == Mythril Gear ==  
+ Commande:  75.0%   [192/256]
+ Belmodar:  50.0%   [128/256]
+ Deathclw:  25.0%   [ 64/256]
+ Corporal:  12.5%   [ 32/256]
+ Sergeant:  12.5%   [ 32/256]
+  Templar:  6.25%   [ 16/256]
+
+  == Gold Gear ==  
+   Wyvern:  25.0%   [ 64/256]
+ MTekInfa:  12.5%   [ 32/256]
+ Dstroide:  12.5%   [ 32/256]
+  General:  12.5%   [ 32/256]
+    Onion:  6.25%   [ 16/256]
+
+  == Diamond Gear ==  
+ Behemoth:  25.0%   [ 64/256]
+ ImpElite:  25.0%   [ 64/256]
+  Oceanus:  12.5%   [ 32/256]
+   Exoray:  12.5%   [ 32/256]
+ KilrMnts:  12.5%   [ 32/256]
+ Punisher:  6.25%   [ 16/256]
+
+  == Crystal Gear ==  
+ CrysDrgn: 100.0%   [256/256]
+ NghtHawk:  50.0%   [128/256]
+ GtMantis:  12.5%   [ 32/256]
+ DemonKht:  12.5%   [ 32/256]
+ Tyranosa:  12.5%   [ 32/256]
+     Yama:  12.5%   [ 32/256]
+ FigaroLz:  6.25%   [ 16/256]
+ Hundlegs:  6.25%   [ 16/256]
+
+  == Daggers ==  
+ Anguifor:  75.0%   [192/256]
+  Domovoi:  25.0%   [ 64/256]
+ MtlHitmn:  12.5%   [ 32/256]
+ LilMurde:  12.5%   [ 32/256]
+ OniDashr:  12.5%   [ 32/256]
+ BkLizard:  12.5%   [ 32/256]
+ VeilDanc:  12.5%   [ 32/256]
+ Harveste:  12.5%   [ 32/256]
+ DevilFst:  6.25%   [ 16/256]
+   Corpse:  6.25%   [ 16/256]
+ NeckHntr:  6.25%   [ 16/256]
+    Joker:  6.25%   [ 16/256]
+ IronClaw:  6.25%   [ 16/256]
+ Tonberry:  6.25%   [ 16/256]
+ LesLopro:  6.25%   [ 16/256]
+
+  == Katanas ==  
+  Samurai:  25.0%   [ 64/256]
+  Yojimbo:  25.0%   [ 64/256]
+    Kamui:  12.5%   [ 32/256]
+ Borghese:  12.5%   [ 32/256]
+  Ochiudo:  12.5%   [ 32/256]
+
+  == Shurikens ==  
+    Ninja:  12.5%   [ 32/256]
+ Outsider:  12.5%   [ 32/256]
+ MagnLodr:  12.5%   [ 32/256]
+ NinjaMas:  12.5%   [ 32/256]
+   Covert:  12.5%   [ 32/256]
+ VectorLy:  6.25%   [ 16/256]
+  Brawler:  6.25%   [ 16/256]
+  Al Jabr:  6.25%   [ 16/256]
+ BldDance:  6.25%   [ 16/256]
+
+  == Spears ==  
+    Dante:  12.5%   [ 32/256]
+ DsrtSaha:  12.5%   [ 32/256]
+ HellRidr:  12.5%   [ 32/256]
+ Gorgimer:  12.5%   [ 32/256]
+ LeapFrog:  12.5%   [ 32/256]
+ TestRidr:  6.25%   [ 16/256]
+  Chimera:  6.25%   [ 16/256]
+
+  == Fire Gear ==  
+ IfritCln:  50.0%   [128/256]
+ FlameDog:  12.5%   [ 32/256]
+ IrnGiant:  12.5%   [ 32/256]
+ GrndBehe:  6.25%   [ 16/256]
+  Grenade:  6.25%   [ 16/256]
+ Landworm:  6.25%   [ 16/256]
+ Pineappl:  6.25%   [ 16/256]
+ LtlMagna:  6.25%   [ 16/256]
+  Balloon:  3.12%   [  8/256]
+     Bomb:  3.12%   [  8/256]
+
+  == Ice Gear ==  
+    Snoll:  75.0%   [192/256]
+ ShivaCln:  50.0%   [128/256]
+  Chronos:  50.0%   [128/256]
+ Frostbst:  25.0%   [ 64/256]
+ Alchymia:  12.5%   [ 32/256]
+    Devil:  12.5%   [ 32/256]
+ Daedalus:  12.5%   [ 32/256]
+ Twinscyt:  6.25%   [ 16/256]
+ Coolness:  6.25%   [ 16/256]
+ SnwPanth:  6.25%   [ 16/256]
+ Oversoul:  6.25%   [ 16/256]
+ Apocryph:  6.25%   [ 16/256]
+
+  == Thunder Gear ==  
+ RamuhCln:  50.0%   [128/256]
+     Thor:  50.0%   [128/256]
+ Tonberri:  12.5%   [ 32/256]
+   Coeurl:  6.25%   [ 16/256]
+ VectChim:  6.25%   [ 16/256]
+ Cheshire:  6.25%   [ 16/256]
+    Mover:  6.25%   [ 16/256]
+ BloodBat:  3.12%   [  8/256]
+ Mahadeva:  3.12%   [  8/256]
+ Brainpan:  3.12%   [  8/256]
+
+  == Claws ==  
+ Skulnant:  75.0%   [192/256]
+  Abaddon:  12.5%   [ 32/256]
+   Sorath:  12.5%   [ 32/256]
+  Mugbear:  12.5%   [ 32/256]
+ Gigantos:  6.25%   [ 16/256]
+ Megalodo:  6.25%   [ 16/256]
+ HilGigas:  6.25%   [ 16/256]
+ SlvrLobo:  6.25%   [ 16/256]
+  Gorgias:  3.12%   [  8/256]
+
+  == Brushes ==  
+ SirenCln:  50.0%   [128/256]
+ MoonGodd:  12.5%   [ 32/256]
+   Cassie:  6.25%   [ 16/256]
+   Vivian:  6.25%   [ 16/256]
+   Mykale:  6.25%   [ 16/256]
+  B.Lamia:  6.25%   [ 16/256]
+ AlurRide:  6.25%   [ 16/256]
+    Lamia:  6.25%   [ 16/256]
+
+  == 1/4 Strength Tab ==  
+  Titania:  25.0%   [ 64/256]
+ LamiaQen:  12.5%   [ 32/256]
+    Misty:  12.5%   [ 32/256]
+ Amduscia:  6.25%   [ 16/256]
+     Face:  6.25%   [ 16/256]
+ Slagworm:  6.25%   [ 16/256]
+ FendDrgn:  6.25%   [ 16/256]
+   Azrael:  6.25%   [ 16/256]
+   Dragon:  3.12%   [  8/256]
+
+  == 1/4 Speed Tab ==  
+  Lunatys:  75.0%   [192/256]
+ Traveler:  25.0%   [ 64/256]
+   Vampyr:  12.5%   [ 32/256]
+     Coco:  12.5%   [ 32/256]
+      Imp:  12.5%   [ 32/256]
+ DarkBehe:  12.5%   [ 32/256]
+ Aeronite:  12.5%   [ 32/256]
+  Pandora:  6.25%   [ 16/256]
+ PlatDrgn:  6.25%   [ 16/256]
+
+  == 1/4 Stamina Tab ==  
+ Rafflesi:  50.0%   [128/256]
+ Intangir:  25.0%   [ 64/256]
+ Draculdy:  12.5%   [ 32/256]
+    Ghost:  3.12%   [  8/256]
+
+  == 1/4 Magic Tab ==  
+ BlkForce:  50.0%   [128/256]
+    Vilia:  25.0%   [ 64/256]
+   Lilith:  12.5%   [ 32/256]
+ Soulflyr:  6.25%   [ 16/256]
+
+  == 1/4 Force Shield ==  
+ MagicPot:  25.0%   [ 64/256]
+      Alv:  6.25%   [ 16/256]
+  Silenus:  3.12%   [  8/256]
+ Deep One:  3.12%   [  8/256]
+ ShldDrgn:  3.12%   [  8/256]
+
+  == 1/4 Force Armor ==  
+ Brachios:  3.12%   [  8/256]
+
+  == 1/4 Golden Apple ==  
+ UndCheru:  12.5%   [ 32/256]
+ LifeTrap:  12.5%   [ 32/256]
+ BlkDragn:  12.5%   [ 32/256]
+      Jam:  12.5%   [ 32/256]
+ Basilisk:  12.5%   [ 32/256]
+ SkullEtr:  12.5%   [ 32/256]
+ SeraphCl:  6.25%   [ 16/256]
+ KirinCln:  6.25%   [ 16/256]
+     Puck:  6.25%   [ 16/256]
+ GlasyaLa:  6.25%   [ 16/256]
+     Rust:  6.25%   [ 16/256]
+ Wild Cat:  6.25%   [ 16/256]
+
+  == 1/4 Soma Drop ==  
+ MuudSuud: 100.0%   [256/256]
+  Cactuar:  50.0%   [128/256]
+ St. Elmo:  25.0%   [ 64/256]
+ Vampires:  12.5%   [ 32/256]
+ Weredrgn:  12.5%   [ 32/256]
+  Kum Kum:  12.5%   [ 32/256]
+ Luminesc:  12.5%   [ 32/256]
+ WilloWsp:  6.25%   [ 16/256]
+ YellowMo:  6.25%   [ 16/256]
+ PurpBava:  6.25%   [ 16/256]
+ RedMarsh:  6.25%   [ 16/256]
+ GrtDemon:  6.25%   [ 16/256]
+ PitFiend:  6.25%   [ 16/256]
+ RicardMg:  6.25%   [ 16/256]
+ WhtJello:  6.25%   [ 16/256]
+ UnicoCln:  6.25%   [ 16/256]
+ BlueFlan:  6.25%   [ 16/256]
+ PiscoDmn:  6.25%   [ 16/256]
+ Mindflyr:  6.25%   [ 16/256]
+   Phoebe:  6.25%   [ 16/256]
+   Minity:  6.25%   [ 16/256]
+     Fawn:  6.25%   [ 16/256]
+    Hecto:  6.25%   [ 16/256]
+
+  == 1/4 Megalixir/Elixir ==  
+ Tonber.M:  12.5%   [ 32/256]
+   Haniel:  12.5%   [ 32/256]
+ Baalzeph:  6.25%   [ 16/256]
+ Myrmecol:  6.25%   [ 16/256]
+ StllLife:  6.25%   [ 16/256]
+   Neochu:  6.25%   [ 16/256]
+ OldDrago:  3.12%   [  8/256]
+ ErthGurd:  3.12%   [  8/256]
+   Peeper:  3.12%   [  8/256]
+   Maiden:  3.12%   [  8/256]

@@ -1,0 +1,1535 @@
+Formation Pack #0 - 00
+   #6 [2x NutEater, LeafBunn]
+   #432 [2x Mandrago, LeafBunn]
+   #7 [2x LeafBunn]
+   #432 [2x Mandrago, LeafBunn]
+-----------
+Formation Pack #1 - Narshe (WoB) Desert
+   #10 [2x DesertSa]
+   #11 [3x Alacran]
+   #12 [2x Alacran, DesertSa]
+   #9 [3x Alacran, DesertSa]
+-----------
+Formation Pack #2 - Narshe (WoB) Forest
+   #7 [2x LeafBunn]
+   #8 [2x NutEater]
+   #432 [2x Mandrago, LeafBunn]
+   #8 [2x NutEater]
+-----------
+Formation Pack #3 - South Figaro (WoB) Grassland/Prairie
+   #40 [Cockatri, 2x Goblin]
+   #19 [Belmodar]
+   #21 [2x Mu, Cockatri]
+   #23 [2x Cockatri]
+-----------
+Formation Pack #4 - South Figaro (WoB) Forest
+   #20 [2x Mu, Belmodar]
+   #22 [2x Mu, Cockatri, Belmodar]
+   #42 [2x Mu, Goblin]
+   #43 [2x Mu, Cockatri, Goblin]
+-----------
+Formation Pack #5 - Returner's Hideout (WoB) Grassland/Prairie
+   #23 [2x Cockatri]
+   #40 [Cockatri, 2x Goblin]
+   #43 [2x Mu, Cockatri, Goblin]
+   #21 [2x Mu, Cockatri]
+-----------
+Formation Pack #6 - Isolated House (WoB) Grassland/Prairie
+   #56 [2x Hedgehog, 3x ChipRabb]
+   #55 [Aepyorni, 2x ChipRabb]
+   #53 [Aepyorni, 2x Hedgehog]
+   #53 [Aepyorni, 2x Hedgehog]
+-----------
+Formation Pack #7 - Doma Castle (WoB) Forest
+   #50 [2x StrayCat, 2x NetlHopr]
+   #52 [5x ChipRabb]
+   #54 [2x Aepyorni, StrayCat]
+   #57 [2x NetlHopr, Aepyorni, StrayCat]
+-----------
+Formation Pack #8 - Doma Castle (WoB) Grassland/Prairie
+   #49 [3x StrayCat]
+   #57 [2x NetlHopr, Aepyorni, StrayCat]
+   #51 [3x NetlHopr]
+   #51 [3x NetlHopr]
+-----------
+Formation Pack #9 - Kohlingen (WoB) Grassland/Prairie
+   #94 [2x Bld.Fang]
+   #97 [2x Bld.Fang, 2x Rudra]
+   #99 [2x MtrDrive]
+   #97 [2x Bld.Fang, 2x Rudra]
+-----------
+Formation Pack #10 - Jidoor (WoB) Grassland/Prairie
+   #100 [2x Rudra, MtrDrive]
+   #101 [4x BrnCandy]
+   #96 [2x BrnCandy, 2x MtrDrive]
+   #96 [2x BrnCandy, 2x MtrDrive]
+-----------
+Formation Pack #11 - Kohlingen (WoB) Forest
+   #95 [3x Rudra, MtrDrive]
+   #96 [2x BrnCandy, 2x MtrDrive]
+   #98 [3x BrnCandy, 2x MtrDrive]
+   #98 [3x BrnCandy, 2x MtrDrive]
+-----------
+Formation Pack #12 - Kohlingen (WoB) Desert
+   #93 [DrgnFosl]
+   #10 [2x DesertSa]
+   #12 [2x Alacran, DesertSa]
+   #93 [DrgnFosl]
+-----------
+Formation Pack #13 - Kohlingen (WoB) Grassland/Prairie
+   #94 [2x Bld.Fang]
+   #101 [4x BrnCandy]
+   #94 [2x Bld.Fang]
+   #433 [Titania, Alchymia, Traveler] - Seems dummied
+-----------
+Formation Pack #14 - Vector (WoB) Grassland/Prairie
+   #143 [2x Don]
+   #144 [Don, 2x Wyvern]
+   #146 [Korpokkr, 2x Graswyrm]
+   #146 [Korpokkr, 2x Graswyrm]
+-----------
+Formation Pack #15 - Vector (WoB) Grassland/Prairie
+   #147 [Don, Joker]
+   #144 [Don, 2x Wyvern]
+   #148 [3x Joker]
+   #149 [5x LitworCh]
+-----------
+Formation Pack #16 - Vector Continent (WoB)
+   #147 [Don, Joker]
+   #144 [Don, 2x Wyvern]
+   #148 [3x Joker]
+   #149 [5x LitworCh]
+-----------
+Formation Pack #17 - Vector (WoB) Forest
+   #145 [Wyvern, 2x LitworCh, Korpokkr]
+   #145 [Wyvern, 2x LitworCh, Korpokkr]
+   #149 [5x LitworCh]
+   #149 [5x LitworCh]
+-----------
+Formation Pack #18 - Maranda (WoB) Forest
+   #145 [Wyvern, 2x LitworCh, Korpokkr]
+   #145 [Wyvern, 2x LitworCh, Korpokkr]
+   #141 [3x Korpokkr]
+   #149 [5x LitworCh]
+-----------
+Formation Pack #19 - Floating Continent (WoR)
+   #714 [IfritCln, RamuhCln, ShivaCln]
+   #593 [SirenCln, KirinCln, UnicoCln]
+   #732 [SirenCln, SeraphCl, ShivaCln]
+   #714 [IfritCln, RamuhCln, ShivaCln]
+-----------
+Formation Pack #20 - Albrook (WoB) Desert
+   #140 [DrgnFosl, 3x Bug]
+   #140 [DrgnFosl, 3x Bug]
+   #139 [2x DrgnFosl]
+   #142 [6x Bug]
+-----------
+Formation Pack #21 - Vector Continent (WoB)
+   #143 [2x Don]
+   #144 [Don, 2x Wyvern]
+   #146 [Korpokkr, 2x Graswyrm]
+   #146 [Korpokkr, 2x Graswyrm]
+-----------
+Formation Pack #22 - Narshe North (WoB) Grassland/Prairie
+   #190 [Ankheg, Devourer, Chimera]
+   #163 [3x Devourer]
+   #190 [Ankheg, Devourer, Chimera]
+   #163 [3x Devourer]
+-----------
+Formation Pack #23 - Narshe North (WoB) Forest
+   #161 [Chimera]
+   #161 [Chimera]
+   #163 [3x Devourer]
+   #163 [3x Devourer]
+-----------
+Formation Pack #24 - Crescent Island (WoB) Grassland/Prairie
+   #160 [2x Ankheg]
+   #190 [Ankheg, Devourer, Chimera]
+   #162 [Devourer, Ankheg]
+   #160 [2x Ankheg]
+-----------
+Formation Pack #25 - Crescent Island (WoB) Forest
+   #161 [Chimera]
+   #190 [Ankheg, Devourer, Chimera]
+   #163 [3x Devourer]
+   #163 [3x Devourer]
+-----------
+Formation Pack #26 - Vector (WoB) Desert
+   #139 [2x DrgnFosl]
+   #140 [DrgnFosl, 3x Bug]
+   #142 [6x Bug]
+   #142 [6x Bug]
+-----------
+Formation Pack #27 - Veldt (WoB) West Forest
+   #135 [Mandrake]
+   #136 [2x Ochu, 2x Mandrake]
+   #136 [2x Ochu, 2x Mandrake]
+   #189 [Malboro]
+-----------
+Formation Pack #28 - Triangle Island (WoB) Forest
+   #444 [2x Domovoi]
+   #445 [2x Domovoi, Goblin]
+   #210 [Intangir]
+   #210 [Intangir]
+-----------
+Formation Pack #29 - Solitary Island (WoR)
+   #192 [2x Peeper]
+   #194 [2x Peeper, ErthGurd]
+   #192 [2x Peeper]
+   #194 [2x Peeper, ErthGurd]
+-----------
+Formation Pack #30 - Solitary Island (WoR) Desert
+   #194 [2x Peeper, ErthGurd]
+   #195 [BlkDragn]
+   #194 [2x Peeper, ErthGurd]
+   #195 [BlkDragn]
+-----------
+Formation Pack #31 - Albrook (WoR) Grassland/Prairie
+   #197 [2x Fafnir]
+   #197 [2x Fafnir]
+   #199 [KilrMnts, Fafnir]
+   #199 [KilrMnts, Fafnir]
+-----------
+Formation Pack #32 - Triangle Island (WoR) Zone Eater
+   #334 [3x NutEater]
+   #334 [3x NutEater]
+   #533 [ZoneEatr]
+   #348 [2x SkullEtr]
+-----------
+Formation Pack #33 - Albrook West (WoR) Wasteland
+   #203 [2x LunarWlf, DiveEagl]
+   #201 [2x PoisnLch, 2x Gigntoad]
+   #203 [2x LunarWlf, DiveEagl]
+   #201 [2x PoisnLch, 2x Gigntoad]
+-----------
+Formation Pack #34 - Albrook (WoR) Wasteland
+   #202 [2x DiveEagl, LunarWlf]
+   #204 [3x PoisnLch, DiveEagl]
+   #202 [2x DiveEagl, LunarWlf]
+   #204 [3x PoisnLch, DiveEagl]
+-----------
+Formation Pack #35 - Albrook (WoR) Forest
+   #198 [4x Fafnir]
+   #200 [2x KilrMnts, PoisnLch]
+   #200 [2x KilrMnts, PoisnLch]
+   #189 [Malboro]
+-----------
+Formation Pack #36 - Albrook (WoR) Desert
+   #194 [2x Peeper, ErthGurd]
+   #195 [BlkDragn]
+   #194 [2x Peeper, ErthGurd]
+   #195 [BlkDragn]
+-----------
+Formation Pack #37 - Serpent Trench (WoR) Grassland/Prairie/Forest
+   #216 [2x VampThrn]
+   #213 [2x Gatling]
+   #217 [VampThrn, 2x Alraune]
+   #217 [VampThrn, 2x Alraune]
+-----------
+Formation Pack #38 - Serpent Trench (WoR) Wasteland
+   #214 [2x PurpBava, Gatling]
+   #217 [VampThrn, 2x Alraune]
+   #214 [2x PurpBava, Gatling]
+   #217 [VampThrn, 2x Alraune]
+-----------
+Formation Pack #39 - Serpent Trench (WoR) Wasteland
+   #219 [2x PurpBava, Gatling, Lizard]
+   #218 [2x VampThrn, Gatling]
+   #215 [2x VampThrn, Lizard]
+   #215 [2x VampThrn, Lizard]
+-----------
+Formation Pack #40 - Serpent Trench (WoR) Desert
+   #195 [BlkDragn]
+   #133 [SandFish, BlkDragn]
+   #133 [SandFish, BlkDragn]
+   #195 [BlkDragn]
+-----------
+Formation Pack #41 - Figaro Castle (WoR) Grassland/Prairie
+   #134 [3x DsrtRabb]
+   #134 [3x DsrtRabb]
+   #134 [3x DsrtRabb]
+   #134 [3x DsrtRabb]
+-----------
+Formation Pack #42 - Figaro Castle (WoR) Forest
+   #224 [Oceanus]
+   #225 [Oceanus, 3x DsrtRabb]
+   #224 [Oceanus]
+   #225 [Oceanus, 3x DsrtRabb]
+-----------
+Formation Pack #43 - Figaro Castle (WoR) Wasteland
+   #220 [2x DsrtRabb, 2x Hundlegs]
+   #220 [2x DsrtRabb, 2x Hundlegs]
+   #220 [2x DsrtRabb, 2x Hundlegs]
+   #220 [2x DsrtRabb, 2x Hundlegs]
+-----------
+Formation Pack #44 - Figaro Castle (WoR) Desert
+   #222 [2x SandFish, Revnant]
+   #223 [Revnant, SandFish, Hundlegs]
+   #138 [3x Hundlegs]
+   #298 [3x Revnant]
+-----------
+Formation Pack #45 - Kohlingen (WoR) Grassland/Prairie
+   #236 [3x Slug]
+   #243 [Bogy, YellowMo]
+   #236 [3x Slug]
+   #243 [Bogy, YellowMo]
+-----------
+Formation Pack #46 - Kohlingen (WoR) Forest
+   #238 [3x YellowMo, Slug]
+   #240 [3x Zeveak]
+   #242 [3x YellowMo]
+   #238 [3x YellowMo, Slug]
+-----------
+Formation Pack #47 - Kohlingen (WoR) Wasteland
+   #239 [2x Bogy]
+   #241 [2x Zeveak, BkLizard, 3x YellowMo]
+   #239 [2x Bogy]
+   #241 [2x Zeveak, BkLizard, 3x YellowMo]
+-----------
+Formation Pack #48 - Jidoor (WoR) Grassland/Prairie
+   #385 [3x Cactus]
+   #386 [2x Carrot]
+   #79 [Cactus, Carrot]
+   #384 [2x Aeronite]
+-----------
+Formation Pack #49 - Jidoor (WoR) Wasteland
+   #386 [2x Carrot]
+   #335 [Aeronite, Carrot]
+   #126 [2x Cactus, Aeronite]
+   #384 [2x Aeronite]
+-----------
+Formation Pack #50 - Jidoor (WoR) Forest
+   #640 [Apanda]
+   #387 [Apanda, BkLizard]
+   #387 [Apanda, BkLizard]
+   #639 [Apanda, 2x BkLizard]
+-----------
+Formation Pack #51 - Narshe (WoR) Grassland/Prairie
+   #326 [2x Basilisk, LeapFrog]
+   #324 [4x LeapFrog]
+   #325 [2x GtMantis]
+   #323 [Sprinter, GtMantis, 2x Lycaon]
+-----------
+Formation Pack #52 - Isolated House (WoR) Grassland/Prairie
+   #328 [2x Sprinter, 2x Lycaon]
+   #323 [Sprinter, GtMantis, 2x Lycaon]
+   #328 [2x Sprinter, 2x Lycaon]
+   #323 [Sprinter, GtMantis, 2x Lycaon]
+-----------
+Formation Pack #53 - Narshe (WoR) Wasteland
+   #103 [2x Basilisk, Crawler]
+   #103 [2x Basilisk, Crawler]
+   #114 [4x Crawler]
+   #114 [4x Crawler]
+-----------
+Formation Pack #54 - Dinosaur Forest (WoR)
+   #321 [Tyranosa]
+   #320 [2x Tyranosa]
+   #321 [Tyranosa]
+   #322 [Brachios]
+-----------
+Formation Pack #55 - Triangle Island (WoR) Ebot's Rock
+   #331 [2x Puck, MedsaChk]
+   #332 [2x RuneClaw]
+   #599 [2x RuneClaw, Purusa]
+   #598 [Emeraldi]
+-----------
+Formation Pack #56 - Triangle Island (WoR) Ebot's Rock
+   #331 [2x Puck, MedsaChk]
+   #333 [3x MedsaChk, Purusa]
+   #332 [2x RuneClaw]
+   #333 [3x MedsaChk, Purusa]
+-----------
+Formation Pack #57 - Narshe (WoB) Mines
+   #14 [3x Wererat]
+   #44 [Wererat, SteelBat]
+   #14 [3x Wererat]
+   #44 [Wererat, SteelBat]
+-----------
+Formation Pack #58 - Narshe (WoB) Mines
+   #14 [3x Wererat]
+   #45 [2x Wererat]
+   #26 [Wererat, SteelBat]
+   #26 [Wererat, SteelBat]
+-----------
+Formation Pack #59 - South Figaro Cave (WoB) (First Time)
+   #13 [2x Hornet]
+   #3 [2x Demiurok, 2x SteelBat]
+   #18 [3x Demiurok]
+   #18 [3x Demiurok]
+-----------
+Formation Pack #60 - South Figaro Cave (WoB) (First Time)
+   #5 [3x Demiurok, 2x Hornet]
+   #15 [Hornet, 2x SteelBat]
+   #5 [3x Demiurok, 2x Hornet]
+   #15 [Hornet, 2x SteelBat]
+-----------
+Formation Pack #61 - Mt. Koltz
+   #29 [3x Cockatri]
+   #31 [Cockatri, 3x RockSlug]
+   #31 [Cockatri, 3x RockSlug]
+   #29 [3x Cockatri]
+-----------
+Formation Pack #62 - Mt. Koltz
+   #28 [2x RockSlug, Gorgias]
+   #30 [Cockatri, 2x Gorgias]
+   #30 [Cockatri, 2x Gorgias]
+   #28 [2x RockSlug, Gorgias]
+-----------
+Formation Pack #63 - Mt. Koltz
+   #32 [2x Zaghrem]
+   #16 [2x Gorgias]
+   #28 [2x RockSlug, Gorgias]
+   #16 [2x Gorgias]
+-----------
+Formation Pack #64 - Mt. Koltz
+   #33 [2x Cockatri, Gorgias, Zaghrem]
+   #16 [2x Gorgias]
+   #28 [2x RockSlug, Gorgias]
+   #16 [2x Gorgias]
+-----------
+Formation Pack #65 - South Figaro Basement (WoB) (When Rescuing Celes)
+   #308 [VectorHn, Fem.Sold]
+   #373 [2x VectorHn, Commande]
+   #125 [3x Commande]
+   #308 [VectorHn, Fem.Sold]
+-----------
+Formation Pack #66 - (Unknown?) - Possibly Kefka's Tower
+   #458 [MissileB, ReflectB, AirForce, LaserUni, ManaJamr]
+   #461 [BlkForce, Myrmecol, Valefor]
+   #458 [MissileB, ReflectB, AirForce, LaserUni, ManaJamr]
+   #461 [BlkForce, Myrmecol, Valefor]
+-----------
+Formation Pack #67 - Phantom Forest (WoB)
+   #69 [2x Ochu, Bomb]
+   #69 [2x Ochu, Bomb]
+   #66 [3x Ghost]
+   #65 [Ghost, Bomb]
+-----------
+Formation Pack #68 - Phantom Forest (WoB)
+   #65 [Ghost, Bomb]
+   #68 [2x Ochu, Ghost]
+   #65 [Ghost, Bomb]
+   #68 [2x Ochu, Ghost]
+-----------
+Formation Pack #69 - Phantom Forest (WoB)
+   #66 [3x Ghost]
+   #69 [2x Ochu, Bomb]
+   #66 [3x Ghost]
+   #69 [2x Ochu, Bomb]
+-----------
+Formation Pack #70 - Phantom Train (WoB)
+   #90 [AnglWhis]
+   #85 [3x LivingDe]
+   #81 [AnglWhis, 3x Bomb]
+   #81 [AnglWhis, 3x Bomb]
+-----------
+Formation Pack #71 - Phantom Train (WoB)
+   #75 [Phoebe, 2x Oversoul]
+   #78 [2x LivingDe, Oversoul]
+   #81 [AnglWhis, 3x Bomb]
+   #81 [AnglWhis, 3x Bomb]
+-----------
+Formation Pack #72 - Phantom Train (WoB)
+   #72 [2x Phoebe, 2x Bomb]
+   #80 [LivingDe, AnglWhis, 2x Phoebe]
+   #90 [AnglWhis]
+   #90 [AnglWhis]
+-----------
+Formation Pack #73 - Sealed Cave? (WoB)
+   #73 [2x PiscoDmn, 2x Provoker]
+   #75 [Phoebe, 2x Oversoul]
+   #75 [Phoebe, 2x Oversoul]
+   #73 [2x PiscoDmn, 2x Provoker]
+-----------
+Formation Pack #74 - Phantom Train (WoB)
+   #77 [2x LivingDe, Bomb]
+   #76 [3x Bomb]
+   #77 [2x LivingDe, Bomb]
+   #76 [3x Bomb]
+-----------
+Formation Pack #75 - Phantom Train? (WoB)
+   #90 [AnglWhis]
+   #90 [AnglWhis]
+   #90 [AnglWhis]
+   #90 [AnglWhis]
+-----------
+Formation Pack #76 - Phantom Train (WoB)
+   #70 [2x AnglWhis, Phoebe]
+   #75 [Phoebe, 2x Oversoul]
+   #77 [2x LivingDe, Bomb]
+   #76 [3x Bomb]
+-----------
+Formation Pack #77 - Zozo
+   #105 [VeilDanc]
+   #107 [Harveste]
+   #108 [VeilDanc, 2x Harveste]
+   #106 [VeilDanc, 2x IronClaw]
+-----------
+Formation Pack #78 - Zozo
+   #104 [2x IronClaw]
+   #109 [2x IronClaw, Harveste]
+   #102 [HilGigas]
+   #110 [Harveste, HilGigas]
+-----------
+Formation Pack #79 - Zozo?
+   #110 [Harveste, HilGigas]
+   #104 [2x IronClaw]
+   #103 [2x Basilisk, Crawler]
+   #103 [2x Basilisk, Crawler]
+-----------
+Formation Pack #80 - Magitek Research Facility
+   #116 [MTekInfa, 2x Belzecue]
+   #404 [ProtoAmr, 2x Onion]
+   #115 [2x Sergeant, 2x Belzecue]
+   #115 [2x Sergeant, 2x Belzecue]
+-----------
+Formation Pack #81 - Magitek Research Facility
+   #403 [2x ProtoAmr]
+   #116 [MTekInfa, 2x Belzecue]
+   #405 [5x Onion]
+   #405 [5x Onion]
+-----------
+Formation Pack #82 - (Unknown?)
+   #369 [Fortis, DthMachi, DuelArmr]
+   #371 [DthMachi, 2x DuelArmr]
+   #372 [3x Fortis]
+   #372 [3x Fortis]
+-----------
+Formation Pack #83 - (Unknown?)
+   #370 [Fortis, 2x Tonberri, DthMachi]
+   #370 [Fortis, 2x Tonberri, DthMachi]
+   #370 [Fortis, 2x Tonberri, DthMachi]
+   #370 [Fortis, 2x Tonberri, DthMachi]
+-----------
+Formation Pack #84 - (Unknown?)
+   #147 [Don, Joker]
+   #364 [2x RicardMg, MagiDrgn]
+   #362 [Titania, Shade, RicardMg]
+   #362 [Titania, Shade, RicardMg]
+-----------
+Formation Pack #85 - (Unknown?)
+   #148 [3x Joker]
+   #363 [RicardMg, MagiDrgn, Shade]
+   #364 [2x RicardMg, MagiDrgn]
+   #364 [2x RicardMg, MagiDrgn]
+-----------
+Formation Pack #86 - Narshe Area? (WoR)
+   #128 [2x Lukhavi]
+   #128 [2x Lukhavi]
+   #131 [3x Sprinter]
+   #131 [3x Sprinter]
+-----------
+Formation Pack #87 - Narshe Area? (WoR)
+   #129 [Sprinter, LunarWlf]
+   #130 [DiveEagl, Sprinter]
+   #132 [2x Fem.Sold]
+   #134 [3x DsrtRabb]
+-----------
+Formation Pack #88 - Figaro Castle Area? (WoR)
+   #134 [3x DsrtRabb]
+   #129 [Sprinter, LunarWlf]
+   #134 [3x DsrtRabb]
+   #129 [Sprinter, LunarWlf]
+-----------
+Formation Pack #89 - Eidolon Cave (WoB)
+   #169 [2x Venobenu, Fawn]
+   #168 [2x LandGril, Mandrake]
+   #167 [2x Fawn, Mandrake]
+   #169 [2x Venobenu, Fawn]
+-----------
+Formation Pack #90 - Eidolon Cave (WoB)
+   #164 [2x Bonnacon, Mandrake]
+   #165 [2x Fawn]
+   #166 [5x Bonnacon]
+   #165 [2x Fawn]
+-----------
+Formation Pack #91 - Eidolon Cave? (WoB)
+   #169 [2x Venobenu, Fawn]
+   #168 [2x LandGril, Mandrake]
+   #167 [2x Fawn, Mandrake]
+   #169 [2x Venobenu, Fawn]
+-----------
+Formation Pack #92 - Sealed Cave (WoB)
+   #153 [2x Provoker]
+   #155 [Wizard, PiscoDmn, Antares]
+   #155 [Wizard, PiscoDmn, Antares]
+   #156 [3x Wizard]
+-----------
+Formation Pack #93 - Sealed Cave (WoB)
+   #153 [2x Provoker]
+   #73 [2x PiscoDmn, 2x Provoker]
+   #152 [Draculdy, PiscoDmn, Outcast]
+   #152 [Draculdy, PiscoDmn, Outcast]
+-----------
+Formation Pack #94 - Sealed Cave (WoB)
+   #36 [2x PiscoDmn, Draculdy]
+   #151 [2x Outcast, DrgnZomb]
+   #152 [Draculdy, PiscoDmn, Outcast]
+   #152 [Draculdy, PiscoDmn, Outcast]
+-----------
+Formation Pack #95 - Sealed Cave (WoB)
+   #150 [Draculdy, DrgnZomb]
+   #151 [2x Outcast, DrgnZomb]
+   #154 [3x Antares]
+   #154 [3x Antares]
+-----------
+Formation Pack #96 - Eidolon Cave? (WoB)
+   #169 [2x Venobenu, Fawn]
+   #166 [5x Bonnacon]
+   #169 [2x Venobenu, Fawn]
+   #166 [5x Bonnacon]
+-----------
+Formation Pack #97 - Eidolon Cave? (WoB)
+   #164 [2x Bonnacon, Mandrake]
+   #167 [2x Fawn, Mandrake]
+   #164 [2x Bonnacon, Mandrake]
+   #167 [2x Fawn, Mandrake]
+-----------
+Formation Pack #98 - Eidolon Cave? (WoB)
+   #165 [2x Fawn]
+   #168 [2x LandGril, Mandrake]
+   #165 [2x Fawn]
+   #168 [2x LandGril, Mandrake]
+-----------
+Formation Pack #99 - Triangle Island (WoR) Zone Eater - Forest
+   #334 [3x NutEater]
+   #334 [3x NutEater]
+   #348 [2x SkullEtr]
+   #348 [2x SkullEtr]
+-----------
+Formation Pack #100 - Cave on the Veldt (WoR) (Path to the Crystal Room)
+   #673 [Deep One, SandFish, Oceanus]
+   #672 [2x Deep One, Oceanus]
+   #673 [Deep One, SandFish, Oceanus]
+   #672 [2x Deep One, Oceanus]
+-----------
+Formation Pack #101 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #102 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #103 - South Figaro Basement/Celes Escape
+   #308 [VectorHn, Fem.Sold]
+   #373 [2x VectorHn, Commande]
+   #308 [VectorHn, Fem.Sold]
+   #125 [3x Commande]
+-----------
+Formation Pack #104 - Magitek Research Facility
+   #357 [4x BlueFlan]
+   #357 [4x BlueFlan]
+   #356 [6x BlueFlan]
+   #356 [6x BlueFlan]
+-----------
+Formation Pack #105 - Magitek Research Facility
+   #119 [2x General]
+   #120 [General, 2x Onion]
+   #118 [3x Trapper]
+   #118 [3x Trapper]
+-----------
+Formation Pack #106 - Magitek Research Facility
+   #124 [Lamia]
+   #360 [2x Dstroide]
+   #361 [2x Lamia, Dstroide]
+   #361 [2x Lamia, Dstroide]
+-----------
+Formation Pack #107 - Magitek Research Facility?
+   #361 [2x Lamia, Dstroide]
+   #118 [3x Trapper]
+   #361 [2x Lamia, Dstroide]
+   #118 [3x Trapper]
+-----------
+Formation Pack #108 - Magitek Research Facility
+   #122 [3x Trapper, Chaser]
+   #416 [4x Sergeant]
+   #123 [3x Onion, Chaser]
+   #121 [4x Onion]
+-----------
+Formation Pack #109 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #110 - Vector Area (WoB)
+   #149 [5x LitworCh]
+   #149 [5x LitworCh]
+   #149 [5x LitworCh]
+   #149 [5x LitworCh]
+-----------
+Formation Pack #111 - Maranda (WoR) Desert
+   #237 [Slagworm]
+   #221 [3x Cactus]
+   #237 [Slagworm]
+   #193 [3x Cactus, Cactuar]
+-----------
+Formation Pack #112 - Floating Continent (WoB)
+   #177 [Behemoth]
+   #180 [2x Ninja]
+   #183 [Apocryph, Misfit, 2x Brainpan]
+   #185 [Dragon]
+-----------
+Formation Pack #113 - Floating Continent (WoB)
+   #180 [2x Ninja]
+   #181 [2x PlatDrgn, Mindflyr]
+   #180 [2x Ninja]
+   #181 [2x PlatDrgn, Mindflyr]
+-----------
+Formation Pack #114 - Floating Continent (WoB)
+   #183 [Apocryph, Misfit, 2x Brainpan]
+   #185 [Dragon]
+   #183 [Apocryph, Misfit, 2x Brainpan]
+   #185 [Dragon]
+-----------
+Formation Pack #115 - Floating Continent (WoB)
+   #188 [2x Ninja, PlatDrgn]
+   #184 [3x Brainpan]
+   #188 [2x Ninja, PlatDrgn]
+   #184 [3x Brainpan]
+-----------
+Formation Pack #116 - Floating Continent (WoB)
+   #186 [Mindflyr, Fawn, Behemoth]
+   #187 [2x Behemoth]
+   #186 [Mindflyr, Fawn, Behemoth]
+   #187 [2x Behemoth]
+-----------
+Formation Pack #117 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #118 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #119 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #120 - Vector Area (WoB)
+   #147 [Don, Joker]
+   #148 [3x Joker]
+   #147 [Don, Joker]
+   #148 [3x Joker]
+-----------
+Formation Pack #121 - Narshe Mines (WoB) (Guard Training Area)
+   #379 [2x Darkside]
+   #379 [2x Darkside]
+   #380 [Darkside, 2x Spectre]
+   #380 [Darkside, 2x Spectre]
+-----------
+Formation Pack #122 - South Figaro Cave (WoB) (Rescuing Celes)
+   #375 [Cartagra, 2x WilloWsp]
+   #378 [2x GoldBear]
+   #376 [GoldBear, WilloWsp]
+   #377 [3x Cartagra]
+-----------
+Formation Pack #123 - Floating Continent (WoB - During Escape)
+   #419 [Naude]
+   #419 [Naude]
+   #419 [Naude]
+   #419 [Naude]
+-----------
+Formation Pack #124 - Triangle Island (WoB) Grassland/Prairie
+   #444 [2x Domovoi]
+   #445 [2x Domovoi, Goblin]
+   #444 [2x Domovoi]
+   #210 [Intangir]
+-----------
+Formation Pack #125 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #126 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #127 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #128 - Tzen (WoR) - Collapsing House
+   #209 [3x Scorpion]
+   #207 [NtWalker, 2x Gigntoad]
+   #209 [3x Scorpion]
+   #207 [NtWalker, 2x Gigntoad]
+-----------
+Formation Pack #129 - Tzen?
+   #210 [Intangir]
+   #207 [NtWalker, 2x Gigntoad]
+   #210 [Intangir]
+   #207 [NtWalker, 2x Gigntoad]
+-----------
+Formation Pack #130 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #131 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #132 - Cave on the Veldt (WoR)
+   #268 [Twinscyt]
+   #269 [2x Twinscyt]
+   #63 [LilMurde]
+   #270 [Gorgimer]
+-----------
+Formation Pack #133 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #134 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #135 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #136 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #137 - Figaro Castle Basement (WoR)
+   #228 [3x DsrtSaha]
+   #229 [Borghese, 2x DsrtSaha]
+   #231 [2x NeckHntr]
+   #231 [2x NeckHntr]
+-----------
+Formation Pack #138 - South Figaro Cave (WoR)
+   #232 [NeckHntr, Borghese, DsrtSaha]
+   #232 [NeckHntr, Borghese, DsrtSaha]
+   #233 [Dante]
+   #233 [Dante]
+-----------
+Formation Pack #139 - Figaro Castle Basement (WoR)
+   #234 [3x Dropper]
+   #233 [Dante]
+   #230 [2x Borghese, DsrtSaha]
+   #234 [3x Dropper]
+-----------
+Formation Pack #140 - South Figaro Cave (WoR)
+   #231 [2x NeckHntr]
+   #233 [Dante]
+   #230 [2x Borghese, DsrtSaha]
+   #230 [2x Borghese, DsrtSaha]
+-----------
+Formation Pack #141 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #142 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #143 - Cave to the Ancient Castle (WoR)
+   #306 [Coeurl, 3x Lunatys]
+   #302 [2x FigaroLz, Devil]
+   #307 [Coeurl, Devil, FigaroLz]
+   #479 [NghtHawk, Silenus]
+-----------
+Formation Pack #144 - Ancient Castle (WoR)
+   #464 [NghtHawk, 2x Silenus]
+   #438 [2x NghtHawk]
+   #435 [Tonber.M]
+   #437 [2x Tonber.M]
+-----------
+Formation Pack #145 - Ancient Castle (WoR)
+   #304 [2x Coeurl]
+   #305 [ArmrdWpn]
+   #436 [NghtHawk]
+   #303 [2x Lunatys, 2x FigaroLz]
+-----------
+Formation Pack #146 - ???
+   #464 [NghtHawk, 2x Silenus]
+   #437 [2x Tonber.M]
+   #479 [NghtHawk, Silenus]
+   #438 [2x NghtHawk]
+-----------
+Formation Pack #147 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #148 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #149 - Daryl's Tomb (WoR)
+   #246 [DdlyHorr]
+   #244 [2x B. Lamia]
+   #246 [DdlyHorr]
+   #245 [B. Lamia, Vampires, CloudWth]
+-----------
+Formation Pack #150 - Daryl's Tomb (WoR)
+   #247 [2x Necroman, CloudWth]
+   #249 [3x Exoray]
+   #245 [B. Lamia, Vampires, CloudWth]
+   #250 [Vampires, 2x Necroman]
+-----------
+Formation Pack #151 - Daryl's Tomb (WoR)
+   #251 [B. Lamia, 2x BloodBat]
+   #250 [Vampires, 2x Necroman]
+   #392 [3x BloodBat, Vampires]
+   #248 [2x Exoray, 2x BloodBat]
+-----------
+Formation Pack #152 - Fanatic's Tower (1F) (WoR)
+   #171 [2x Shade]
+   #172 [RicardMg, Shade]
+   #173 [3x RicardMg]
+   #362 [Titania, Shade, RicardMg]
+-----------
+Formation Pack #153 - Fanatic's Tower (2F) (WoR)
+   #363 [RicardMg, MagiDrgn, Shade]
+   #364 [2x RicardMg, MagiDrgn]
+   #365 [2x Shade, MagiDrgn]
+   #394 [Titania, MagiDrgn, Shade]
+-----------
+Formation Pack #154 - Fanatic's Tower (3F) (WoR)
+   #466 [Traveler, MagiDrgn]
+   #472 [Yama, Traveler]
+   #478 [2x Yama, Traveler]
+   #480 [Titania, Yama, Traveler]
+-----------
+Formation Pack #155 - Fanatic's Tower (4F) (WoR)
+   #486 [Alchymia, Traveler]
+   #506 [RicardMg, Alchymia]
+   #424 [RicardMg, Alchymia, Traveler]
+   #433 [Titania, Alchymia, Traveler]
+-----------
+Formation Pack #156 - Fanatic's Tower (5F) (WoR)
+   #439 [PitFiend, Alchymia]
+   #440 [Deep One]
+   #441 [Titania, Deep One]
+   #442 [2x Deep One]
+-----------
+Formation Pack #157 - Owzer's Mansion (WoR)
+   #286 [Lilith]
+   #284 [2x Lilith, AlurRide]
+   #285 [AlurRide, 3x Minity]
+   #284 [2x Lilith, AlurRide]
+-----------
+Formation Pack #158 - Owzer's Mansion (Owzer's Room) (WoR)
+   #284 [2x Lilith, AlurRide]
+   #287 [BldDance, 4x Wild Cat]
+   #288 [2x Misty]
+   #289 [3x Rafflesi]
+-----------
+Formation Pack #159 - Fanatic's Tower (Top Floor) (WoR)
+   #355 [2x MagicPot]
+   #355 [2x MagicPot]
+   #355 [2x MagicPot]
+   #355 [2x MagicPot]
+-----------
+Formation Pack #160 - Mt. Zozo (WoR)
+   #263 [GlasyaLa]
+   #265 [Mugbear]
+   #261 [2x LamiaQen]
+   #267 [Punisher, Mugbear]
+-----------
+Formation Pack #161 - Mt. Zozo (WoR)
+   #266 [LamiaQen, 2x Punisher]
+   #263 [GlasyaLa]
+   #262 [DevilFst, 2x Punisher]
+   #262 [DevilFst, 2x Punisher]
+-----------
+Formation Pack #162 - Mt. Zozo (WoR)
+   #261 [2x LamiaQen]
+   #264 [GlasyaLa, DevilFst, Mugbear]
+   #266 [LamiaQen, 2x Punisher]
+   #266 [LamiaQen, 2x Punisher]
+-----------
+Formation Pack #163 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #164 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #165 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #166 - Umaro's Cave (WoR)
+   #254 [3x Knotty, Imp]
+   #255 [Tzakmaqi, Illuyank]
+   #256 [Tzakmaqi, 2x Knotty, Imp]
+   #253 [Tonberry]
+-----------
+Formation Pack #167 - Umaro's Cave (WoR)
+   #259 [4x OniDashr]
+   #258 [2x Imp, OniDashr]
+   #260 [Illuyank, 2x OniDashr, 2x Imp]
+   #257 [3x Illuyank]
+-----------
+Formation Pack #168 - Umaro's Cave (WoR)
+   #259 [4x OniDashr]
+   #258 [2x Imp, OniDashr]
+   #260 [Illuyank, 2x OniDashr, 2x Imp]
+   #257 [3x Illuyank]
+-----------
+Formation Pack #169 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #170 - Gogo's Cave (WoR)
+   #349 [Corpse, Cassie, Mykale]
+   #353 [Amduscia, Kamui]
+   #351 [Amduscia, Baalzeph]
+   #352 [Corpse, Cassie, Baalzeph]
+-----------
+Formation Pack #171 - Gogo's Cave (Wor) (Gogo's Room)
+   #388 [UndCheru, Amduscia, Mykale]
+   #390 [UndCheru, Kamui, Cassie]
+   #389 [UndCheru, 2x Corpse]
+   #351 [Amduscia, Baalzeph]
+-----------
+Formation Pack #172 - Gogo's Cave? (WoR)
+   #353 [Amduscia, Kamui]
+   #347 [5x MedsaChk]
+   #352 [Corpse, Cassie, Baalzeph]
+   #353 [Amduscia, Kamui]
+-----------
+Formation Pack #173 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #174 - Phoenix's Cave (WoR)
+   #336 [2x FlameDog]
+   #338 [2x Pineappl, 2x Covert]
+   #339 [2x Pineappl, Garm]
+   #343 [Covert, Jam, Chs.Drgn]
+-----------
+Formation Pack #175 - Phoenix's Cave (WoR)
+   #337 [3x Pineappl, FlameDog]
+   #340 [2x Jam, 3x RedMarsh]
+   #342 [Garm, 2x RedMarsh, Chs.Drgn]
+   #341 [Garm, 2x RedMarsh]
+-----------
+Formation Pack #176 - Phoenix's Cave? (WoR)
+   #336 [2x FlameDog]
+   #337 [3x Pineappl, FlameDog]
+   #338 [2x Pineappl, 2x Covert]
+   #339 [2x Pineappl, Garm]
+-----------
+Formation Pack #177 - Phoenix's Cave? (WoR)
+   #340 [2x Jam, 3x RedMarsh]
+   #341 [Garm, 2x RedMarsh]
+   #342 [Garm, 2x RedMarsh, Chs.Drgn]
+   #343 [Covert, Jam, Chs.Drgn]
+-----------
+Formation Pack #178 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #179 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #180 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #181 - Cyan's Dream (WoR) Phantom Train
+   #309 [Face, 2x Al Jabr]
+   #310 [2x Al Jabr, Samurai]
+   #422 [Al Jabr, 2x Vampyr]
+   #423 [3x Vampyr]
+-----------
+Formation Pack #182 - Cyan's Dream (WoR) Mines
+   #311 [2x PlutoAmr, 2x Rust]
+   #313 [Schmidt, 2x Rust, PlutoAmr]
+   #137 [Io]
+   #137 [Io]
+-----------
+Formation Pack #183 - Cyan's Dream (WoR) Magus Sisters Boss Area
+   #312 [Cheshire, Coco]
+   #314 [2x Weredrgn]
+   #315 [Cheshire, 3x Pandora]
+   #316 [Weredrgn, 2x Face]
+-----------
+Formation Pack #184 - Cyan's Dream (WoR) Entrance
+   #420 [2x Samurai]
+   #421 [Pandora, 2x Samurai]
+   #317 [Cheshire, Samurai, Rust, Coco]
+   #317 [Cheshire, Samurai, Rust, Coco]
+-----------
+Formation Pack #185 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #186 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #187 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #188 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #189 - Narshe (WoR)
+   #275 [2x Lukhavi, Coolness]
+   #273 [2x SnwPanth]
+   #274 [TestRidr, Coolness]
+   #128 [2x Lukhavi]
+-----------
+Formation Pack #190 - Narshe (WoR)
+   #280 [WhtJello, Frostbst, Coolness]
+   #278 [SnwPanth, 2x WhtJello]
+   #280 [WhtJello, Frostbst, Coolness]
+   #276 [2x Frostbst]
+-----------
+Formation Pack #191 - Narshe (WoR)
+   #279 [2x PurpBava, 3x WhtJello, Coolness]
+   #277 [4x Coolness]
+   #277 [4x Coolness]
+   #279 [2x PurpBava, 3x WhtJello, Coolness]
+-----------
+Formation Pack #192 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #193 - Ebot's Rock (WoR)
+   #291 [2x Neochu]
+   #292 [St. Elmo, Mahadeva]
+   #293 [Ourobors, Vivian, Neochu]
+   #294 [St. Elmo, 2x Ourobors]
+-----------
+Formation Pack #194 - Ebot's Rock (WoR)
+   #296 [Sorath, 2x St. Elmo]
+   #297 [2x Sorath]
+   #296 [Sorath, 2x St. Elmo]
+   #295 [MedsaChk, 2x Vivian]
+-----------
+Formation Pack #195 - Ebot's Rock? (WoR)
+   #291 [2x Neochu]
+   #297 [2x Sorath]
+   #295 [MedsaChk, 2x Vivian]
+   #294 [St. Elmo, 2x Ourobors]
+-----------
+Formation Pack #196 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #197 - Forbidden Land Eureka - Kenkonken's Area
+   #495 [ErthEatr]
+   #484 [Chronos, MoonGodd, Hecto]
+   #657 [Azrael, 3x Hecto]
+   #632 [Grimoire]
+-----------
+Formation Pack #198 - Forbidden Land Eureka - Cerberus's Area
+   #474 [Azrael, Thor, Chronos]
+   #487 [MoonGodd, Vilia, Hecto]
+   #489 [Chronos, Vilia, Thor]
+   #635 [Grimoire]
+-----------
+Formation Pack #199 - Forbidden Land Eureka - Murakumo's Area
+   #679 [4x Azrael]
+   #383 [2x Thor, Chronos]
+   #657 [Azrael, 3x Hecto]
+   #636 [Grimoire]
+-----------
+Formation Pack #200 - Forbidden Land Eureka - Ahriman's Area
+   #481 [Hecto, Abaddon]
+   #494 [Nightmar, Chronos, MoonGodd]
+   #488 [2x GrtDemon, Thor]
+   #637 [Grimoire]
+-----------
+Formation Pack #201 - Kefka's Tower?
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #202 - Kefka's Tower?
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #203 - Kefka's Tower?
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #204 - Unused
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+-----------
+Formation Pack #205 - Kefka's Tower?
+   #212 [2x VectChim]
+   #300 [FendDrgn]
+   #299 [GrndBehe, Deathclw, VectorLy]
+   #299 [GrndBehe, Deathclw, VectorLy]
+-----------
+Formation Pack #206 - Kefka's Tower?
+   #282 [2x OldDrago]
+   #271 [4x VectorLy]
+   #329 [GrndBehe, Deathclw, GrtMalbo]
+   #329 [GrndBehe, Deathclw, GrtMalbo]
+-----------
+Formation Pack #207 - Kefka's Tower?
+   #227 [Landworm]
+   #227 [Landworm]
+   #227 [Landworm]
+   #227 [Landworm]
+-----------
+Formation Pack #208 - Kefka's Tower (1)(2)(3) Bird's-eye View (Entrance)
+   #272 [GrtMalbo, OldDrago, Deathclw]
+   #271 [4x VectorLy]
+   #329 [GrndBehe, Deathclw, GrtMalbo]
+   #458 [MissileB, ReflectB, AirForce, LaserUni, ManaJamr]
+-----------
+Formation Pack #209 - Kefka's Tower (1) First Cave
+   #299 [GrndBehe, Deathclw, VectorLy]
+   #329 [GrndBehe, Deathclw, GrtMalbo]
+   #299 [GrndBehe, Deathclw, VectorLy]
+   #329 [GrndBehe, Deathclw, GrtMalbo]
+-----------
+Formation Pack #210 - Kefka's Tower (1) First Cave (Metal Floor)
+   #425 [2x BlkForce]
+   #428 [Maiden, 2x DemonKht]
+   #452 [BlkForce, 2x Soulflyr]
+   #428 [Maiden, 2x DemonKht]
+-----------
+Formation Pack #211 - Kefka's Tower (1)(2) Switch Room
+   #414 [3x MtlHitmn]
+   #415 [Colossus, Vanguard]
+   #401 [3x Junk]
+   #415 [Colossus, Vanguard]
+-----------
+Formation Pack #212 - Kefka's Tower (1) Eidolon Tube Isle
+   #395 [Vanguard, InnoSent]
+   #397 [Promethe]
+   #413 [4x MtlHitmn, Helldive]
+   #413 [4x MtlHitmn, Helldive]
+-----------
+Formation Pack #213 - Kefka's Tower (1) Next to the Eidolon Tube Isle
+   #300 [FendDrgn]
+   #318 [2x Haokah, FendDrgn]
+   #226 [2x FendDrgn]
+   #446 [Numbr024]
+-----------
+Formation Pack #214 - Kefka's Tower (2) First Cave
+   #282 [2x OldDrago]
+   #330 [3x GrtMalbo]
+   #282 [2x OldDrago]
+   #330 [3x GrtMalbo]
+-----------
+Formation Pack #215 - Kefka's Tower (2) Toilet
+   #427 [NinjaMas, Yojimbo]
+   #426 [BlkForce, Soulflyr, DemonKht]
+   #427 [NinjaMas, Yojimbo]
+   #449 [2x NinjaMas, Yojimbo]
+-----------
+Formation Pack #216 - Kefka's Tower (2) Under the Toilet
+   #430 [MuudSuud]
+   #429 [3x Mover, Soulflyr]
+   #430 [MuudSuud]
+   #454 [LeftClaw, Rt.Blade, Numbr128]
+-----------
+Formation Pack #217 - Kefka's Tower (2) Yellow Dragon's Room
+   #212 [2x VectChim]
+   #282 [2x OldDrago]
+   #638 [4x Haniel]
+   #282 [2x OldDrago]
+-----------
+Formation Pack #218 - Kefka's Tower (2) Yellow Dragon's Room
+   #492 [2x Haniel, Soulflyr]
+   #196 [4x Tonberri, Daedalus]
+   #206 [2x Tonberri, 2x Luminesc]
+   #638 [4x Haniel]
+-----------
+Formation Pack #219 - Kefka's Tower (1)(2)(3) Switch Room
+   #450 [2x Mover]
+   #450 [2x Mover]
+   #430 [MuudSuud]
+   #450 [2x Mover]
+-----------
+Formation Pack #220 - Kefka's Tower (1)(2)(3) Guardian's Room
+   #399 [Gamma]
+   #400 [3x InnoSent]
+   #399 [Gamma]
+   #400 [3x InnoSent]
+-----------
+Formation Pack #221 - Kefka's Tower (1)(2)(3) Guardian's Room
+   #205 [Daedalus, Luminesc]
+   #490 [Haokah, Haniel, Luminesc]
+   #205 [Daedalus, Luminesc]
+   #431 [2x Daedalus]
+-----------
+Formation Pack #222 - Kefka's Tower (3) Inferno's Room (Top)
+   #330 [3x GrtMalbo]
+   #299 [GrndBehe, Deathclw, VectorLy]
+   #282 [2x OldDrago]
+   #282 [2x OldDrago]
+-----------
+Formation Pack #223 - Kefka's Tower (3) Inferno's Room (Bottom)
+   #396 [2x Vanguard]
+   #398 [Helldive, 2x Colossus]
+   #396 [2x Vanguard]
+   #454 [LeftClaw, Rt.Blade, Numbr128]
+-----------
+Formation Pack #224 - Kefka's Tower (3) Inferno's Room(Top)
+   #397 [Promethe]
+   #400 [3x InnoSent]
+   #399 [Gamma]
+   #399 [Gamma]
+-----------
+Formation Pack #225 - Kefka's Tower (3) In front of Skull Dragon's Room
+   #227 [Landworm]
+   #227 [Landworm]
+   #227 [Landworm]
+   #227 [Landworm]
+-----------
+Formation Pack #226 - Kefka's Tower (3) Skull Dragon's Room
+   #428 [Maiden, 2x DemonKht]
+   #426 [BlkForce, Soulflyr, DemonKht]
+   #427 [NinjaMas, Yojimbo]
+   #425 [2x BlkForce]
+-----------
+Formation Pack #227 - Kefka's Tower (2) Pipe Passage
+   #414 [3x MtlHitmn]
+   #415 [Colossus, Vanguard]
+   #401 [3x Junk]
+   #415 [Colossus, Vanguard]
+-----------
+Formation Pack #228 - Labyrinth of the Ancients (WoR) - Entrance
+   #461 [BlkForce, Myrmecol, Valefor]
+   #473 [GrtDemon, 2x Valefor]
+   #641 [2x GrtDemon, BlkForce]
+   #483 [2x Myrmecol]
+-----------
+Formation Pack #229 - Labyrinth of the Ancients (WoR) - Western/Eastern Wings
+   #482 [ShldDrgn, Valefor]
+   #470 [2x ShldDrgn]
+   #469 [DarkBehe]
+   #477 [2x DarkBehe]
+-----------
+Formation Pack #230 - Forbidden Land Eureka (WoR) - Entrance
+   #481 [Hecto, Abaddon]
+   #657 [Azrael, 3x Hecto]
+   #484 [Chronos, MoonGodd, Hecto]
+   #495 [ErthEatr]
+-----------
+Formation Pack #231 - Forbidden Land Eureka (WoR) - Mjolnir's Area
+   #474 [Azrael, Thor, Chronos]
+   #383 [2x Thor, Chronos]
+   #487 [MoonGodd, Vilia, Hecto]
+   #489 [Chronos, Vilia, Thor]
+-----------
+Formation Pack #232 - Forbidden Land Eureka (WoR) - 3 Merchants' Area
+   #658 [Abaddon]
+   #679 [4x Azrael]
+   #494 [Nightmar, Chronos, MoonGodd]
+   #674 [2x DonTonbe]
+-----------
+Formation Pack #233 - Crystal Tower (WoR) - Entrance
+   #382 [2x Kum Kum]
+   #493 [SoulEatr]
+   #382 [2x Kum Kum]
+   #465 [Kum Kum, 2x SoulEatr]
+-----------
+Formation Pack #234 - Crystal Tower (WoR) - Scarmiglione's Floor
+   #683 [Yama, GrtMalbo, Deep One]
+   #382 [2x Kum Kum]
+   #683 [Yama, GrtMalbo, Deep One]
+   #634 [Grimoire]
+-----------
+Formation Pack #235 - Cystal Tower (WoR) - Cagnazzo's Floor
+   #665 [Brachios, ShldDrgn]
+   #382 [2x Kum Kum]
+   #665 [Brachios, ShldDrgn]
+   #631 [Grimoire]
+-----------
+Formation Pack #236 - Crystal Tower (WoR) - Barbariccia's Floor
+   #717 [Lilith, Vilia, Alv]
+   #382 [2x Kum Kum]
+   #717 [Lilith, Vilia, Alv]
+   #633 [Grimoire]
+-----------
+Formation Pack #237 - Crystal Tower (WoR) - Rubicante's Floor
+   #681 [DarkBehe, GrndBehe]
+   #382 [2x Kum Kum]
+   #681 [DarkBehe, GrndBehe]
+   #630 [Grimoire]
+-----------
+Formation Pack #238 - Crystal Tower (WoR) - Room After Rubicante
+   #382 [2x Kum Kum]
+   #493 [SoulEatr]
+   #465 [Kum Kum, 2x SoulEatr]
+   #381 [4x Kum Kum]
+-----------
+Formation Pack #239 - Doma Area (WoR) Grassland/Prairie
+   #366 [2x Ochiudo]
+   #367 [Outsider, Ochiudo]
+   #368 [2x Outsider]
+   #366 [2x Ochiudo]
+-----------
+Formation Pack #240 - Doma Area (WoR) Wasteland
+   #369 [Fortis, DthMachi, DuelArmr]
+   #370 [Fortis, 2x Tonberri, DthMachi]
+   #372 [3x Fortis]
+   #371 [DthMachi, 2x DuelArmr]
+-----------
+Formation Pack #241 - Ancient Castle Interior (WoR)
+   #436 [NghtHawk]
+   #435 [Tonber.M]
+   #437 [2x Tonber.M]
+   #438 [2x NghtHawk]
+-----------
+Formation Pack #242 - Crescent/Thamasa Island (WoR) Forest
+   #393 [2x Purusa]
+   #333 [3x MedsaChk, Purusa]
+   #393 [2x Purusa]
+   #252 [Emeraldi]
+-----------
+Formation Pack #243 - Fanatic's Tower (WoR) (2F: Treasure)
+   #364 [2x RicardMg, MagiDrgn]
+   #365 [2x Shade, MagiDrgn]
+   #362 [Titania, Shade, RicardMg]
+   #355 [2x MagicPot]
+-----------
+Formation Pack #244 - Fanatic's Tower (WoR) (3F: Treasure)
+   #466 [Traveler, MagiDrgn]
+   #478 [2x Yama, Traveler]
+   #480 [Titania, Yama, Traveler]
+   #355 [2x MagicPot]
+-----------
+Formation Pack #245 - Fanatic's Tower (WoR) (4F: Treasure)
+   #486 [Alchymia, Traveler]
+   #424 [RicardMg, Alchymia, Traveler]
+   #433 [Titania, Alchymia, Traveler]
+   #355 [2x MagicPot]
+-----------
+Formation Pack #246 - Fanatic's Tower (WoR) (5F: Treasure)
+   #439 [PitFiend, Alchymia]
+   #440 [Deep One]
+   #443 [2x PitFiend]
+   #355 [2x MagicPot]
+-----------
+Formation Pack #247 - Serpent Trench (WoB) Cave
+   #455 [3x Opinicus]
+   #456 [SahagChf, Opinicus]
+   #459 [Sahagin, Anguifor, Opinicus]
+   #456 [SahagChf, Opinicus]
+-----------
+Formation Pack #248 - Lost Road (WoR) - First Area
+   #730 [2x Coeurl]
+   #731 [Lunatys, Alv, Apocryph]
+   #730 [2x Coeurl]
+   #448 [2x Alv, IrnGiant]
+-----------
+Formation Pack #249 - Mt. Koltz (WoB) Protect Mt. Koltz!
+   #590 [SOLDIER, ProtoAmr, Sergeant]
+   #591 [2x Onion, 2x Trapper]
+   #590 [SOLDIER, ProtoAmr, Sergeant]
+   #591 [2x Onion, 2x Trapper]
+-----------
+Formation Pack #250 - South Figaro Basement (WoR) A Girl's Wish
+   #644 [2x Grenade, Imp]
+   #645 [2x Grenade, Vivian]
+   #646 [Grenade, Naude, Vivian]
+   #643 [Tonberry]
+-----------
+Formation Pack #251 - Possibly the same as above, just the 2nd basement
+   #643 [Tonberry]
+   #646 [Grenade, Naude, Vivian]
+   #645 [2x Grenade, Vivian]
+   #643 [Tonberry]
+-----------
+Formation Pack #252 - Phantom Forest (WoR)
+   #650 [Apanda, 2x GtMantis]
+   #649 [2x Apanda]
+   #650 [Apanda, 2x GtMantis]
+   #651 [Brachios, Tyranosa]
+-----------
+Formation Pack #253 - Matoya's Cave (WoR)
+   #652 [2x Garm, UndCheru]
+   #654 [Coeurl, 2x RuneClaw]
+   #653 [UndCheru, Coeurl, RuneClaw]
+   #655 [2x SkullEtr]
+-----------
+Formation Pack #254 - Lost Road (WoR) - Alexander's Room/Previous Area
+   #448 [2x Alv, IrnGiant]
+   #463 [Alv, IrnGiant]
+   #731 [Lunatys, Alv, Apocryph]
+   #467 [CrysDrgn]
+-----------
+Formation Pack #255 - Veldt
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]
+   #0 [SlvrLobo]

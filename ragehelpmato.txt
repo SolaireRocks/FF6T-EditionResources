@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gau's Rage Compendium - FFVI T-Edition</title>
+    <style>
+        /* Reset and Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+            background-color: #121212; /* Dark background */
+            color: #ddd; /* Light text for contrast */
+            line-height: 1.6;
+        }
+
+        a {
+            color: #4CAF50; /* Green links */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #66bb6a;
+        }
+
+        /* Container */
+        .container {
+            width: 95%;
+            max-width: 1400px; /* Wider for better readability on large screens */
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1e1e1e; /* Slightly lighter dark for contrast */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+            border-radius: 8px;
+            overflow-x: auto; /* Handles table overflow */
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #4CAF50;
+        }
+
+        .header h1{
+            margin: 5px;
+        }
+
+        /* Update Info */
+        .update-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #999;
+        }
+
+        /* Notes */
+        .notes {
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            line-height: 1.5;
+            color: #bbb;
+            border-left: 4px solid #4CAF50; /* Subtle visual cue */
+            padding-left: 15px;
+        }
+        .notes p{
+            margin: 5px;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            table-layout: fixed; /* Keeps columns consistent */
+
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+            word-wrap: break-word; /* Handles long words */
+        }
+
+        th {
+            background-color: #4CAF50; /* Header color */
+            color: #121212;
+            font-weight: 600;
+            text-transform: uppercase; /* Make headers stand out */
+            letter-spacing: 1px;
+        }
+          /* Zebra striping for better readability */
+        tr:nth-child(even) {
+            background-color: #282828;
+        }
+
+        tr:hover {
+            background-color: #3a3a3a;
+        }
+
+        /* Column Widths */
+        td:nth-child(1) { width: 20%; } /* Monster Name */
+        td:nth-child(2) { width: 10%; }  /* WoB/WoR */
+        td:nth-child(3) { width: 70%; }  /* Location/Ability */
+        
+
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.8em;
+        }
+        .WoB{
+            text-align: center;
+        }
+        .WoR{
+            text-align: center;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .update-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            th, td{
+                font-size: 12px;
+                padding: 8px 10px;
+            }
+        }
+        .rage-group {
+            margin-bottom: 20px;
+            border: 1px solid #444;
+            border-radius: 4px;
+        }
+
+        .rage-group-title {
+            background-color: #333;
+            color: #4CAF50;
+            padding: 10px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .rage-table-container{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Gau's Rage Compendium</h1>
+            <h2>Final Fantasy VI T-Edition</h2>
+        </div>
+
+        <div class="update-info">
+            <div>Last Updated: 12/8/2022</div>
+            <div>Version: 3.0.5 (EX: 2.0.5)</div>
+        </div>
+
+        <div class="notes">
+            <p><b>Note:</b>  If you're using the custom Rage patch (<a href="https://pastebin.com/raw/NSsqpnZy" target="_blank">https://pastebin.com/raw/NSsqpnZy</a>) to custom sort your Rages, they won't reflect the order here.</p>
+            <p>If you miss any Rages, complete Gau's quest with his father, talk to him, select the first option, and all Rage Formations will be open on the Veldt.</p>
+            <p>Check the Enemy Formations tab (on the original site's sidebar) and use Ctrl + F to search for alternative locations for Rages.</p>
+            <p>Refer to the magic HTML (presumably on the original site) for information on unique attacks.</p>
+            <p>Gau's equipped weapon(s) determine the Rage's weapon, including elemental properties.  The animations are visual only; he's actually using his equipped weapons.</p>
+            <p>Gau gains the elemental/status resistances and weaknesses of the monster he's Raging.  Check the Item Drops/Libra/Steal Data HTML (presumably on the original site) for details.</p>
+            <p>For more fun, use the Eidolon "Unicorn" to stop Gau from Raging without having to defeat him.</p>
+        </div>
+    <!-- Physical -->
+    <div class="rage-group">
+        <div class="rage-group-title">Physical</div>
+        <div class = "rage-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Monster Name</th>
+                        <th>World</th>
+                        <th>Where to Encounter / Special Ability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>KllrMantis</td><td class="WoR">WoR</td><td>Outside Albrook - Shrapnel</td></tr>
+                    <tr><td>Twinscythe</td><td class="WoR">WoR</td><td>Veldt Cave - Shrapnel</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Mixed Element -->
+    <div class="rage-group">
+        <div class="rage-group-title">Mixed Element</div>
+        <div class = "rage-table-container">
+            <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Fiend Drgn</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 Room After the Eidolon Tubes Room) - Southern Cross (Fire, Light)</td></tr>
+                <tr><td>Muud Suud</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #2 Room Beyond the Toilet) - Southern Cross</td></tr>
+                <tr><td>Bonnacon</td><td class="WoB">WoB</td><td>Eidolon Cave - Acid Rain (Dark, Water)</td></tr>
+                <tr><td>Chaser</td><td class="WoB">WoB</td><td>Vector (After Number 128 - Escape) - Plasma (Thunder, Wind)</td></tr>
+                <tr><td>Duel Armor</td><td class="WoR">WoR</td><td>Outside Doma - Diffractive Laser (Fire, Thunder, Wind)</td></tr>
+                <tr><td>Gamma</td><td class="WoR">WoR</td><td>Kefka's Tower (Guardian's Room) - Diffractive Laser</td></tr>
+                <tr><td>Tyranosaur</td><td class="WoR">WoR</td><td>Dinosaur Forest - Galaxy (All-Element)</td></tr>
+                <tr><td>Slagworm</td><td class="WoR">WoR</td><td>Maranda Desert - Sandstorm (Wind, Earth)</td></tr>
+                <tr><td>DrgnFossil</td><td class="WoB">WoB</td><td>Albrook Desert - Sandstorm</td></tr>
+                <tr><td>Test Rider</td><td class="WoR">WoR</td><td>Narshe Mines - Flash Rain (Thunder, Water)</td></tr>
+                <tr><td>Zeveak</td><td class="WoR">WoR</td><td>Outside Kohlingen - Flash Rain</td></tr>
+                <tr><td>Exoray</td><td class="WoR">WoR</td><td>Daryl's Tomb - Poison Fog (Wind, Dark)</td></tr>
+                <tr><td>InnoSent</td><td class="WoR">WoR</td><td>Kefka's Tower (Inferno's Room (Top Area)) - Poison Fog</td></tr>
+            </tbody>
+        </table>
+        </div>    
+    </div>
+
+    <!-- Fixed/Fractional -->
+    <div class="rage-group">
+        <div class="rage-group-title">Fixed/Fractional</div>
+        <div class = "rage-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Monster Name</th>
+                        <th>World</th>
+                        <th>Where to Encounter / Special Ability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr><td>AnglWhispr</td><td class="WoB">WoB</td><td>Phantom Train - Gravity</td></tr>
+                <tr><td>Belzecue</td><td class="WoB">WoB</td><td>Magitek Factory - Gravity</td></tr>
+                <tr><td>Brainpan</td><td class="WoB">WoB</td><td>Floating Continent - 1000 Needles</td></tr>
+                <tr><td>Cactuar</td><td class="WoR">WoR</td><td>Maranda Desert - 1000 Needles</td></tr>
+                <tr><td>Cactus</td><td class="WoR">WoR</td><td>Maranda Desert - 1000 Needles</td></tr>
+                <tr><td>Face</td><td class="WoR">WoR</td><td>Cyan's Dream (Phantom Train) - 1000 Needles</td></tr>
+                <tr><td>Gatling</td><td class="WoR">WoR</td><td>Mobliz/Nikeah/Serpent Trench Area - 1000 Needles</td></tr>
+                <tr><td>Dragon</td><td class="WoB">WoB</td><td>Floating Continent - Revenge Blast</td></tr>
+                <tr><td>Gl.Labolas</td><td class="WoR">WoR</td><td>Mt. Zozo - Revenge Blast</td></tr>
+                <tr><td>Pandora</td><td class="WoR">WoR</td><td>Cyan's Dream (Entrance/Magus Sisters Boss Area) - Revenge Blast</td></tr>
+                <tr><td>Crawler</td><td class="WoR">WoR</td><td>Outside Narshe - Traveler</td></tr>
+                <tr><td>Fafnir</td><td class="WoR">WoR</td><td>Outside Albrook - Traveler</td></tr>
+                <tr><td>OnionDashr</td><td class="WoR">WoR</td><td>Umaro's Cave - Traveler</td></tr>
+                <tr><td>Pineapple</td><td class="WoR">WoR</td><td>Phoenix Cave - Self-Destruct</td></tr>
+                <tr><td>Balloon</td><td class="WoB">WoB</td><td>Burning House - Self-Destruct</td></tr>
+                <tr><td>Dive Eagle</td><td class="WoR">WoR</td><td>Outside Albrook - Shamshir</td></tr>
+                <tr><td>Satellite</td><td class="WoB">WoB</td><td>Imperial Camp (Treasure Chest Trap) - Shamshir</td></tr>
+                <tr><td>Yojimbo</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #2 Toilet Room) - Tachi: Tiger</td></tr>
+                <tr><td>Mover</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #2 - Room Beyond the Toilet) - Tornado</td></tr>
+                <tr><td>Sorath</td><td class="WoR">WoR</td><td>Ebot's Rock (Entrance/Hidon Area) - Cave-In</td></tr>
+                <tr><td>Io</td><td class="WoR">WoR</td><td>Cyan's Dream (Mines) - Flare Star</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Leech/Mana Burn -->
+<div class="rage-group">
+    <div class="rage-group-title">Leech/Mana Burn</div>
+    <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr><td>Bloodfang</td><td class="WoB">WoB</td><td>Outside Kohlingen - Drain</td></tr>
+            <tr><td>Vampiress</td><td class="WoR">WoR</td><td>Daryl's Tomb - Drain</td></tr>
+            <tr><td>NightWalkr</td><td class="WoR">WoR</td><td>Tzen's Collapsing House - Drain</td></tr>
+            <tr><td>Vamp Thorn</td><td class="WoR">WoR</td><td>Serpent Trench - Drain</td></tr>
+            <tr><td>Samurai</td><td>-</td><td>Sealed Cave (Treasure Chest Trap)/Cyan's Dream (Phantom Train) - Tachi: Dragon</td></tr>
+            <tr><td>Outcast</td><td class="WoB">WoB</td><td>Sealed Cave - Lifeshaver</td></tr>
+            <tr><td>Misfit</td><td class="WoB">WoB</td><td>Floating Continent - Lifeshaver</td></tr>
+            <tr><td>Mindflayer</td><td class="WoB">WoB</td><td>Floating Continent - Mind Blast</td></tr>
+            <tr><td>Soulflayer</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 Cave, Metal Floor) - Mind Blast</td></tr>
+            <tr><td>BladeDancr</td><td class="WoR">WoR</td><td>Owzer's Mansion - Rasp</td></tr>
+            <tr><td>Dropper</td><td class="WoR">WoR</td><td>Figaro Castle Basement (Tentacle Room) - Magic Hammer</td></tr>
+            <tr><td>Junk</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #2 Pipe Room) - Magic Hammer</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Non-Elemental Magic -->
+    <div class="rage-group">
+        <div class="rage-group-title">Non-Elemental Magic</div>
+        <div class = "rage-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Monster Name</th>
+                        <th>World</th>
+                        <th>Where to Encounter / Special Ability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>HeavyArmor</td><td class="WoB">WoB</td><td>South Figaro (Locke's Scenario - Talk to Magitek Soldier)/Narshe Snowfield Defense - Magitek Laser</td></tr>
+                    <tr><td>M.TekArmor</td><td class="WoB">WoB</td><td>Imperial Camp - Magitek Laser</td></tr>
+                    <tr><td>Sky Armor</td><td class="WoB">WoB</td><td>Floating Continent's Sky - Magitek Laser</td></tr>
+                    <tr><td>PlutoArmor</td><td class="WoR">WoR</td><td>Cyan's Dream (Mines) - Magitek Missile</td></tr>
+                    <tr><td>GtBehemoth</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 Entrance/First Cave) - Meteor</td></tr>
+                    <tr><td>DemnKnight</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 Cave, Metal Floor) - Shockwave</td></tr>
+                    <tr><td>Intangir</td><td class="WoB">WoB</td><td>Triangle Island - Comet</td></tr>
+                    <tr><td>Lunatys</td><td class="WoR">WoR</td><td>Ancient Castle Cave - Comet</td></tr>
+                    <tr><td>Ninja</td><td class="WoB">WoB</td><td>Sealed Cave/Floating Continent - Leaf Swirl</td></tr>
+                    <tr><td>Wyvern</td><td class="WoB">WoB</td><td>Outside Vector - Leaf Swirl</td></tr>
+                    <tr><td>Trapper</td><td class="WoB">WoB</td><td>Magitek Research Facility (Stair Room After Ifrit/Shiva) - Level 3 Flare</td></tr>
+                    <tr><td>Outsider</td><td class="WoR">WoR</td><td>Outside Doma - Flare</td></tr>
+                    <tr><td>SkullEater</td><td class="WoR">WoR</td><td>Triangle Island - Flare</td></tr>
+                    <tr><td>ArmoredWpn</td><td class="WoR">WoR</td><td>Ancient Castle - Mustard Bomb</td></tr>
+                    <tr><td>Tonberry</td><td class="WoR">WoR</td><td>Umaro's Cave - Everyone's Grudge</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <!-- Defense-Piercing -->
+<div class="rage-group">
+    <div class="rage-group-title">Defense-Piercing</div>
+        <div class = "rage-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Monster Name</th>
+                        <th>World</th>
+                        <th>Where to Encounter / Special Ability</th>
+                    </tr>
+                </thead>
+            <tbody>
+                <tr><td>Trapper</td><td class="WoB">WoB</td><td>Magitek Research Facility (Stair Room After Ifrit/Shiva) - Level 3 Flare</td></tr>
+                <tr><td>Outsider</td><td class="WoR">WoR</td><td>Outside Doma - Flare</td></tr>
+                <tr><td>SkullEatr</td><td class="WoR">WoR</td><td>Triangle Island - Flare</td></tr>
+                <tr><td>GtBehemoth</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 Entrance/First Cave) - Meteor</td></tr>
+                <tr><td>DkBehemoth</td><td class="WoR">WoR</td><td>Labyrinth of the Ancients - Shadow Flare</td></tr>
+                <tr><td>ArmoredWpn</td><td class="WoR">WoR</td><td>Ancient Castle - Mustard Bomb</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Fire -->
+    <div class="rage-group">
+        <div class="rage-group-title">Fire</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>MotorDrive</td><td class="WoB">WoB</td><td>Outside Kohlingen - Phoenix Dance</td></tr>
+                <tr><td>Flame Dog</td><td class="WoR">WoR</td><td>Phoenix's Cave - Firaga</td></tr>
+                <tr><td>Old Dragon</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 2 3 Entrance) - Firaga</td></tr>
+                <tr><td>Grenade</td><td class="WoB">WoB</td><td>Burning House - Fireball</td></tr>
+                <tr><td>Les.Lopros</td><td class="WoB">WoB</td><td>Lethe River - Fireball</td></tr>
+                <tr><td>Red Mallow</td><td class="WoR">WoR</td><td>Phoenix's Cave - Fireball</td></tr>
+                <tr><td>Templar</td><td class="WoB">WoB</td><td>Imperial Camp - Fira</td></tr>
+                <tr><td>Wizard</td><td class="WoB">WoB</td><td>Sealed Cave (Entrance) - Fira</td></tr>
+                <tr><td>Imp. Soldr</td><td class="WoB">WoB</td><td>Imperial Camp - Fire</td></tr>
+                <tr><td>Specter</td><td class="WoB">WoB</td><td>Narshe Mines Security Room - Fire</td></tr>
+                <tr><td>Coolness</td><td class="WoR">WoR</td><td>Narshe Mines - Elf Fire</td></tr>
+                <tr><td>Devil Fist</td><td class="WoR">WoR</td><td>Mt. Zozo - Elf Fire</td></tr>
+                <tr><td>Oversoul</td><td class="WoB">WoB</td><td>Phantom Train - Elf Fire</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Blizzard -->
+<div class="rage-group">
+    <div class="rage-group-title">Blizzard</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Spitfire</td><td class="WoB">WoB</td><td>Floating Continent's Sky - Absolute Zero</td></tr>
+                <tr><td>Gorgimera</td><td class="WoR">WoR</td><td>Veldt Cave - Avalanche</td></tr>
+                <tr><td>Blk.Dragon</td><td class="WoR">WoR</td><td>Solitary Island Desert - Snowstorm</td></tr>
+                <tr><td>Frostbeast</td><td class="WoR">WoR</td><td>Narshe Mines - Blizzaga</td></tr>
+                <tr><td>Baalzephon</td><td class="WoR">WoR</td><td>Gogo's Cave - Blizzaga</td></tr>
+                <tr><td>Chaos Drgn</td><td class="WoR">WoR</td><td>Phoenix's Cave - Blizzaga</td></tr>
+                <tr><td>WhiteJello</td><td class="WoR">WoR</td><td>Narshe Mines - Blizzaga</td></tr>
+                <tr><td>Darkside</td><td class="WoB">WoB</td><td>Narshe Mines Security Room - Blizzara</td></tr>
+                <tr><td>VeilDancer</td><td>-</td><td>Zozo - Blizzara</td></tr>
+                <tr><td>Megalodoth</td><td class="WoB">WoB</td><td>Narshe Mines - Blizzard (All)</td></tr>
+                <tr><td>Lukhavi</td><td class="WoR">WoR</td><td>Narshe Mines - Blizzard (All)</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    <!-- Thunder -->
+<div class="rage-group">
+    <div class="rage-group-title">Thunder</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ghost</td><td class="WoB">WoB</td><td>Phantom Forest/Train - Thundara</td></tr>
+                <tr><td>Joker</td><td class="WoB">WoB</td><td>Outside Vector - Thundara</td></tr>
+                <tr><td>Belmodar</td><td class="WoB">WoB</td><td>Outside South Figaro - 10,000 Volts</td></tr>
+                <tr><td>Punisher</td><td class="WoR">WoR</td><td>Mt. Zozo - Thundaga</td></tr>
+                <tr><td>Devil</td><td class="WoR">WoR</td><td>Ancient Castle Cave - Thundaga</td></tr>
+                <tr><td>Corpse</td><td class="WoR">WoR</td><td>Gogo's Cave - Thundaga</td></tr>
+                <tr><td>Al Jabr</td><td class="WoR">WoR</td><td>Cyan's Dream (Phantom Train) - Thundaga</td></tr>
+                <tr><td>Imp</td><td class="WoR">WoR</td><td>Umaro's Cave - Thundaga</td></tr>
+                <tr><td>Illuyankas</td><td class="WoR">WoR</td><td>Umaro's Cave - 1,000,000 Volts</td></tr>
+                <tr><td>Thor</td><td class="WoR">WoR</td><td>Forbidden Land Eureka - Thunder Call</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Water -->
+<div class="rage-group">
+    <div class="rage-group-title">Water</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Anguiform</td><td class="WoB">WoB</td><td>Serpent Trench - Aqua Breath</td></tr>
+                <tr><td>Chimera</td><td class="WoB">WoB</td><td>Outside Thamasa - Aqua Breath</td></tr>
+                <tr><td>DsrtSahagn</td><td class="WoR">WoR</td><td>South Figaro Cave - Flood</td></tr>
+                <tr><td>Slug</td><td class="WoR">WoR</td><td>Outside Kohlingen - Aqua Breath</td></tr>
+                <tr><td>VctChimera</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #2 Outside Yellow Dragon's Room) - El Nino</td></tr>
+                <tr><td>Mandrake</td><td class="WoB">WoB</td><td>Eidolon Cave - Poison</td></tr>
+                <tr><td>Venobennu</td><td class="WoB">WoB</td><td>Eidolon Cave - Poison</td></tr>
+                <tr><td>Wererat</td><td class="WoB">WoB</td><td>Narshe Mines - Poison</td></tr>
+                <tr><td>Scorpion</td><td class="WoR">WoR</td><td>Tzen's Collapsing House - Poison</td></tr>
+                <tr><td>Antares</td><td class="WoB">WoB</td><td>Sealed Cave - Poison</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Earth -->
+<div class="rage-group">
+    <div class="rage-group-title">Earth</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Ankheg</td><td class="WoB">WoB</td><td>Outside Thamasa - Magnitude 8</td></tr>
+                <tr><td>Gigantos</td><td class="WoB">WoB</td><td>Floating Continent (Treasure Chest Trap) - Magnitude 8</td></tr>
+                <tr><td>Hill Gigas</td><td>-</td><td>Zozo - Magnitude 8</td></tr>
+                <tr><td>Landworm</td><td class="WoR">WoR</td><td>Kefka's Tower (Outside Skull Dragon's Room) - Magnitude 8</td></tr>
+                <tr><td>Oceanus</td><td class="WoR">WoR</td><td>South Figaro Forest - Magnitude 8</td></tr>
+                <tr><td>Hundlegs</td><td class="WoR">WoR</td><td>Outside South Figaro - Quake</td></tr>
+                <tr><td>MedusaChic</td><td class="WoR">WoR</td><td>Outside Thamasa - Quake</td></tr>
+                <tr><td>LitworChic</td><td class="WoB">WoB</td><td>Outside Vector - Quake</td></tr>
+                <tr><td>Ouroboros</td><td class="WoR">WoR</td><td>Ebot's Rock - Quake</td></tr>
+                <tr><td>Purusa</td><td class="WoR">WoR</td><td>Outside Thamasa - Rockslide</td></tr>
+                <tr><td>Commander</td><td class="WoB">WoB</td><td>South Figaro Basement - Break</td></tr>
+                <tr><td>Lizard</td><td class="WoR">WoR</td><td>Serpent Trench - Break</td></tr>
+                <tr><td>Luna Wolf</td><td class="WoR">WoR</td><td>Outside Albrook - Break</td></tr>
+                <tr><td>Basilisk</td><td class="WoR">WoR</td><td>Outside Narshe - Break</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Wind -->
+<div class="rage-group">
+    <div class="rage-group-title">Wind</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Covert</td><td class="WoR">WoR</td><td>Phoenix's Cave - Wind Slash </td></tr>
+                <tr><td>GuardLeadr</td><td class="WoB">WoB</td><td>Narshe Mines (Save Terra Event) - Wind Slash </td></tr>
+                <tr><td>Grt.Mantis</td><td class="WoR">WoR</td><td>Outside Narshe - Wind Slash </td></tr>
+                <tr><td>Jam</td><td class="WoR">WoR</td><td>Phoenix's Cave - Wind Slash </td></tr>
+                <tr><td>PlatDragon</td><td class="WoB">WoB</td><td>Floating Continent - Aeroga</td></tr>
+                <tr><td>Sprinter</td><td class="WoR">WoR</td><td>Outside Narshe - Aeroga</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+    <!-- Light -->
+<div class="rage-group">
+    <div class="rage-group-title">Light</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>BrandLamia</td><td class="WoR">WoR</td><td>Daryl's Tomb - Level 2 Holy</td></tr>
+                <tr><td>Borghese</td><td class="WoR">WoR</td><td>South Figaro Cave/Figaro Castle Basement - Holy</td></tr>
+                <tr><td>Maiden</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 Cave, Metal Floor) - Holy</td></tr>
+                <tr><td>St. Elmo</td><td class="WoR">WoR</td><td>Ebot's Rock - Holy</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Darkness -->
+<div class="rage-group">
+    <div class="rage-group-title">Darkness</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>GrtMalboro</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 Entrance/First Cave) - Scourge</td></tr>
+                <tr><td>Mahadeva</td><td class="WoR">WoR</td><td>Ebot's Rock - Scourge</td></tr>
+                <tr><td>Neochu</td><td class="WoR">WoR</td><td>Ebot's Rock/Phantom Forest - Scourge</td></tr>
+                <tr><td>Piscodemon</td><td class="WoB">WoB</td><td>Sealed Cave - Bio</td></tr>
+                <tr><td>PoisnLeech</td><td class="WoR">WoR</td><td>Serpent Trench - Bio</td></tr>
+                <tr><td>P.Bavarois</td><td class="WoR">WoR</td><td>Serpent Trench - Bio</td></tr>
+                <tr><td>DkBehemoth</td><td class="WoR">WoR</td><td>Labyrinth of the Ancients - Shadow Flare (Disease)</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Support -->
+<div class="rage-group">
+    <div class="rage-group-title">Support</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Goetia</td><td class="WoB">WoB</td><td>Opera House (Attic) - Libra</td></tr>
+                <tr><td>BlackForce</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #2 - Toilet Room)/Labyrinth of the Ancients - Ancient Prayer</td></tr>
+                <tr><td>Braciosaur</td><td class="WoR">WoR</td><td>Dinosaur Forest - Mighty Guard</td></tr>
+                <tr><td>EarthGuard</td><td class="WoR">WoR</td><td>Solitary Island - Mighty Guard</td></tr>
+                <tr><td>ChipiRabit</td><td class="WoB">WoB</td><td>Gau's Father's House/Doma Area - Raise</td></tr>
+                <tr><td>Harvester</td><td>-</td><td>Zozo - Haste</td></tr>
+                <tr><td>Sergeant</td><td class="WoB">WoB</td><td>Magitek Factory - Reflect</td></tr>
+                <tr><td>Imp. Elite</td><td class="WoB">WoB</td><td>Vector (Banquet Break) - Protect</td></tr>
+                <tr><td>Magic Pot</td><td class="WoR">WoR</td><td>Tower of Fanatics - Curaga</td></tr>
+                <tr><td>DesertHare</td><td class="WoR">WoR</td><td>Outside South Figaro - Cura</td></tr>
+                <tr><td>Misty</td><td class="WoR">WoR</td><td>Owzer's Mansion - Cura</td></tr>
+                <tr><td>Phoebe</td><td class="WoB">WoB</td><td>Phantom Train - Cure</td></tr>
+                <tr><td>Peeper</td><td class="WoR">WoR</td><td>Solitary Island - White Wind</td></tr>
+                <tr><td>Rudra</td><td class="WoB">WoB</td><td>Outside Kohlingen - White Wind</td></tr>
+                <tr><td>VectrLytho</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 2 3 Entrance) - White Wind</td></tr>
+                <tr><td>Mandragora</td><td class="WoB">WoB</td><td>Outside Narshe - Sunbath (Heal HP, cure Frozen)</td></tr>
+                <tr><td>Mu</td><td class="WoB">WoB</td><td>Outside South Figaro - Forest Bath (Heal all status, recover MP)</td></tr>
+                <tr><td>Cheshire</td><td class="WoR">WoR</td><td>Cyan's Dream - Raccoon (Heal all, cure all statuses)</td></tr>
+                <tr><td>Mykale</td><td class="WoR">WoR</td><td>Gogo's Cave - Meerkat (Protect, Shell, Haste, Regen to all allies)</td></tr>
+                <tr><td>SnowPanthr</td><td class="WoR">WoR</td><td>Narshe Mines - Snow Bunny (Heal all, grant Blink)</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Status Ailments / Instant Death (Damage) -->
+<div class="rage-group">
+    <div class="rage-group-title">Status Ailments / Instant Death (Damage)</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Commander</td><td class="WoB">WoB</td><td>South Figaro Basement - Break (Petrify)</td></tr>
+                <tr><td>Lizard</td><td class="WoR">WoR</td><td>Serpent Trench - Break</td></tr>
+                <tr><td>Luna Wolf</td><td class="WoR</td><td>Outside Albrook - Break</td></tr>
+                <tr><td>Basilisk</td><td class="WoR">WoR</td><td>Outside Narshe - Break</td></tr>
+                <tr><td>Coolness</td><td class="WoR">WoR</td><td>Narshe Mines - Elf Fire (Confuse)</td></tr>
+                <tr><td>Devil Fist</td><td class="WoR">WoR</td><td>Mt. Zozo - Elf Fire</td></tr>
+                <tr><td>Oversoul</td><td class="WoB">WoB</td><td>Phantom Train - Elf Fire</td></tr>
+                <tr><td>Slagworm</td><td class="WoR">WoR</td><td>Maranda Desert - Sandstorm (Blind)</td></tr>
+                <tr><td>DrgnFossil</td><td class="WoB">WoB</td><td>Albrook Desert - Sandstorm</td></tr>
+                <tr><td>Test Rider</td><td class="WoR">WoR</td><td>Narshe Mines - Flash Rain (Blind)</td></tr>
+                <tr><td>Zeveak</td><td class="WoR">WoR</td><td>Outside Kohlingen - Flash Rain</td></tr>
+                <tr><td>GrtMalboro</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 Entrance/First Cave) - Scourge (Poison, Disease)</td></tr>
+                <tr><td>Mahadeva</td><td class="WoR">WoR</td><td>Ebot's Rock - Scourge</td></tr>
+                <tr><td>Neochu</td><td class="WoR">WoR</td><td>Ebot's Rock/Phantom Forest - Scourge</td></tr>
+                <tr><td>Mindflayer</td><td class="WoB">WoB</td><td>Floating Continent - Mind Blast (MP Burn, Silence, Disease)</td></tr>
+                <tr><td>Soulflayer</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 Cave, Metal Floor) - Mind Blast</td></tr>
+                <tr><td>Piscodemon</td><td class="WoB">WoB</td><td>Sealed Cave - Bio (Disease)</td></tr>
+                <tr><td>PoisnLeech</td><td class="WoR">WoR</td><td>Serpent Trench - Bio</td></tr>
+                <tr><td>P.Bavarois</td><td class="WoR">WoR</td><td>Serpent Trench - Bio</td></tr>
+                <tr><td>Sorath</td><td class="WoR">WoR</td><td>Ebot's Rock (Entrance/Hidon Area) - Cave-In (Disease)</td></tr>
+                <tr><td>DkBehemoth</td><td class="WoR">WoR</td><td>Labyrinth of the Ancients - Shadow Flare (Disease)</td></tr>
+                <tr><td>Mandrake</td><td class="WoB">WoB</td><td>Eidolon Cave - Poison (Poison)</td></tr>
+                <tr><td>Venobennu</td><td class="WoB">WoB</td><td>Eidolon Cave - Poison</td></tr>
+                <tr><td>Wererat</td><td class="WoB">WoB</td><td>Narshe Mines - Poison</td></tr>
+                <tr><td>Scorpion</td><td class="WoR">WoR</td><td>Tzen's Collapsing House - Poison</td></tr>
+                <tr><td>Antares</td><td class="WoB">WoB</td><td>Sealed Cave - Poison</td></tr>
+                <tr><td>Exoray</td><td class="WoR">WoR</td><td>Daryl's Tomb - Poison Fog (Poison)</td></tr>
+                <tr><td>InnoSent</td><td class="WoR">WoR</td><td>Kefka's Tower (Inferno's Room (Top Area)) - Poison Fog</td></tr>
+                <tr><td>ArmoredWpn</td><td class="WoR">WoR</td><td>Ancient Castle - Mustard Bomb (Poison)</td></tr>
+                <tr><td>Tonberry</td><td class="WoR">WoR</td><td>Umaro's Cave - Everyone's Grudge (Instant Death)</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+    <!-- Status Ailments / Instant Death (No Damage) -->
+<div class="rage-group">
+    <div class="rage-group-title">Status Ailments / Instant Death (No Damage)</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Cassie</td><td class="WoR">WoR</td><td>Inside Gogo's Cave - Bad Breath (Poison, Sleep, Blind, Confuse, Silence, Toad)</td></tr>
+                <tr><td>Malboro</td><td>-</td><td>Forest Near Veldt (WoB)/Albrook Forest (WoR) - Bad Breath</td></tr>
+                <tr><td>Daedalus</td><td class="WoR">WoR</td><td>Kefka's Tower (Guardian's Room) - Devil's Whistle (One of: Blind, Poison, Toad, Condemn, Berserk, Confuse, Disease, Slow)</td></tr>
+                <tr><td>Fortis</td><td class="WoR">WoR</td><td>Outside Doma - Confuser (AOE Confuse)</td></tr>
+                <tr><td>Coco</td><td class="WoR">WoR</td><td>Cyan's Dream (Entrance) - Confuse</td></tr>
+                <tr><td>Lamia</td><td class="WoB">WoB</td><td>Magitek Research Facility (Eidolon Tube Room) - Confuse</td></tr>
+                <tr><td>Minity</td><td class="WoR">WoR</td><td>Owzer's Mansion - Night (Ally+Enemy Sleep)</td></tr>
+                <tr><td>Rafflesia</td><td class="WoR">WoR</td><td>Owzer's Mansion (Check Flower Painting at Entrance) - Lullaby (AOE Sleep)</td></tr>
+                <tr><td>FigaroLzrd</td><td class="WoR">WoR</td><td>Ancient Castle Cave - Dischord (Level halved)</td></tr>
+                <tr><td>MetlHitman</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #2 Pipe Room) - Dischord</td></tr>
+                <tr><td>Coeurl</td><td class="WoR">WoR</td><td>Ancient Castle Cave - Blaster (AOE Instant Death)</td></tr>
+                <tr><td>DdlyHorror</td><td class="WoR">WoR</td><td>Daryl's Tomb - X-Zone (AOE Instant Death)</td></tr>
+                <tr><td>Rust</td><td class="WoR">WoR</td><td>Cyan's Dream (Entrance/Mines) - Banisher (ST Instant Death)</td></tr>
+                <tr><td>DthMachine</td><td class="WoR">WoR</td><td>Outside Doma - Level ? Death</td></tr>
+                <tr><td>Cloudwrath</td><td class="WoR">WoR</td><td>Daryl's Tomb - Death</td></tr>
+                <tr><td>Necromancr</td><td class="WoR">WoR</td><td>Daryl's Tomb - Death</td></tr>
+                <tr><td>Weredragon</td><td class="WoR">WoR</td><td>Cyan's Dream (Magus Sisters Boss Area) - Death</td></tr>
+                <tr><td>Gigantoad</td><td class="WoR">WoR</td><td>West of Albrook (Near Desert, Wasteland) - Frog Song (AOE Toad, will not untoad)</td></tr>
+                <tr><td>NeckHunter</td><td class="WoR">WoR</td><td>South Figaro Cave/Figaro Castle Basement - Toad</td></tr>
+                <tr><td>Onion</td><td class="WoB">WoB</td><td>Magitek Factory - Toad</td></tr>
+                <tr><td>Provoker</td><td class="WoB">WoB</td><td>Sealed Cave (Entrance) - Toad</td></tr>
+                <tr><td>Tzakmaqiel</td><td class="WoR">WoR</td><td>Umaro's Cave - Toad</td></tr>
+                <tr><td>Schmidt</td><td class="WoR">WoR</td><td>Cyan's Dream (Mines) - Mega Berserk (AOE Berserk)</td></tr>
+                <tr><td>Zaghrem</td><td class="WoB">WoB</td><td>Mt. Koltz - Berserk</td></tr>
+                <tr><td>NettleHopr</td><td class="WoB">WoB</td><td>Gau's Father's House/Doma Area - Berserk</td></tr>
+                <tr><td>Grasswyrm</td><td class="WoB">WoB</td><td>Outside Vector - Berserk</td></tr>
+                <tr><td>DragonZomb</td><td class="WoB">WoB</td><td>Sealed Cave - Death Sentence</td></tr>
+                <tr><td>AllureRidr</td><td class="WoR">WoR</td><td>Owzer's Mansion - Death Sentence</td></tr>
+                <tr><td>Kamui</td><td class="WoR">WoR</td><td>Gogo's Cave - Death Sentence</td></tr>
+                <tr><td>Leap Frog</td><td class="WoR">WoR</td><td>Outside Narshe - Slowga</td></tr>
+                <tr><td>Amduscias</td><td class="WoR">WoR</td><td>Gogo's Cave - Slowga</td></tr>
+                <tr><td>General</td><td class="WoB">WoB</td><td>Magitek Factory - Slow</td></tr>
+                <tr><td>Apocrypha</td><td class="WoB">WoB</td><td>Floating Continent - Level 4 Hold (AOE Stop and Slow vs Lev. Mult of 4)</td></tr>
+                <tr><td>Bug</td><td class="WoB">WoB</td><td>Albrook Desert - Stop</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Specials: Status Ailments -->
+<div class="rage-group">
+    <div class="rage-group-title">Specials: Status Ailments</div>
+        <div class = "rage-table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Monster Name</th>
+                    <th>World</th>
+                    <th>Where to Encounter / Special Ability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Aepyornis</td><td class="WoB">WoB</td><td>Gau's Father's House/Doma Area - Special 'Featherdust' [Inflict Poison]</td></tr>
+                <tr><td>Alacran</td><td class="WoB">WoB</td><td>Outside Figaro Castle - Special 'Numb Needle' [Inflict Stop]</td></tr>
+                <tr><td>Blue Flan</td><td class="WoB">WoB</td><td>Magitek Research Facility (Ifrit/Shiva Room) - Special 'Slip Liquid' [Inflict Poison]</td></tr>
+                <tr><td>BrainCandy</td><td class="WoB">WoB</td><td>Outside Kohlingen/Jidoor - Special 'Sleep Sting' [Inflict Sleep]</td></tr>
+                <tr><td>Cartagra</td><td class="WoB">WoB</td><td>South Figaro Cave (Saving Celes) - Special 'Poison Needle' [Inflict Poison]</td></tr>
+                <tr><td>Cockatrice</td><td class="WoB">WoB</td><td>Outside South Figaro/Mt. Koltz - Special 'Petrifying Beak' [Inflict Stone]</td></tr>
+                <tr><td>Demiurok</td><td class="WoB">WoB</td><td>South Figaro Cave (First Time) - Special 'Digestive Fluid' [Apply Slow]</td></tr>
+                <tr><td>Kum Kum</td><td class="WoR">WoR</td><td>Crystal Tower - Special 'Breakga' [100% Inflict Stone]</td></tr>
+                <tr><td>LamiaQueen</td><td class="WoR">WoR</td><td>Mt. Zozo - Special 'Snuggle Up' [100% Deal 1x Damage + Inflict Muddle]</td></tr>
+                <tr><td>LandGrilon</td><td class="WoB">WoB</td><td>Eidolon Cave - Special 'Beetlejuice' [Inflict Berserk]</td></tr>
+                <tr><td>Lilith</td><td class="WoR">WoR</td><td>Owzer's Mansion - Special 'Melty Kiss' [100% Deal 1x Damage + Inflict Muddle]</td></tr>
+                <tr><td>LivingDead</td><td class="WoB">WoB</td><td>Phantom Train - Special 'Outcast Sword' [Deal 1x Damage + Inflict Poison]</td></tr>
+                <tr><td>Knotty</td><td class="WoR">WoR</td><td>Umaro's Cave - Special 'Soft Tail' [Inflict Toad]</td></tr>
+                <tr><td>Nautiloid</td><td class="WoB">WoB</td><td>Lethe River - Special 'Ink' [Inflict Blind]</td></tr>
+                <tr><td>Ochu</td><td class="WoB">WoB</td><td>Phantom Forest - Special 'Tentacle' [Deal 1x Damage + Inflict Poison]</td></tr>
+                <tr><td>Rock Slug</td><td class="WoB">WoB</td><td>Mt. Koltz - Special 'Slime' [Apply Slow]</td></tr>
+                <tr><td>Stunner</td><td class="WoB">WoB</td><td>Opera House (Attic) - Special 'Filthy Incisor' [Inflict Poison]</td></tr>
+                <tr><td>Vampyr</td><td class="WoR">WoR</td><td>Cyan's Dream (Phantom Train) - Special 'Zombie Kiss' [Deal 1x Damage + Inflict Zombie]</td></tr>
+                <tr><td>YllwMousse</td><td class="WoR">WoR</td><td>Outside Kohlingen - Special 'Gunk' [Apply Slow]</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- Specials: Damage -->
+<div class="rage-group">
+        <div class="rage-group-title">Specials: Damage</div>
+        <div class = "rage-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Monster Name</th>
+                        <th>World</th>
+                        <th>Where to Encounter / Special Ability</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   <tr><td>Nighthawk</td><td class="WoR">WoR</td><td>Ancient Castle - Special 'Fatality Claw' [Deal 3.5x Damage]</td></tr>
+                    <tr><td>Behemoth</td><td class="WoB">WoB</td><td>Floating Continent - Special 'Beatdown' [Deal 3x Damage]</td></tr>
+                    <tr><td>Dante</td><td class="WoR">WoR</td><td>South Figaro Cave/Figaro Castle Basement (Tentacle Room) - Special 'Crystal Lance' [Deal 3x Damage]</td></tr>
+                    <tr><td>Domovoi</td><td class="WoB">WoB</td><td>Triangle Island - Special 'Goblin Rush' [Deal 3x Damage]</td></tr>
+                    <tr><td>Hell Rider</td><td class="WoB">WoB</td><td>Narshe Snowfield Defense - Special 'Silver Lance' [Deal 3x Damage]</td></tr>
+                    <tr><td>Soul Eater</td><td class="WoR">WoR</td><td>Crystal Tower - Special 'Soul Eater' [100% Deal 2.5x Damage]</td></tr>
+                    <tr><td>Haokah</td><td class="WoR">WoR</td><td>Kefka's Tower (Guardian's Room) - Special 'Teeth Shredder' [Deal 2.5x Damage]</td></tr>
+                    <tr><td>Stray Cat</td><td class="WoB">WoB</td><td>Gau's Father's House/Doma Area - Special 'Kitty Kick' [Deal 2.5x Damage]</td></tr>
+                    <tr><td>Wildcat</td><td class="WoR">WoR</td><td>Owzer's Mansion - Special 'Kitty Punch' [Deal 2.5x Damage]</td></tr>
+                    <tr><td>Destroyer</td><td class="WoB">WoB</td><td>Magitek Research Facility (Eidolon Tube Room) - Special 'Mighty Hit' [Deal 2.5x Damage]</td></tr>
+                    <tr><td>Garm</td><td class="WoR">WoR</td><td>Phoenix's Cave - Special 'Hell Bite' [Deal 2.5x Damage]</td></tr>
+                    <tr><td>Gold Bear</td><td class="WoB">WoB</td><td>South Figaro Cave (Saving Celes) - Special 'Gouge' [Deal 2.5x Damage]</td></tr>
+                    <tr><td>Iron Claw</td><td>-</td><td>Zozo - Special 'Iron Claw' [Deal 2.5x Damage]</td></tr>
+                    <tr><td>Luminesce</td><td class="WoR">WoR</td><td>Kefka's Tower (Guardian's Room) - Special 'Backstab' [Deal 2.5x Damage]</td></tr>
+                    <tr><td>Lycaon</td><td class="WoR">WoR</td><td>North of Narshe (Isolated House Area) - Special 'Scratch' [Deal 2.5x Damage]</td></tr>
+                    <tr><td>Mugbear</td><td class="WoR">WoR</td><td>Mt. Zozo - Special 'Jugular Scratch' [Deal 2.5x Damage]</td></tr>
+                    <tr><td>Bogy</td><td class="WoR">WoR</td><td>Outside Kohlingen - Special 'Grrrrrr' [Deal 2x Damage]</td></tr>
+                    <tr><td>Blk.Lizard</td><td class="WoR">WoR</td><td>Jidoor Forest - Special 'Long Tongue' [Deal 2x Damage]</td></tr>
+                    <tr><td>Corporal</td><td class="WoB">WoB</td><td>Narshe Snowfield Defense - Special 'Swing' [Deal 2x Damage]</td></tr>
+                    <tr><td>Death Claw</td><td class="WoR">WoR</td><td>Kefka's Tower (Path #1 2 3 Entrance) - Special 'Death Claw' [Deal 2x Damage]</td></tr>
+                    <tr><td>Fawn</td><td class="WoB">WoB</td><td>Eidolon Cave/Floating Continent - Special 'Elven Dart' [Deal 2x Damage]</td></tr>
+                    <tr><td>Fidor</td><td class="WoB">WoB</td><td>Narshe Snowfield Defense - Special 'Pounce' [Deal 2x Damage]</td></tr>
+                    <tr><td>Goblin</td><td class="WoB">WoB</td><td>Outside South Figaro - Special 'Goblin Punch' [Deal 2x Damage]</td></tr>
+                    <tr><td>Gorgias</td><td class="WoB">WoB</td><td>Mt. Koltz - Special 'Gore' [Deal 2x Damage]</td></tr>
+                    <tr><td>Hedgehog</td><td class="WoB">WoB</td><td>Gau's Father's House/Doma Area - Special 'Needle Launch' [100% Deal 1.5x Damage]</td></tr>
+                    <tr><td>Bomb</td><td class="WoB">WoB</td><td>Phantom Forest/Train - Special 'Small Explosion' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>DesrtSaucr</td><td class="WoB">WoB</td><td>Outside Figaro Castle - Special 'Tail Strike' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Devourer</td><td class="WoB">WoB</td><td>Outside Thamasa - Special 'Shell Tackle' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Doberman</td><td class="WoB">WoB</td><td>Imperial Camp - (Kick the Chest) Special 'Bite' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Don</td><td class="WoB">WoB</td><td>Outside Vector - Special 'Tackle' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Fem. Soldr</td><td class="WoB">WoB</td><td>South Figaro Basement - Special 'Smash' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Guard</td><td class="WoB">WoB</td><td>Narshe - Special 'Full Strength' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Hunt.Hound</td><td class="WoB">WoB</td><td>Narshe Snowfield Defense - Special 'Throat Attack' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Hornet</td><td class="WoB">WoB</td><td>South Figaro Cave (First Time) - Special 'Iron Sting' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Leaf Bunny</td><td class="WoB">WoB</td><td>Outside Narshe - Special 'Incisor' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Nut Eater</td><td class="WoB">WoB</td><td>Outside Narshe - Special 'Nut Throw' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>SahgnChief</td><td class="WoB">WoB</td><td>Serpent Trench - Special 'Triangle Kick' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Sahagin</td><td class="WoB">WoB</td><td>Lethe River/Serpent Trench - Special 'Kick' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>SilverLobo</td><td class="WoB">WoB</td><td>Narshe - Special 'Fang' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>VectrHound</td><td class="WoB">WoB</td><td>South Figaro Basement - Special 'Pounce' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Vivian</td><td class="WoR">WoR</td><td>Ebot's Rock - Special 'Malboro Germs' [Deal 1.5x Damage]</td></tr>
+                    <tr><td>Blood Bat</td><td class="WoR">WoR</td><td>Daryl's Tomb - Special 'Blood Suck' [Deal 1x Damage+Drain]</td></tr>
+                    <tr><td>LivingDead</td><td class="WoB">WoB</td><td>Phantom Train - Special 'Outcast Sword' [Deal 1x Damage+Poison]</td></tr>
+                    <tr><td>Ochu</td><td class="WoB">WoB</td><td>Phantom Forest - Special 'Tentacle' [Deal 1x Damage+Poison]</td></tr>
+                    <tr><td>Steel Bat</td><td class="WoB">WoB</td><td>Narshe Mines/South Figaro Cave (First Time) - Special 'Blood Suck' [Deal 1x Damage+Drain]</td></tr>
+                    <tr><td>Vampyr</td><td class="WoR">WoR</td><td>Cyan's Dream (Phantom Train) - Special 'Zombie Kiss' [Deal 1x Damage+Zombie]</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+        <div class="footer">
+            Final Fantasy VI T-Edition. Mod Creator: Tsushiy (◆KEHt9L6ti47L)
+        </div>
+    </div>
+</body>
+</html>

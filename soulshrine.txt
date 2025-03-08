@@ -1,0 +1,275 @@
+Guide to the Soul Shrine
+
+Note: Upon clearing the Soul Shrine for the first time, you can select any of the groups from a list and rebattle them over and over. Great for 
+farming high-end rare loot.
+
+ === Group #1 ===
+! <BGM: Final Fantasy 6 - Save Them>
+* #  1: 2x Mandrago, LeafBunn
+* #  2: 3x Demiurok, 2x Hornet
+* #  3: 2x Mu, Goblin
+* #  4: 2x Cockatri, Gorgias, Zaghrem
+* #  5: MTekArmr, 2x Imp.Sold
+* #  6: Sahagin, Nautiloi, LesLopro
+* #  7: Darkside, 2x Spectre
+* #  8: 2x NetlHopr, Aepyorni, StrayCat
+* #  9: 4x Imp.Sold, Satellit          [100% Drop: Green Beret]
+* # 10: LivingDe, AnglWhis, 2x Phoebe
+* # 11: 2x LivingDe, Oversoul
+* # 12: 2x Anguifor, SahagChf
+* # 13: Corporal, Fidor
+* # 14: 2x Corporal, HvyArmor
+* # 15: HellRidr
+* # 16: 3x Rudra, MtrDrive
+* # 17: VeilDanc, 2x IronClaw
+* # 18: Harveste, HilGigas
+* # 19: 3x Stunner, 2x Goetia
+* # 20: 2x Don
+* # 21: DrgnFosl, 3x Bug
+* # 22: Wyvern, 2x LitworCh, Korpokkr
+
+ === Group #2 ===
+! <BGM: Romancing SaGa 3/RS3 - Gens Castle Battle>
+* # 23: 2x Sergeant, 2x Belzecue
+* # 24: ProtoAmr, 2x Onion
+* # 25: MTekInfa, 2x Belzecue
+* # 26: 6x BlueFlan
+* # 27: 2x Lamia, Dstroide
+* # 28: MegaArmr, ProtoAmr
+* # 29: 2x PiscoDmn, Draculdy
+* # 30: Wizard, PiscoDmn, Antares
+* # 31: 3x Balloon, 3x Bomb
+* # 32: 2x Fawn, Mandrake
+* # 33: 2x Gigantos                    [100% Drop: Izayoi]
+* # 34: Ankheg, Devourer, Chimera
+* # 35: 2x SkyArmor, Spitfire
+* # 36: Malboro
+* # 37: Dragon
+* # 38: Mindflyr, Fawn, Behemoth
+* # 39: 2x Ninja, PlatDrgn
+* # 40: 2x Domovoi
+* # 41: Intangir
+* # 42: 2x Peeper, ErthGurd
+* # 43: KilrMnts, Fafnir
+* # 44: SandFish, BlkDragn
+
+ === Group #3 ===
+! <BGM: Xenogears/XG - Flight>
+* # 45: 3x Scorpion
+* # 46: NtWalker, 2x Gigntoad
+* # 47: 3x Balloon, 3x Grenade
+* # 48: 2x LunarWlf, DiveEagl
+* # 49: 2x PoisnLch, 2x Gigntoad
+* # 50: VampThrn, 2x Alraune
+* # 51: 2x PurpBava, Gatling, Lizard
+* # 52: 2x DsrtRabb, 2x Hundlegs
+* # 53: Oceanus
+* # 54: NeckHntr, Borghese, DsrtSaha
+* # 55: Dante
+* # 56: 3x Dropper
+* # 57: 3x Slug
+* # 58: 2x Zeveak, BkLizard, 3x YellowMo
+* # 59: 3x Cactus, Cactuar
+* # 60: 2x Aeronite
+* # 61: 2x Carrot
+* # 62: Apanda, 2x BkLizard
+* # 63: DdlyHorr
+* # 64: 2x Necroman, CloudWth
+* # 65: 2x B. Lamia
+* # 66: 3x BloodBat, Vampires
+
+ === Group #4 ===
+! <BGM: Final Fantasy 11/FF11 - Luck of the Mog>
+* # 67: GlasyaLa, DevilFst, Mugbear
+* # 68: LamiaQen, 2x Punisher
+* # 69: 2x Twinscyt
+* # 70: Gorgimer
+* # 71: LilMurde
+* # 72: 2x Basilisk, LeapFrog
+* # 73: Sprinter, GtMantis, 2x Lycaon
+* # 74: 4x LeapFrog
+* # 75: 4x Crawler
+* # 76: 2x Puck, MedsaChk
+* # 77: 2x RuneClaw, Purusa
+* # 78: Emeraldi
+* # 79: Ourobors, Vivian, Neochu
+* # 80: St. Elmo, Mahadeva
+* # 81: 2x Sorath
+* # 82: Weredrgn, 2x Face
+* # 83: Al Jabr, 2x Vampyr
+* # 84: Cheshire, Samurai, Rust, Coco
+* # 85: 2x FlameDog
+* # 86: 2x Pineappl, Garm
+* # 87: Covert, Jam, Chs.Drgn
+* # 88: 2x Jam, 3x RedMarsh
+
+ === Group #5 ===
+! <BGM: Unlimited Saga/US - Battle Theme I>
+* # 89: TestRidr, Coolness
+* # 90: 2x Frostbst
+* # 91: 2x Lukhavi
+* # 92: WhtJello, Frostbst, Coolness
+* # 93: Tzakmaqi, Illuyank
+* # 94: 3x Knotty, Imp
+* # 95: 4x OniDashr
+* # 96: Tonberry
+* # 97: Amduscia, Kamui
+* # 98: UndCheru, Amduscia, Mykale
+* # 99: Corpse, Cassie, Baalzeph
+* #100: 3x Tonberri
+* #101: RicardMg, Shade
+* #102: Titania, MagiDrgn, Shade
+* #103: 2x Yama, Traveler
+* #104: Titania, Alchymia, Traveler
+* #105: 2x MagicPot
+* #106: 2x PitFiend
+* #107: 2x Deep One
+* #108: 2x Lilith, AlurRide
+* #109: BldDance, 4x Wild Cat
+* #110: AlurRide, 3x Minity
+
+ === Group #6 ===
+! <BGM: Romancing SaGa/RS1 - Coup De Grace>
+* #111: Outsider, Ochiudo
+* #112: Fortis, DthMachi, DuelArmr
+* #113: Coeurl, 3x Lunatys
+* #114: 2x FigaroLz, Devil
+* #115: ArmrdWpn
+* #116: 2x NghtHawk
+* #117: 2x Tonber.M
+* #118: 4x VectorLy
+* #119: GrndBehe, Deathclw, GrtMalbo
+* #120: Maiden, 2x DemonKht
+* #121: BlkForce, 2x Soulflyr
+* #122: 2x OldDrago
+* #123: 3x MtlHitmn
+* #124: 3x Junk
+* #125: Helldive, 2x Colossus
+* #126: 2x Vanguard
+* #127: Fiend
+
+ === Group #7 ===
+! <BGM: Romancing SaGa 2/RS2 - Last Battle>
+* #128: 3x InnoSent
+* #129: Gamma
+* #130: 3x Mover, Soulflyr
+* #131: MuudSuud
+* #132: Daedalus, Luminesc
+* #133: Promethe
+* #134: 3x GrtMalbo
+* #135: 2x VectChim
+* #136: 2x FendDrgn
+* #137: NinjaMas, Yojimbo
+* #138: Landworm
+* #139: Haokah, Haniel, Luminesc
+* #140: 2x SkullEtr
+* #141: Brachios, Tyranosa
+* #142: Demon
+
+ === Group #8 ===
+! <BGM: Romancing SaGa 3/RS3 - Last Battle>
+* #143: CrysDrgn
+* #144: 2x Alv, IrnGiant
+* #145: 2x GrtDemon, Thor
+* #146: Azrael, Thor, Chronos
+* #147: Hecto, Abaddon
+* #148: 2x DarkBehe
+* #149: MoonGodd, Vilia, Hecto
+* #150: Chronos, Vilia, Thor
+* #151: ShldDrgn, Valefor
+* #152: ErthEatr
+* #153: 2x NinjaMas
+* #154: DonTonbe
+* #155: SoulEatr
+* #156: 4x Kum Kum
+* #157: Goddess
+
+ === Group #9 ===
+! <BGM: Bravely Default Flying Fairy/BDFF - That Person's Name Is>
+* #158: Carbuncl
+* #159: Catoblep
+* #160: Seraphim
+* #161: Titan
+* #162: 2x MistDrgn
+* #163: Ashura                         [100% Drop: Guard Bracelet]
+* #164: Diabolos
+* #165: Valigarm
+* #166: Alexande
+* #167: 2x Odin
+* #168: Leviatha
+* #169: Bahamut
+
+ === Group #10 ===
+! <BGM: Final Fantasy 3/FF3 - Final Battle>
+* #170: 2x SlvrLobo, GardLedr          [100% Drop: Hi-Potion]
+* #171: PhaTrain                       [100% Drop: Tent]
+* #172: 2x MtrDrive, Dadaluma
+* #173: Numbr024
+* #174: LeftClaw, Rt.Blade, Numbr128   [100% Drop: Tent]
+* #175: 2x Crane
+* #176: MissileB, ReflectB, AirForce, LaserUni, ManaJamr [100% Drop: X-Potion]
+* #177: Mom Bomb, 4x Bomb, Grenade
+* #178: YmirHead, AngWhelk             [100% Drop: Dragon Claw]
+* #179: UltimaWe                       [100% Drop: Ultima Weapon]
+
+ === Group #11 ===
+! <BGM: Final Fantasy 4/FF4 - The Final Battle>
+* #180: 3x Tentacle, DesrtTrp          [100% Drop: X-Ether]
+* #181: Wisp, Dullahan                 [100% Drop: Reincarnation]
+* #182: KingBehe                       [100% Drop: Behemoth Suit]
+* #183: Nightmar, Tantaria
+* #184: 2x Chadarno
+* #185: KTonberr                       [100% Drop: Kitchen Knife]
+* #186: DthRider                       [100% Drop: Black Robe]
+* #187: Proserpi                       [100% Drop: White Robe]
+* #188: Tricerat
+* #189: Sam.Soul                       [100% Drop: Master's Scroll]
+* #190: 2x SoulSavr, Wrexsoul
+* #191: ---- None ---- 
+
+ === Group #12 ===
+! <BGM: Final Fantasy 5/FF5 - The Last Battle>
+* #192: Omniscen
+* #193: Gilgames
+* #194: GilTurtl
+* #195: Omega
+* #196: Shinryu
+
+ === Group #13 ===
+! <BGM: Chrono Trigger/CT - Battle with Magus>
+* #197: 2x LifeTrap
+* #198: Adamanti
+* #199: GstTrain
+* #200: 2x Erebus, Hidon, 2x Nyx       [100% Drop: Dead Soul]
+* #201: Sandy, Mindy, Cindy
+* #202: Ketu, Rahu, Inferno
+* #203: Colossus, Wolfrmtr, Vanguard
+* #204: Guardian
+* #205: UltiBust                       [100% Drop: Ultima Weapon]
+
+ === Group #14 ===
+! <BGM: Final Fantasy 7/FF7 - One Winged Angel>
+* #206: StrmDrgn                       [100% Drop: Force Armor]
+* #207: ErthDrgn                       [100% Drop: Rubber Suit]
+* #208: YlloDrgn                       [100% Drop: Lambent Hat]
+* #209: SkulDrgn                       [100% Drop: Bone Club]
+* #210: BlueDrgn                       [100% Drop: Pinwheel]
+* #211: RedDragn                       [100% Drop: Mutsunokami]
+* #212: HolyDrgn                       [100% Drop: Safety Bit]
+* #213: 4x FrzeDrgn                    [100% Drop: Force Shield]
+* #214: Kraken
+* #215: Lich
+* #216: Tiamat
+* #217: Marilith
+
+ === Group #15 ===
+! <BGM: Final Fantasy 8/FF8 - The Extreme>
+* #218: Cerberus                       [100% Drop: Bracer]
+* #219: 2HedDrgn                       [100% Drop: Maximillian]
+* #220: Echidna                        [100% Drop: Lordly Robes]
+* #221: Ahriman                        [100% Drop: Grand Helm]
+* #222: 2x Skulnant, 2x Scarmili       [100% Drop: Earth Greaves]
+* #223: 2x Cagnazzo                    [100% Drop: Water Cuffs]
+* #224: 2x Barbaric                    [100% Drop: Wind Corsage]
+* #225: 2x Rubicant                    [100% Drop: Flame Cape]
+* #226: Ultima

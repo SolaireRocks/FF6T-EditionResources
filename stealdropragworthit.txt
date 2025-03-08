@@ -1,0 +1,316 @@
+Worthwhile Drops/Steals/Ragnarok Morphs
+
+Note: For things such as Golden Apples and Soma Drop, the best method to farm these is via "MuudSuud" in Kefka's Tower. (Path #2, the room 
+right after the toilet area.) He has a 100% Ragnarok morph rate, 25% chance to become a Soma Drop. Bet this at the Coliseum for Golden Apples. 
+As for X-Potions, you can repeat the "Finding Food" quest in WoR Albrook by flying back and forth to grab fish for the bartender.
+
+Also, I'll list only the stuff worth aiming for within reason and not trying to grind say, Hi-Ethers or something at a 4% rate off a level 70+ 
+monster that takes forever. Not to mention a lot of drops can be easily acquired at the Coliseum, so refer to that file for a guide if you're 
+wanting a specific item.
+
+One more thing: If you're trying to cheat the system and get a rare drop, the game determines the drop when you enter the battle, however, if 
+you don't get the item you want, reload and do another fight to change the RNG, then try again. Helps mostly for monster-in-a-box or certain 
+boss fights.
+
+
+AngWhelk [101] (Daryl's Tomb - Monster-in-a-box)
+Drop: 100% Dragon Claw (Drops 2 if you kill head+shell at the same time.)
+
+Ankheg [034] (Outside Thamasa WoB)
+Steal: 1/4 Gaia Gear
+
+Apocryph [00C] (Floating Continent WoB)
+Steal: 1/4 Lunar Curtain
+
+Appariti [156] (Phantom Train - Monster-in-a-box)
+Drop: 100% Hyper Wrist (Farm on the Veldt early on.)
+
+Basilisk [099] (North of Narshe WoR, Grassland)
+Drop: 4% Blood Sword
+
+Behemoth [020] (Floating Continent WoB)
+Steal: 1/4 Gauntlet
+Drop: 4% X-Potion (Only mentioning this since you'd be farming Gauntlets.)
+
+Belmodar [015] (Outside South Figaro WoB)
+Steal: 1/4 Mythril Claw
+
+BkLizard [0A7] (Jidoor's Forests WoR)
+Drop: 8% Stoneblade
+
+BlkForce [00D] (Kefka's Tower Path #2 - Toilet Room)
+Drop: 4% Black Robe
+Ragnarok Morph Chance: 1/2 Hermes Sandals (25% to obtain.)
+
+BlueFlan [047] (Magitek Research Facility - Room with Cid/Save Point)
+Drop: 8% Tent, 4% Magicite Fragment (Good grind spot for learning magic.)
+
+Bomb [04F] (Phantom Forest/Train)
+Drop: 4% Ninja Gear (Nice armor, but don't break your back trying for it.)
+
+Brainpan [04A] (Floating Continent WoB)
+Steal: 1/4 Earrings
+
+Cactuar [04C] (Maranda's Desert WoR)
+Drop: 4% Reincarnation (Rare encounter, be warned.)
+Ragnarok Morph Chance: 1/2 Soma Drop (25% to obtain.)
+
+Cactus [032] (Maranda's Desert WoR)
+Steal: 1/4 Ether
+
+Carbuncl [1DA] (Narshe WoB)
+Steal: 1/4 Reflect Ring
+
+Catoblep [185] (Narshe WoB)
+Steal: 1/4 Stoneblade
+
+Chimera [10F] (Outside Thamasa WoB)
+Steal: 1/4 Hyper Wrist
+
+Cockatri [008] (Outside South Figaro/Mt. Koltz WoB)
+Steal: 3/4 Gold Needle (Great for stocking up/saving Gil early on.)
+Drop: 8% Plumed Hat (If you're farming the above.)
+
+Covert [067] (Phoenix Cave)
+Drop: 8% Black Hood, 4% Fuma Shuriken
+
+Crane [10E] (Right Crane, Vector Escape)
+Steal: 1/4 Drill (In the event you didn't want to spend money in Figaro. Can still steal and sell.)
+
+Demiurok [062] (South Figaro Cave, First Time)
+Steal: 1/4 Remedy (Good spot to grind a few out early game.)
+
+Demon [129] (Kefka's Tower, Warring Triad)
+Steal: 1/4 Gungnir
+
+Devourer [096] (North of Narsh WoB, Grasslands)
+Steal: 1/4 Remedy
+
+Diabolos [1F0] (Doma Castle WoR)
+Steal: 1/4 Floral Fallal
+
+Domovoi [040] (Triangle Island WoB)
+Steal: 100% Tent (Excellent place to farm these in WoB, as they're 2000 Gil a pop otherwise.)
+
+Dragon [083] (Floating Continent WoB)
+Drop: 4% Enhancer Sword (Very worthwhile drop, as you don't get Dispel till late game and this alone will save you some headaches.)
+
+Dropper [08B] (Figaro Castle Basement WoR)
+Steal: 1/4 Elixir
+Drop: 4% Ether (Just listing it since you'll be farming the above anyway.)
+
+Dstroide [075] (Magitek Research Facility, Tank Room)
+Steal: 1/4 Flash (Good money to sell or if you didn't buy it in Figaro.)
+
+DthRider [1D6] (Inside Zone Eater, Monster-in-a-box)
+Steal: 1/4 Balmung
+
+Fawn [05E] (Eidolon Cave)
+Steal 1/4 White Cape
+
+Fidor [01C] (Narshe Snowfield Defense WoB)
+Steal: 3/4 Phoenix Down (Nice supply while heading to Kefka.)
+
+Fiend [127] (Kefka's Tower, Warring Triad)
+Steal: 1/4 Mace of Zeus
+
+GilTurtl [116] (Sealed Cave WoB/WoR)
+Steal: 1/4 Gold Hairpin
+
+Gilgames [1AB] (Coliseum WoR)
+Steal: 1/4 Genji Glove
+
+Goddess [128] (Kefka's Tower, Warring Triad)
+Steal: 1/4 Save the Queen
+
+Gorgimer [07E] (Cave on the Veldt)
+Steal: 1/4 Blood Lance
+
+Grimoire [1DF] (Labyrnth of the Ancients, Forbidden Land Eureka)
+Steal: 3/4 Magicite Fragment
+
+GrndBehe [0E0] (Kefka's Tower Path #1 - First Cave)
+Drop: 4% Snow Scarf
+
+GtMantis [0D2] (Outside Narshe WoR, Grasslands)
+Drop: 4% Balmung
+
+Haokah [0A8] (Kefka's Tower, Eidolon Tube Hallway)
+Drop: 4% Gaia's Hammer
+
+Harveste [04E] (Zozo)
+Drop: 4% Dragoon Boots
+
+HilGigas [053] (Zozo)
+Drop: 4% Gigas Glove (Only spot to farm in WoB, but buyable in WoR Albrook.)
+
+Inferno [0F6] (Kefka's Tower)
+Steal: 1/4 Thunder Shield
+
+IronClaw [028] (Zozo)
+Steals: 1/4 Kaiser Knuckle
+Drop: 4% Needle Dagger
+
+Kefka [1D0] (Floating Continent WoB)
+Steal: 3/4 Gold Hairpin
+
+Kraken [1E5] (Cave on the Veldt - Crystal Room)
+Drop: 8% Ice Shield
+
+Kum Kum [04D] (Crystal Tower)
+Steal: 1/4 Moogle Suit
+
+Lamia [02A] (Magitek Research Facility - Eidolon Tube Room)
+Steal: 1/4 Elixir (GREAT place to farm these early game.)
+
+LamiaQen [0E6] (Daryl's Tomb/Mt. Zozo)
+Steal: 1/4 Elixir
+Drop: 4% Barrette
+
+Lich [1E4] (Daryl's Tomb - Crystal Room)
+Drop: 8% Rubber Costume
+
+Lilith [0EE] (Owzer's Mansion)
+Drop: 4% Gold Hairpin
+
+LitworCh [03D] (Vector Grasslands)
+Steal: 1/4 Tent
+
+MTekInfa [110] (Magitek Factory)
+Drop: 4% Rune Blade
+
+Mandrago [0AF] (Outside Narshe WoB)
+Drop: 4% Star Pendant
+
+Marilith [1E3] (Phoenix Cave - Crystal Room)
+Drop: 8% Minerva Bustier
+
+Misfit [0A4] (Floating Continent WoB)
+Steal: 1/4 Alarm Earring
+
+MistDrgn [1E1/1E2] (Thamasa WoR)
+Steal: 1/4 Mirage Vest (Can be stolen twice - Dragon/Mist form are separate targets.)
+
+Misty [009] (Owzer's Mansion)
+Steal: 1/4 Moogle Suit
+
+Mom Bomb [1AC] (Burning House)
+Steal: 1/4 Flame Whip
+
+MtrDrive [06C] (Outside Kohlingen/Jidoor WoB)
+Steal: 1/4 Twist Headband
+
+MuudSuud [016] (Kefka's Tower #2 - Room after the Toilet Room)
+Ragnarok Morph Chance: 100% (25% for Ether, Hi-Ether, X-Ether, or Soma Drop.)
+
+NghtHawk [037] (Ancient Castle)
+Steal: 1/4 Durandal
+
+NinjaMas [1B9] (Kefka's Tower - Toilet Room)
+Drop: 4% Narigitsune
+
+Numbr024 [1AE] (Magitek Research Facility)
+Steal: 1/4 Blood Sword, 3/4 Rune Blade
+Drop: 68% Flametongue, 20% Icebrand, 8% Thunder Blade, 4% Thunder Blade
+
+Numbr128 [10B] (Escape from Vector)
+Steal: 1/4 Kikuichimonji
+
+Ochiudo [1B8] (Doma Area WoR, Grassland)
+Steal: 1/4 Ward Bangle
+
+Odin [1E9] (Ancient Castle)
+Steal: 1/4 Merit Award (Can't be stolen if his sword is in his left hand)
+
+Peeper [072] (Solitary Island)
+Steal: 1/4 X-Potion (Might be faster than the bar quest in Albrook.)
+Ragnarok Morph Chance: 1/32 Megalixir (25% to obtain this or an Elixir.)
+
+Pineappl [0F7] (Phoenix Cave)
+Drop: 8% Flame Rod
+
+Promethe [105] (Kefka's Tower - Inferno's Room)
+Steal: 1/4 Particle Bomb
+
+Rudra [069] (Outside Kohlingen WoB)
+Steal: 1/4 Phoenix Down
+
+Satellit [044] (Imperial Camp - Monster-in-a-box)
+Drop: 100% Green Beret (Farm them early on the Veldt.)
+
+SeraphCl [195] (Floating Continent WoR)
+Steal: 1/4 White Robe, 3/4 Holy Rod
+
+Seraphim [1D8] (Tzen)
+Steal: 1/4 Feather Boots
+
+ShivaCln [182] (Floating Continent WoR)
+Drop: 8% Ice Rod
+Ragnarok Morph Chance: 1/2 (25% for Icebrand, Ice Rod, Arondight, or Ice Shield.)
+
+ShldDrgn [1C6] (Labyrinth of the Ancients)
+Drop: 8% Genji Shield
+
+SirenCln [183] (Floating Continent WoR)
+Drop: 8% Diamond Bell
+Ragnarok Morph Chance: 1/2 (25% for Chocobo Brush, Magical Brush, Lamia Brush, or Rainbow Brush.)
+
+Snoll [19F] (Narshe Mines WoR (Quest "Night Patrol"))
+Drop: 8% Ice Rod
+Ragnarok Morph Chance: 1/2 (25% for Icebrand, Ice Rod, Arondight, or Ice Shield.)
+
+Spectre [0B6] (Narshe Mines WoB - Guard Training Area)
+Drop: 4% Ice Rod (Nice money chance with Terra, Banon, and Edgar. 15,000 Gil each.)
+
+Sprinter [087] (Dinosaur Forest WoR, Grasslands)
+Drop: 8% Crystal Mail (Amazingly easy Gil in the WoR. Level up and farm them safetly using Vanish.)
+
+Tantaria [1DE] (Owzer's Mansion WoR, Diary (repeatable, just re-check))
+Steal: 3/4 Magicite Fragment
+
+TestRidr [09C] (Outside Narshe Mines WoR)
+Steal: 1/4 Partisan
+Drop: 4% Dragon Spear
+
+Thor [OFB] (Forbidden Land Eureka)
+Steal: 1/4 Shock Whip
+Drop: 8% Protect Ring
+Ragnarok Morph Chance: 1/2 (25% for Thunder Blade, Thunder Rod, Shock Whip, or Thunder Shield.)
+
+Tiamat [1E6] (Mt. Zozo - Crystal Room)
+Drop: 8% Zephyr Cloak
+
+Titan [1F1] (Narshe Mines WoR - Valigarmanda Room)
+Steal: 1/4 Gaia's Hammer
+
+Tonberri [0FF] (Narshe WoR (Quest "Night Patrol"))
+Drop: 8% Minerva Bustier
+
+Tonberry [054] (Umaro's Cave WoR)
+Drop: 4% Cat Hood
+
+TunlArmr [104] (Locke's Scenario)
+Steal: 100% Air Knife
+
+Twinscyt [08F] (Cave on the Veldt)
+Drop: 4% Chainsaw
+
+UndCheru [1D4] (Inside Zone Eater - Gogo's Room)
+Drop: 4% Cachusha
+
+Valefor [1BD] (Entrance of Eureka)
+Drop: 4% Power Belt
+
+VeilDanc [052] (Zozo)
+Drop: 4% Thief's Knife
+Ragnarok Morph Chance: 1/8 (25% for Main Gauche, Dancing Dagger, Assassin's Dagger, or Kitchen Knife.)
+
+Wrexsoul [122] (Doma Castle WoR - Cyan's Dream)
+Steal: 1/4 Reflect Ring
+
+Wyvern [081] (Vector Grasslands)
+Drop: 4% Dragoon Boots
+
+Yojimbo [007] (Kefka's Tower #2 - Toilet Room)
+Steal: 1/4 Murasame
+Ragnarok Morph Chance: 1/4 (25% for Kotetsu, Bizen Osafune, Kikuichimonji, or Muramasa.)

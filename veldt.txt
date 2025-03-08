@@ -1,0 +1,679 @@
+Using the below information, you can use the following to find a specific enemy:
+
+1) Figure out which formation group below contains the enemy that you want.
+2) Fight on the Veldt and determine which group contains the encounter you're on.
+3) Repeat (2) until the *NEXT* group contains the enemy you want.
+4) Perform an emulator save state (not in-game save state).
+5) Fight a battle on the Veldt. If it contains your enemy, great! You're done!
+6) If it doesn't, load the save state.
+7) Fight an encounter off-Veldt.
+8) Return to the Veldt.
+9) Repeat steps 4-8 until you find your target enemy.
+
+For example, I'm trying to find HellRidr, which I can see from using "CTRL-F/Find" that
+it's only in formation #10. I go onto the Veldt and encounter a solo SoulEatr, so I
+know that I'm in formation #61. I fight 12 more battles after that, so my last battle
+was an encounter in formation #9 (62, 63, 0-9). I perform a save state, then fight a 
+battle on the Veldt, but run into 3x LivingDe. That's not what I want, so I reload the
+save state, then go fight a battle off of the Veldt. I come back and, luckily, encounter
+HellRidr on my first battle afterwards. I can now cross HellRidr off of my Rages list.
+
+
+ == Veldt Mechanics ==
+(1) Every time you run into an encounter on the Veldt, the following occurs:
+    (a) Increase "group number" by 1.
+    (b) If the group number is 64 or higher, subtract 64 until it's below 64 (or ID%64).
+    (c) Select a random encounter from the list in the new group.
+    (d) If you have not encountered that formation, pick the next one in the group.
+    (d) If it's not a valid Veldt encounter, pick a different one in the same group.
+    (e) If you have not encountered ANY enemies in a group, return to (a).
+(2) Whenever you get into an encounter off the Veldt, the "randomly chosen" encounter from the
+    current pack is changed.    
+(3) Every time you load an in-game save, the system/global save's RNG is increased by 13 and
+    immediately saved, then the group ID is set to that. This may or may not match up with your 
+    save's previous group ID+13, and thus is only a semi-reliable way to increase the group ID 
+    by a fixed amount. I would not rely on this method to find a particularly stubborn enemy,
+    but if you're lucky, the stars may align and it could save you time, or at least pick a 
+    random formation much closer to the one you're going for. 
+(4) The memory address [7E1FA5] contains last encountered formation group after a battle.
+
+
+ == Formation Group # 0 == (0x00)
+* #1: SlvrLobo
+* #2: 2x SlvrLobo
+* #3: 2x Guard
+* #4: 2x Demiurok, 2x SteelBat
+* #5: 2x SlvrLobo, GardLedr
+* #6: 3x Demiurok, 2x Hornet
+* #7: 2x NutEater, LeafBunn
+* #8: 2x LeafBunn
+
+ == Formation Group # 1 == (0x01)
+* #1: 2x NutEater
+* #2: 3x Alacran, DesertSa
+* #3: 2x DesertSa
+* #4: 3x Alacran
+* #5: 2x Alacran, DesertSa
+* #6: 2x Hornet
+* #7: 3x Wererat
+* #8: Hornet, 2x SteelBat
+
+ == Formation Group # 2 == (0x02)
+* #1: 2x Gorgias
+* #2: SlvrLobo, Megalodo
+* #3: 3x Demiurok
+* #4: Belmodar
+* #5: 2x Mu, Belmodar
+* #6: 2x Mu, Cockatri
+* #7: 2x Mu, Cockatri, Belmodar
+* #8: 2x Cockatri
+
+ == Formation Group # 3 == (0x03)
+* #1: 4x Mu
+* #2: MTekArmr, 2x Imp.Sold
+* #3: Wererat, SteelBat
+* #4: MTekArmr
+* #5: 2x RockSlug, Gorgias
+* #6: 3x Cockatri
+* #7: Cockatri, 2x Gorgias
+* #8: Cockatri, 3x RockSlug
+
+ == Formation Group # 4 == (0x04)
+* #1: 2x Zaghrem
+* #2: 2x Cockatri, Gorgias, Zaghrem
+* #3: 2x MTekArmr
+* #4: 2x LesLopro
+* #5: 2x PiscoDmn, Draculdy
+* #6: Sahagin, Nautiloi, LesLopro
+* #7: Nautiloi, Sahagin
+* #8: 2x Sahagin, LesLopro
+
+ == Formation Group # 5 == (0x05)
+* #1: Cockatri, 2x Goblin
+* #2: SlvrLobo, 2x Guard
+* #3: 2x Mu, Goblin
+* #4: 2x Mu, Cockatri, Goblin
+* #5: Wererat, SteelBat
+* #6: 2x Wererat
+* #7: 2x Doberman
+* #8: 3x SahagChf
+
+ == Formation Group # 6 == (0x06)
+* #1: 2x Doberman, Imp.Sold
+* #2: 3x StrayCat
+* #3: 2x StrayCat, 2x NetlHopr
+* #4: 3x NetlHopr
+* #5: 5x ChipRabb
+* #6: Aepyorni, 2x Hedgehog
+* #7: 2x Aepyorni, StrayCat
+* #8: Aepyorni, 2x ChipRabb
+
+ == Formation Group # 7 == (0x07)
+* #1: 2x Hedgehog, 3x ChipRabb
+* #2: 2x NetlHopr, Aepyorni, StrayCat
+* #3: 2x Templar
+* #4: SOLDIER, Officer
+* #5: 2x SOLDIER
+* #6: 4x Imp.Sold, Satellit
+* #7: 3x Doberman
+* #8: LilMurde
+
+ == Formation Group # 8 == (0x08)
+* #1: HvyArmor
+* #2: Ghost, Bomb
+* #3: 3x Ghost
+* #4: SahagChf, 2x Sahagin
+* #5: 2x Ochu, Ghost
+* #6: 2x Ochu, Bomb
+* #7: 2x AnglWhis, Phoebe
+* #8: 3x SteelBat
+
+ == Formation Group # 9 == (0x09)
+* #1: 2x Phoebe, 2x Bomb
+* #2: 2x PiscoDmn, 2x Provoker
+* #3: 4x AnglWhis
+* #4: Phoebe, 2x Oversoul
+* #5: 3x Bomb
+* #6: 2x LivingDe, Bomb
+* #7: 2x LivingDe, Oversoul
+* #8: Cactus, Carrot
+
+ == Formation Group #10 == (0x0A)
+* #1: LivingDe, AnglWhis, 2x Phoebe
+* #2: AnglWhis, 3x Bomb
+* #3: Anguifor, 3x Sahagin
+* #4: 2x Anguifor, SahagChf
+* #5: 2x Guard, 2x Megalodo
+* #6: 3x LivingDe
+* #7: Anguifor, SahagChf
+* #8: HellRidr
+
+ == Formation Group #11 == (0x0B)
+* #1: 2x Corporal, HvyArmor
+* #2: Corporal, Fidor
+* #3: AnglWhis
+* #4: 4x Corporal
+* #5: 2x Corporal, HntHound
+* #6: DrgnFosl
+* #7: 2x Bld.Fang
+* #8: 3x Rudra, MtrDrive
+
+ == Formation Group #12 == (0x0C)
+* #1: 2x BrnCandy, 2x MtrDrive
+* #2: 2x Bld.Fang, 2x Rudra
+* #3: 3x BrnCandy, 2x MtrDrive
+* #4: 2x MtrDrive
+* #5: 2x Rudra, MtrDrive
+* #6: 4x BrnCandy
+* #7: HilGigas
+* #8: 2x Basilisk, Crawler
+
+ == Formation Group #13 == (0x0D)
+* #1: 2x IronClaw
+* #2: VeilDanc
+* #3: VeilDanc, 2x IronClaw
+* #4: Harveste
+* #5: VeilDanc, 2x Harveste
+* #6: 2x IronClaw, Harveste
+* #7: Harveste, HilGigas
+* #8: MagnLodr, 2x LtlMagna
+
+ == Formation Group #14 == (0x0E)
+* #1: Goetia, 2x Stunner
+* #2: 3x Stunner, 2x Goetia
+* #3: 4x Crawler
+* #4: 2x Sergeant, 2x Belzecue
+* #5: MTekInfa, 2x Belzecue
+* #6: MagnLodr, LtlMagna
+* #7: 3x Trapper
+* #8: 2x General
+
+ == Formation Group #15 == (0x0F)
+* #1: General, 2x Onion
+* #2: 4x Onion
+* #3: 3x Trapper, Chaser
+* #4: 3x Onion, Chaser
+* #5: Lamia
+* #6: 3x Commande
+* #7: 2x Cactus, Aeronite
+* #8: Frostbst
+
+ == Formation Group #16 == (0x10)
+* #1: 2x Lukhavi
+* #2: Sprinter, LunarWlf
+* #3: DiveEagl, Sprinter
+* #4: 3x Sprinter
+* #5: 2x Fem.Sold
+* #6: SandFish, BlkDragn
+* #7: 3x DsrtRabb
+* #8: Mandrake
+
+ == Formation Group #17 == (0x11)
+* #1: 2x Ochu, 2x Mandrake
+* #2: Io
+* #3: 3x Hundlegs
+* #4: 2x DrgnFosl
+* #5: DrgnFosl, 3x Bug
+* #6: 3x Korpokkr
+* #7: 6x Bug
+* #8: 2x Don
+
+ == Formation Group #18 == (0x12)
+* #1: Don, 2x Wyvern
+* #2: Wyvern, 2x LitworCh, Korpokkr
+* #3: Korpokkr, 2x Graswyrm
+* #4: Don, Joker
+* #5: 3x Joker
+* #6: 5x LitworCh
+* #7: Draculdy, DrgnZomb
+* #8: 2x Outcast, DrgnZomb
+
+ == Formation Group #19 == (0x13)
+* #1: Draculdy, PiscoDmn, Outcast
+* #2: 2x Provoker
+* #3: 3x Antares
+* #4: Wizard, PiscoDmn, Antares
+* #5: 3x Wizard
+* #6: 3x ImpElite
+* #7: Balloon, Bomb, Grenade
+* #8: 3x Balloon, 3x Bomb
+
+ == Formation Group #20 == (0x14)
+* #1: 2x Ankheg
+* #2: Chimera
+* #3: Devourer, Ankheg
+* #4: 3x Devourer
+* #5: 2x Bonnacon, Mandrake
+* #6: 2x Fawn
+* #7: 5x Bonnacon
+* #8: 2x Fawn, Mandrake
+
+ == Formation Group #21 == (0x15)
+* #1: 2x LandGril, Mandrake
+* #2: 2x Venobenu, Fawn
+* #3: Gigantos
+* #4: 2x Shade
+* #5: RicardMg, Shade
+* #6: 3x RicardMg
+* #7: 2x Gigantos
+* #8: 2x SkyArmor, Spitfire
+
+ == Formation Group #22 == (0x16)
+* #1: SkyArmor, Spitfire
+* #2: Behemoth
+* #3: 2x Misfit, Apocryph
+* #4: Fawn, Apocryph
+* #5: 2x Ninja
+* #6: 2x PlatDrgn, Mindflyr
+* #7: 2x Mindflyr, Apocryph
+* #8: Apocryph, Misfit, 2x Brainpan
+
+ == Formation Group #23 == (0x17)
+* #1: 3x Brainpan
+* #2: Dragon
+* #3: Mindflyr, Fawn, Behemoth
+* #4: 2x Behemoth
+* #5: 2x Ninja, PlatDrgn
+* #6: Malboro
+* #7: Ankheg, Devourer, Chimera
+* #8: 3x Ankheg
+
+ == Formation Group #24 == (0x18)
+* #1: 2x Peeper
+* #2: 3x Cactus, Cactuar
+* #3: 2x Peeper, ErthGurd
+* #4: BlkDragn
+* #5: 4x Tonberri, Daedalus
+* #6: 2x Fafnir
+* #7: 4x Fafnir
+* #8: KilrMnts, Fafnir
+
+ == Formation Group #25 == (0x19)
+* #1: 2x KilrMnts, PoisnLch
+* #2: 2x PoisnLch, 2x Gigntoad
+* #3: 2x DiveEagl, LunarWlf
+* #4: 2x LunarWlf, DiveEagl
+* #5: 3x PoisnLch, DiveEagl
+* #6: Daedalus, Luminesc
+* #7: 2x Tonberri, 2x Luminesc
+* #8: NtWalker, 2x Gigntoad
+
+ == Formation Group #26 == (0x1A)
+* #1: Scorpion, Gigntoad
+* #2: 3x Scorpion
+* #3: Intangir
+* #4: 4x NtWalker
+* #5: 2x VectChim
+* #6: 2x Gatling
+* #7: 2x PurpBava, Gatling
+* #8: 2x VampThrn, Lizard
+
+ == Formation Group #27 == (0x1B)
+* #1: 2x VampThrn
+* #2: VampThrn, 2x Alraune
+* #3: 2x VampThrn, Gatling
+* #4: 2x PurpBava, Gatling, Lizard
+* #5: 2x DsrtRabb, 2x Hundlegs
+* #6: 3x Cactus
+* #7: 2x SandFish, Revnant
+* #8: Revnant, SandFish, Hundlegs
+
+ == Formation Group #28 == (0x1C)
+* #1: Oceanus
+* #2: Oceanus, 3x DsrtRabb
+* #3: 2x FendDrgn
+* #4: Landworm
+* #5: 3x DsrtSaha
+* #6: Borghese, 2x DsrtSaha
+* #7: 2x Borghese, DsrtSaha
+* #8: 2x NeckHntr
+
+ == Formation Group #29 == (0x1D)
+* #1: NeckHntr, Borghese, DsrtSaha
+* #2: Dante
+* #3: 3x Dropper
+* #4: 3x Tonberri
+* #5: 3x Slug
+* #6: Slagworm
+* #7: 3x YellowMo, Slug
+* #8: 2x Bogy
+
+ == Formation Group #30 == (0x1E)
+* #1: 3x Zeveak
+* #2: 2x Zeveak, BkLizard, 3x YellowMo
+* #3: 3x YellowMo
+* #4: Bogy, YellowMo
+* #5: 2x LamiaQen
+* #6: LamiaQen, Vampires, CloudWth
+* #7: DdlyHorr
+* #8: 2x Necroman, CloudWth
+
+ == Formation Group #31 == (0x1F)
+* #1: 2x Exoray, 2x BloodBat
+* #2: 3x Exoray
+* #3: Vampires, 2x Necroman
+* #4: LamiaQen, 2x BloodBat
+* #5: Emeraldi
+* #6: Tonberry
+* #7: 3x Knotty, Imp
+* #8: Tzakmaqi, Illuyank
+
+ == Formation Group #32 == (0x20)
+* #1: Tzakmaqi, 2x Knotty, Imp
+* #2: 3x Illuyank
+* #3: 2x Imp, OniDashr
+* #4: 4x OniDashr
+* #5: Illuyank, 2x OniDashr, 2x Imp
+* #6: 2x LamiaQen
+* #7: DevilFst, 2x Punisher
+* #8: GlasyaLa
+
+ == Formation Group #33 == (0x21)
+* #1: GlasyaLa, DevilFst, Mugbear
+* #2: Mugbear
+* #3: LamiaQen, 2x Punisher
+* #4: Punisher, Mugbear
+* #5: Twinscyt
+* #6: 2x Twinscyt
+* #7: Gorgimer
+* #8: 4x VectorLy
+
+ == Formation Group #34 == (0x22)
+* #1: GrtMalbo, OldDrago, Deathclw
+* #2: 2x SnwPanth
+* #3: TestRidr, Coolness
+* #4: 2x Lukhavi, Coolness
+* #5: 2x Frostbst
+* #6: 4x Coolness
+* #7: SnwPanth, 2x WhtJello
+* #8: 2x PurpBava, 3x WhtJello, Coolness
+
+ == Formation Group #35 == (0x23)
+* #1: WhtJello, Frostbst, Coolness
+* #2: Cassie, 2x RedMarsh
+* #3: 2x OldDrago
+* #4: BldDance, 2x Minity
+* #5: 2x Lilith, AlurRide
+* #6: AlurRide, 3x Minity
+* #7: Lilith
+* #8: BldDance, 4x Wild Cat
+
+ == Formation Group #36 == (0x24)
+* #1: 2x Misty
+* #2: 3x Rafflesi
+* #3: StllLife
+* #4: 2x Neochu
+* #5: St. Elmo, Mahadeva
+* #6: Ourobors, Vivian, Neochu
+* #7: St. Elmo, 2x Ourobors
+* #8: MedsaChk, 2x Vivian
+
+ == Formation Group #37 == (0x25)
+* #1: Sorath, 2x St. Elmo
+* #2: 2x Sorath
+* #3: 3x Revnant
+* #4: GrndBehe, Deathclw, VectorLy
+* #5: FendDrgn
+* #6: 2x Devil
+* #7: 2x FigaroLz, Devil
+* #8: 2x Lunatys, 2x FigaroLz
+
+ == Formation Group #38 == (0x26)
+* #1: 2x Coeurl
+* #2: ArmrdWpn
+* #3: Coeurl, 3x Lunatys
+* #4: Coeurl, Devil, FigaroLz
+* #5: VectorHn, Fem.Sold
+* #6: Face, 2x Al Jabr
+* #7: 2x Al Jabr, Samurai
+* #8: 2x PlutoAmr, 2x Rust
+
+ == Formation Group #39 == (0x27)
+* #1: Cheshire, Coco
+* #2: Schmidt, 2x Rust, PlutoAmr
+* #3: 2x Weredrgn
+* #4: Cheshire, 3x Pandora
+* #5: Weredrgn, 2x Face
+* #6: Cheshire, Samurai, Rust, Coco
+* #7: 2x Haokah, FendDrgn
+* #8: Tricerat
+
+ == Formation Group #40 == (0x28)
+* #1: 2x Tyranosa
+* #2: Tyranosa
+* #3: Brachios
+* #4: Sprinter, GtMantis, 2x Lycaon
+* #5: 4x LeapFrog
+* #6: 2x GtMantis
+* #7: 2x Basilisk, LeapFrog
+* #8: 5x Pineappl
+
+ == Formation Group #41 == (0x29)
+* #1: 2x Sprinter, 2x Lycaon
+* #2: GrndBehe, Deathclw, GrtMalbo
+* #3: 3x GrtMalbo
+* #4: 2x Buck, MedsaChk
+* #5: 2x RuneClaw
+* #6: 3x MedsaChk, Purusa
+* #7: 3x NutEater
+* #8: Aeronite, Carrot
+
+ == Formation Group #42 == (0x2A)
+* #1: 2x FlameDog
+* #2: 3x Pineappl, FlameDog
+* #3: 2x Pineappl, 2x Covert
+* #4: 2x Pineappl, Garm
+* #5: 2x Jam, 3x RedMarsh
+* #6: Garm, 2x RedMarsh
+* #7: Garm, 2x RedMarsh, Chs.Drgn
+* #8: Covert, Jam, Chs.Drgn
+
+ == Formation Group #43 == (0x2B)
+* #1: Jam, Covert
+* #2: Pineappl, 2x FlameDog
+* #3: Mykale, Kamui
+* #4: 5x MedsaChk
+* #5: 2x SkullEtr
+* #6: Corpse, Cassie, Mykale
+* #7: 4x NutEater
+* #8: Amduscia, Baalzeph
+
+ == Formation Group #44 == (0x2C)
+* #1: Corpse, Cassie, Baalzeph
+* #2: Amduscia, Kamui
+* #3: Samurai
+* #4: 2x MagicPot
+* #5: 6x BlueFlan
+* #6: 4x BlueFlan
+* #7: Lamia, 3x BlueFlan
+* #8: Ankheg, Chimera
+
+ == Formation Group #45 == (0x2D)
+* #1: 2x Dstroide
+* #2: 2x Lamia, Dstroide
+* #3: Titania, Shade, RicardMg
+* #4: RicardMg, MagiDrgn, Shade
+* #5: 2x RicardMg, MagiDrgn
+* #6: 2x Shade, MagiDrgn
+* #7: 2x Ochiudo
+* #8: Outsider, Ochiudo
+
+ == Formation Group #46 == (0x2E)
+* #1: 2x Outsider
+* #2: Fortis, DthMachi, DuelArmr
+* #3: Fortis, 2x Tonberri, DthMachi
+* #4: DthMachi, 2x DuelArmr
+* #5: 3x Fortis
+* #6: 2x VectorHn, Commande
+* #7: 2x VectorHn
+* #8: Cartagra, 2x WilloWsp
+
+ == Formation Group #47 == (0x2F)
+* #1: GoldBear, WilloWsp
+* #2: 3x Cartagra
+* #3: 2x GoldBear
+* #4: 2x Darkside
+* #5: Darkside, 2x Spectre
+* #6: 4x Kum Kum
+* #7: 2x Kum Kum
+* #8: 2x Thor, Chronos
+
+ == Formation Group #48 == (0x30)
+* #1: 2x Aeronite
+* #2: 3x Cactus
+* #3: 2x Carrot
+* #4: Apanda, BkLizard
+* #5: UndCheru, Amduscia, Mykale
+* #6: UndCheru, 2x Corpse
+* #7: UndCheru, Kamui, Cassie
+* #8: <Not on Veldt> :: Imp.Sold
+
+ == Formation Group #49 == (0x31)
+* #1: 3x BloodBat, Vampires
+* #2: 2x Purusa
+* #3: Titania, MagiDrgn, Shade
+* #4: Vanguard, InnoSent
+* #5: 2x Vanguard
+* #6: Promethe
+* #7: Helldive, 2x Colossus
+* #8: Gamma
+
+ == Formation Group #50 == (0x32)
+* #1: 3x InnoSent
+* #2: 3x Junk
+* #3: ProtoAmr
+* #4: 2x ProtoAmr
+* #5: ProtoAmr, 2x Onion
+* #6: 5x Onion
+* #7: 2x MagnLodr
+* #8: 4x LtlMagna
+
+ == Formation Group #51 == (0x33)
+* #1: MegaArmr
+* #2: Captain
+* #3: 2x Templar, 2x Imp.Sold
+* #4: 4x Balloon
+* #5: 2x Imp.Sold
+* #6: 4x MtlHitmn, Helldive
+* #7: 3x MtlHitmn
+* #8: Colossus, Vanguard
+
+ == Formation Group #52 == (0x34)
+* #1: 4x Sergeant
+* #2: MegaArmr, ProtoAmr
+* #3: Sergeant
+* #4: Naude
+* #5: 2x Samurai
+* #6: Pandora, 2x Samurai
+* #7: Al Jabr, 2x Vampyr
+* #8: 3x Vampyr
+
+ == Formation Group #53 == (0x35)
+* #1: RicardMg, Alchymia, Traveler
+* #2: 2x BlkForce
+* #3: BlkForce, Soulflyr, DemonKht
+* #4: NinjaMas, Yojimbo
+* #5: Maiden, 2x DemonKht
+* #6: 3x Mover, Soulflyr
+* #7: MuudSuud
+* #8: 2x Daedalus
+
+ == Formation Group #54 == (0x36)
+* #1: 2x Mandrago, LeafBunn
+* #2: Titania, Alchymia, Traveler
+* #3: 2x MTekArmr
+* #4: Tonber.M
+* #5: NghtHawk
+* #6: 2x Tonber.M
+* #7: 2x NghtHawk
+* #8: PitFiend, Alchymia
+
+ == Formation Group #55 == (0x37)
+* #1: Deep One
+* #2: Titania, Deep One
+* #3: 2x Deep One
+* #4: 2x PitFiend
+* #5: 2x Domovoi
+* #6: 2x Domovoi, Goblin
+* #7: Numbr024
+* #8: DonTonbe
+
+ == Formation Group #56 == (0x38)
+* #1: 2x Alv, IrnGiant
+* #2: 2x NinjaMas, Yojimbo
+* #3: 2x Mover
+* #4: Nelapa
+* #5: BlkForce, 2x Soulflyr
+* #6: <Not on Veldt> :: Kefka
+* #7: LeftClaw, Rt.Blade, Numbr128
+* #8: 3x Opinicus
+
+ == Formation Group #57 == (0x39)
+* #1: SahagChf, Opinicus
+* #2: Promethe
+* #3: MissileB, ReflectB, AirForce, LaserUni, ManaJamr
+* #4: Sahagin, Anguifor, Opinicus
+* #5: LifeTrap
+* #6: <Not on Veldt> :: BlkForce, Myrmecol, Valefor
+* #7: 2x LifeTrap
+* #8: Alv, IrnGiant
+
+ == Formation Group #58 == (0x3A)
+* #1: NghtHawk, 2x Silenus
+* #2: Kum Kum, 2x SoulEatr
+* #3: Traveler, MagiDrgn
+* #4: CrysDrgn
+* #5: 2x CrysDrgn
+* #6: DarkBehe
+* #7: 2x ShldDrgn
+* #8: <Not on Veldt> :: Long Arm, Face, ShortArm
+
+ == Formation Group #59 == (0x3B)
+* #1: Yama, Traveler
+* #2: GrtDemon, 2x Valefor
+* #3: Azrael, Thor, Chronos
+* #4: <Not on Veldt> :: Orthros
+* #5: Appariti
+* #6: 2x DarkBehe
+* #7: 2x Yama, Traveler
+* #8: NghtHawk, Silenus
+
+ == Formation Group #60 == (0x3C)
+* #1: Titania, Yama, Traveler
+* #2: Hecto, Abaddon
+* #3: ShldDrgn, Valefor
+* #4: 2x Myrmecol
+* #5: Chronos, MoonGodd, Hecto
+* #6: <Not on Veldt> :: 3x Imp.Sold
+* #7: Alchymia, Traveler
+* #8: MoonGodd, Vilia, Hecto
+
+ == Formation Group #61 == (0x3D)
+* #1: 2x GrtDemon, Thor
+* #2: Chronos, Vilia, Thor
+* #3: Haokah, Haniel, Luminesc
+* #4: 3x Balloon, 3x Grenade
+* #5: 2x Haniel, Soulflyr
+* #6: SoulEatr
+* #7: Nightmar, Chronos, MoonGodd
+* #8: ErthEatr
+
+ == Formation Group #62 == (0x3E)
+* #1: Imp.Sold
+* #2: <Not on Veldt> :: 
+* #3: <Not on Veldt> :: 
+* #4: <Not on Veldt> :: 
+* #5: <Not on Veldt> :: 
+* #6: <Not on Veldt> :: ZoneEatr
+* #7: <Not on Veldt> :: 
+* #8: <Not on Veldt> :: Officer
+
+ == Formation Group #63 == (0x3F)
+* #1: <Not on Veldt> :: 
+* #2: <Not on Veldt> :: Kefka
+* #3: RicardMg, Alchymia
+* #4: <Not on Veldt> :: Cadet
+* #5: <Not on Veldt> :: Haniel
+* #6: <Not on Veldt> :: Omniscen
+* #7: <Not on Veldt> :: 
+* #8: <Not on Veldt> :: UltiBust

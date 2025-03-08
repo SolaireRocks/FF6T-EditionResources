@@ -1,0 +1,4350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Important for responsiveness -->
+    <title>FFVI T-Edition Weapon List</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto; /* Center the content */
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .version-info {
+            text-align: right;
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+		.version-info p {
+			margin: 2px;
+		}
+
+       /* Sticky Navigation */
+        .weapon-nav {
+            display: flex;
+            flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            background-color: #007bff; /* Background for the sticky nav */
+            padding: 10px 0; /* Add some padding */
+            position: sticky; /* Make it sticky */
+            top: 0;         /* Stick to the top */
+            z-index: 100;    /* Ensure it's above other content */
+        }
+
+        .weapon-nav a {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #fff;  /* White background for links */
+            color: #007bff;         /* Blue text */
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease; /* Smoother transition */
+            font-size: 0.9rem;
+			text-align: center;
+            border: 1px solid #007bff; /* Add a border */
+        }
+
+        .weapon-nav a:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            color: #fff;              /* White text on hover */
+             border: 1px solid #0056b3;
+        }
+
+
+        .weapon-section {
+            margin-bottom: 40px;
+        }
+
+        .weapon-section h2 {
+			display: flex;
+			align-items: center;
+			gap: 1rem;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+			font-size: 1.5rem;
+        }
+		.weapon-section h2 img{
+			width: 2rem;
+			height: 2rem;
+			margin-right: .5rem;
+		}
+
+        .weapon-table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: auto; /*  table layout */
+        }
+
+
+       .weapon-table th,
+        .weapon-table td {
+            border: 1px solid #dee2e6;
+            padding: 12px;
+            text-align: left;
+			vertical-align: middle;
+            word-wrap: break-word; /*  for long words */
+        }
+
+
+        .weapon-table th {
+            background-color: #e9ecef;
+            color: #495057;
+            font-weight: 600;
+        }
+
+        .weapon-table tr:nth-child(odd) {
+			background-color: #f5f5f5;
+		}
+
+        .weapon-table td:first-child {  /* Weapon Number */
+           text-align: center;
+           width: 5%;
+        }
+		.weapon-table td:nth-child(2) { /*weapon name*/
+			min-width: 8.5rem;
+		}
+
+        .stat-boost {
+            color: #28a745;
+        }
+		.stat-boost-neg {
+			color: #dc3545;
+		}
+		.character-icon{
+			width: 20px; /* Or whatever size you desire */
+			height: 20px;
+			margin: 0 2px; /* Small spacing between icons */
+		}
+
+        .attribute-cell {
+            font-weight: bold;
+        }
+
+        .attribute-fire { color: #dc3545; }
+        .attribute-ice { color: #007bff; }
+        .attribute-thunder { color: #ffc107; }
+        .attribute-light { color: #6f42c1; }
+        .attribute-wind { color: green; }
+        .attribute-dark { color: #707070; }
+        .attribute-earth { color: #8B4513;}
+        .attribute-water {color: #39f;}
+
+		.top-link {
+            display: inline-block; /*  to apply padding/margin */
+			color: white;
+			text-decoration: none;
+            padding: 5px;
+
+		}
+		.top-link:hover {
+			text-decoration: underline;
+		}
+		footer {
+			margin-top: 3rem;
+			text-align: center;
+		}
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) { /* Adjust as needed for your design */
+            .weapon-table {
+                font-size: 0.8rem; /* Smaller font on smaller screens */
+            }
+            .weapon-table th,
+            .weapon-table td {
+                padding: 8px; /* Less padding */
+            }
+              .weapon-nav {
+                justify-content: space-around; /*  on smaller screens */
+            }
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container" id = "top">
+        <h1>FFVI T-Edition Weapon List</h1>
+
+        <div class="version-info">
+			<p>Last Updated: 12/8/2022</p>
+            <p>Version: 3.0.5</p>
+            <p>EX： 2.0.5</p>
+        </div>
+
+        <nav class="weapon-nav">
+            <a href="#daggers">Daggers</a>
+            <a href="#swords">Swords</a>
+            <a href="#knight-swords">Knight Swords</a>
+            <a href="#dark-swords">Dark Swords</a>
+            <a href="#katana">Katana</a>
+            <a href="#ninjato">Ninjato</a>
+            <a href="#lances">Lances</a>
+            <a href="#axes">Axes</a>
+            <a href="#brushes">Brushes</a>
+            <a href="#claws">Claws</a>
+            <a href="#rods">Staves/Rods/Canes</a>
+            <a href="#gambling">Gambling Items</a>
+            <a href="#whips">Whips/Bells</a>
+            <a href="#boomerangs">Boomerangs/Shurikens</a>
+        </nav>
+
+
+        <section class="weapon-section" id="daggers">
+            <h2><img src="img/knife.png" alt="Dagger Icon"> Daggers <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00</td>
+                        <td>Dagger</td>
+                        <td>14</td>
+                        <td>130</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><img src="img/weapon/000.png" alt="Dagger"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">An easy-to-use weapon for self-defense.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Mythril Knife -->
+					<tr>
+						<td>01</td>
+						<td>Mythril Knife</td>
+						<td>22</td>
+						<td>130</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td><img src="img/weapon/001.png" alt="Mythril Knife"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A knife made from the precious metal, Mythril.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Main Gauche -->
+					<tr>
+						<td>02</td>
+						<td>Main Gauche</td>
+						<td>32</td>
+						<td>130</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +2</span>, <span class="stat-boost">Evasion +10</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/002.png" alt="Main Gauche"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A dagger not only useful for attacking, but also defending.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Air Knife -->
+					<tr>
+						<td>03</td>
+						<td>Air Knife</td>
+						<td>40</td>
+						<td>130</td>
+						<td class="attribute-cell attribute-wind">Wind</td>
+						<td>-</td>
+						<td><span class="stat-boost">Speed +1</span>, <span class="stat-boost">Magic +1</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/003.png" alt="Air Knife"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A knife with a special blade that creates vacuums.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Thief's Knife -->
+					<tr>
+						<td>04</td>
+						<td>Thief's Knife</td>
+						<td>62</td>
+						<td>130</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Speed +2</span>, <span class="stat-boost">Evasion +5</span></td>
+						<td>Does "Mug" occasionally.</td>
+						<td><img src="img/weapon/004.png" alt="Thief's Knife"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A knife preferred by thieves. Does "Mug" occasionally.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Needle Dagger -->
+					<tr>
+						<td>64</td>
+						<td>Needle Dagger</td>
+						<td>75</td>
+						<td>140</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Speed +2</span>, <span class="stat-boost">Evasion +5</span></td>
+						<td>Ignores row.</td>
+						<td><img src="img/weapon/064.png" alt="Needle Dagger"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A sharp needle-like knife used for throwing.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Dancing Dagger -->
+					<tr>
+						<td>06</td>
+						<td>Dancing Dagger</td>
+						<td>68</td>
+						<td>130</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Speed +6</span>, <span class="stat-boost">Evasion +15</span></td>
+						<td>Performs a random "Dance". 50% chance of activating.</td>
+						<td><img src="img/weapon/006.png" alt="Dancing Dagger"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A dagger said to house a dancer's soul. Sometimes does "Dance" effect.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Assassin's Dagger -->
+					<tr>
+						<td>05</td>
+						<td>Assassin's Dagger</td>
+						<td>81</td>
+						<td>130</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +3</span>,
+							<span class="stat-boost">Speed +2</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost">Evasion +10</span>
+						</td>
+						<td>Sometimes instant kills.</td>
+						<td><img src="img/weapon/005.png" alt="Assassin's Dagger"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A dagger made for assassination. Sometimes instant kills.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Gladius -->
+					<tr>
+						<td>07</td>
+						<td>Gladius</td>
+						<td>102</td>
+						<td>130</td>
+						<td class="attribute-cell attribute-light">Light</td>
+						<td>-</td>
+						<td><span class="stat-boost">Magic +2</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/007.png" alt="Gladius"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A knife imbued with holy power.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Valiant Knife -->
+					<tr>
+						<td>08</td>
+						<td>Valiant Knife</td>
+						<td>???</td>
+						<td>130</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Evasion +5</span>, <span class="stat-boost">Magic Evasion +5</span></td>
+						<td>As HP is lost, damage increases.</td>
+						<td><img src="img/weapon/008.png" alt="Valiant Knife"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A knife that shows its true power as the user loses HP. As HP is lost, damage increases.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Kitchen Knife -->
+					<tr>
+						<td>63</td>
+						<td>Kitchen Knife</td>
+						<td>140</td>
+						<td>80</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +4</span>,
+							<span class="stat-boost">Speed +4</span>,
+							<span class="stat-boost">Magic +7</span>,
+							<span class="stat-boost-neg">Evasion -20</span>,
+							<span class="stat-boost-neg">Magic Evasion -20</span>
+						</td>
+						<td>Ignores row. Increased damage to humans.</td>
+						<td><img src="img/weapon/063.png" alt="Kitchen Knife"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A kitchen knife used by the cursed Tonberry beastmen.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Orichalcum -->
+					<tr>
+						<td>66</td>
+						<td>Orichalcum</td>
+						<td>0～255</td>
+						<td>140</td>
+						<td>-</td>
+						<td>Additional effect: Aspir</td>
+						<td>
+							<span class="stat-boost">Strength +3</span>,
+							<span class="stat-boost">Speed +7</span>,
+							<span class="stat-boost">Stamina +3</span>,
+							<span class="stat-boost">Evasion +20</span>
+						</td>
+						<td>"Steal" success equals the weapon's power. Maximum power is 255 (510 successful steals).</td>
+						<td><img src="img/weapon/066.png" alt="Orichalcum"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A dagger thats sharpness depends on the skill of its user. Attack power="Steal" success count. Steal chance up/Additional effect: Aspir.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+		<section class="weapon-section" id="swords">
+            <h2><img src="img/sword.png" alt="sword Icon"> Swords <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Mythril Sword -->
+                    <tr>
+                        <td>09</td>
+                        <td>Mythril Sword</td>
+                        <td>45</td>
+                        <td>110</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><img src="img/weapon/009.png" alt="Mythril Sword"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A sword made from the precious metal, Mythril.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Great Sword -->
+					<tr>
+						<td>0A</td>
+						<td>Great Sword</td>
+						<td>62</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td><img src="img/weapon/00A.png" alt="Great Sword"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A sword with a wide, thick blade.</td>
+												<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Rune Blade -->
+					<tr>
+						<td>0B</td>
+						<td>Rune Blade</td>
+						<td>54</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +1</span>, <span class="stat-boost">Magic +2</span></td>
+												<td>Consumes MP to force a critical hit.</td>
+						<td><img src="img/weapon/00B.png" alt="Rune Blade"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A sword engraved with ancient runes.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Flametongue -->
+					<tr>
+						<td>0C</td>
+						<td>Flametongue</td>
+						<td>85</td>
+						<td>110</td>
+						<td class="attribute-cell attribute-fire">Fire</td>
+						<td>Additional effect: Fire</td>
+						<td><span class="stat-boost">Magic +2</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/00C.png" alt="Flametongue"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A sword wrapped in flames said to house the spirit of Ifrit. Additional effect: Fire.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Icebrand -->
+					<tr>
+						<td>0D</td>
+						<td>Icebrand</td>
+						<td>85</td>
+						<td>110</td>
+						<td class="attribute-cell attribute-ice">Ice</td>
+						<td>Additional effect: Blizzard</td>
+						<td><span class="stat-boost">Magic +2</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/00D.png" alt="Icebrand"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A sword covered in ice said to house the spirit of Shiva. Additional effect: Blizzard.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Thunder Blade -->
+					<tr>
+						<td>0E</td>
+						<td>Thunder Blade</td>
+						<td>85</td>
+						<td>110</td>
+						<td class="attribute-cell attribute-thunder">Thunder</td>
+						<td>Additional effect: Thunder</td>
+						<td><span class="stat-boost">Magic +2</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/00E.png" alt="Thunder Blade"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A sword charged with thunder said to house the spirit of Ramuh. Additional effect: Thunder.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Stoneblade -->
+					<tr>
+						<td>11</td>
+						<td>Stoneblade</td>
+						<td>91</td>
+						<td>110</td>
+						<td class="attribute-cell attribute-earth">Earth</td>
+						<td>Additional effect: Break</td>
+						<td><span class="stat-boost">Speed +1</span>, <span class="stat-boost">Magic +3</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/011.png" alt="Stoneblade"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A sword coated with stones said to house the spirit of Catoblepas. Additional effect: Break.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Enhancer Sword -->
+					<tr>
+						<td>0F</td>
+						<td>Enhancer Sword</td>
+						<td>108</td>
+						<td>110</td>
+						<td>-</td>
+						<td>Additional effect: Dispel</td>
+						<td><span class="stat-boost">Magic +5</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/00F.png" alt="Enhancer Sword"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A magical sword capable of dispelling an enemy's power. Additional effect: Dispel.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Crystal Sword -->
+					<tr>
+						<td>10</td>
+						<td>Crystal Sword</td>
+						<td>116</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +2</span>,
+							<span class="stat-boost">Speed +1</span>,
+							<span class="stat-boost">Magic +1</span>,
+							<span class="stat-boost">Stamina +1</span>
+						</td>
+						<td>-</td>
+						<td><img src="img/weapon/010.png" alt="Crystal Sword"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A sword made out of crystal and fitted with a mysterious stone.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Ultima Weapon -->
+					<tr>
+						<td>61</td>
+						<td>Ultima Weapon</td>
+						<td>???</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>Becomes stronger with more Stamina. Higher HP=more damage.</td>
+						<td><img src="img/weapon/061.png" alt="Ultima Weapon"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A technologically-advanced sword made by an ancient civilization. Current level, Strength, Stamina, and HP% affect damage.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/umaro3.gif" class="character-icon" alt="Umaro">
+						</td>
+					</tr>
+
+					<!-- Omega Weapon -->
+					<tr>
+						<td>E6</td>
+						<td>Omega Weapon</td>
+						<td>255</td>
+						<td>150</td>
+						<td>-</td>
+						<td>Additional effect: Ultima</td>
+						<td>
+							<span class="stat-boost">Strength +6</span>,
+							<span class="stat-boost">Speed +6</span>,
+							<span class="stat-boost">Stamina +6</span>,
+							<span class="stat-boost">Magic +6</span>,
+							<span class="stat-boost">Evasion +30</span>,
+							<span class="stat-boost">Magic Evasion +30</span>
+						</td>
+						<td>
+							Auto-Regen,
+							Auto-Haste,
+							Critical-Wall (Protect/Shell),
+							Physical/Magic attack up,
+							Counterattack,
+							Aim (100% Hit)
+						</td>
+						<td><img src="img/weapon/0E6.png" alt="Omega Weapon"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">Another sword created by an ancient civilization. Over Technology.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/umaro3.gif" class="character-icon" alt="Umaro">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section class="weapon-section" id="knight-swords">
+            <h2><img src="img/blade.png" alt="Knight Sword Icon"> Knight Swords <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Defender -->
+                    <tr>
+                        <td>18</td>
+                        <td>Defender</td>
+                        <td>107</td>
+                        <td>115</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><span class="stat-boost">Strength +3</span>, <span class="stat-boost">Evasion +10</span></td>
+                        <td>-</td>
+                        <td><img src="img/weapon/018.png" alt="Defender"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A knight sword made of steel with a wide, thick blade.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+
+					<!-- Durandal -->
+                    <tr>
+                        <td>19</td>
+                        <td>Durandal</td>
+                        <td>155</td>
+                        <td>115</td>
+                        <td>-</td>
+                        <td>-</td>
+						<td>
+							<span class="stat-boost">Strength +1</span>,
+							<span class="stat-boost">Speed +1</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost">Magic +1</span>
+						</td>
+                        <td>-</td>
+                        <td><img src="img/weapon/019.png" alt="Durandal"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A knight sword said to have been forged by fairies.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Save the Queen -->
+                    <tr>
+                        <td>1A</td>
+                        <td>Save the Queen</td>
+                        <td>178</td>
+                        <td>115</td>
+                        <td>-</td>
+                        <td>-</td>
+						<td>
+							<span class="stat-boost">Strength +2</span>,
+							<span class="stat-boost">Speed +2</span>,
+							<span class="stat-boost">Magic +1</span>,
+							<span class="stat-boost">Magic Evasion +5</span>
+						</td>
+                        <td>Cover, Auto-Protect</td>
+                        <td><img src="img/weapon/01A.png" alt="Save the Queen"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A knight sword given to those that protect the Queen. Cover/Auto-Protect.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Zantetsuken -->
+					<tr>
+						<td>1C</td>
+						<td>Zantetsuken</td>
+						<td>182</td>
+						<td>120</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +5</span>, <span class="stat-boost">Stamina +5</span></td>
+						<td>Sometimes kills enemies in 1 hit.</td>
+						<td><img src="img/weapon/01C.png" alt="Zantetsuken"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">War God Odin's Knight Sword. Sometimes kills instantly.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<tr>
+					<!-- Excalibur -->
+					<tr>
+						<td>67</td>
+						<td>Excalibur</td>
+						<td>200</td>
+						<td>115</td>
+						<td class="attribute-cell attribute-light">Light</td>
+						<td>Additional effect: Comet</td>
+						<td>
+							<span class="stat-boost">Strength +1</span>,
+							<span class="stat-boost">Speed +3</span>,
+							<span class="stat-boost">Stamina +1</span>,
+							<span class="stat-boost">Magic +2</span>,
+							<span class="stat-boost">Evasion +5</span>,
+							<span class="stat-boost">Magic Evasion +5</span>
+						</td>
+						<td>Auto-Regen</td>
+						<td><img src="img/weapon/067.png" alt="Excalibur"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A knight sword wielded by the true champion, the king of kings. Auto-Regen/Additional effect: Comet.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Ragnarok -->
+					<tr>
+						<td>1B</td>
+						<td>Ragnarok</td>
+						<td>212</td>
+						<td>115</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +3</span>,
+							<span class="stat-boost">Speed +2</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost">Magic +4</span>,
+							<span class="stat-boost">Evasion +10</span>,
+							<span class="stat-boost">Magic Evasion +10</span>
+						</td>
+						<td>Auto-Shell</td>
+						<td><img src="img/weapon/01B.png" alt="Ragnarok"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A knight sword that appears in the story that calls for the end of the world. Auto-Shell.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Lightbringer -->
+					<tr>
+						<td>5F</td>
+						<td>Lightbringer</td>
+						<td>220</td>
+						<td>125</td>
+						<td>-</td>
+						<td>Additional effect: Flare</td>
+						<td>
+							<span class="stat-boost">Strength +3</span>,
+							<span class="stat-boost">Speed +2</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost">Magic +4</span>,
+							<span class="stat-boost">Evasion +25</span>,
+							<span class="stat-boost">Magic Evasion +15</span>
+						</td>
+						<td>-</td>
+						<td><img src="img/weapon/05F.png" alt="Lightbringer"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A sacred knight sword named by God. Additional effect: Flare.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Maduin's Horn -->
+					<tr>
+						<td>65</td>
+						<td>Maduin's Horn</td>
+						<td>185</td>
+						<td>130</td>
+						<td>-</td>
+						<td>Additional effect: Maduin</td>
+						<td>
+							<span class="stat-boost">Strength +2</span>,
+							<span class="stat-boost">Speed +3</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost">Magic +3</span>,
+							<span class="stat-boost">Evasion +5</span>,
+							<span class="stat-boost">Magic Evasion +10</span>
+						</td>
+						<td>X-Magic</td>
+						<td><img src="img/weapon/065.png" alt="Maduin's Horn"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">"The dreams, hopes, and love from around the world are with you..." X-Magic/Additional effect: Maduin.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+														<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section class="weapon-section" id="dark-swords">
+            <h2><img src="img/dark.png" alt="Dark Sword Icon"> Dark Swords <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Shadow Blade -->
+                    <tr>
+                        <td>12</td>
+                        <td>Shadow Blade</td>
+                        <td>67</td>
+                        <td>110</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><span class="stat-boost">Strength +2</span></td>
+                        <td>Deals extra damage to magical types.</td>
+                        <td><img src="img/weapon/012.png" alt="Shadow Blade"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A dark sword that can cut shadows.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Blood Sword -->
+                    <tr>
+                        <td>13</td>
+                        <td>Blood Sword</td>
+                        <td>88</td>
+                        <td>95</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><span class="stat-boost">Strength +2</span></td>
+                        <td>Damage dealt=HP recovered. Reverses on Undead.</td>
+                        <td><img src="img/weapon/013.png" alt="Blood Sword"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A dark sword with a crimson blade that appears bloody.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+
+					<!-- Hrunting -->
+                    <tr>
+                        <td>14</td>
+                        <td>Hrunting</td>
+                        <td>90</td>
+                        <td>110</td>
+						<td class="attribute-cell attribute-dark">Darkness</td>
+                        <td>Additional effect: Bio</td>
+                        <td><span class="stat-boost">Magic +3</span></td>
+                        <td>Deals extra damage to magical types.</td>
+                        <td><img src="img/weapon/014.png" alt="Hrunting"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A dark sword forged and doused in blood. Additional effect: Bio.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Gram -->
+					<tr>
+						<td>15</td>
+						<td>Gram</td>
+						<td>107</td>
+						<td>100</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +2</span>, <span class="stat-boost">Speed +1</span>, <span class="stat-boost">Magic +1</span></td>
+						<td>Physical attack up. Deals extra damage to magical types.</td>
+						<td><img src="img/weapon/015.png" alt="Gram"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A dark sword with a name meaning "Anger". Physical attack up.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Arondight -->
+					<tr>
+						<td>16</td>
+						<td>Arondight</td>
+						<td>125</td>
+						<td>110</td>
+						<td class="attribute-cell attribute-ice">Ice</td>
+						<td>Additional effect: Blizzara</td>
+						<td><span class="stat-boost">Strength +2</span>, <span class="stat-boost">Speed +2</span>, <span class="stat-boost">Magic +4</span></td>
+						<td>Deals extra damage to magical types.</td>
+						<td><img src="img/weapon/016.png" alt="Arondight"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A blue dark sword with a beautiful blade. Additional effect: Blizzara.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Balmung -->
+					<tr>
+						<td>17</td>
+						<td>Balmung</td>
+						<td>144</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +4</span>, <span class="stat-boost">Speed +1</span></td>
+						<td>Deals extra damage to dragons.</td>
+						<td><img src="img/weapon/017.png" alt="Balmung"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A dark sword used by a brave warrior to slay a dragon.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Soul Eater -->
+					<tr>
+						<td>68</td>
+						<td>Soul Eater</td>
+						<td>119</td>
+						<td>115</td>
+						<td>-</td>
+						<td>Additional effect: Rasp</td>
+						<td>
+							<span class="stat-boost">Strength +2</span>,
+							<span class="stat-boost">Speed +3</span>,
+							<span class="stat-boost">Stamina +3</span>,
+							<span class="stat-boost">Magic +1</span>,
+							<span class="stat-boost">Magic Evasion +15</span>
+						</td>
+						<td>Damage dealt=MP restored. Reversed on Undead.</td>
+						<td><img src="img/weapon/068.png" alt="Soul Eater"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A dark sword made blacker by consuming souls. Additional effect: Rasp.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section class="weapon-section" id="katana">
+            <h2><img src="img/katana.png" alt="Katana Icon"> Katana <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Ashura -->
+                    <tr>
+                        <td>2B</td>
+                        <td>Ashura</td>
+                        <td>56</td>
+                        <td>110</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><img src="img/weapon/02B.png" alt="Ashura"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A katana named after the incarnation of battle.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Kotetsu -->
+					<tr>
+						<td>2C</td>
+						<td>Kotetsu</td>
+						<td>62</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +2</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/02C.png" alt="Kotetsu"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A katana with a beautiful carving of a tiger engraved into the blade.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Bizen Osafune -->
+					<tr>
+						<td>2D</td>
+						<td>Bizen Osafune</td>
+						<td>75</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Stamina +3</span>, <span class="stat-boost">Evasion +5</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/02D.png" alt="Bizen Osafune"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A high-quality katana made with iron sand.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Kikuichimonji -->
+					<tr>
+						<td>2E</td>
+						<td>Kikuichimonji</td>
+						<td>89</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +1</span>,
+							<span class="stat-boost">Speed +1</span>,
+							<span class="stat-boost">Stamina +1</span>,
+							<span class="stat-boost">Magic +1</span>
+						</td>
+						<td>-</td>
+						<td><img src="img/weapon/02E.png" alt="Kikuichimonji"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A katana in which the flange is shaped into a pattern of a chrysanthemum.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Muramasa -->
+					<tr>
+						<td>2F</td>
+						<td>Muramasa</td>
+						<td>115</td>
+						<td>110</td>
+						<td class="attribute-cell attribute-dark">Darkness</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +3</span>, <span class="stat-boost">Stamina +6</span>, <span class="stat-boost">Magic +1</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/02F.png" alt="Muramasa"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A katana known for its extremely sharp edge.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Murasame -->
+					<tr>
+						<td>31</td>
+						<td>Murasame</td>
+						<td>133</td>
+						<td>110</td>
+						<td class="attribute-cell attribute-water">Water</td>
+						<td>-</td>
+						<td><span class="stat-boost">Magic +2</span>, <span class="stat-boost">Magic Evasion +10</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/031.png" alt="Murasame"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A katana that appears to be crying tears.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Mutsunokami -->
+					<tr>
+						<td>30</td>
+						<td>Mutsunokami</td>
+						<td>152</td>
+						<td>115</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +2</span>,
+							<span class="stat-boost">Speed +2</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost">Magic +2</span>,
+							<span class="stat-boost">Evasion +5</span>,
+							<span class="stat-boost">Magic Evasion +5</span>
+						</td>
+						<td>HP+25%</td>
+						<td><img src="img/weapon/030.png" alt="Mutsunokami"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A katana once owned by a hero of Doma. HP+25%.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Masamune -->
+					<tr>
+						<td>69</td>
+						<td>Masamune</td>
+						<td>171</td>
+						<td>115</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +4</span>,
+							<span class="stat-boost">Speed +5</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost">Magic +3</span>,
+							<span class="stat-boost">Evasion +5</span>
+						</td>
+						<td>Auto-Haste, Pre-emptive Strike, Alarm</td>
+						<td><img src="img/weapon/069.png" alt="Masamune"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A legendary katana forged by an Eidolon. Auto-Haste/Pre-emptive Strike/Alarm (Back/Pincer Attacks nulled).</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Amanomurakumo -->
+					<tr>
+						<td>32</td>
+						<td>Amanomurakumo</td>
+						<td>192</td>
+						<td>115</td>
+						<td class="attribute-cell attribute-light">Light</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +3</span>, <span class="stat-boost">Stamina +2</span>, <span class="stat-boost">Evasion +5</span>, <span class="stat-boost">Magic Evasion +10</span></td>
+						<td>Physical attack up. Deals extra damage to dragons.</td>
+						<td><img src="img/weapon/032.png" alt="Amanomurakumo"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A katana appearing in Doman legends. Physical attack up.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+			<section class="weapon-section" id="ninjato">
+            <h2><img src="img/shinobi.png" alt="Ninjato Icon"> Ninjato <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Kunai -->
+                    <tr>
+                        <td>25</td>
+                        <td>Kunai</td>
+                        <td>32</td>
+                        <td>130</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><span class="stat-boost">Speed +1</span></td>
+                        <td>Dual Wield</td>
+                        <td><img src="img/weapon/025.png" alt="Kunai"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A multi-purpose tool used by ninja. Allows for dual wielding.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+														<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Kodachi -->
+					<tr>
+						<td>26</td>
+						<td>Kodachi</td>
+						<td>45</td>
+						<td>130</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +1</span>, <span class="stat-boost">Speed +2</span></td>
+						<td>Dual Wield</td>
+						<td><img src="img/weapon/026.png" alt="Kodachi"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A short sword that's easy to carry/conceal. Allows for dual wielding.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Sakura Fubuki -->
+					<tr>
+						<td>27</td>
+						<td>Sakura Fubuki</td>
+						<td>64</td>
+						<td>130</td>
+						<td class="attribute-cell attribute-wind">Wind</td>
+						<td>-</td>
+						<td><span class="stat-boost">Speed +3</span>, <span class="stat-boost">Magic +2</span>, <span class="stat-boost">Evasion +5</span></td>
+						<td>Dual Wield</td>
+						<td><img src="img/weapon/027.png" alt="Sakura Fubuki"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A dagger designed with flowers from a foreign land. Allows for dual wielding.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Izayoi -->
+					<tr>
+						<td>28</td>
+						<td>Izayoi</td>
+						<td>92</td>
+						<td>130</td>
+						<td>-</td>
+						<td>Additional effect: Sleep</td>
+						<td><span class="stat-boost">Speed +3</span>, <span class="stat-boost">Magic +1</span>, <span class="stat-boost">Evasion +5</span></td>
+						<td>Dual Wield</td>
+						<td><img src="img/weapon/028.png" alt="Izayoi"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A ninjato that shines brightly like the moon on a dark night. Allows for dual wielding/Additional effect: Sleep.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Narigitsune -->
+					<tr>
+						<td>29</td>
+						<td>Narigitsune</td>
+						<td>132</td>
+						<td>130</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +4</span>, <span class="stat-boost">Speed +3</span>, <span class="stat-boost">Stamina +1</span>, <span class="stat-boost">Magic +3</span>, <span class="stat-boost">Evasion +10</span></td>
+						<td>Dual Wield</td>
+						<td><img src="img/weapon/029.png" alt="Narigitsune"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A ninjato that produces a sharp-sounding vibration. Allows for dual wielding.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Kagenui -->
+					<tr>
+						<td>2A</td>
+						<td>Kagenui</td>
+						<td>140</td>
+						<td>130</td>
+						<td>-</td>
+						<td>Additional effect: Stop</td>
+						<td>
+							<span class="stat-boost">Strength +2</span>,
+							<span class="stat-boost">Speed +5</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost">Magic +1</span>,
+							<span class="stat-boost">Evasion +5</span>,
+							<span class="stat-boost">Magic Evasion +5</span>
+						</td>
+						<td>Dual Wield</td>
+						<td><img src="img/weapon/02A.png" alt="Kagenui"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A ninjato that strikes at an opponent's shadow. Allows for dual wielding/Additional effect: Stop.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Sasuke's Katana -->
+					<tr>
+						<td>6A</td>
+						<td>Sasuke's Katana</td>
+						<td>162</td>
+						<td>130</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +3</span>,
+							<span class="stat-boost">Speed +2</span>,
+							<span class="stat-boost">Stamina +1</span>,
+							<span class="stat-boost">Evasion +15</span>,
+							<span class="stat-boost">Magic Evasion +5</span>
+						</td>
+						<td>Dual Wield, Blade Grasp</td>
+						<td><img src="img/weapon/06A.png" alt="Sasuke's Katana"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A ninjato once used by a legendary ninja. Allows for dual wielding/Blade Grasp (randomly evade).</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Gekkabijin -->
+					<tr>
+						<td>60</td>
+						<td>Gekkabijin</td>
+						<td>201</td>
+						<td>140</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +6</span>,
+							<span class="stat-boost">Speed +4</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost">Evasion +10</span>
+						</td>
+						<td>Dual Wield</td>
+						<td><img src="img/weapon/072.png" alt="Gekkabijin"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A ninjato with a breath-taking beauty. Allows for dual wielding/MP+12%.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section class="weapon-section" id="lances">
+            <h2><img src="img/lance.png" alt="Lance Icon"> Lances <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Mythril Spear -->
+                    <tr>
+                        <td>1D</td>
+                        <td>Mythril Spear</td>
+                        <td>55</td>
+                        <td>110</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td></td>
+                        <td></td>
+                        <td><img src="img/weapon/01D.png" alt="Mythril Spear"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A spear made from the precious metal, Mythril.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Heavy Lance -->
+					<tr>
+						<td>1E</td>
+						<td>Heavy Lance</td>
+						<td>86</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +3</span>,
+							<span class="stat-boost-neg">Speed -1</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost-neg">Magic -1</span>
+						</td>
+						<td>-</td>
+						<td><img src="img/weapon/01E.png" alt="Heavy Lance"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A lance with a wide, thick blade.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Trident -->
+					<tr>
+						<td>1F</td>
+						<td>Trident</td>
+						<td>93</td>
+						<td>110</td>
+						<td class="attribute-cell attribute-water">Water</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +1</span>, <span class="stat-boost">Speed +1</span>, <span class="stat-boost">Magic +3</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/01F.png" alt="Trident"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A three-pronged spear with the power of a sea god.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Partisan -->
+					<tr>
+						<td>20</td>
+						<td>Partisan</td>
+						<td>116</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +3</span>, <span class="stat-boost">Stamina +2</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/020.png" alt="Partisan"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A beautiful spear that's also designed for decoration.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Blood Lance -->
+					<tr>
+						<td>21</td>
+						<td>Blood Lance</td>
+						<td>84</td>
+						<td>95</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +2</span>,
+							<span class="stat-boost">Speed +6</span>,
+							<span class="stat-boost-neg">Stamina -1</span>
+						</td>
+						<td>Damage dealt=HP recovered. Reverses on Undead.</td>
+						<td><img src="img/weapon/021.png" alt="Blood Lance"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A bloody spear with a crimson-colored blade.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Dragon Spear -->
+					<tr>
+						<td>24</td>
+						<td>Dragon Spear</td>
+						<td>132</td>
+						<td>115</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +3</span>, <span class="stat-boost">Speed +3</span>, <span class="stat-boost">Stamina +2</span>, <span class="stat-boost">Magic Evasion +10</span></td>
+						<td>Deals extra damage to dragons.</td>
+						<td><img src="img/weapon/024.png" alt="Dragon Spear"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A powerful spear said to house the heart of Hiryu.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Radiant Lance -->
+					<tr>
+						<td>22</td>
+						<td>Radiant Lance</td>
+						<td>157</td>
+						<td>115</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +3</span>, <span class="stat-boost">Speed +3</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/022.png" alt="Radiant Lance"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A spear that emits a blinding light.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Holy Lance -->
+					<tr>
+						<td>6F</td>
+						<td>Holy Lance</td>
+						<td>185</td>
+						<td>115</td>
+						<td class="attribute-cell attribute-light">Light</td>
+						<td>Additional effect: Holy</td>
+						<td><span class="stat-boost">Strength +2</span>, <span class="stat-boost">Speed +2</span>, <span class="stat-boost">Stamina +4</span>, <span class="stat-boost">Magic +4</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/06F.png" alt="Holy Lance"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A three-pronged spear tempered with holy water. Additional effect: Holy.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Gungnir -->
+					<tr>
+						<td>23</td>
+						<td>Gungnir</td>
+						<td>208</td>
+						<td>115</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +5</span>, <span class="stat-boost">Speed +5</span></td>
+						<td>Multi-Jump</td>
+						<td><img src="img/weapon/023.png" alt="Gungnir"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A spear once used by a god. Changes Fight->Jump. Multi-Jump effect (2-4 Jumps).</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section class="weapon-section" id="axes">
+            <h2><img src="img/axe.png" alt="Axe Icon"> Axes <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Mythril Axe -->
+                    <tr>
+                        <td>44</td>
+                        <td>Mythril Axe</td>
+                        <td>52</td>
+                        <td>100</td>
+                        <td>-</td>
+                        <td>-</td>
+						<td><span class="stat-boost">Strength +5</span>, <span class="stat-boost">Stamina +5</span>, <span class="stat-boost-neg">Evasion -10</span></td>
+                        <td>-</td>
+                        <td><img src="img/weapon/044.png" alt="Mythril Axe"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">An axe made from the precious metal, Mythril.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+														<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/umaro3.gif" class="character-icon" alt="Umaro">
+						</td>
+                    </tr>
+					<!-- Slasher -->
+                    <tr>
+                        <td>49</td>
+                        <td>Slasher</td>
+                        <td>63</td>
+                        <td>130</td>
+                        <td>-</td>
+                        <td>Additional effect: Slow</td>
+						<td><span class="stat-boost">Strength +1</span>, <span class="stat-boost">Speed +1</span>, <span class="stat-boost-neg">Evasion -10</span></td>
+                        <td>-</td>
+                        <td><img src="img/weapon/049.png" alt="Slasher"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A large hand axe that makes use of its weight for attacking. Additional effect: Slow.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/umaro3.gif" class="character-icon" alt="Umaro">
+						</td>
+                    </tr>
+
+					<!-- Gaia's Hammer -->
+                    <tr>
+                        <td>4C</td>
+                        <td>Gaia's Hammer</td>
+                        <td>117</td>
+                        <td>100</td>
+						<td class="attribute-cell attribute-earth">Earth</td>
+                        <td>Additional effect: Quake</td>
+						<td><span class="stat-boost">Strength +7</span>, <span class="stat-boost-neg">Speed -5</span>, <span class="stat-boost-neg">Evasion -10</span></td>
+                        <td>-</td>
+                        <td><img src="img/weapon/04C.png" alt="Gaia's Hammer"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">The giant hammer used by the Eidolon Titan. Additional effect: Quake.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/umaro3.gif" class="character-icon" alt="Umaro">
+						</td>
+                    </tr>
+
+					<!-- Bone Club -->
+                    <tr>
+                        <td>3B</td>
+                        <td>Bone Club</td>
+                        <td>163</td>
+                        <td>120</td>
+						<td>-</td>
+                        <td>-</td>
+						<td><span class="stat-boost">Strength +5</span>, <span class="stat-boost">Stamina +7</span>, <span class="stat-boost-neg">Evasion -20</span></td>
+                        <td>2-Handed</td>
+                        <td><img src="img/weapon/03B.png" alt="Bone Club"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A massive club with beautiful carvings. Hold with 2 hands.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/umaro3.gif" class="character-icon" alt="Umaro">
+						</td>
+                    </tr>
+
+					<!-- Earthbreaker -->
+                    <tr>
+                        <td>6D</td>
+                        <td>Earthbreaker</td>
+                        <td>186</td>
+                        <td>100</td>
+						<td>-</td>
+                        <td>-</td>
+						<td><span class="stat-boost">Strength +7</span>, <span class="stat-boost-neg">Speed -1</span>, <span class="stat-boost-neg">Evasion -20</span></td>
+                        <td>Strength+50%</td>
+                        <td><img src="img/weapon/06D.png" alt="Earthbreaker"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">An axe made from stone that can shatter the earth it cuts. Strength+50%.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/umaro3.gif" class="character-icon" alt="Umaro">
+						</td>
+                    </tr>
+
+					<!-- Mjolnir -->
+					<tr>
+						<td>D0</td>
+						<td>Mjolnir</td>
+						<td>206</td>
+						<td>120</td>
+						<td>-</td>
+						<td>Additional effect: Thundaga</td>
+						<td>
+							<span class="stat-boost">Strength +5</span>,
+							<span class="stat-boost">Speed +2</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost">Magic +3</span>
+						</td>
+						<td>Uses MP to force a critical hit.</td>
+						<td><img src="img/weapon/073.png" alt="Mjolnir"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A legendary hammer that will never break or miss. Aim (100% hit)/Additional effect: Thundaga/MP+25%.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/umaro3.gif" class="character-icon" alt="Umaro">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section class="weapon-section" id="brushes">
+            <h2><img src="img/brush.png" alt="Brush Icon"> Brushes <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Chocobo Brush -->
+                    <tr>
+                        <td>3D</td>
+                        <td>Chocobo Brush</td>
+                        <td>42</td>
+                        <td>110</td>
+                        <td>-</td>
+                        <td>-</td>
+						<td><span class="stat-boost">Speed +2</span></td>
+                        <td>Improves chance of Sketch</td>
+                        <td><img src="img/weapon/03D.png" alt="Chocobo Brush"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A paintbrush made with a chocobo's tail feathers. Sketch chance up.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Magical Brush -->
+					<tr>
+						<td>3E</td>
+						<td>Magical Brush</td>
+						<td>58</td>
+						<td>110</td>
+						<td>-</td>
+						<td>Additional effect: Teleport</td>
+						<td><span class="stat-boost">Magic +3</span>, <span class="stat-boost">Magic Evasion +5</span></td>
+						<td>Improves chance of Sketch</td>
+						<td><img src="img/weapon/03E.png" alt="Magical Brush"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A paintbrush infused with magical power. Sketch chance up/Additional effect: Teleport.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Lamia Brush -->
+					<tr>
+						<td>3F</td>
+						<td>Lamia Brush</td>
+						<td>67</td>
+						<td>95</td>
+						<td>-</td>
+						<td>Additional effect: Confuse</td>
+						<td>
+							<span class="stat-boost">Strength +1</span>,
+							<span class="stat-boost">Speed +2</span>,
+							<span class="stat-boost">Stamina +1</span>,
+							<span class="stat-boost">Magic +2</span>
+						</td>
+						<td>Improves chance of Sketch. Damage dealt=HP recovered. Reversed on Undead.</td>
+						<td><img src="img/weapon/03F.png" alt="Lamia Brush"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A beautiful brush made from a Lamia's hair. Sketch chance up/Additional effect: Confuse.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Rainbow Brush -->
+					<tr>
+						<td>40</td>
+						<td>Rainbow Brush</td>
+						<td>99</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +2</span>, <span class="stat-boost">Speed +2</span>, <span class="stat-boost">Magic +3</span></td>
+						<td>Improves chance of Sketch</td>
+						<td><img src="img/weapon/040.png" alt="Rainbow Brush"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A beautiful brush that can draw out a rainbow. Sketch chance up/When in critical HP=Protect.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Artemis's Brush -->
+                    <tr>
+                        <td>62</td>
+                        <td>Artemis's Brush</td>
+                        <td>135</td>
+                        <td>120</td>
+                        <td class="attribute-cell attribute-light">Light</td>
+                        <td>Additional effect: Tornado</td>
+						<td><span class="stat-boost">Strength +1</span>, <span class="stat-boost">Speed +3</span></td>
+                        <td>Improves chance of Sketch. Deals extra damage to dragons.</td>
+                        <td><img src="img/weapon/062.png" alt="Artemis's Brush"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A brush named after the goddess of the Moon. Sketch chance up/Additional effect: Tornado.</td>
+						<td colspan="1">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/relm3.gif" class="character-icon" alt="Relm">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section class="weapon-section" id="claws">
+            <h2><img src="img/crow.png" alt="Claw Icon"> Claws <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Metal Knuckle -->
+                    <tr>
+                        <td>55</td>
+                        <td>Metal Knuckle</td>
+                        <td>33</td>
+                        <td>120</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><img src="img/weapon/055.png" alt="Metal Knuckle"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A knuckle made of iron.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Mythril Claw -->
+					<tr>
+						<td>56</td>
+						<td>Mythril Claw</td>
+						<td>48</td>
+						<td>120</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +1</span>, <span class="stat-boost">Speed +1</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/056.png" alt="Mythril Claw"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A mythril claw fitted with blades.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Kaiser Knuckle -->
+					<tr>
+						<td>57</td>
+						<td>Kaiser Knuckle</td>
+						<td>61</td>
+						<td>120</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +2</span>, <span class="stat-boost">Stamina +1</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/057.png" alt="Kaiser Knuckle"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A knuckle named after an emperor.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Dark Claw -->
+                    <tr>
+                        <td>58</td>
+                        <td>Dark Claw</td>
+                        <td>79</td>
+                        <td>120</td>
+						<td class="attribute-cell attribute-dark">Darkness</td>
+                        <td>Additional effect: Poison</td>
+                        <td><span class="stat-boost">Strength +2</span>, <span class="stat-boost">Speed +1</span></td>
+                        <td>-</td>
+                        <td><img src="img/weapon/058.png" alt="Dark Claw"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A claw made from the bones of a demon. Additional effect: Poison.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Burning Knuckle -->
+					<tr>
+						<td>59</td>
+						<td>Burning Knuckle</td>
+						<td>86</td>
+						<td>120</td>
+						<td class="attribute-cell attribute-fire">Fire</td>
+						<td>Additional effect: Fire</td>
+						<td><span class="stat-boost">Strength +1</span>, <span class="stat-boost">Speed +1</span>, <span class="stat-boost">Stamina +2</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/059.png" alt="Burning Knuckle"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A knuckle that fires up both you and the opponent. Additional effect: Fire.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Dragon Claw -->
+					<tr>
+						<td>5C</td>
+						<td>Dragon Claw</td>
+						<td>118</td>
+						<td>120</td>
+						<td class="attribute-cell attribute-light">Light</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +3</span>,
+							<span class="stat-boost">Speed +2</span>,
+							<span class="stat-boost">Stamina +2</span>,
+							<span class="stat-boost">Magic +3</span>
+						</td>
+						<td>Deals extra damage to dragons.</td>
+						<td><img src="img/weapon/05C.png" alt="Dragon Claw"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A claw fitted with a dragon's scales and nails.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Tiger Fang -->
+					<tr>
+						<td>5D</td>
+						<td>Tiger Fang</td>
+						<td>142</td>
+						<td>120</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +5</span>, <span class="stat-boost">Speed +5</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/05D.png" alt="Tiger Fang"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A claw made from the legendary beast Byakko.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif"  class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Godhand -->
+					<tr>
+						<td>70</td>
+						<td>Godhand</td>
+						<td>168</td>
+						<td>125</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +6</span>,
+							<span class="stat-boost">Speed +2</span>,
+							<span class="stat-boost">Stamina +6</span>,
+							<span class="stat-boost">Magic +5</span>
+						</td>
+						<td>Aim (100% hit), Immune to Confuse, Immune to Zombie</td>
+						<td><img src="img/weapon/070.png" alt="Godhand"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A claw said to be the "hand of a great god". Aim (100% hit)/Confuse/Zombie immune.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section class="weapon-section" id="rods">
+            <h2><img src="img/rod.png" alt="Rod Icon"> Staves/Rods/Canes <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Battle Bamboo -->
+					<tr>
+						<td>33</td>
+						<td>Battle Bamboo</td>
+						<td>46</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Speed +1</span>, <span class="stat-boost-neg">Magic -1</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/033.png" alt="Battle Bamboo"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A slender stick made for striking.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Octagon Staff -->
+					<tr>
+						<td>38</td>
+						<td>Octagon Staff</td>
+						<td>99</td>
+						<td>110</td>
+						<td>-</td>
+						<td>Additional effect: Toad</td>
+						<td><span class="stat-boost">Strength +4</span>, <span class="stat-boost">Speed +2</span>, <span class="stat-boost">Stamina +2</span>, <span class="stat-boost">Magic +4</span></td>
+						<td>-</td>
+						<td><img src="img/weapon/038.png" alt="Octagon Staff"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A wooden bo fitted with iron then cut into an octagon shape. Additional effect: Toad.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Flame Rod -->
+					<tr>
+						<td>35</td>
+						<td>Flame Rod</td>
+						<td>38</td>
+						<td>110</td>
+						<td class="attribute-cell attribute-fire">Fire</td>
+						<td>Use: Fira</td>
+						<td>-</td>
+						<td>-</td>
+						<td><img src="img/weapon/035.png" alt="Flame Rod"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A rod containing the power of fire. Breaks on use: Fira.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Ice Rod -->
+					<tr>
+						<td>36</td>
+						<td>Ice Rod</td>
+						<td>38</td>
+						<td>110</td>
+						<td class="attribute-cell attribute-ice">Ice</td>
+						<td>Use: Blizzara</td>
+						<td>-</td>
+						<td>-</td>
+						<td><img src="img/weapon/036.png" alt="Ice Rod"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A rod containing the power of ice. Breaks on use: Blizzara.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Thunder Rod -->
+					<tr>
+						<td>37</td>
+						<td>Thunder Rod</td>
+						<td>38</td>
+						<td>110</td>
+						<td class="attribute-cell attribute-thunder">Thunder</td>
+						<td>Use: Thundara</td>
+						<td>-</td>
+						<td>-</td>
+						<td><img src="img/weapon/037.png" alt="Thunder Rod"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A rod containing the power of thunder. Breaks on use: Thundara.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Holy Rod -->
+                    <tr>
+                        <td>39</td>
+                        <td>Holy Rod</td>
+                        <td>78</td>
+                        <td>110</td>
+                        <td class="attribute-cell attribute-light">Light</td>
+                        <td>Use: Light</td>
+						<td><span class="stat-boost">Magic +2</span></td>
+                        <td>-</td>
+                        <td><img src="img/weapon/039.png" alt="Holy Rod"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A rod containing holy water. Breaks on use: Holy.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Wizard Rod -->
+					<tr>
+						<td>6B</td>
+						<td>Wizard Rod</td>
+						<td>102</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Magic +7</span>, <span class="stat-boost">Magic Evasion +10</span></td>
+						<td>Magic attack up</td>
+						<td><img src="img/weapon/06B.png" alt="Wizard Rod"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A rod once used by a famous mage. Magic attack up.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Healing Staff -->
+					<tr>
+						<td>34</td>
+						<td>Healing Staff</td>
+						<td>200</td>
+						<td>180</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>Restore target's HP. Ignores row.</td>
+						<td><img src="img/weapon/034.png" alt="Healing Staff"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A cane made from a tree in which the power of a spirit resides. Restore target's HP.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/cyan3.gif" class="character-icon" alt="Cyan">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/edgar3.gif" class="character-icon" alt="Edgar">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/umaro3.gif" class="character-icon" alt="Umaro">
+						</td>
+					</tr>
+					<!-- Mace of Zeus -->
+					<tr>
+						<td>3C</td>
+						<td>Mace of Zeus</td>
+						<td>115</td>
+						<td>115</td>
+						<td class="attribute-cell attribute-thunder attribute-light">Thunder, Light</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +1</span>, <span class="stat-boost">Speed +3</span>, <span class="stat-boost">Stamina +7</span>, <span class="stat-boost">Magic +2</span>, <span class="stat-boost">Magic Evasion +10</span></td>
+						<td>Ignores row.</td>
+						<td><img src="img/weapon/03C.png" alt="Mace of Zeus"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A staff of conviction used by a god.  MP+25%.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section class="weapon-section" id="gambling">
+            <h2><img src="img/card.png" alt="Gambling Icon"> Gambling Items <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Cards -->
+                    <tr>
+                        <td>4E</td>
+                        <td>Cards</td>
+                        <td>52</td>
+                        <td>110</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+						<td>Ignores row. Deals extra damage to flying enemies.</td>
+                        <td><img src="img/weapon/04E.png" alt="Cards"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">Special playing cards used in casinos.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Darts -->
+					<tr>
+						<td>4F</td>
+						<td>Darts</td>
+						<td>64</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +2</span></td>
+						<td>Ignores row. Deals extra damage to flying enemies.</td>
+						<td><img src="img/weapon/04F.png" alt="Darts"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">Darts remodeled for battling.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Dice -->
+					<tr>
+						<td>50</td>
+						<td>Dice</td>
+						<td>???</td>
+						<td>100</td>
+						<td>-</td>
+						<td>-</td>
+						<td>-</td>
+						<td>Damage changes based on the total rolled. Ignores row.</td>
+						<td><img src="img/weapon/050.png" alt="Dice"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">Dice thats power changes depending on the sum rolled.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Tarot de Bennstat -->
+					<tr>
+						<td>51</td>
+						<td>Tarot de Bennstat</td>
+						<td>83</td>
+						<td>115</td>
+						<td>-</td>
+						<td>Additional effect: Death</td>
+						<td>
+							<span class="stat-boost">Speed +2</span>,
+							<span class="stat-boost">Magic +2</span>,
+							<span class="stat-boost">Evasion +5</span>,
+							<span class="stat-boost">Magic Evasion +5</span>
+						</td>
+						<td>Ignores row. Dealings extra damage to flying enemies.</td>
+						<td><img src="img/weapon/051.png" alt="Tarot de Bennstat"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A famous painter once dealt with these Tarot. Additional effect: Death.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Antares -->
+					<tr>
+						<td>53</td>
+						<td>Antares</td>
+						<td>122</td>
+						<td>115</td>
+						<td class="attribute-cell attribute-dark">Darkness</td>
+						<td>Additional effect: Scourge</td>
+						<td><span class="stat-boost">Strength +2</span>, <span class="stat-boost">Speed +4</span>, <span class="stat-boost">Magic Evasion +10</span></td>
+						<td>Ignores row. Deals extra damage to flying enemies.</td>
+						<td><img src="img/weapon/053.png" alt="Antares"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">Darts coated in scorpion poison. Additional effect: Scourge.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Fixed Dice -->
+					<tr>
+						<td>52</td>
+						<td>Fixed Dice</td>
+						<td>???</td>
+						<td>100</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Stamina +3</span></td>
+						<td>Damage changes based on the total rolled. Ignores row.</td>
+						<td><img src="img/weapon/052.png" alt="Fixed Dice"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">Dice thats power changes depending on the sum rolled.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Elven Darts -->
+					<tr>
+						<td>6C</td>
+						<td>Elven Darts</td>
+						<td>88</td>
+						<td>120</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Speed +1</span>, <span class="stat-boost">Magic +3</span>, <span class="stat-boost">Evasion +5</span>, <span class="stat-boost">Magic Evasion +10</span></td>
+						<td>Master's Scroll (attack 4 times). Ignores row. Deals extra damage to flying enemies.</td>
+						<td><img src="img/weapon/06C.png" alt="Elven Darts"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">Darts made with fairy feathers. Master's Scroll (attack 4 times).</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+														<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Last Resort -->
+					<tr>
+						<td>54</td>
+						<td>Last Resort</td>
+						<td>???</td>
+						<td>115</td>
+						<td>-</td>
+						<td>-</td>
+						<td>
+							<span class="stat-boost">Strength +5</span>,
+							<span class="stat-boost">Speed +5</span>,
+							<span class="stat-boost">Stamina +3</span>,
+							<span class="stat-boost">Magic +3</span>,
+							<span class="stat-boost">Evasion +15</span>,
+							<span class="stat-boost">Magic Evasion +5</span>
+													</td>
+						<td>Ignores row. As HP is lost, damage increases.</td>
+						<td><img src="img/weapon/054.png" alt="Last Resort"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">Trump cards with an incredible sharpness. As HP is lost, damage increases. Magic power increased.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/setzer3.gif" class="character-icon" alt="Setzer">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section class="weapon-section" id="whips">
+            <h2><img src="img/whip.png" alt="Whip Icon"> Whips/Bells <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Chain Whip -->
+                    <tr>
+                        <td>4A</td>
+                        <td>Chain Whip</td>
+                        <td>38</td>
+                        <td>120</td>
+                        <td>-</td>
+                        <td>-</td>
+						<td><span class="stat-boost">Strength +2</span>, <span class="stat-boost">Speed +3</span>, <span class="stat-boost">Stamina +3</span></td>
+						<td>Ignores row.</td>
+                        <td><img src="img/weapon/04A.png" alt="Chain Whip"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A whip made from iron chains.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Flame Whip -->
+					<tr>
+						<td>46</td>
+						<td>Flame Whip</td>
+						<td>72</td>
+						<td>120</td>
+						<td class="attribute-cell attribute-fire">Fire</td>
+						<td>Additional effect: Fira</td>
+						<td><span class="stat-boost">Speed +1</span>, <span class="stat-boost">Magic +1</span></td>
+						<td>Ignores row.</td>
+						<td><img src="img/weapon/046.png" alt="Flame Whip"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A whip made from the flame beast Garm's skin. Additional effect: Fira.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Blitz Whip -->
+					<tr>
+						<td>4B</td>
+						<td>Blitz Whip</td>
+						<td>86</td>
+						<td>120</td>
+						<td class="attribute-cell attribute-thunder">Thunder</td>
+						<td>Additional effect: Thundara</td>
+						<td><span class="stat-boost">Strength +2</span>, <span class="stat-boost">Speed +3</span>, <span class="stat-boost">Stamina +2</span>, <span class="stat-boost">Magic +3</span></td>
+						<td>Ignores row.</td>
+						<td><img src="img/weapon/04B.png" alt="Blitz Whip"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A whip infused with the power of thunder. Additional effect: Thundara.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Dragon Whisker -->
+					<tr>
+						<td>6E</td>
+						<td>Dragon Whisker</td>
+						<td>121</td>
+						<td>110</td>
+						<td>-</td>
+						<td>Additional effect: Flood</td>
+						<td><span class="stat-boost">Speed +4</span>, <span class="stat-boost">Magic +2</span></td>
+						<td>Critical-Wall (Protect/Shell). Ignores row. Deals extra damage to dragons.</td>
+						<td><img src="img/weapon/06E.png" alt="Dragon Whisker"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A whip infused with the sea king Leviathan's power. Critical-Wall (Protect/Shell)/Additional effect: Flood.</td>
+						<td colspan="1">
+							<img src="img/tina3.gif" class="character-icon" alt="Tina">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/celes3.gif" class="character-icon" alt="Celes">
+							<img src="img/stragos3.gif" class="character-icon" alt="Stragos">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Diamond Bell -->
+					<tr>
+						<td>4D</td>
+						<td>Diamond Bell</td>
+						<td>85</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Speed +6</span>, <span class="stat-boost">Magic +2</span></td>
+						<td>Ignores row.</td>
+						<td><img src="img/weapon/04D.png" alt="Diamond Bell"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A glass bell with magical power.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Marvelous Cheer -->
+					<tr>
+						<td>5E</td>
+						<td>Marvelous Cheer</td>
+						<td>124</td>
+						<td>110</td>
+						<td>-</td>
+						<td>Additional effect: Silence</td>
+						<td><span class="stat-boost">Speed +2</span>, <span class="stat-boost">Magic +1</span>, <span class="stat-boost">Magic Evasion +15</span></td>
+						<td>Ignores row.</td>
+						<td><img src="img/weapon/05E.png" alt="Marvelous Cheer"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A bell used to inspire friends. Additional effect: Silence.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Rune Bell -->
+					<tr>
+						<td>71</td>
+						<td>Rune Bell</td>
+						<td>102</td>
+						<td>115</td>
+						<td class="attribute-cell" style="background: linear-gradient(to right, #dc3545, #007bff, #ffc107, #707070, green, #6f42c1, #8B4513, #39f);">All Elements</td>
+						<td>-</td>
+						<td><span class="stat-boost">Magic +5</span>, <span class="stat-boost">Evasion +5</span>, <span class="stat-boost">Magic Evasion +5</span></td>
+						<td>Consumes MP to force a critical hit. Ignores row. Immune to Petrify</td>
+						<td><img src="img/weapon/071.png" alt="Rune Bell"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A magical bell made by an ancient civilization. All-elemental attack/Petrify immune.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/relm3.gif" class="character-icon" alt="Relm">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mog3.gif" class="character-icon" alt="Mog">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+
+		<section class="weapon-section" id="boomerangs">
+            <h2><img src="img/syuriken.png" alt="Boomerang Icon"> Boomerangs/Shurikens <a href="#top" class="top-link">▲</a></h2>
+            <table class="weapon-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Attack</th>
+                        <th>Accuracy</th>
+                        <th>Attribute</th>
+                        <th>Effect</th>
+                        <th>Status Change</th>
+                        <th>Special Effects</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+					<!-- Boomerang -->
+                    <tr>
+                        <td>47</td>
+                        <td>Boomerang</td>
+                        <td>43</td>
+                        <td>110</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><span class="stat-boost">Speed +1</span></td>
+						<td>Ignores row.</td>
+                        <td><img src="img/weapon/047.png" alt="Boomerang"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A throwing weapon made out of wood.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gau3.gif" class="character-icon" alt="Gau">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Moonring Blade -->
+					<tr>
+						<td>48</td>
+						<td>Moonring Blade</td>
+						<td>59</td>
+						<td>100</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +2</span>, <span class="stat-boost">Speed +2</span>, <span class="stat-boost">Stamina +1</span>, <span class="stat-boost">Magic +1</span>, <span class="stat-boost">Evasion +5</span></td>
+						<td>Ignores row. Deals extra damage to humans.</td>
+						<td><img src="img/weapon/048.png" alt="Moonring Blade"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A throwing weapon whose blade is disc-shaped.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Rising Sun -->
+					<tr>
+						<td>45</td>
+						<td>Rising Sun</td>
+						<td>102</td>
+						<td>100</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Speed +2</span>, <span class="stat-boost">Magic +2</span></td>
+						<td>Ignores row. Deals extra damage to humans.</td>
+						<td><img src="img/weapon/045.png" alt="Rising Sun"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A throwing weapon named after the emblem of a foreign land.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+
+					<!-- Kenkonken -->
+                    <tr>
+                        <td>3A</td>
+                        <td>Kenkonken</td>
+                        <td>149</td>
+                        <td>100</td>
+						<td>-</td>
+                        <td>-</td>
+						<td><span class="stat-boost">Strength +4</span>, <span class="stat-boost">Speed +2</span>, <span class="stat-boost">Magic +2</span>, <span class="stat-boost">Evasion +10</span></td>
+                        <td>Blade Grasp (randomly evade). Ignores row. Deals extra damage to humans.</td>
+                        <td><img src="img/weapon/03A.png" alt="Kenkonken"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td colspan="6">A throwing weapon once used by ancient warriors. Blade Grasp (randomly evade).</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/locke3.gif" class="character-icon" alt="Locke">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/mash3.gif" class="character-icon" alt="Mash">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/gogo3.gif" class="character-icon" alt="Gogo">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+                    </tr>
+					<!-- Shuriken -->
+					<tr>
+						<td>41</td>
+						<td>Shuriken</td>
+						<td>35</td>
+						<td>100</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Speed +1</span>, <span class="stat-boost">Magic +1</span></td>
+						<td>Ignores row. Dual Wield. Deals extra damage to humans.</td>
+						<td><img src="img/weapon/041.png" alt="Shuriken"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A throwing weapon used by ninja. Allows for dual wielding.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Fuma Shuriken -->
+					<tr>
+						<td>42</td>
+						<td>Fuma Shuriken</td>
+						<td>97</td>
+						<td>115</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +1</span>, <span class="stat-boost">Speed +3</span>, <span class="stat-boost">Evasion +5</span></td>
+						<td>Ignores row. Dual Wield. Deals extra damage to humans.</td>
+						<td><img src="img/weapon/042.png" alt="Fuma Shuriken"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">A shuriken used by a famous ninja clan. Allows for dual wielding.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+					<!-- Pinwheel -->
+					<tr>
+						<td>43</td>
+						<td>Pinwheel</td>
+						<td>129</td>
+						<td>110</td>
+						<td>-</td>
+						<td>-</td>
+						<td><span class="stat-boost">Strength +3</span>, <span class="stat-boost">Speed +5</span>, <span class="stat-boost">Evasion +5</span></td>
+						<td>Ignores row. Dual Wield. Deals extra damage to humans.</td>
+						<td><img src="img/weapon/043.png" alt="Pinwheel"></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td colspan="6">An assassination weapon used by ninja. Allows for dual wielding.</td>
+						<td colspan="1">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/shadow3.gif" class="character-icon" alt="Shadow">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+							<img src="img/blank.gif" class="character-icon" alt="">
+						</td>
+					</tr>
+                </tbody>
+            </table>
+        </section>
+
+
+
+
+	</div>
+
+	<footer>
+		Final Fantasy VI T-Edition. Mod Creator: Tsushiy◆KEHt9L6ti47L
+	</footer>
+</body>
+</html>						

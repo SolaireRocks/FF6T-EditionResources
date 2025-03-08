@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Fantasy VI T-Edition EX - Change Log</title>
+    <style>
+        body, td, th {
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        div {
+            letter-spacing: 0.1em;
+        }
+
+        h1 {
+          text-align: center;
+        }
+        h4{
+          text-align:center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 800px;
+            margin: 1em auto;
+        }
+		/* General table styles*/
+        th, td {
+            padding: 5px;
+            border: 1px solid #000; /*Consistent borders*/
+            text-align: left; /* Left-align text for readability */
+        }
+
+        th {
+            background-color: #D2D4E8; /* Consistent header background */
+        }
+        .version-info {
+            text-align: right;
+            margin-bottom: 1em;
+        }
+
+        .update-heading-table {
+            background-color: #717171;
+            color: #fff;
+            height: 40px;
+        }
+        .update-heading-table td{
+          border: none;
+        }
+
+        .update-heading-table a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .update-heading-table .back-to-top {
+            text-align: right;
+            color: #fff; /*Back to Top in White*/
+
+        }
+
+        .update-heading-table b {
+          font-size: 1.2em; /*Makes the Bold text stand out*/
+        }
+        .update-entry-table {
+            background-color: #E9E9E9;
+        }
+        .update-entry-table td{
+          border: none;
+        }
+        .update-entry-table ul {
+          padding-inline-start: 1em; /* Standard indentation for lists */
+          list-style-type: disc;
+        }
+
+        .update-entry-table ul ul {
+          list-style-type: circle; /*Different bullet points*/
+        }
+        .update-entry-table li {
+            margin-bottom: 0.5em; /* Spacing between list items */
+        }
+
+		.update-entry-table b {
+			font-weight: bold;
+		}
+
+        /* Image centering */
+        .image-container {
+            text-align: center;
+            margin: 1em 0; /* Space above and below images */
+        }
+
+        .image-container img {
+            margin-right: 20px;
+            vertical-align: middle; /* Align images properly */
+        }
+        .image-container img:last-child{
+          margin-right: 0px; /*Removes the margin from the last img so that it isn't offset*/
+        }
+		.hidden {
+			display: none;
+		}
+    .index-link {
+      text-align: center;
+      margin-bottom: 1em;
+    }
+     .index-link a{
+      text-decoration:none;
+      color: inherit;
+    }
+
+    </style>
+	<!-- Javascript is fine. No changes needed. -->
+    <script>
+        function show(inputData) {
+            const objID = document.getElementById( "layer_" + inputData );
+            const buttonID = document.getElementById( "category_" + inputData );
+            if(objID.classList.contains('hidden')) {
+                objID.classList.remove('hidden');
+            } else {
+                objID.classList.add('hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h1>EX Change Log</h1>
+<hr style="color: blue;">
+
+<div class="version-info">
+    <div>Last Updated: 12/8/2022</div>
+    <div>Version: 3.0.5</div>
+    <div>EX： 2.0.5</div>
+</div>
+
+<div class = "index-link"><a href="#new">Go To The Latest Update History ▼</a></div>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>14/09/24 Ver.0.0.1</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+                <li>Game goes public.</li>
+                <li>3 sets of fightable bosses.<br>
+                ※Currently, even if you defeat them, special flags are not changed.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>14/09/28 Ver.0.0.2</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+                <li>The statuses and behavior of enemies has been adjusted.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>14/10/01 Ver.0.0.3</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>The majority of magic accuracy has risen from 10 to 20.<br>
+            ※Magic that already had a high hit rate, spells appearing early on, and very power spells such as "Fallen One" and "Disaster" are unchanged.</li>
+            <li>The effect values of the Eidolons "Bahamut" and "Ultima" have been decreased.</li>
+            <li>Meteor's effect value has slightly been increased.</li>
+            <li>Changed the attribute of "Thunder Call" from thunder to lightning.</li>
+            <li>The effect value of "Fusillade Particle Beam" has been slightly increased.</li>
+            <li>The Float status has been given to Zeromus (after transforming).</li>
+            <li>Zeromus (after transforming) has been given a new sprite.<br>
+            ※I made some changes of the Super Famicom version of FF4's sprite to fit in a 128 x 128 frame.</li>
+          </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>14/10/04 Ver.0.0.4</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>The magic that deals percent damage such as "Gravity", "Tornado", Diabolos", "Sonic Boom", "Cave-In", and "Great Storm", were changed from a chance of instant death to critical health.<br>
+            ※Even if instant death were to be blocked, the spells will still work if there's no blocking of critical health. Since you can't block critical health 100% of the time, it will still work.<br>
+            ※With the changes done to the magic above, I've made the Strength value give a bonus chance of evading the attack.<br></li>
+            <li>To add onto the changes made above, the cancel Float effect from "Gravity" and the Sap effect from "Sonic Boom" have been removed.<br>
+            ※This is due to it's impossible to add the status ailment with the changes made above.</li>
+            <li>Along with the changes made to Death magic, enemy resistance to it has been changed.<br>
+            ※Please be aware there may be oversights with this still.</li>
+            <li>The "Dance" technique "Deathblow" under "Forest's Nocturne" has been changed to "Great Storm".</li>
+            <li>The attack "Snowball" was changed from 50% damage+Sleep to ice and wind-elemental damage+Sleep.</li>
+            <li>Fixed an error in the armor "Behemoth Suit".</li>
+            <li>The additional effect on "Artemis's Brush" was changed to "Tornado".</li>
+            <li>Adjusted various amounts of equipment.</li>
+            <li>During the "Zeromus" battle, fixed an issue that would cause freezing when he changed to his second form.<br>
+            ※This may not be 100% fixed yet.</li>
+            <li>Added 2 more sets of bosses, bringing the total to 5 now.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>14/10/07 Ver.0.0.5</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed an error that displays a message at the bottom of the screen once finishing a battle.</li>
+              <li>Corrected a mistake in the description of the "Rage" ability "Proto Armor".</li>
+              <li>The effect of "Grand Delta" has been changed.</li>
+              <li>Changed the starting status effects, behavior, and special attacks of enemies.</li>
+              <li>Added 1 new boss, bringing the total to 6.</li>
+              <li>With thanks to HatZen08's "Imitation Art", I've added various character sprites for Gogo to change to during battles when he's wearing his "Chameleon Robe" costume.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>14/10/08 Ver.0.0.6</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+    <table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Adjusted the defense power of shields, hats, and helmets.</li>
+              <li>Adjusted the starting statuses and behavior of enemies.</li>
+              <li>Fixed the sequence data of "Final Fantasy 8: Force Your Way" in the new list of songs.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>14/10/11 Ver.0.0.7</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+            <li>Fixed the sequence data of "Final Fanasy 7: Those Who Fight Further" in the new list of songs.</li>
+            <li>Created a new song.<br>
+            <li>Fixed a bug with the armor "Maximillian".</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b>14/10/17 Ver.0.0.8</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+            <li>Fixed the sequence data of "Final Fanasy 7: Those Who Fight Further" in the new list of songs.</li>
+            <li>Fixed the sequence data of "Final Fantasy 5: Last Battle", "Seiken Densetsu 1: Battle 2", and "Romancing SaGa 1: Coup de Grace" in the new list of songs.<br>
+            <li>Zeromus form 2's script was adjusted.<br>
+            ※Zeromus' counterattack to swap forms is based on a final attack that can be bypassed due to a bug. This was changed.</li>
+            <li>Created a new song.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>14/10/24 Ver.0.0.9</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+            <li>Fixed a bug where "Diabolos" would always miss.</li>
+            <li>Fixed a bug where the Eidolon "Ultima" could be summoned via the item "Magicite Fragment" and the Blue Magic spell "Ancient Prayer".</li>
+            <li>Created a new song.</li>
+            <li>Added 3 new NPC sprites.</li>
+            <li>Changed the effect of "Everyone's Grudge".</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>14/11/07 Ver.0.1.0</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Adjusted the statuses of some enemies.</li>
+              <li>Added 1 new set of enemies.</li>
+              <li>"Gil Toss" was changed to no longer split damage based on the number of targets.</li>
+              <li>The hit rate of the Eidolon "Diabolos" has been changed to 135.</li>
+              <li>The hit rate of the Eidolon "Odin" has been increased from 128 to 145.</li>
+              <li>The attack power of the weapon "Soul Eater" has been increased from 99 to 119</li>
+              <li>Changed a few weapon graphics during battle. Along with this change, we've also reviewed most of the new battle using them.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>14/11/09 Ver.0.1.1</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>Window Types 2, 3, 4, 5, 6, 7, and 8 have been changed. Type 1 is unchanged (default).</li>
+            <li>If you're using an older save data and update to the latest version, you won't see a change to the windows. However, simply selecting the color of the window and hitting the A Button to reset it to default will "unlock" them.</li>
+            <li>As a bonus I've attached 3 separate patches just for window type changes.<b> These will only work for FF6 T-Edition or EX</b>. There's no other changes done except this and it won't affect the original FF6 either.</li>
+            <br>
+            <div style = "text-align:center"><a HREF="windowtype.html">→Window Type List</a></div>
+            <li>The following status changes have had their effects altered:
+            <ul>
+              <li>Poison … Deals 1/8 HP damage over time. There is no change in damage over time.</li>
+              <li>Regen … Recovers 1/8 HP over time. There's no change based on the Strength value.</li>
+              <li>Disease … Originally "Sap", the name has been changed to "Disease".<br>
+                    Deals 1/8 MP damage over time.</li>
+              <li>MP Sap … Additional effect of some magic such as "Poltergeist".<br>
+                    Unlike "Disease", the only cure for this is to kill the character and then revive.</li>
+            </ul>
+            </li>
+            <li>In accordance with the changes above to statuses, I've reviewed the status weaknesses of enemies.</li>
+            <li>The Eidolon "Cait Sith" now sets Disease.</li>
+            <li>Some graphics and colors of weapons have been changed.</li>
+            <li>Some weapon icons have been changed.</li>
+            <li>The ability "Kill" has had it's color changed.</li>
+            <li>If the target is Undead, "Kill" will now revive them just like the spell "Death".</li>
+            <li>The magic seen after the Blue Magic spell "Death Sentence" executes has been changed from "Death" to "Kill". <br>※There were issues with instant death immunity causing problems after the countdown, so I changed it.</li>
+            <li>Petrification immunity was removed from the accessory "Memento Ring", and Death immunity was added.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>14/11/11 Ver.0.1.2</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Poisona's description was changed.</li>
+              <li>Some weapon graphics and colors have been changed.</li>
+              <li>Fixed a bug that caused "Sketch" use count to increase when using "Rage" (for the Achievements).</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>14/11/14 Ver.0.1.3</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>When a specific boss is defeated in EX Mode, a flag is set.<br>When you load your save data back up in FF6 T-Edition, your Collection Room will have changes.</li>
+              <li>Many character sprites have been changed thanks to forum user 228.</li>
+              <li>"Gil Toss" has been changed again, but this time only for enemies; damage is now split based on party members:
+              <ul>
+                <li>Gil Use … (Original) Level × <b>30</b> → (FF6 T-Edition) Level × <b>180</b></li>
+                <li>Damage … (Original) Gil Consumed x <b>2</b> → (FF6 T-Edition) Gil Consumed x <b>1/2</b></li>
+                <li>Example … When used at Level 50...<br>
+                    (Original) <b>1500 Gil </b>consumed / <b>3000 damage</b> ÷ number of enemies → (FF6 T-Edition) <b>9000 Gil </b>consumed / <b>4500 damage</b>.</li>
+              </ul></li>
+              <li>The formula for "Steal" has been changed:
+              <ul>
+                <li>Success Rate … (Original) Level+<b>50</b>-Target's Level÷99 → (FF6 T-Edition) Level+<b>70</b>-Target's Level÷99.</li>
+                <li>Rare Steal … (Original) <b>1/8</b> → (FF6 T-Edition) <b>1/4</b>.</li>
+              </ul></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b>14/11/25 Ver.0.1.4</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed a bug where the spell "Supernova" was able to be absorbed with Runic.</li>
+              <li>Added a new costume for Terra, Locke, Edgar, and Celes in the "Dressing Room" that we're testing out.<br>
+              ※These can be unlocked by completing their specific character Achievement.</li>
+              <li>Fixed a bug (from the original game) that caused graphical glitches with large enemy sprites when the Eidolon "Phoenix" was used.<br>
+              ※I can't say it's 100% fixed yet, because only a few instances have been tested so far.</li>
+              <li>The MP cost of the Blue Magic "Traveler" was originally Playtime x2, however, this caused problems if it went over 128 hours, so it has been changed to just Playtime=cost.<br>
+              ※The Playtime counter was stopping at 255:59, and was disabled for battles.</li>
+              <li>With the above change, the effect value of Traveler has gone from <b>Step Count÷32</b> to now <b>Step Count ÷48</b>.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>14/12/02 Ver.0.1.5</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed a bug where the song "Final Fantasy 6 - Victory Fanfare" couldn't be selected in the Music Player.</li>
+              <li>The effect value range for "Particle Bomb" was incorrect.</li>
+              <li>Due to a problem arising, the Battle Speed has been returned to what the original game is.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>14/12/04 Ver.0.1.6</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed a bug where when changing Edgar to his "Dragon Mail" would not change his sprite, but instead change Locke's.</li>
+              <li>Fixed a bug where if a character has the "Reraise" spell on them and are hit with a technique such as "Degenerator" or "Time Compression", they'd be revived but become invisible. This has been fixed and the techniques now work as intended.<br>
+                ※SPARX helped create this fix.</li>
+              <li>Fixed a bug where when entering the Falcon with Umaro in the lead in his normal costume, the game would freeze.</li>
+              <li>Fixed a bug where when entering a battle it wouldn't load based on wearing certain "Dressing Room" costumes.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>14/12/18 Ver.0.1.6</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed a bug where when changing Cyan to his "Gold-Trim Armor" costume, the game would freeze if he wasn't in the party.</li>
+              <li>Fixed a bug where in "New Game+" you couldn't use the 4th costumes for anyone even if you've completed the Achievement "Quest Achiever".</li>
+              <li>Fixed a bug where when setting Edgar's "Cross-Sword Coat" and Strago's "Lunar Cloak", the status changes were not correct.</li>
+              <li>Fixed a bug where the spell "Meteor" was set to attack 4 times.</li>
+              <li>Fixed a mistake where the description for the spell "Poltergeist" said "Strength value".</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>14/12/23 Ver.0.1.7</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+            <li>Magic, Eidolons, Iaido, Blitz, Blue Magic, and Rage Menus have been changed and expanded from 14 to 19 spaces for the descriptions.</li>
+            <li>With these changes, I've reviewed the explanations.</li>
+            <li>Some attributes have been renamed:
+              <ul>
+                <li>Flame → Fire</li>
+                <li>Land → Earth</li>
+                <li>Poison → Darkness</li>
+                <li>Holy → Light</li>
+              </ul>
+            </li>
+            <li>With these changes, I've reviewed some battle messages.</li>
+            <li>The performance of some magic has been changed:
+            <ul>
+                <li>Poison … Attribute changed from Dark to Water.</li>
+                <li>Bio … Effect changed from Poison to Disease.</li>
+                <li>Catoblepas … Added Darkness damage.</li>
+                <li>Cait Sith … Added light damage.</li>
+                <li>Mist Dragon … Changed the attribute from Light to Light+Water.</li>
+                <li>Shadow Flare … Changed from no attribute to Dark.</li>
+            </ul>
+            </li>
+            <li>The Blue Magic spells "Mighty Guard" and "Night" are now able to be absorbed with Runic.</li>
+            <li>An issue was fixed where Umaro changing into his "Ronso's Waist Cloth" costume instead would change Shadow's costume.</li>
+            <li>Fixed an issue where Strago's "Guru's Glasses" costume was having sprite oddities in battle.</li>
+            <li>Changed the pose of Locke's "Ancient Armor" costume.<br>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/01/06 Ver.0.1.8</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+            <li>Adjusted the songs "Final Fantasy 1: Matoya's Cave" and "Final Fantasy 5: Last Battle".<br>
+            <li>Fixed a sprite error for Shadow's "Lunar Mail" costume and Gogo's "Mysidian Priest's Robe" costume poses.</li>
+            <li>Changed the sprite of Gau during his "Dress Up" event in WoR.<br>
+            <li>Changed NPC sprites on Palette #5.</li>
+            <li>Prior to this change, characters under ID 1F could only have animations for before/after battles used. Now, characters under 3F may also be used.</li>
+            <li>Due to the above change, character animations before and after battle are now set to ID 20.</li>
+            <li>Partially fixed the original game's bug of "Psycho Cyan" (Imp version).<br>
+            ※Iaido's "Sky" has been used, then Cyan dies→After reviving and making Cyan an Imp, being attacked will only make you counterattack once. I've modified the behavior of other bugs.</li>
+            <li>You will now immediately return to the title screen after dying.<br>
+            ※This stops the airship bug.</li>
+            <li>In the original game, changing the battle speed only affected enemies. Now, it will also affect you.</li>
+            <li>Changing costumes in the "Dressing Room" will now change the portraits on the menu.<br>
+            ※Many of these portraits were created by NAOKI.</li>
+            <li>Removed the exception handling of Locke's Portrait.</li>
+            <li>Changed the sprite of Locke's "Ancient Armor" costume.</li>
+            <li>Poison's damage has been changed from 1/16 HP to 1/8 HP.</li>
+            <li>Added 1 new set of battles.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/01/08 Ver.0.1.9</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+            <li>Fixed a bug where the portrait in the menu would collapse during using items or magic.</li>
+            <li>Fixed an error in the header for the song "Final Fantasy 5: Dear Friends".</li>
+            <li>The spell "Apocalypse" has been changed.</li>
+            <li>Fine-tuned Ultimecia's battle script.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/01/21 Ver.0.2.0</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Adjusted the songs "Final Fantasy 1: Matoya's Cave" and "Final Fantasy 3: Battle 1".</li>
+              <li>Fixed Cyan's "Exotic Foreign Armor" portrait.<br>
+              <li>Adjusted the sprite for Locke's "Wild Rose Bandana" costume.<br>
+              <li>Fixed a bug where Umaro would not auto-equip the "strongest" equipment when using "Genji Glove", "Gauntlet", or "Merit Award".</li>
+              <li>Fixed a bug where Umaro was unable to equip "Merit Award" and "Hyper Wrist".</li>
+              <li>Fixed a bug where the effect of dark-elemental damage was not reversing correctly on absorption, due to darkness not being applied to Poison.</li>
+              <li>Disease has been changed to deal dark-elemental damage, MP Sap, and will reverse if the target can absorb darkness.</li>
+              <li>Experimenting with new costumes, I've given Terra, Locke, Sabin, Celes, Relm, Gogo, and Umaro new outfits in the "Dressing Room".<br>
+              ※Completing the Achievement "Quest Achiever" will unlock these new costumes.<br>
+              ※I haven't added BGM to the Falcon yet when you're wearing costumes. It's very difficult to accomplish due to the remaining IDs for songs. Also, some character's portraits do not change, due to not being created yet.<br>
+              ※Some poses (dead in battle and Chocobo riding sprites) have not been added yet.</li>
+              <li>Added 1 new set of battles.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/01/26 Ver.0.2.1</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Changed enemy's Regen rate to 1/16 HP.<br>
+                ※Party member Regen remains at 1/8 HP.</li>
+              <li>Fixed a bug where Poison damage was 0 when at 1 HP.<br>
+                ※If HP is below a certain value, it will still be 0. This is to ensure the enemies "Peeper" and "Earth Protector" use "Self-Destruct".</li>
+              <li>The spell "Meteor" has been changed to attack 2-4 times.</li>
+              <li>Before joining the party, Gogo and Umaro's names in the "Dressing Room" have been changed to be listed as ??? and ???.</li>
+              <li>Added a new costume for Edgar and Strago.<br>
+                ※These are unlocked by completing the Achievement "Character Master".<br>
+                ※The conditions to cancel the Achievement "Character Master" was added last update also.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/01/28 Ver.0.2.2</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed a bug where when afflicted with the "Frozen" status, "MP Sap" from "Disease" still occurs.</li>
+              <li>Fixed a bug where when setting Edgar's "Cross-Sword Coat" and Strago's "Lunar Cloak", the status changes were not correct.</li>
+              <li>Fixed a bug where the spell "Meteor" was set to attack 4 times.</li>
+              <li>Fixed a mistake where the description for the spell "Poltergeist" said "Strength value".</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/02/09 Ver.0.2.3</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>During Version 1.8.5's Poison change, I've now re-fixed how it would deal less than 0 damage when at 1 HP.<br>
+            ※Poison's damage was increased drastically under certain conditions and has now been set back to normal.<br>
+            ※The enemies "Peeper" and "Earth Protector" have had their initial status changed to "Condemn".</li>
+            <li>Fixed a bug where only Strago would not change his costume in the "Dressing Room".</li>
+            <li>Changed the effect of some enemy's special attacks.</li>
+            <li>Changed Umaro's "Kappa Armor" costume to "Priest's Bolero". This also changes his field/battle/portrait sprites and the BGM played on the Falcon.</li>
+            <li>Umaro's "Ronso Waist Cloth" costume has had its field/battle/portrait sprites changed.</li>
+            <li>Umaro's "Full-Moon Hair Decorations" costume has had its field/battle/portrait sprites changed.</li>
+            <li>Lock's "Ancient Armor" costume has had its field/battle/portrait sprites changed.</li>
+            <li>I've reviewed and changed all the sprites for each character's tents.<br>
+            ※NAOKI of the forums did this.</li>
+            <li>Added new costumes in the "Dressing Room" for Cyan, Shadow, Setzer, Mog, and Gau.<br>
+            ※These costumes are unlocked when completing the Achievement "Character Master".<br>
+            ※This is now the 3rd set of costumes to be added for each character. There are no plans to add more.<br>
+            ※NAOKI on the forums created the above 5 sets of costumes.</li></li>
+            <li>Created a new song.<br>
+            ※I have now used all 255 ID slots for songs. Due to this, no more songs can be added.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/02/10　Ver.0.2.4</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>2 new accessories have been added.<br>
+              ※They're located in "Matoya's Cave" and the "Developer's Room".<br>
+              ※By equipping these accessories, your character's battle sprite will change. This is purely cosmetic.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/02/12 Ver.0.2.5</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+    <table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>Changed some field/battle sprite IDs.</li>
+            <li>Fixed a bug where some pixels were missing in field/battle sprites.</li>
+            <li>Adjusted some portrait graphics.</li>
+            <li>When in the "Dressing Room", changing costumes now changes job titles.</li>
+          </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/02/15　Ver.0.2.6</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>Fixed an error on Mog's "Shiny-Gold Crown" costume's portrait.</li>
+            <li>Changed the image ID of some characters again.<br>
+            ※If you're using an older save data, your job title may be Moogle, etc. Just change to something in the "Dressing Room" to fix this.</li>
+            <li>Changed the job name for some characters.</li>
+            <li>Celes's "Summoner's Kimono" costume's field and battle sprites have been changed. Overall, the entire palette has been changed.<br>
+            ※If she's already changed her costume, try changing it again to get the new effect.</li>
+            <li>Changed the field sprite for Shadow's "Lunar Mail" costume.</li>
+            <li>Fixed a bug when in Strago's "Lunar Cloak" costume, the effects of Poison, Zombie, etc changing the skin color were not correctly working.</li>
+          </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/02/17 Ver.0.2.7</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+        <td>
+            <ul>
+              <li>Fixed a bug where "Runic" could absorb the spell "Meteorite".</li>
+              <li>Changed Gilgamesh's field graphic.<br>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/02/19 Ver.0.2.8</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Adjusted the songs "Final Fantasy 1: Battle A", Final Fantasy 1: Boss Battle B", and "Final Fantasy Tactics: Antipyretic".</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/02/25 Ver.0.2.9</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Changed the "Toad" status portrait and sprite.</li>
+            </ul
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/02/28 Ver.0.3.0</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+            <li>Readded 2 previously deleted backgrounds: 04: Building, and 0A: Cave to [38][40].</li>
+            <li>Added 1 new battle background to [41].</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/03/02 Ver.0.3.1</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+            <li>Added in new dialogue that's different depending on whatever character is in the lead when you open a treasure chest.<br>
+            ※If the leader is blank at the top, Banon, Leo, or Ghost, etc, the dialogue will remain the default message.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/03/06 Ver.0.3.2</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>In the BGM, "Fanfare" (FF6, unused) was replaced to "Final Fantasy 5: Fanfare".</li>
+            <li>Gogo's Cave, I've gotten rid of the encounter rate.</li>
+            <li>Fixed a bug when selling an extended new item, it'd sometimes change to a different item.<br>
+            ※I believe this may be fixed for now, and it's only affecting the sale data, however another problem may arise with extended item use elsewhere.</li>
+          </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/03/13 Ver.0.3.3</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Changed some sound effects:<br>
+          <ul>
+            <li>Bio - FF5's effect.</li>
+            <li>Whip - FF5's effect. （FF6 T-Edition uses an unused sound effect.）</li>
+            <li>Time Magic - FF5's effect. (FF6 T-Edition uses an unused sound effect.）</li>
+          </ul>
+        </li>
+        <li>Created 3 new event commands.</li>
+        <li>Changed the performance process at the end of battle for Victory Fanfare.</li>
+        <li>Of the new added songs, I've removed the "Battle Fanfare" from the list in order to make room for new songs.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/03/21　Ver.0.3.4</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Slightly reduced the casting time of "X-Magic".</li>
+              <li>Expanded the accessories that change character commands to alternate ones.</li>
+              <li>With the above change, "Pre-emptive Strike" and "Alert", I've changed the address of the effect setting.</li>
+              <li>Added a new accessory called "Embroided Tippet".<br>
+              ※The location is in a hidden treasure chest in Daryl's Tomb. A battle will happen first when you open the chest, so be prepared.<br>
+              ※Even if you're playing an older save file and opened this chest, you may once again open it now once updating.</li>
+              <li>Added a new item, "Pheasant Netsuke".<br>
+              ※Due to the armor "Princess Dress" being replaced, if you're concerned by the number of these items you have, please just sell them.</li>
+              <li>Fixed a bug from the original game, where the chances of a Back Attack, Pincer Attack, or Side Attack were low due to a random number generator error.</li>
+              <li>The chance of "Pre-emptive Strike" happening has been doubled.</li>
+              <li>Changed the name of the ability "Cockatrice" to "Falcon" under Mog's "Dance".</li>
+              <li>Changed the unlock condition for the Achievement "Absorbed Player" to 100 hours Playtime.</li>
+              <li>Changed the unlock condition for the Achievement "World Roamer" to 200,000 Steps.</li>
+              <li>Added new costumes to test out for Terra, Cyan, Shadow, Edgar, Sabin, Celes, Relm, Setzer, and Gau in the "Dressing Room".<br>
+              ※These are unlocked by completing the Achievement "Quest Achiever".<br>
+              ※I haven't added BGM in the Falcon yet for each one, and there's no new portraits either. They'll remain the default ones for now.<br>
+              ※NAOKI from the forums helped with the above.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/03/23 Ver.0.3.5</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed a bug where "Revive" was being used when an Eidolon was cast.</li>
+              <li>Fixed a problem where if a character has the "Reraise" spell on them and are hit with a technique such as "Degenerator" or "Time Compression", they'd be revived but become invisible. This has been fixed and the techniques now work as intended.<br>
+              ※SPARX helped create this fix.</li>
+              <li>Fixed a bug where when entering the Falcon with Umaro in the lead in his normal costume, the game would freeze.</li>
+              <li>Fixed a bug where when entering a battle it wouldn't load based on wearing certain "Dressing Room" costumes.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/04/30 Ver.0.3.6</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed a bug where battles wouldn't start normally if characters were in costumes from the "Dressing Room".</li>
+              <li>Fixed a bug where fixed battles in "Labyrinth of the Ancients" and "Forbidden Land Eureka" are being revived, then deleted after changing to the 4th costume for characters in the "Dressing Room".</li>
+              <li>Fixed a bug where the game would freeze with Strago if Celes changed to her "Opera Dress" costume in the "Dressing Room".</li>
+              <li>Fixed a bug where when "Embroided Tippet" was equipped, you wouldn't recieve Magic Points after a battle.</li>
+              <li>Added new costumes in the "Dressing Room" for Locke, Strago, Mog, and Gogo.<br>
+              ※These are unlocked once the Achievement "Quest Achiever" has been completed.<br>
+              ※Umaro's BGM in the Falcon for his costume has not yet been added.<br>
+              ※NAOKI helped with the above.</li>
+              <li>Created a new song.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/05/02 Ver.0.3.7</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Created a new song.</li>
+        <li>Added Chocobo riding graphics for Lock, Gogo and Umaro's 4th costumes.</li>
+        <li>Adjusted Gogo's "Great Tree's Heavy Armor" costume graphic.<br>
+        ※NAOKI helped with this.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/05/13 Ver.0.3.8</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+                <li>Fixed a bug where Relm's "Sketch" command wasn't changing when she equipped the accessory "Embroided Tippet".</li>
+                <li>Fixed a bug where the BGM stopped when changing Strago to his "Engineer's Goggles" costume.</li>
+                <li>Adjusted Cyan's "Spira Monk Clothes" and "Judge's Mail" costumes, along with Shadow's "Shinobi Clothing" costume.<br>
+                ※NAOKI on the forums made these changes.</li>
+                <li>Adjusted Gogo's "Aegishjalmr" costume.<br>
+                ※279 and NAOKI on the forums helped with this.</li>
+                <li>Adjusted the songs "Romancing SaGa 1: Sewers", "Romancing SaGa 1: Grey's Theme", Romancing SaGa 1: Battle 1", "Romancing SaGa 1: Battle 2", "Romancing SaGa 1: Final Battle! Saruin", "Romancing SaGa 2: Normal Battle", "Romancing SaGa 2: Battle with Kujinshi", and "Romancing SaGa 3: Battle 2".<br>
+                ※マイセン on the forums adjusted these.</li>
+                <li>Adjusted the songs "Final Fantasy 3: Crystal Cave" and "Final Fantasy 3: Elia, the Maiden of Water".<br>
+                ※288 on the forums tried to arrange it similar to the song "Final Fantasy 3: Eternal Legend of the Wind".</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/05/27 Ver.0.3.9</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed a bug where the bonuses "Pre-emptive Strike Up" and "Alert" from the weapon/armor "Masamune" and "Earth Greaves" weren't working properly.</li>
+        <li>Fixed Umaro's default appearance graphic.</li>
+        <li>Adjusted Setzer's "Knight's Armor" costume graphic.<br>
+        ※NAOKI made this.</li>
+        <li>Corrected an issue where when Relm used the ability "Revive", it was displaying as "Meteorite".</li>
+        <li>Adjusted the songs "Final Fantasy 3: Battle 1", "Seiken Densetsu 1: Battle 2", "Romancing SaGa 1: Battle 1", Romancing SaGa 2: Battle 2", "Romancing SaGa 2: Normal Battle", and "Romancing SaGa 2: Last Battle".<br>
+        ※288 from the forums did this.</li>
+        <li>Changed the effects of the Eidolons "Titan", "Mist Dragon", "Leviathan", and "Ultima".<br>
+        ※However, there may be a time I restore this change for "Mist Dragon" and "Ultima".</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/06/10 Ver.0.4.0</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Created a new event command, [FC].</li>
+        <li>Added many new alphabet characters, half-width symbols, kanji, etc.</li>
+        <li>Characters that can only be used in conversational events [18 XX] and [17 XX] have been added.</li>
+        <li>Changed the descriptions on some items.</li>
+        </ul>
+    </td>
+  </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/06/18 Ver.0.4.1</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Added a new NPC.</li>
+        <li>Added new Japanese symbols.</li>
+        <li>Created a new song.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/06/22 Ver.0.4.2</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+            <li>Added a new NPC.</li>
+            <li>Adjusted the graphic for Locke's "SeeD Jacket" costume.<br>
+            ※NAOKI created this.</li>
+            <li>Adjusted the volume on some BGM.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/07/09 Ver.0.4.3</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+            <li>Previously, you'd be unable to use Dispel while outside of battle, but now you can, in order to get rid of Vanish if you'd like.</li>
+            <li>Added 1 new set of battles.<br>
+            ※I've added 2 new ones, however, they're not yet available.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/07/12 Ver.0.4.4</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+            <li>Fixed a bug where the Dance "Darkness's Requiem" would change the background to Narshe (Night) instead of Cave (Brown).</li>
+            <li>Adjusted the songs "Final Fantasy 3: Town of Water", "Final Fantasy 6: Town 2 (Unused)", "Final Fantasy 7: Still More Fighting", "Final Fantasy 9: Battle 1", and "Final Fantasy 13-2: Noel's Theme - The Last Journey".</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/07/16 Ver.0.4.5</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>Fixed a bug where defense wasn't increasing in the back row or when selected Defend.</li>
+            <li>Fixed a bug where when changing Cyan's costume to "Gold-Trim Armor", the game would freeze if he wasn't in the party.</li>
+            <li>Fixed a bug where in "New Game+" you couldn't use the 4th costumes for anyone even if you've completed the Achievement "Quest Achiever".</li>
+            <li>Created a new song.</li>
+            <li>Added 1 new set of battles.</li>
+          </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/07/20 Ver.0.4.6</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed a bug where the game would freeze if you tried to change Celes to her "Alexandrian General Armor" costume when she wasn't in the current party.</li>
+              <li>Fixed an error where Anima's name was incorrect.</li>
+              <li>The songs "SaGa Frontier 2:　Besessenheit" and "SaGa Frontier 2:　Freudenbezeigung IV" have been adjusted.</li>
+              <li>Created a new song.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/09/13　Ver.0.4.7</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>Deleted the ability to gain "Reflect" when using the item "Lunar Curtain" in battle.</li>
+            <li>Changed the additional effects of "Shadow Flare", "Poltergeist", "Almagest", and "Apocalypse" to "Disease".</li>
+            <li>Changed the graphic for "Sephiroth".</li>
+            <li>Raised some magic mastery rates.</li>
+          </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/10/08　Ver.0.4.8</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>Some weapon's battle graphics have been changed.</li>
+            <li>Added some Japanese symbols.</li>
+            <li>Changed the spell names "Disruption Particle Beam" to "Fusillade Particle Beam", and "Anti-Particle Beam" to "Reflective Particle Beam".</li>
+            <li>Added 1 new set of battles.<br>
+            ※This is the last planned addition of battles to the mod.</li>
+          </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/10/10 Ver.0.4.9</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>Changed the default appearance of Relm, Gau, and Gogo.</li>
+            <li>Due to the above changes for Gau, all 4 of his costumes have been changed.</li>
+          </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/10/15 Ver.0.5.0</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Changed the default appearances of Terra, Locke, Shadow, Celes, Strago, and Mog.</li>
+        <li>Adjusted colors 00, 01, 04, 05 on the character palette.</li>
+        <li>With the changes made to the above, some character images have been adjusted.</li>
+        <li>The effect of the spell "Scourge" has been changed.</li>
+        <li>The item "Echo Screen" has been changed.</li>
+        <li>Fixed a bug where sometimes Gogo and Umaro could not change to their 4th costume.</li>
+        <li>Created a new song.</li>
+    </ul>
+    </td>
+  </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/10/20 Ver.0.5.1</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+       <li>Made a change where the Death Sentence countdown is not green when Terra is in Trance mode.</li>
+        <li>Made significant changes to the colors 00, 06, 07 on the character palettes.</li>
+        <li>Made some changes to some character images, palette settings, map auto events, etc, with the changes made to the above.</li>
+        <li>Changed the default look of Edgar, Sabin, Cyan, and Setzer.</li>
+        <li>Changed the appearance of Celes' "Alexandrian General Armor" costume.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/10/24 Ver.0.5.2</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Changed Gogo's appearances based on when he wears his "Chameleon Robe" costume:<br>
+        ※Current (22 Types) … Terra, Locke, Cyan, Shadow, Edgar, Sabin, Celes, Strago, Relm, Setzer, Mog, Gau, Gogo, Umaro, Soldier, Toad, Leo, Banon, Trance Terra, Merchant, Ghost, and Kefka.<br>
+        ※New (9 Types)  … Leo, Banon, Trance Terra, Merchant, Ghost, Kefka, Ghestahl, Cid, Daryl, and Rachel.<br>
+        ※Added Gestahl, Cid, Daryl, and Rachel battle sprites.<br>
+        <li>Changed the transformation scene for "Exdeath".</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>15/10/28 Ver.0.5.3</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed various issues when Cyan was wearing his "Exotic Foreign Armor" costume.</li>
+              <li>I've reviewed the pre-battle animations for costumes in the "Dressing Room".<br>
+              <li>Fixed some color problems with Setzer's "Engineer's Clothing" costume during battle.</li>
+              <li>Adjusted the image of Locke's "Sky Pirate's Clothing" costume.</li>
+              <li>Added 1 new battle background.</li>
+              <li>Changed the battle background for the Zeromus battle.</li>
+              <li>Added Mog's "Dance" backgrounds, even if they don't change for the battles.<br>
+              ※In EX, this will never change for any battle.</li>
+              <li>Iaido: Dance had to be changed to Iaido: Fierce.<br>
+              ※This was done because when your party was hit by it, the game would freeze.</li>
+              <li>Adjusted the armor "Ice Shield" and "Thunder Shield".</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/12/02 Ver.0.5.4</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Added 1 new song.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+    <tr>
+        <td><b>15/12/31 Ver.1.0.0</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed a bug where the "Optimize" command on the Equip Menu was not working properly sometimes.</li>
+              <li>This marks Version 1.0.0 and completes the patch.<br>
+              ※I will fix and correct any bugs still, especially anything that affects game progress.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b>16/02/09 Ver.1.0.1</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>Changed the lowercase font used for naming.<br>
+            ※228 made this possible.</li>
+            <li>Changed the default appearance of Terra, Edgar, Celes, Relm, and Cid.<br>
+            ※228 again made this possible.</li>
+            <li>Added 3 bonus patches to change the Menu's Window Type.<br>
+            ※These are specifically for FF6 T-Edition and EX, they will not work in the original game.</li>
+          </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b>16/03/18 Ver.1.0.2</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Changed the values for HP and MP increase for all characters, which before was the same across the board.<br>
+        ※snow gets the credit for this fix.<br>
+        ※Due to the change in Eidolons, all Eidolon bonuses have been removed.<br>
+        </li>
+        <li>Deleted the items "Renaming Card" and "Sleeping Bag", replacing them with "Golden Apple" to increase max HP, and "Soma Drop" to increase max MP.<br>
+        ※GrayShadows helped with this.</li>
+        <li>Monster drop frame has been expanded from 2 to 4.<br>
+        ※I'm using Madsiur's process for this method. <br>
+        ※The probabilities are as follows:<br>
+        <br>
+        　　・Previous version （Original） - 88％ / 12％<br>
+        　　・New version - 68％ / 20％ / 8% / 4%</li>
+        <br>
+        <li>I've done an overall review of items dropped, stolen, and traded at the Coliseum.<br>
+        　※The case for the Coliseum especially, due to rare items being difficult to obtain.</li>
+        <li>Changed the name and sprite of the Eidolon "Zoneseeker".</li>
+        <li>Changed the colors for the spells "Flare, "Fire", "Fira", "Firaga", and "Level 2 Holy".</li>
+        <li>Changed the colors and effects of the spells "Flare", "Esuna", "Holy", "Silence", and "Remedy".</li>
+        <li>Changed the sphere effect of some magic.<br>
+        　※It's used for the spells "Firaga", "Gravity", "Protect", "Level 2 Holy", and "Blaster".</li>
+        <li>Changed the name of one of Cyan's "Iaido" moves.<br>
+        　※This won't show if you're using older save data upgrading to this latest version.</li>
+        <li>Changed the effects of Iaido #6, 7, and 8.</li>
+        <li>By equipping the accessory "Embroided Tippet", Relm's "Sketch" changes to "Spirit" now.</li>
+        <li>Changed the Tool "Mana Charger" to "Particle Bomb".</li>
+        <li>Changed the name of "Heaven's Shield".</li>
+        <li>The item "Pink Tail" has been changed to another item.</li>
+        <li>The accessory "Growth Egg" has been changed to another item.<br>
+        　※As a result, the reward from the quest "Owzer's Collection" has been changed.</li>
+        <li>The item "Wonder Wand" has been changed to another item.<br>
+        　※As a result, the accessory "Soul of Thamasa" is no longer dropped by the boss "Omniscient", and is found in the same spot now as the original game's location.</li>
+        <li>Changed an effect on the dagger "Orichalcum" and increased the chance of "Steal" working.</li>
+        <li>Changed the status bonuses of "Orichalcum" slightly.</li>
+        <li>Changed the effect of the weapon "Gungnir" to "Multi-Jump" as well as the accessory "Dragon Horn".</li>
+        <li>Created a new event command; "5B".</li>
+        <li>The wait time for "Tools" and "X-Magic" have been slightly reduced.</li>
+        <li>The chance for "Chainsaw" to have instant death proc has been lowered from 33% to 25%.<br>
+        　※It's been set back to how it was in the original game.</li>
+        <li>Created a new song.</li>
+        <li>Changed the default appearance of Celes and Relm's "White Robe" costume.<br>
+        　※228 is the one who made these.</li>
+        <li>Adjusted Relm's "White Robe" costume portrait in the menu.<br>
+        　※228 again helped make this.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<table class="update-heading-table">
+    <tr>
+        <td><b>16/03/23 Ver.1.0.3</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>Fixed a bug where the display for Terra's "Illusionary World Bustier" costume was not correct.</li>
+            <li>Fixed the description that shows at the Save Point.</li>
+            <li>Fixed mistakes for Gau's "Rage" descriptions.</li>
+            <li>The interior's decoration has been changed while in the memory.</li>
+            <li>Changed the effect of the Eidolon "Mist Dragon".</li>
+          </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+    <tr>
+        <td><b>16/03/28 Ver.1.0.4</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed a bug when talking to the crystal there was no response.</li>
+        <li>Changed the effect of the Eidolon "Titan".</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b>16/04/13 Ver.1.0.5</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Adjusted the song "Final Fantasy 2: Battle Scene A" in the list of songs.</li>
+              <li>Fixed a bug where items were dropping in battles that were changed and not meant to. Example: "Eald'narche" from FF11.</li>
+              <li>Add a new song.</li>
+              <li>Fixed a bug when using the accessory "Bracer", you could gain the effect of equipping 2 weapons by equipping 2 weapons that were not the strongest, then removing "Bracer".</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>16/04/14 Ver.1.0.6</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>The volume of some songs has been adjusted.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>16/10/09 Ver.1.1.0</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="updateentry-table">
+    <tr>
+        <td>
+            <ul>
+                <li>Corrected some mistakes in the html files.</li>
+                <li>Corrected some status errors for the armor "Lordly Robes" and "Maximillian".</li>
+                <li>Part of the title screen has been changed.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>17/02/21 Ver.1.2.0</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Corrected some dot errors in Locke's "Sky Pirate Clothes" and "Wild Rose Bandana" costumes.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>17/03/06 Ver.1.3.0</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Changed the map tile between memories.</li>
+              <li>Changed the map between memories.</li>
+              <li>Added a store between memories.<br>
+            ※You can now buy medicines.</li>
+              <li>The prices of "X-Potion", "X-Ether", and "Reincarnation" have been changed.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>17/06/06 Ver.1.4.0</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed a pallete error with the Kappa sprite when equipped with the accessory "Kappa's Favor".</li>
+        <li>Created a new song.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>17/06/09 Ver.1.5.0</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>The command name that originally had to be hidden when using the skill menu is now visible again.</li>
+          <ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>17/08/19 Ver.1.6.0</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed a bug where the song "Final Fantasy 6 - Victory Fanfare" couldn't be selected in the Music Player.</li></li>
+        <li>The effect value range for "Particle Bomb" was incorrect.</li>
+        <li>Due to a problem arising, the Battle Speed has been returned to what the original game is.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>18/02/06 Ver.1.6.1</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+                <li>Fixed a bug where the title of the Magitek Research Facility in the Music Player was not correct.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+    <tr>
+        <td><b>21/02/04 Ver.1.6.2</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>Note: All of the below has been officially added to the English version or some of the bug fixes were already patched prior -Kain.<br>
+            <li>Items that weren't in their correct positions when using 「Sort」 now are.<br>
+            　※Corrected by 148 in the 「FF6T Other Chat - 3」 forum thread.</li>
+            <li>Fixed the long-standing bug with certain items placed near other items and used in battle having odd effects.<br>
+            　※Corrected by 154 in the 「FF6T Other Chat - 3」 forum thread.</li>
+            <li>Buff and debuff colors now cycle on a character when multiple are in effect.<br>
+            　※Leet Sketcher's 「Color Wheel tweak patch」 was used to do this.</li>
+            <li>Fixed a bug where when 「Gekkabijin」+「Dancing Dagger」 are equipped random magic would proc instead of a dance effect.</li>
+            <li>Fixed a bug where when doing a 「Rage」 with the 「Dancing Dagger」 equipped produced a strange message.<br>
+            <li>Fixed a bug where the HP/MP growth value was incorrect when gaining experience points above a certain level and leveling up 2 or more times in 1 battle.<br>
+            　※Corrected by 205 in the 「FF6T Other Chat - 3」 forum thread.</li>
+            <li>Fixed an error in the sequence data for the song 「FF4 Fabul」.<br>
+            <li>「Experience Egg」 has been readded.<br>
+             ※Note: It is a reward from a new battle at the end of the WoB and from a chest in the WoR. -Kain.</li>
+            <li>Setzer's default sprite has been changed.<br>
+            　※I've modified it based on a design by Jameswhite89.<br>
+             ※I've added this, however, Setzer's old sprite is now an optional patch for the English version, found in the Optional Patches folder in case people don't care for the design. Check the characters.html - Setzer for a preview of his new look -Kain.</li>
+            <li>Locke's default sprite was slightly modified.<br>
+             ※I checked the sprites and noticed he corrected a few dots -Kain.</li>
+            <li>The effect values of 「Flare Star」 and 「Wave Cannon」 have been reduced from 45->42 and 88->77 respectively.<br>
+            <li>The AP gain from defeating the monster 「Intangir」 has been changed.<br>
+            <li>Some other small adjustments were made that weren't documented -Kain.<br></li>
+          </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b>21/02/06 Ver.1.6.3</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>Fixed a bug in the level up process.<br>
+                ※Thanks to Mr. 212 in the 「FF6T Other Chat Thread - 3」 thread on the forums for this solution.</li></li>
+          </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b>22/05/23 Ver.1.6.4</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+          <ul>
+            <li>「Experience Egg」 has been removed once again (immediately sell it to an NPC if transferring your data over from an older version, as it will cause problems if you don't).<br>
+            　※This is due to causing graphical glitches when equipping Relics and exceeding the max amount of allowed items.</li>
+            <li>Terra and Celes's default sprites have been slightly edited (back view).<br>
+            　※Thanks to Mr. 228 from the forums for these.</li>
+            <li>Locke's default sprite has been changed.<br>
+            　※I modified it based on Kain Stryder's work.</li>
+            <li>Kefka's sprite has been changed.<br>
+            　※Thanks to NAOKI for making this.</li>
+            <li>Terra's Trance sprite has been changed.<br>
+            　※This doesn't affect the sprite model used when she flies around the world map.</li>
+            <li>Fixed an issue where Setzer's sprite was incorrect when riding a Chocobo.</li>
+            <li>Of the new songs added, 「FF2 - Battle Scene 2」's sequence data has been modified.<br>
+            　※Thanks to Mr. 222 in the 「FF6T Other Chat - 3」 thread on the forums for this.</li>
+            <li>「Flash」's sprite location has been fixed.<br>
+            　※I used The FF6 Hacking Community's 「Stray Flash」 patch for this.</li>
+            <li>Edgar's 「Pilot Suit」 menu portrait has been fixed.<br>
+            <li>「Aura Cannon」's palette has been changed.</li>
+            <li>「Northern Cross」's palette has been changed.</li>
+            <li>Regen, Poison, and Disease's potency has been changed to max HP dependence instead of current HP.<br>
+            　In addition, the limit of Poison/Disease slip damage is 999.</li>
+            <li>「Wave Cannon」's formula has been changed to 9/16 of maximum HP and can no longer be evaded based on your Stamina value.</li>
+            <li>Fixed a bug on the Floating Continent in the WoR involving the save point room. This has been removed and a new save point is placed outside of it.</li>
+            <li>「Crusader」's 「Armaggedon」 has been changed from non-elemental damage to all-elemental damage.</li>
+            <li>The enemy 「Ironclad」 has had its name changed to 「Wolframiter」, and had its stats/resistances also changed.</li>
+            <li>「Carbuncle」 and 「Catoblepas」 are now available to obtain in the WoR.</li>
+            <li>Fixed an issue during 「New Game+」 where changing costumes at inns with Relm would cause issues.</li>
+            <li>Fixed some errors in map tile placements in the Forbidden Land Eureka.</li>
+            <li>The battle background for the Crystal Tower has been changed.</li>
+            <li>Fixed a bug where Locke's 「Sky Pirate」 costume wasn't selectable in EX.</li>
+          </ul>
+        </td>
+    </tr>
+</table>
+<table class="update-heading-table">
+    <tr>
+        <td><b>22/05/26　Ver.1.6.5</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>The item order in the Items menu has been adjusted.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>22/05/28 Ver.1.6.6</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed a ratio damage process.</li>
+        <li>The Eidolon 「Diabolos」's attack 「Dark Messenger」's gravity effect has been changed from 15/16 to 3/4.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>22/07/22 Ver.2.0.0</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Changed it so Gogo and Umaro are able to learn magic.</li>
+        <li>Costumes have had their stat changes removed for the 「Dressing Room」.</li>
+        <li>「Gold Hairpin」 has been changed from a headpiece to an accessory.</li>
+        <li>Default portraits have been changed for each character.<br>
+        ※Thank you to the author Laurel, patch creator Gens, and Kain Stryder for this.</li>
+        <li>Adjusted the status and actions of some enemies.</li>
+        <li>Adjusted the numerical value and performance of some equipment, as well as who may equip it.</li>
+        <li>Added 2x damage to magic creatures for some of the Dark Swords.<br>
+        ※There's a few exceptions.</li>
+        <li>Set dragon attribute to some enemies.</li>
+        <li>Some weapons now deal 2x damage against dragon enemies.</li>
+        <li>With the above, weapons now show 「Magic Bane」 and 「Dragon」 for the 2x damage effect.</li>
+        <li>Changed it so bonus damage to flying types is now 2x.</li>
+        <li>Changed the font color of some menu text.</li>
+        <li>Added and combined status recovery items.</li>
+        <li>Tab items to increase stats have been added.<br>
+        ※GrayShadows's process was used for this.</li>
+        <li>Fixed a bug where null, absorb, 50% resist, and weaknesses were not updated properly when changing some enemy parties.</li>
+        <li>Fixed a bug where Terra in Trance state would not run and characters in a frozen state would run in the opposite direction when escaping from an enemy.</li>
+        <li>Partially changed and implemented the patches 「Status Display Addition Patch C」, 「Eidolon List Drawing Modification」, and 「Main Menu Modification」 by Mr. 288 in the FF6T Other Chat Thread 3 on the forums.<br>
+        ※Thank you to Mr. 288 for this.</li>
+        <li>Fixed a bug with the 「Gauntlet」 accessory.<br>
+        ※Corrected by Mr. 724 in the FF6T Bug Report Thread - 2 on the forums.</li>
+        <li>「Experience Egg」 has been readded again.</li>
+        <li>The spell 「Holy」 has had its graphic changed.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<table class="update-heading-table">
+    <tr>
+        <td><b>22/07/28 Ver.2.0.1</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed an issue where when Strago changed clothes in the Dressing Room, the data of the mastered Eidolons was rewritten.</li>
+              <li>Fixed a bug where the damage of 「Ultima Weapon」 became extremely low when the strength value was 128 or more.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+    <tr>
+        <td><b>22/09/17 Ver.2.0.2</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+      <ul>
+        <li>Fixed a bug that occurred when changing clothes in the Dressing Room.</li>
+        <li>Adjusted the resistance and behavior of some enemies.</li>
+        <li>Fixed a bug where the display collapses when moving to the save screen with the magic acquisition status displayed by pressing the X button on the menu screen.<br>
+        ※Mr. 288 from the FF6T Other Chat Thread - 3 on the forums corrected it.</li>
+        <li>Added the patch by Mr. 288 from the FF6T Other Chat Thread - 3 on the forums 「Status Menu Modification」.<br>
+        ※Thank you again to the author, Mr. 288.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+<table class="update-heading-table">
+  <tr>
+    <td><b> 22/11/24 Ver.2.0.3</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed an issue with the 「Omega Weapon」 weapon in new game+.</li>
+              <li>Changed the attack effect when Gau/Gogo is doing 「Rage」 so that the equipped weapon's graphic is used instead of the monster's specific one.</li>
+              <li>Gau can now use 「Ultima Weapon」.<br>
+              <li>Fixed unintentional items being sold at the shop.<br>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table">
+  <tr>
+    <td><b>22/11/25 Ver.2.0.4</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+    <tr>
+        <td>
+            <ul>
+              <li>Fixed a bug that caused the game to freeze when changing costumes.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<table class="update-heading-table" id = "new">
+  <tr>
+    <td><b>22/12/4 Ver.2.0.5</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+<table class="update-entry-table">
+  <tr>
+    <td>
+        <ul>
+        <li>Fixed an issue with costumes freezing the game again (revised the code).</li>
+        <li>Fixed a bug where the original portraits for characters in the status menu had returned by mistake.</li>
+        <li>Fixed a bug where the item 「Gold Needle」 had the wrong effect.</li>
+        <li>Fixed a bug where certain slots on the character select screen for making parties were displaying incorrect numbers for stats.<br>
+        ※Mr. 288's 「Status Menu Modification」 patch was the part modified and fixed by him. Thank you!</li>
+        <li>Fixed a bug where the status screen was briefly weird when starting a brand new game on a completely new rom.<br>
+        ※Mr. 288's 「Status Menu Modification」 patch was the part modified and fixed by him. Thank you!</li>
+        </ul>
+    </td>
+</tr>
+</table>
+
+<div class="version-info">Final Fantasy VI T-Edition. Mod Creator: Tsushiy◆KEHt9L6ti47L</div>
+</body>
+</html>

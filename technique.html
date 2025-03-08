@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Skill Compendium - FFVI T-Edition</title>
+    <style>
+        /* Reset and Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+            background-color: #f8f9fa; /* Light background */
+            color: #343a40; /* Dark text for contrast */
+            line-height: 1.6;
+        }
+
+        a {
+            color: #007bff; /* Blue links */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        /* Container */
+        .container {
+            width: 95%;
+            max-width: 1400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff; /* White background for content */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            border-radius: 8px;
+            overflow-x: auto; /* Handles table overflow */
+            text-align: center; /* Center everything within the container */
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            margin: 5px;
+            color: #007bff;
+        }
+        .header h2 {
+          margin: 0;
+        }
+
+        /* Update Info */
+        .update-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+
+        /* Navigation Table */
+        .nav-table {
+            width: 100%;
+            margin-bottom: 30px;
+            table-layout: fixed; /* Equal width columns */
+        }
+
+        .nav-table td {
+            padding: 8px;
+            background-color: #e9ecef;
+            border-radius: 4px;
+        }
+        .nav-table a{
+          display: block;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+
+        }
+
+        th, td {
+            padding: 10px 12px; /* Reduced padding */
+            text-align: center; /* Center table cell content */
+            border-bottom: 1px solid #dee2e6;
+            word-wrap: break-word;
+        }
+
+        th {
+            background-color: #007bff; /* Header color */
+            color: #fff;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tr:hover {
+            background-color: #e9ecef;
+        }
+
+        /* Section Headers */
+        .section-header {
+            font-size: 1.5em;
+            color: #343a40;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-header a {
+            margin-left: 15px;
+            font-size: 0.7em; /* Smaller up arrow */
+            color: #007bff;
+            text-decoration: none;
+
+        }
+
+      .section-header a:hover{
+          color: #0056b3;
+          text-decoration: underline;
+      }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #6c757d;
+            font-size: 0.8em;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .update-info {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            th, td {
+              padding: 8px; /* Smaller padding for small screens */
+              font-size: 0.9em; /* Slightly smaller font size */
+            }
+             .nav-table td {
+              padding: 4px; /* Reduce nav table padding on small screens */
+
+             }
+            .nav-table a {
+              font-size: 0.8em; /* Smaller font in nav table */
+            }
+        }
+        .always-hits {
+            font-style: italic;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Special Skill Compendium</h1>
+            <h2>Final Fantasy VI T-Edition</h2>
+        </div>
+
+        <div class="update-info">
+            <div>Last Updated: 12/8/2022</div>
+            <div>Version: 3.0.5 (EX: 2.0.5)</div>
+        </div>
+
+        <table class="nav-table">
+            <tr>
+                <td><a href="#blitz">Blitz</a></td>
+                <td><a href="#swdtech">Iaido</a></td>
+                <td><a href="#tools">Tools</a></td>
+                <td><a href="#ninjutsu">Throw</a></td>
+                <td><a href="#dance">Dance</a></td>
+                <td><a href="#Slots">Slots</a></td>
+                <td><a href="#magitek">Magitek</a></td>
+                <td><a href="#other">Other</a></td>
+            </tr>
+        </table>
+
+
+        <div class="section-header"><a name="blitz"></a>Blitz<a href="#top">▲</a></div>
+        <table>
+             <tr>
+                <th>Name</th>
+                <th>Level Obtained</th>
+                <th>Target</th>
+                <th colspan="3">Attribute</th>
+                <th>Effect Value</th>
+                <th>Accuracy</th>
+                <th>Ability Information</th>
+                <th>Condition Change</th>
+                <th>Command</th>
+             </tr>
+             <tr>
+                <td>Pummel</td>
+                <td>1</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>98</td>
+                <td>130</td>
+                <td>Inflicts defense-ignoring physical damage to a single enemy.</td>
+                <td>-</td>
+                <td>←→←Ａ</td>
+             </tr>
+             <tr>
+                <td>Aura Cannon</td>
+                <td>6</td>
+                <td>Single</td>
+                <td colspan="3">Light</td>
+                <td>68</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals light-elemental damage to a single enemy.</td>
+                <td>-</td>
+                <td>↓／←Ａ</td>
+             </tr>
+             <tr>
+                <td>Suplex</td>
+                <td>10</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>142</td>
+                <td>80</td>
+                <td>Inflicts defense-ignoring physical damage to a single enemy.<br>Some enemies can't be thrown.</td>
+                <td>-</td>
+                <td>ＸＹ↓↑Ａ</td>
+             </tr>
+             <tr>
+                <td>Phoenix Dance</td>
+                <td>15</td>
+                <td>All</td>
+                <td colspan="3">Fire</td>
+                <td>40</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Inflicts fire-elemental damage on all enemies that doesn't split the damage.</td>
+                <td>-</td>
+                <td>←／↓＼→Ａ</td>
+             </tr>
+             <tr>
+                <td>Chakra</td>
+                <td>23</td>
+                <td>All <br>(Except Self)</td>
+                <td colspan="3">-</td>
+                <td>1</td>
+                <td>-</td>
+                <td>Restores HP to party members except yourself and heals Poison.<br>Amount of HP restored is based on current HP.</td>
+                <td>-</td>
+                <td>ＲＬＲＬＸＹＡ</td>
+             </tr>
+             <tr>
+                <td>Vacuum Wave</td>
+                <td>30</td>
+                <td>All</td>
+                <td colspan="3">Wind</td>
+                <td>75</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Inflicts wind-elemental damage on all enemies that doesn't split the damage.</td>
+                <td>-</td>
+                <td>↑／→＼↓／←Ａ</td>
+             </tr>
+             <tr>
+                <td>Tiger Rush</td>
+                <td>49</td>
+                <td>Random</td>
+                <td colspan="3">-</td>
+                <td>69</td>
+                <td>100</td>
+                <td>Hits a random enemy 3 times with physical damage, ignoring defense.</td>
+                <td>-</td>
+                <td>ＲＬＸＹ→←Ａ</td>
+             </tr>
+             <tr>
+                <td>Phantom Rush</td>
+                <td>99</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>168</td>
+                <td>150</td>
+                <td>Inflicts HP-dependent physical damage that ignores defense to a single enemy.</td>
+                <td>-</td>
+                <td>←＼↑／→＼↓／←Ａ</td>
+             </tr>
+        </table>
+
+        <div class="section-header"><a name="swdtech"></a>Iaido<a href="#top">▲</a></div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Level Obtained</th>
+                <th>Target</th>
+                <th colspan="3">Attribute</th>
+                <th>Effect Value</th>
+                <th>Accuracy</th>
+                <th>Ability Information</th>
+                <th>Condition Change</th>
+            </tr>
+            <tr>
+                <td>Tachi: Kiba (Fang)</td>
+                <td>1</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>120</td>
+                <td>130</td>
+                <td>Inflicts defense-ignoring damage to a single enemy.</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Tachi: Sora (Sky)</td>
+                <td>6</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>56</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Enter a counterattack pose that deals non-elemental damage to whoever strikes you. Wears off if another action is selected. Ignores defense.</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Tachi: Tora (Tiger)</td>
+                <td>12</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>1</td>
+                <td>100</td>
+                <td>Deal physical damage equal to the amount of HP you've lost.</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Tachi: Mai (Dance)</td>
+                <td>15</td>
+                <td>Random</td>
+                <td colspan="3">-</td>
+                <td>62</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Attacks enemies randomly 4 times with physical damage.</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Tachi: Ryu (Dragon)</td>
+                <td>24</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>28</td>
+                <td>130</td>
+                <td>Absorbs HP and MP from a single enemy and ignores defense, dealing non-elemental damage.</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>Tachi: Yukikaze (Snow)</td>
+                <td>34</td>
+                <td>Single</td>
+                <td colspan="3">Ice, Wind</td>
+                <td>49</td>
+                <td>140</td>
+                <td>Deals ice and wind-elemental damage with Silence to a single enemy and ignores defense <br>(if they can be silenced).</td>
+                <td>Silence</td>
+            </tr>
+            <tr>
+                <td>Tachi: Gekko (Moon)</td>
+                <td>44</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>108</td>
+                <td>120</td>
+                <td>Deals physical damage to all enemies and adds Stop <br>(if they can be stopped).</td>
+                <td>Stop</td>
+            </tr>
+            <tr>
+                <td>Tachi: Kasha (Flower)</td>
+                <td>99</td>
+                <td>Random</td>
+                <td colspan="3">-</td>
+                <td>42</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals defense-ignoring physical damage to a random enemy 4 times.</td>
+                <td>-</td>
+            </tr>
+        </table>
+
+        <div class="section-header"><a name="tools"></a>Tools<a href="#top">▲</a></div>
+        <table>
+          <tr>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Target</th>
+              <th colspan="3">Attribute</th>
+              <th>Effect Value</th>
+              <th>Accuracy</th>
+              <th>Ability Information</th>
+              <th>Condition Change</th>
+          </tr>
+          <tr>
+              <td>Auto Crossbow</td>
+              <td>1800</td>
+              <td>All</td>
+              <td colspan="3">-</td>
+              <td>65</td>
+              <td>100</td>
+              <td>Deals physical damage to all enemies and ignores row.</td>
+              <td>-</td>
+          </tr>
+          <tr>
+              <td>Noiseblaster</td>
+              <td>2000</td>
+              <td>All</td>
+              <td colspan="3">-</td>
+              <td>-</td>
+              <td>120</td>
+              <td>Inflicts Confusion on all enemies <br>(if they can be confused).</td>
+              <td>Confuse</td>
+          </tr>
+          <tr>
+              <td>Bioblaster</td>
+              <td>2000</td>
+              <td>All</td>
+              <td colspan="3">Darkness</td>
+              <td>20</td>
+              <td class = "always-hits">Always Hits</td>
+              <td>Deals dark-elemental damage to all enemies that doesn't split the damage, ignoring row, and inflicts Poison <br>(if they can be poisoned).</td>
+              <td>Poison</td>
+          </tr>
+          <tr>
+              <td>Flash</td>
+              <td>5000</td>
+              <td>All</td>
+              <td colspan="3">Fire</td>
+              <td>45</td>
+              <td>128</td>
+              <td>Inflicts fire-elemental damage to all enemies that doesn't split the damage, ignoring row, and sets Blind <br>(if they can be blinded).</td>
+              <td>Blind</td>
+          </tr>
+          <tr>
+              <td>Drill</td>
+              <td>15000</td>
+              <td>Single</td>
+              <td colspan="3">-</td>
+              <td>95</td>
+              <td>120</td>
+              <td>Deals defense-ignoring physical damage that ignores row to a single enemy.</td>
+              <td>-</td>
+          </tr>
+          <tr>
+              <td>Chainsaw</td>
+              <td>25000</td>
+              <td>Single</td>
+              <td colspan="3">-</td>
+              <td>225</td>
+              <td>140</td>
+              <td>Deals defense-ignoring physical damage that ignores row or instant death to an enemy.<br>Chance of death is 33%.</td>
+              <td>-</td>
+          </tr>
+          <tr>
+              <td>Particle Bomb</td>
+              <td>-</td>
+              <td>Single</td>
+              <td colspan="3">-</td>
+              <td>82</td>
+              <td class = "always-hits">Always Hits</td>
+              <td>Deals non-elemental damage to an enemy, ignoring row, and sets Condemn <br>(if they can be condemned).</td>
+              <td>Condemn</td>
+          </tr>
+          <tr>
+              <td>Air Anchor</td>
+              <td>-</td>
+              <td>Single/All</td>
+              <td colspan="3">-</td>
+              <td>172</td>
+              <td>140</td>
+              <td>Deals physical damage to an enemy that ignores row and causes them to die on their next turn.<br>Damage is given instead to all enemies if they're immune.</td>
+              <td>-</td>
+          </tr>
+        </table>
+
+        <div class="section-header"><a name="ninjutsu"></a>Throw<a href="#top">▲</a></div>
+         <table>
+            <tr>
+               <th>Name</th>
+               <th>Price</th>
+               <th>Target</th>
+               <th colspan="3">Attribute</th>
+               <th>Effect Value</th>
+               <th>Accuracy</th>
+               <th>Ability Information</th>
+               <th>Condition Change</th>
+            </tr>
+            <tr>
+               <td>Flame Scroll</td>
+               <td>600</td>
+               <td>All</td>
+               <td colspan="3">Fire</td>
+               <td>80</td>
+               <td class = "always-hits">Always Hits</td>
+               <td>Deals fire-elemental damage to all enemies and sets Blind (if they can be blinded).</td>
+               <td>Blind</td>
+            </tr>
+            <tr>
+               <td>Water Scroll</td>
+               <td>600</td>
+               <td>All</td>
+               <td colspan="3">Water</td>
+               <td>80</td>
+               <td class = "always-hits">Always Hits</td>
+               <td>Deals water-elemental damage to all enemies and sets Silence (if they can be silenced).</td>
+               <td>Silence</td>
+            </tr>
+            <tr>
+               <td>Thunder Scroll</td>
+               <td>600</td>
+               <td>All</td>
+               <td colspan="3">Thunder</td>
+               <td>80</td>
+               <td class = "always-hits">Always Hits</td>
+               <td>Deals thunder-elemental damage to all enemies and sets Slow (if they can be slowed).</td>
+               <td>Slow</td>
+            </tr>
+            <tr>
+               <td>Invis Scroll</td>
+               <td>400</td>
+               <td>Self</td>
+               <td colspan="3">-</td>
+               <td>-</td>
+               <td>-</td>
+               <td>Casts Vanish on the user.</td>
+               <td>Vanish</td>
+            </tr>
+            <tr>
+               <td>Shadow Scroll</td>
+               <td>800</td>
+               <td>Self</td>
+               <td colspan="3">-</td>
+               <td>-</td>
+               <td>-</td>
+               <td>Casts Blink on the user.</td>
+               <td>Blink</td>
+            </tr>
+         </table>
+
+        <div class="section-header"><a name="dance"></a>Dance<a href="#top">▲</a></div>
+        <table>
+           <tr>
+                <th>Dance</th>
+                <th>Name</th>
+                <th>Target</th>
+                <th colspan="3">Attribute</th>
+                <th>Effect Value</th>
+                <th>Accuracy</th>
+                <th>Ability Information</th>
+                <th>Condition Change</th>
+                <th>Reflect</th>
+                <th>Runic</th>
+           </tr>
+               <tr><td rowspan="4">Wind's Rhapsody</td>
+                <td>Wind Slash</td>
+                <td>All</td>
+                <td colspan="3">Wind</td>
+                <td>44</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals wind-elemental damage to all enemies that doesn't split the damage.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Sunbath</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>42</td>
+                <td>-</td>
+                <td>Recovers HP for the party and removes Frozen status.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Updraft</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Causes all party members to Jump.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Falcon</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>52</td>
+                <td>140</td>
+                <td>Inflicts non-elemental defense-ignoring damage to a single enemy and causes Petrify (if they can be stoned).</td>
+                <td>Petrify</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+                <tr><td rowspan="4">Forest's Nocturne</td>
+                <td>Leaf Swirl</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>50</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals non-elemental damage to all enemies that doesn't split the damage.<br>Deals extra damage to flying enemies.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Forest Bath</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>1</td>
+                <td>-</td>
+                <td>Heals MP for all party members and some statuses. Confusion, Silence, Slow, Disease, Stop, Sleep, Poison, Blind, and Petrify.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Whirlwind</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>10/16</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals 10/16 HP non-elemental damage to all targets. Fails if immune to Death.</td>
+                <td>Near Death</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Wombat</td>
+                <td>Random</td>
+                <td colspan="3">-</td>
+                <td>6</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals non-elemental defense-ignoring damage to a random enemy 8 times.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+                <tr><td rowspan="4">Desert's Lullaby</td>
+                <td>Sandstorm</td>
+                <td>All</td>
+                <td colspan="3">Wind, Earth</td>
+                <td>45</td>
+                <td>130</td>
+                <td>Deals wind and earth-elemental damage to all enemies, doesn't split the damage, and inflicts Blind <br>(if they can be blinded).</td>
+                <td>Blind</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Antlion</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>-</td>
+                <td>100</td>
+                <td>Instant death to a single enemy. Stamina helps with the evasion chance.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Landslide</td>
+                <td>All</td>
+                <td colspan="3">Earth</td>
+                <td>-</td>
+                <td>75</td>
+                <td>Deals earth-elemental damage to all enemies.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Meerkat</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Applies Protect, Shell, Haste, and Regen to all party members.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+                <tr><td rowspan="4">Love's Serenade</td>
+                <td>Elf Fire</td>
+                <td>Single</td>
+                <td colspan="3">Fire</td>
+                <td>72</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals fire-elemental damage to a single enemy and inflicts Confuse <br>(if they can be confused).</td>
+                <td>Confuse</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Ghost</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>25</td>
+                <td>140</td>
+                <td>Absorbs HP and MP from a single enemy.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Saint Beam</td>
+                <td>All</td>
+                <td colspan="3">Light</td>
+                <td>32</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals light-elemental damage to all enemies that doesn't split the damage.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>○</td>
+             </tr>
+             <tr>
+
+                <td>Tapir</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Gives Reraise to all party members.<br>Restores HP of those sleeping.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+                <tr><td rowspan="4">Earth's Blues</td>
+                <td>Cliff Collapse</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>65</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals non-elemental defense-ignoring damage to a single enemy.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Shamshir</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>10/16</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals 5/8 HP damage to a single enemy and sets them in Near Death status.</td>
+                <td>Near Death</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+              <tr>
+
+                <td>Magnitude 8</td>
+                <td>All</td>
+                <td colspan="3">Earth</td>
+                <td>100</td>
+                <td>130</td>
+                <td>Deals earth-elemental damage to all targets.<br>Has no effect on floating/flying units.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Wild Pig</td>
+                <td>Random</td>
+                <td colspan="3">-</td>
+                <td>14</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals non-elemental defense-ignoring damage to a random enemy 4 times.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+                <tr><td rowspan="4">Water's Harmony</td>
+                <td>El Nino</td>
+                <td>All</td>
+                <td colspan="3">Fire, Water</td>
+                <td>52</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals fire and water-elemental damage to all enemies that doesn't split damage.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Plasma</td>
+                <td>Single</td>
+                <td colspan="3">Thunder, Wind</td>
+                <td>70</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals thunder and wind-elemental damage to a single enemy.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Flash Rain</td>
+                <td>All</td>
+                <td colspan="3">Thunder, Water</td>
+                <td>60</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals thunder and water-elemental damage that doesn't split the damage and sets Blind (if they can be blinded).</td>
+                <td>Blind</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Raccoon</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>100</td>
+                <td>-</td>
+                <td>Recovers HP of all party members and most status ailments. Confusion, Silence, Slow, Toad, Disease, Berserk, Stop, Sleep, Poison, Zombie, Condemn, Blind, Frozen, Petrify</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+                <tr><td rowspan="4">Darkness's Requiem</td>
+                <td>Cave-In</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>12/16</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals 3/4 HP non-elemental damage to a single enemy and sets Disease and Near Death statuses <br>(if they can be diseased).</td>
+                <td>Disease, <br>Near Death</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Poison Fog</td>
+                <td>All</td>
+                <td colspan="3">Wind, Darkness</td>
+                <td>52</td>
+                <td>130</td>
+                <td>Deals wind and dark-elemental damage and sets Poison <br>(if they can be Poisoned).</td>
+                <td>Poison</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Confuser</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>-</td>
+                <td>128</td>
+                <td>Confuses all enemies <br>(if they can be confused).</td>
+                <td>Confuse</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Poison Frog</td>
+                <td>Single</td>
+                <td colspan="3">Darkness</td>
+                <td>62</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals dark-elemental damage to one enemy and sets Blind, Disease, Poison, and Silence <br>(if they can be set).</td>
+                <td>Blind, Disease, <br>Poison, Silence</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+                <tr><td rowspan="4">Snowman Rondo</td>
+                <td>Avalanche</td>
+                <td>All</td>
+                <td colspan="3">Ice</td>
+                <td>55</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals ice-elemental damage to all enemies that doesn't split damage.<br>Doesn't affect floating/flying enemies.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Snowball</td>
+                <td>All</td>
+                <td colspan="3">Ice, Wind</td>
+                <td>58</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals ice and wind-elemental damage to all enemies and inflicts Sleep <br>(if they can be slept).</td>
+                <td>Sleep</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Snowstorm</td>
+                <td>All</td>
+                <td colspan="3">Ice</td>
+                <td>71</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals ice-elemental damage to all enemies and ignores defense.</td>
+                <td>-</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+             <tr>
+
+                <td>Snow Bunny</td>
+                <td>Single</td>
+                <td colspan="3">-</td>
+                <td>60</td>
+                <td>-</td>
+                <td>Heals HP for all party members and gives Blink.</td>
+                <td>Blink</td>
+                <td>×</td>
+                <td>×</td>
+             </tr>
+        </table>
+
+         <div class="section-header"><a name="Slots"></a>Slots<a href="#top">▲</a></div>
+         <table>
+             <tr>
+                <th>Name</th>
+                <th>Roll</th>
+                <th>Target</th>
+                <th colspan="3">Attribute</th>
+                <th>Effect Value</th>
+                <th>Accuracy</th>
+                <th>Ability Information</th>
+                <th>Condition Change</th>
+             </tr>
+             <tr>
+                <td>Mysidia Bunny</td>
+                <td>Lose</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>14</td>
+                <td>-</td>
+                <td>Cures all party members by Effect Value x Level and heals Poison and Blind.</td>
+                <td>-</td>
+             </tr>
+             <tr>
+                <td>Chocobo Rush</td>
+                <td>Chocobo</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>36</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals non-elemental defense-ignoring damage to all enemies that doesn't split the damage.<br>Will not hit floating/flying units.</td>
+                <td>-</td>
+             </tr>
+             <tr>
+                <td>Seven Flush</td>
+                <td>Diamond</td>
+                <td>All</td>
+                <td colspan="3">Fire, Ice, <br>Thunder, Wind, <br>Light, Earth, <br>Water</td>
+                <td>65</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals seven types of elemental damage to all enemies that doesn't split the damage.</td>
+                <td>-</td>
+             </tr>
+             <tr>
+                <td>Dive Bomb</td>
+                <td>Airship</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>88</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Deals non-elemental defense-ignoring damage to all enemies that doesn't split the damage.</td>
+                <td>-</td>
+             </tr>
+             <tr>
+                <td>Mega Flare</td>
+                <td>Bahamut</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>Summons Bahamut.</td>
+                <td>-</td>
+             </tr>
+             <tr>
+                <td>Random Summon</td>
+                <td>BAR</td>
+                <td>?</td>
+                <td colspan="3">-</td>
+                <td>?</td>
+                <td>?</td>
+                <td>Randomly calls an Eidolon.</td>
+                <td>-</td>
+             </tr>
+             <tr>
+                <td>Joker Death</td>
+                <td>77BAR</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>-</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Instant death to all party members. Ignores resistance.</td>
+                <td>-</td>
+             </tr>
+             <tr>
+                <td>Joker Death</td>
+                <td>777</td>
+                <td>All</td>
+                <td colspan="3">-</td>
+                <td>-</td>
+                <td class = "always-hits">Always Hits</td>
+                <td>Instant death to all enemies. Ignores resistance.</td>
+                <td>-</td>
+             </tr>
+         </table>
+
+        <div class="section-header"><a name="magitek"></a>Magitek<a href="#top">▲</a></div>
+        <table>
+          <tr>
+              <th>Name</th>
+              <th>Target</th>
+              <th colspan="3">Attribute</th>
+              <th>Effect Value</th>
+              <th>Accuracy</th>
+              <th>Ability Information</th>
+              <th>Condition Change</th>
+          </tr>
+          <tr>
+             <td>Magitek Beam</td>
+             <td>Single</td>
+             <td colspan="3">-</td>
+             <td>61</td>
+             <td class = "always-hits">Always Hits</td>
+             <td>Deals non-elemental damage to a single enemy.</td>
+             <td>-</td>
+          </tr>
+           <tr>
+             <td>Bio Blaster</td>
+             <td>All</td>
+             <td colspan="3">Darkness</td>
+             <td>60</td>
+             <td class = "always-hits">Always Hits</td>
+             <td>Deals dark-elemental damage to all targets and sets Poison (if they can be poisoned).</td>
+             <td>Poison</td>
+          </tr>
+           <tr>
+             <td>Heal Force</td>
+             <td>Single</td>
+             <td colspan="3">-</td>
+             <td>60</td>
+             <td class = "always-hits">Always Hits</td>
+             <td>Heals target party member by Effect Value x Level.</td>
+             <td>-</td>
+          </tr>
+            <tr>
+              <td>Confuser</td>
+             <td>All</td>
+             <td colspan="3">-</td>
+             <td>-</td>
+             <td>128</td>
+             <td>Confuses all targets (if they can be confused).</td>
+             <td>Confuse</td>
+          </tr>
+             <tr>
+              <td>Banisher</td>
+             <td>Single</td>
+             <td colspan="3">-</td>
+             <td>-</td>
+             <td>170</td>
+             <td>Kills the target. Stamina helps chance to avoid.</td>
+             <td>-</td>
+          </tr>
+              <tr>
+                            <td>Magitek Missile</td>
+             <td>Single</td>
+             <td colspan="3">-</td>
+             <td>58</td>
+             <td class="always-hits">Always Hits</td>
+             <td>Deals non-elemental damage to the enemy and ignores defense.</td>
+             <td>-</td>
+          </tr>
+        </table>
+
+        <div class="section-header"><a name="other"></a>Other<a href="#top">▲</a></div>
+        <table>
+         <tr>
+            <th>Name</th>
+            <th>Target</th>
+            <th colspan="3">Attribute</th>
+            <th>Effect Value</th>
+            <th>Accuracy</th>
+            <th>Special Effects</th>
+            <th>Ability Information</th>
+         </tr>
+          <tr>
+            <td>Pray</td>
+            <td>All</td>
+            <td colspan="3">-</td>
+            <td>42</td>
+            <td class="always-hits">Always Hits</td>
+            <td>-</td>
+            <td>Recovers HP for the party. Cures Frozen.</td>
+         </tr>
+          <tr>
+            <td>Shock</td>
+            <td>All</td>
+            <td colspan="3">-</td>
+            <td>128</td>
+            <td class="always-hits">Always Hits</td>
+            <td>-</td>
+            <td>Deals non-elemental damage to all targets.</td>
+         </tr>
+           <tr>
+            <td>Spirit</td>
+            <td>All</td>
+            <td colspan="3">-</td>
+            <td>3</td>
+            <td class="always-hits">Always Hits</td>
+            <td>-</td>
+            <td>Restores a small amount of MP to all targets.</td>
+         </tr>
+         <tr>
+            <td>Twin Fang (Interceptor)</td>
+            <td>Single</td>
+            <td colspan="3">-</td>
+            <td>68</td>
+            <td class="always-hits">Always Hits</td>
+            <td>-</td>
+            <td>Deals physical damage that ignores defense to a single enemy.</td>
+         </tr>
+         <tr>
+            <td>Wishing Star (Sketch)</td>
+            <td>Single</td>
+            <td colspan="3">-</td>
+            <td>Step Count/41</td>
+            <td class="always-hits">Always Hits</td>
+            <td>-</td>
+            <td>Deals Step Count÷41 non-elemental damage to a single enemy.</td>
+         </tr>
+        </table>
+
+        <div class="footer">
+            Final Fantasy VI T-Edition. Mod Creator: Tsushiy (◆KEHt9L6ti47L)
+        </div>
+    </div>
+</body>
+</html>

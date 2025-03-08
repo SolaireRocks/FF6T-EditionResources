@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFVI T-Edition Guides</title>
+    <style>
+        /* Reset and Basic Styles */
+        body, h1, h2, h3, p, ul, li, a, table, td, th {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            min-height: 100vh;
+            overflow: hidden; /* Hide any overflow on the body*/
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100vh;
+            background-color: #e9ecef;
+            color: #212529;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            transition: left 0.3s ease;
+        }
+
+        .sidebar.closed {
+            left: -250px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 60px;
+        }
+
+        .sidebar li {
+            /* Remove the border from the li */
+            /*border-bottom: 1px solid #ced4da; */
+        }
+         .sidebar li:last-child{
+            /*border-bottom: none;*/  /* No border on last li */
+        }
+
+        .sidebar li a {
+            display: block;
+            padding: 12px 15px;
+            color: #343a40;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .sidebar li a:hover {
+            background-color: #d4d8db;
+            color: #000;
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger-menu {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            z-index: 1001;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hamburger-menu:hover {
+            background-color: #0056b3;
+        }
+
+        .hamburger-menu span {
+            margin-right: 8px;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            margin-left: 250px;
+            transition: margin-left 0.3s;
+            overflow: hidden; /* Changed from auto to hidden*/
+            width: calc(100% - 250px);
+
+        }
+        .main-content.sidebar-closed{
+            margin-left: 40px;
+            width: auto;
+        }
+.main-content > * {
+    overflow-x: auto; /*Allow the children elements to have scroll bars if needed*/
+}
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+        }
+
+        /* Horizontal Rule Styles */
+        .sidebar .separator {
+          border: none; /* Remove default hr styling */
+          height: 2px;  /* Make it a little thicker */
+          background-color: #495057; /* Darker color */
+          margin: 0; /* Remove the margins.  Key change. */
+          width: 100%; /* Full width. Key change */
+          padding: 0;
+
+        }
+
+        .sidebar ul > li:has(> .separator) {
+           /*No padding needed*/
+        }
+        .sidebar ul > li:has(> .separator) + li {
+            padding-top: .5rem; /* Add space *after* a separator */
+        }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                left: -100%;
+                margin-top:0;
+            }
+
+            .sidebar ul {
+                margin-top: 0;
+            }
+            .sidebar.open{
+              left:0;
+            }
+
+            .main-content {
+                margin-left: 0 !important;
+                padding: 20px;
+                width:100% !important;
+            }
+
+            .hamburger-menu {
+                position:fixed;
+                top:10px;
+                left:10px;
+            }
+            .sidebar.closed {
+              left: -100%;
+            }
+
+            .sidebar li {
+              /* border-bottom: 1px solid #ced4da;  Border on li for mobile, but handle with separators */
+            }
+            .sidebar li:last-child{
+               /* border-bottom:none; */ /*No border needed*/
+            }
+            .sidebar .separator {
+                /*No Changes needed on mobile*/
+            }
+
+        }
+
+        /* iframe Styles */
+          .main-content iframe {
+            width: 100%;  /* Ensure iframe takes full width of .main-content */
+            height: 100vh; /*Use Viewport height*/
+            border: none;
+            display: block; /* Important for consistent sizing */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="readme.html" target="content">Read Me</a></li>
+            <li><a href="readme translation (translated notes and guides in html folder, open the index file in a browser).txt" target="content">Read Me (Translation Notes)</a></li>
+            <li><a href="EX readme.html" target="content">EX Read Me</a></li>
+            <li><a href="change.html" target="content">Changes From Vanilla</a></li>
+            <li><a href="Events.html" target="content">New Events/Side Quests</a></li>
+            <li><a href="spoiler_free_new_quests.txt" target="content">Spoiler-Free New Event List</a></li>
+            <li><hr class="separator"></li>  <!--  separator -->
+            <li><a href="character.html" target="content">Characters</a></li>
+            <li><a href="technique.html" target="content">Techniques</a></li>
+            <li><a href="magic.html" target="content">Magic/Enemy Skills</a></li>
+            <li><a href="rageenglish.html" target="content">Rages - English</a></li>
+            <li><a href="ragehelp.txt" target="content">Rages - Suggestions</a></li>
+            <li><a href="ragemato.html" target="content">Rages - Mato</a></li>
+            <li><a href="ragehelpmato.html" target="content">Rages - Mato Suggestions</a></li>
+            <li><a href="veldt.txt" target="content">Veldt Formations</a></li>
+            <li><a href="soulshrine.txt" target="content">Soul Shrine Formations</a></li>
+            <li><hr class="separator"></li> <!--  separator -->
+            <li><a href="dressroom.html" target="content">Dressing Room/Costumes</a></li>
+            <li><a href="weapon.html" target="content">Weapons</a></li>
+            <li><a href="armor.html" target="content">Armor/Relics</a></li>
+			<li><a href="bestiary.html" target="content">Bestiary</a></li>
+            <li><a href="ragnarok.txt" target="content">Ragnarok Guide</a></li>
+            <li><a href="coliseum.html" target="content">Coliseum List</a></li>
+            <li><a href="shop.html" target="content">Shop List</a></li>
+            <li><a href="stealdropragworthit.txt" target="content">Worthwhile Drops/Steals/Ragnarok Morphs</a></li>
+            <li><hr class="separator"></li> <!--  separator -->
+            <li><a href="windowtype.html" target="content">Window Types</a></li>
+            <li><a href="bgm.html" target="content">BGM</a></li>
+            <li><a href="background.html" target="content">Backgrounds</a></li>
+            <li><hr class="separator"></li> <!--  separator -->
+            <li><a href="history.html" target="content">Patch Notes</a></li>
+            <li><a href="EX history.html" target="content">EX Patch Notes</a></li>
+			<li><a href="item spoilers.html" target="content">Item Location Spoilers</a></li>
+        </ul>
+    </div>
+
+    <button class="hamburger-menu" id="hamburgerMenu">
+        <span>☰</span> Menu
+    </button>
+
+    <main class="main-content" id="mainContent">
+        <iframe src="readme.html" name="content"></iframe>
+    </main>
+
+    <script>
+        const hamburgerMenu = document.getElementById('hamburgerMenu');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+        let sidebarOpen = true;
+
+        function toggleSidebar() {
+            sidebarOpen = !sidebarOpen;
+            if (sidebarOpen) {
+                sidebar.classList.remove('closed');
+                mainContent.classList.remove('sidebar-closed');
+            } else {
+                sidebar.classList.add('closed');
+                mainContent.classList.add('sidebar-closed');
+            }
+        }
+
+        hamburgerMenu.addEventListener('click', (e) => {
+          e.stopPropagation();
+          toggleSidebar();
+        });
+
+        document.addEventListener('click', (event) => {
+          if (!sidebar.contains(event.target) && !hamburgerMenu.contains(event.target) && sidebarOpen && window.innerWidth <=768) {
+                toggleSidebar();
+          }
+        });
+
+       document.querySelectorAll('.sidebar a').forEach(link => {
+          link.addEventListener('click', (e) => {
+            if(window.innerWidth <= 768){
+              toggleSidebar();
+            }
+          });
+        });
+    </script>
+</body>
+</html>

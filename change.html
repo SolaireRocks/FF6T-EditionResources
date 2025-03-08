@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Final Fantasy VI T-Edition - Major Changes</title>
+    <style>
+        body, td, th {
+            font-family: sans-serif; /* Simplified for cross-platform consistency */
+            font-size: 14px;
+        }
+
+        div {
+            letter-spacing: 0.1em;
+        }
+
+        h1 {
+          text-align: center; /* Center the main title */
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 800px; /* Consistent width */
+            margin: 1em auto; /* Centered with top/bottom margin */
+            /* border: 1px solid #000; Removed unnecessary border from tables, borders kept on cells */
+        }
+		/* General table styles */
+        th, td {
+            padding: 5px;
+             border: 1px solid #000;
+            text-align: left; /* Left-align text for readability */
+        }
+
+        th {
+            background-color: #D2D4E8; /* Consistent header background */
+        }
+
+        hr {
+          width: 70%;
+          border: none; /* Removed the default border styling*/
+          border-top: 1px solid #000; /*Added a simple line*/
+          margin: 1em auto;
+        }
+
+        .version-info {
+            text-align: right;
+            margin-bottom: 1em;
+        }
+
+        /* Section heading tables (Table of Contents, System Related, etc.) */
+        .section-heading-table {
+            background-color: #C3C1C1;
+            height: 40px;
+        }
+        .section-heading-table td{
+          border: none;
+        }
+        .section-heading-table a {
+          color: inherit; /* Links inherit text color */
+          text-decoration: none; /*Removes Underline*/
+        }
+
+        .section-heading-table .back-to-top {
+            text-align: right;
+            color: #fff; /*Back to Top in White*/
+
+        }
+
+        .section-heading-table b {
+          font-size: 1.2em; /*Makes the Bold text stand out*/
+        }
+        /* Content tables */
+        .content-table {
+            /* Removed CELLSPACING, using CSS padding instead */
+            /*border: none; No need to explicitly remove borders since we use border-collapse */
+        }
+        .content-table td{
+          border: none;
+        }
+        .content-table ul {
+          padding-inline-start: 1em; /* Standard indentation for lists */
+          list-style-type: disc;
+        }
+
+        .content-table ul ul {
+          list-style-type: circle; /*Different bullet points*/
+        }
+        .content-table li {
+            margin-bottom: 0.5em; /* Spacing between list items */
+        }
+
+		.content-table b {
+			font-weight: bold;
+		}
+
+        /* Image centering */
+        .image-container {
+            text-align: center;
+            margin: 1em 0; /* Space above and below images */
+        }
+
+        .image-container img {
+            margin-right: 20px;
+            vertical-align: middle; /* Align images properly */
+        }
+        .image-container img:last-child{
+          margin-right: 0px; /*Removes the margin from the last img so that it isn't offset*/
+        }
+		.hidden {
+			display: none;
+		}
+
+    </style>
+
+	<!-- Javascript is fine. No changes needed. -->
+    <script>
+        function show(inputData) {
+            const objID = document.getElementById( "layer_" + inputData );
+            const buttonID = document.getElementById( "category_" + inputData );
+            if(objID.classList.contains('hidden')) {
+                objID.classList.remove('hidden');
+            } else {
+                objID.classList.add('hidden');
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h1>Major Changes</h1>
+<hr style="color: blue;">
+
+<div class="version-info">
+    <div>Last Updated: 12/8/2022</div>
+    <div>Version: 3.0.5</div>
+    <div>EX: 2.0.5</div>
+</div>
+
+<table class="section-heading-table">
+    <tr>
+        <td><b>0. Table of Contents</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="content-table">
+    <tr><td><div><a href="#1">1. System Related</a></div></td></tr>
+    <tr><td><div><a href="#2">2. Battle Related</a></div></td></tr>
+    <tr><td><div><a href="#3">3. Character Related</a></div></td></tr>
+    <tr><td><div><a href="#4">4. Ability Related</a></div></td></tr>
+    <tr><td><div><a href="#5">5. Item Related</a></div></td></tr>
+    <tr><td><div><a href="#6">6. Monster Related</a></div></td></tr>
+    <tr><td><div><a href="#7">7. Event Related</a></div></td></tr>
+</table>
+
+<table class="section-heading-table" id="1">
+  <tr>
+    <td><b>1. System Related</b></td>
+    <td class="back-to-top"><a href="#top">▲</a></td>
+  </tr>
+</table>
+
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Movement Speed</h4>
+        <ul>
+          <li>In the original game you could only dash when you had "Sprint Shoes" equipped, but that has now been changed. Now simply <b>press and hold the B Button to run</b>.</li>
+          <li>With the above change, "Sprint Shoes" have been deleted.</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>ATB System</h4>
+        <ul>
+          <li>The ATB system has been changed so the bar freezes anytime an action/effect goes off (it's now similar to FF5's ATB.)</li>
+          <li>Thanks to snow for this.</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Music Player</h4>
+        <ul>
+          <li>By selecting Config in the menu→then Sound, you'll see it's now been changed to be like the GBA version's Music Player.</li>
+          <li>It'll play that song until you exit the menu screen entirely.</li>
+          <li>Thanks to Inu for this.</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="image-container">
+        <img src="img/music_01.png" alt="Music Player 1">
+        <img src="img/music_02.png" alt="Music Player 2">
+      </div>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Added Music</h4>
+        <ul>
+          <li>In addition to the 10 new songs added by the Omega mod, I've added 200+ new songs mostly from Square's other works, including Romancing SaGa, Seiken Densetsu, etc.</li>
+          <li>For a list of the songs, including the original ones, please click below.<br>
+            <div style="text-align: center;"><a href="bgm.html">→Song List</a></div>
+          </li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Battle Music - Fanfare Change</h4>
+                <ul>
+                    <li>In addition to being able to set the battle music for any monster formation thanks to Omega's mod, I'm also able to change the victory fanfare when the battle ends.</li>
+                    <li>Battle music and victory fanfare has been changed from the normal version of FF6 now by area/enemy.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>New Game+</h4>
+                <ul>
+                    <li>During the World of Ruin speak with the NPC at the Narshe's Beginner's Hall behind the bar and select "New Game+" .</li>
+                    <li>The following will carry over:
+                        <ul>
+                            <li>Current items held.　※Key items will not carry over.</li>
+                            <li>Magic spells.</li>
+                            <li>Eidolons.</li>
+                            <li>Blue Magic, Rages, and Dances.</li>
+                            <li>Playtime.</li>
+                            <li>Step Count.</li>
+                            <li>Steal success count.</li>
+                            <li>Twin Fang count.</li>
+                            <li>Successful uses of Runic.</li>
+                            <li>Successful uses of Sketch.</li>
+                            <li>Slots use total.</li>
+                            <li>Snowstorm use total.</li>
+                            <li>Successful uses of Mimic.</li>
+                            <li>Unlocked Achievements.</li>
+                        </ul>
+                    </li>
+
+                    <li>The following are added to "New Game+":
+                        <ul>
+                            <li>Monster formation encounters are reset.</li>
+                            <li>Bar quests/side quests are reset (you MUST clear ALL in one play to get the achievement if you missed any).</li>
+                            <li>Treasure chests are reset.</li>
+                            <li>Trance time increase is reset (Humbaba event).</li>
+                            <li>Terra loses Trance.</li>
+                            <li>Deathgaze kill flag reset.</li>
+                            <li>Reset Dried Meat flag.</li>
+                        </ul>
+                    </li>
+                    <li>If you unlock the Achievement "The Best Models" you can change clothes in various places during gameplay:
+                        <ul>
+                            <li>Narshe's Beginner's Hall</li>
+                            <li>Returner's Headquarters</li>
+                            <li>Gau's Father's House - Chocobo Merchant</li>
+                            <li>South Figaro Inn</li>
+                            <li>Mobliz Inn</li>
+                            <li>Nikeah Inn</li>
+                            <li>Kohlingen Inn</li>
+                            <li>Jidoor Inn</li>
+                            <li>Albrook Inn</li>
+                            <li>Tzen Inn</li>
+                            <li>Maranda Inn</li>
+                            <li>Thamasa Inn</li>
+                        </ul>
+                    </li>
+                    <li>◆HZ9Cy.3WvI's Omega mod was used to do all of this.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Attribute Names</h4>
+                <ul>
+                  <li>The following attribute names have been changed:</li>
+                    <ul>
+                        <li>Flame → Fire</li>
+                        <li>Land → Earth</li>
+                        <li>Poison → Darkness</li>
+                        <li>Holy → Light</li>
+                    </ul>
+                </ul>
+            </div>
+        </td>
+    </tr>
+    </table>
+
+    <hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Equipment Details Menu</h4>
+                <ul>
+                    <li>Along with the original information displayed, such as can it be used with Runic, Iaido, 2 Hands, etc, it's now been added to show the following characteristics of other effects on weapons:</li>
+                    <ul>
+                        <li>Consume MP to enforce a Critical Hit (MP Critical).</li>
+                        <li>Absorb HP by dealing damage (HP Absorb).</li>
+                        <li>Absorbs MP by dealing damage (MP Absorb).</li>
+                        <li>There's no penalty to attacking from the back row (Row OK).</li>
+                        <li>Possible to "Throw" ("Throw" OK).</li>
+                        <li>Extra damage to flying units (Flight weak).</li>
+                        <li>Extra damage to human units (Human weak).</li>
+                    </ul>
+                </ul>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="image-container">
+                <img src="img/menu_01.png" alt="Menu 1">
+                <img src="img/menu_02.png" alt="Menu 2">
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Equipment Attribute Details</h4>
+                <ul>
+                    <li>The attribute details of equipment have been changed.</li>
+                    <li>Originally only 6 types could be displayed, but now all 8 can be shown.</li>
+                    <li>Thanks to Lenophis's "elemental display fix" for this.</li>
+
+                </ul>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="image-container">
+                <img src="img/elemental_01.png" alt="Elemental 1">
+                <img src="img/elemental_02.png" alt="Elemental 2">
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>HP/MP Status Growth</h4>
+        <ul>
+          <li>Eidolons no longer give any status growth.</li>
+          <li>There are now separate tables of HP/MP growth for each character, which originally only 1 table was shared for all.</li>
+          <li>Thanks to snow for this.</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Coliseum Battles</h4>
+        <ul>
+          <li>You can now control your character in battles opposed to auto-battle like before.</li>
+          <li>The enemy's battle behavior has been adjusted.</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Magic Classification</h4>
+                <ul>
+                    <li>In the original game magic was classified as "Recovery", "Attack", and "Support". It's now been changed to "○White", "●Black", and "<span style='color:#808080;'>●</span>Time".</li>
+                    <li>With the above edit the number of magic in each class has been changed.</li>
+
+                </ul>
+            </div>
+        </td>
+    </tr>
+		<tr>
+			<td>
+				 <div class="image-container">
+        <img src="img/magic_01.png" alt="Magic 1">
+        <img src="img/magic_02.png" alt="Magic 2">
+        <img src="img/magic_03.png" alt="Magic 3">
+      </div>
+			</td>
+		</tr>
+    </table>
+
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Magic Acquisition Status</h4>
+                <ul>
+                  <li>By pressing the X Button on the menu, the equipped Eidolon name and magic acquisition status will be displayed.</li>
+                  <li>Also, a star will be displayed for Eidolons that have been mastered.</li>
+                  <li>Madsiur's 「Mastered Esper Icon」 was used for this process.</li>
+                  <li>Mr. 288 from the forum's 「Eidolon List Drawing Modification」 and 「Main Menu Modification」 mods were used as well.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+		<tr>
+			<td>
+				<div class="image-container">
+					<img src="img/esper_01.gif" alt="Esper 1" >
+					<img src="img/esper_02.gif" alt="Esper 2" >
+				</div>
+			</td>
+		</tr>
+</table>
+
+<hr>
+ <table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Additional Kanji</h4>
+                <ul>
+                    <li>In addition to characters added from the Omega mod, I've added even more kanji.</li>
+                    <li>For more details please refer to the "FF6-T追加漢字.txt" file.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Item Descriptions</h4>
+                <ul>
+                    <li>Added descriptive text to all items in the fashion of the GBA version and others.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Magic Skill Description</h4>
+        <ul>
+          <li>I've changed the window layout and expanded the character limit for text descriptions from 14 to 19.</li>
+          <li>With the above changed I've also reviewed each description and explanation.</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+       <div class="image-container">
+        <img src="img/magicdescription_01.png" alt="Magic Description 1">
+        <img src="img/magicdescription_02.png" alt="Magic Description 2">
+      </div>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>3 Digit Playtime</h4>
+                <ul>
+                  <li>In the original game the timer would stop counting at 99:59. This has now been changed to display <b>255:59</b>.</li>
+                  <li>With the above edit I've slightly changed the menu layout.</li>
+                  <li>Thanks to Leviathan Mist's "255 Hours on Timer" for this.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+		<tr>
+			<td>
+				<div class="image-container">
+					<img src="img/playtime_01.png" alt="Playtime 1">
+					<img src="img/playtime_02.png" alt="Playtime 2">
+				</div>
+			</td>
+		</tr>
+</table>
+
+<hr>
+<table class="content-table" id="window">
+    <tr>
+        <td colspan="2">
+            <div>
+                <h4>Window Type</h4>
+                <ul>
+                    <li>Changed windows 2, 3, 4, 5, 6, 7, and 8. Type 1 is unchanged (default).</li>
+                    <li>I've tried to immitate other Square games with the changed window types above.</li>
+                    <li>If you're using an older save data and update to the latest version, you won't see a change to the windows. However, simply selecting the color of the window and hitting the A Button to reset to default will "unlock" them.</li>
+                    <li>As a bonus I've attached 3 separate patches just for window type changes. <b>These will only work for FF6 T-Edition or EX</b>. There's no other changes done except this and it won't affect the original FF6 either.</li>
+                  <br>
+                  <div style="text-align: center;"><a href="windowtype.html">→Window Type List</a></div>
+                </ul>
+
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Treasure Chest Message</h4>
+                <ul>
+                    <li>I've changed the normal dialogue message when you receive treasure to be different now based on who's in the lead of your party.</li>
+                    <li>If the very top of the party slot is empty, Banon, Ghost, or Leo it'll be the generic original message displayed.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<table class="section-heading-table" id="2">
+    <tr>
+        <td><b>2. Battle Related</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Accuracy Bug</h4>
+                <ul>
+                    <li>I've fixed a bug in the original game where accuracy was not working properly.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Battle Speed</h4>
+                <ul>
+                    <li>In the original game changing the battle speed would only affect the enemy's speed and not the players. I've since changed it to now also affect the player's speed.</li>
+                    <li>Due to this the game's speed is just sped up to make things faster. It doesn't make things easier or harder (such as lowering the speed=doesn't make the enemy weaker).<br>
+                        Of course if you lower the game's speed, the ease of entering commands is much easier, so this could be seen as making the game easy.</li>
+                    <li>Note: As of 2.9 this has been reverted to vanilla. I've left the above text in just in case Tsushiy fixes this (he reverted it due to a bug he couldn't fix) - Kain.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Item Drop Rate</h4>
+                <ul>
+                  <li>In the original game there were two types of drops: 88% (common) and 12% (rare).</li>
+                  <li>Thanks to Madsiur for help on this.</li>
+                    <ul>
+                        <li>Original … 88% / 12%</li>
+                        <li>FF6 T-Edition … 68% / 20% / 8% / 4%</li>
+                    </ul>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Back Attack/Pincer Attack/Side Attack</h4>
+                <ul>
+                    <li>In the original game there was a bug where the random number generated for the chance of these was lower than intended. I've fixed this.</li>
+                    <li>Due to the above change accessories that increase some of these effects like "Alarm Earring" have had their effects further enhanced.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Pre-emptive Strike Increase</h4>
+                <ul>
+                  <li>I've increased the chance of Pre-emptive Strike to twice that of the original and also accessories that enhance it such as "Gale Hairpin".</li>
+                  <li>With the above change "Gale Hairpin" is now even stronger.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Defense-Ignoring Attacks</h4>
+        <ul>
+          <li>The formula for attacks that ignore defense and magic defense have been changed.</li>
+          <li>The formula is different for the party and enemy:</li>
+          <ul>
+            <li>Party … Physical： Defense 1/2　　Magic： Defense 0</li>
+            <li>Enemy … Physical： Defense 0　　Magic： Defense 0</li>
+          </ul>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Weakness Attribute</h4>
+                <ul>
+                    <li>The weakeness to specific damage has been changed now to setting defense to 1/4 max if the attack has a double effect on weakness.</li>
+                    <li>Thanks to SPARX for help with this.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Multiple Attribute Attacks</h4>
+                <ul>
+                    <li>The priority of an enemy's attack, absorb, null, 50% reduction, and weakness in the original game is:<br> <b>Absorb>Null>50% Reduction>Weakness</b><br> This has now been changed to make each one separate.</li>
+                    <li>Example - Null: Ice    Weak to: Water<br>
+                        The case above is for if an attack shares ice and water-elemental properties, damage will still be dealt.
+                          <ul>
+                              <li>Before change … Ice damage takes priority, so damage is set to 0.</li>
+                              <li>After change … Magic defense is set to 1/4 due to water weakness. Ice is nulled and damage is halved for the remainder.</li>
+                          </ul>
+                      </li>
+                    <li>Thanks to Imzogelmo's "Separation of Powers" patch for this.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Status Ailments</h4>
+                <ul>
+                    <li>I've changed the priority for status ailments to be blocked if items that give any and prevent any are equipped at the same time.</li>
+                    <li>If for example you equip the armor "Cursed Shield" and then the accessory "Ribbon" you'd still get the status ailments from "Cursed Shield".</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Critical Health</h4>
+                <ul>
+                    <li>The critical health/dying state has been changed from 1/8 to 1/4 HP.</li>
+                    <li>"Cover" effect and Desperation Attacks are effected by this.</li>
+                    <li>Thanks to HatZen08's "Half Health Warning" for this.</li>
+                    <li>I've created a new "Critical Health" effect. With this change attacks with percent damage (Gravity, Tornado, etc) will now work on enemies immune to instant death, but not critical health resistant.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Blind Status</h4>
+                <ul>
+                  <li>I've fixed the bug in the original game where Blind was not reducing accuracy.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Stop Status</h4>
+                <ul>
+                  <li>The Stop status has been shortened. It was originally the same duration as Sleep, but now it's less.</li>
+                  <li>Sleep is set to be longer, but can be cured with a physical attack. Stop can't be cured with a physical attack, but the duration is much less.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Poison Status</h4>
+                <ul>
+                    <li>The effect of Poison has been changed to deal 1/8 HP damage per tic.</li>
+                    <li>The damage limit is set to 999.</li>
+                    <li>The original game's version of damage over time has been changed.</li>
+                    <li>Thanks to HatZen08's "Fixed Regen" for this.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Regen Status</h4>
+              <ul>
+                <li>The effect of Regen was changed to 1/8 HP a tic for the party and 1/16 for the enemy.</li>
+                <li>I've changed the limit of 255 HP recovered to 999.</li>
+                <li>Stamina doesn't affect the amount healed per tic.</li>
+                <li>Thanks to HatZen08's "Fixed Regen" for this.</li>
+              </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Disease Status</h4>
+                <ul>
+                  <li>I've changed the original game's "Sap" status into "Disease".</li>
+                  <li>The ailment deals 1/8 MP damage per tic.</li>
+                  <li>Thanks to HatZen08's "Fixed Regen" for this.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Critical Hit Rate</h4>
+        <ul>
+          <li>The chance for a critical hit has been increased from 3% to 8%.</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Protection Against Defense-Ignoring Damage</h4>
+                <ul>
+                  <li>I've given some enemies protection up to <b>1/2</b> damage resistance to these types of attacks.</li>
+                  <li>Thanks to ◆HZ9Cy.3WvI's "Omega patch" for this.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Summoning Eidolons</h4>
+                <ul>
+                    <li>In the original game you could only call an Eidolon once each per battle. I've changed it so you can now call them as many times as you'd like. Their MP costs have increased to counter-balance this.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Defend Status</h4>
+        <ul>
+          <li>I've changed the status known as "Defend" to the following:
+              <ul>
+                <li>Physical damage received has been decreased from 1/2 to now 1/3.</li>
+                <li>Magic damage received has also been reduced to 1/3 as well.</li>
+              </ul>
+            </li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Back Row Status</h4>
+                <ul>
+                    <li>In the back row physical damage reduction has been reduced from 1/2 to 1/3 now. They will also only deal 50% physical damage.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Shell Status</h4>
+                <ul>
+                  <li>The effect of Shell also effects the amount of healing magic dealt. When used on an enemy who has Shell, the amount is reduced.</li>
+                  <li>Magic attacks ignoring magic defense are also reduced by 1/3 damage.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Absorbing Damage</h4>
+                <ul>
+                  <li>In the original game damage dealt would equal the amount healed. However this has now been changed to absorb whatever damage would've been dealt even if the amount dealt is 0.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Reflect Status</h4>
+                <ul>
+                    <li>In the original game when magic was reflected the effect was reduced by 1/2. This has been changed to no reduction in damage now.</li>
+                    <li>Damage is further increased if you reflect magic off 3 or more people (same as FF5).</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Magic</h4>
+        <ul>
+          <li>I've deleted and added some new Magic.</li>
+
+          <li>Spells deleted:
+            <ul>
+              <li>Reraise</li>
+              <li>Merton (Enemy-only spell now)</li>
+              <li>Graviga</li>
+              <li>Quick</li>
+              <li>Imp</li>
+            </ul>
+          </li>
+
+          <li>Spells added:
+              <ul>
+                <li>Blink</li>
+                <li>Flood</li>
+                <li>Scourge</li>
+                <li>Toad</li>
+                <li>Comet</li>
+              </ul>
+          </li>
+
+          <li>For more information on the changes and new abilities, click the link here: <a href="magic.html">→Magic List</a></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>MP Damage/Recovery Display</h4>
+                <ul>
+                    <li>I've changed the color for MP damage (pink) and recovery (blue).<br>※As a side effect of this, if reflected, the color of the damage is odd.</li>
+                    <li>Thanks to ◆s8fp98fd5k's patch for this.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+		<tr>
+			<td>
+				 <div class="image-container">
+        <img src="img/mp_01.png" alt="MP 1">
+        <img src="img/mp_02.png" alt="MP 2">
+      </div>
+			</td>
+		</tr>
+</table>
+
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Registering Monster Formations to the Veldt</h4>
+                <ul>
+                  <li>Original game:
+                    <ol>
+                      <li>The monster's IDs are less than FF.</li>
+                      <li>Monster formations are 1FF or less.</li>
+                    </ol>When a correct monster formation is met and defeated, that formation is registered to the Veldt. However, this has been deleted and monster formations can be registered now up to 1FF (=511 types).</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Desperation Attacks</h4>
+        <ul>
+          <li>I've implemented Desperation Attacks for Gau and Umaro who originally didn't have them.</li>
+          <li>I've changed the method of activating these attacks from the original. Due to making it easier to proc, I've lowered the effect and performance.</li>
+
+            <ul>
+              <li>The activation chance has increased from 1/16 to <b>1/8</b>.</li>
+              <li>You may now use these abilities <b>as many times as you'd like in a battle</b>.</li>
+              <li>I've deleted the specification to count to 768 during a battle before one of these attacks may be used.</li>
+              <li>This has also been changed so that the <b>"Offering/Master Scroll" effect will not affect the damage</b>.</li>
+            </ul>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Damage/Recovery Limit Increase</h4>
+        <ul>
+          <li>In the original game the damage cap was 9999. This has now been changed to 32000.</li>
+          <li>With the above change the display on the graphics has been increased from 4 to 5 digits.</li>
+          <li>Because it's become 5 digits, the font looks weird, so I've changed it to a new font to hide this.</li>
+          <li>Thanks to giangurgolo's "Overkill 32000" patch for this.</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+       <div class="image-container">
+        <img src="img/overkill_01.png" alt="Overkill 1">
+        <img src="img/overkill_02.png" alt="Overkill 2">
+      </div>
+    </td>
+  </tr>
+</table>
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Magic Casting Motions</h4>
+        <ul>
+          <li>The casting animation for White and Summoning Magic has been changed.</li>
+          <li>I've added a new animation and sound effect for Time Magic.</li>
+        </ul>
+      </div>
+    </td>
+	  </tr>
+  <tr>
+    <td>
+      <div class="image-container">
+        <img src="img/whm.gif" alt="White Magic Animation" style="margin-right:20px;">
+        <img src="img/stm.gif" alt="Time Magic Animation"><br>
+        <img src="img/blm.gif" alt="Black Magic Animation" style="margin-right:20px;">
+        <img src="img/smn.gif" alt="Summon Magic Animation">
+      </div>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Information Display of Status Ailments of Allies</h4>
+                <ul>
+                    <li>I've added the ability to see status ailments that can't be seen visually/normally: Reraise, Defend, Runic (Readying), Tachi: Sky (Counterattack), Charm, Love Token, and Cloudy Heaven, can be displayed via icons by pressing the Select button during battle.</li>
+                    <li>Mr. 288 on the forum's 「Additional Status Display Patch C」 process was used for this.</li>
+                    <ul>
+                        <li>Reraise … Feather</li>
+                        <li>Defend … Shield</li>
+                        <li>Runic (Readying) … Knight Sword</li>
+                        <li>Tachi: Sky … Katana</li>
+                        <li>Charm … Heart</li>
+                        <li>Love Token … Broken Heart</li>
+                        <li>Cloudy Heaven … Skull</li>
+                    </ul>
+                </ul>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="image-container">
+                <img src="img/buff.gif" alt="Status Ailment Icons">
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Information Display on the Status Screen</h4>
+                <ul>
+                  <li>I've changed the status screen to display various information by pressing Left and Right on the D-Pad.</li>
+                  <li>Mr. 288's 「Status Menu Changes」 process was used for this.</li>
+
+                    <li>Menu Descriptions</li>
+
+                      <ul>
+                        <li>Main Page … Original status screen.</li>
+                        <li>Attributes … Attack/Defense attribute display (Absorb, Null, 50%, Weakness).</li>
+                        <li>Condition … Display of status ailment resistances, permanent effects, and initial changes.<br>
+                            Gray: No resistance. White: Resist. Yellow: Permanent effect. !: Initial change.</li>
+                        <li>Abilities … Shows current ability changes and boosts.</li>
+                      </ul>
+                </ul>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="image-container">
+                <img src="img/status1.png" alt="Status Screen 1" style="margin-right:20px;">
+                <img src="img/status2.png" alt="Status Screen 2" style="margin-right:20px;"><br>
+                <img src="img/status3.png" alt="Status Screen 3" style="margin-right:20px;">
+                <img src="img/status4.png" alt="Status Screen 4" style="margin-right:20px;">
+            </div>
+        </td>
+    </tr>
+</table>
+
+<table class="section-heading-table" id="3">
+    <tr>
+        <td><b>3. Character Related</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Character Overview</h4>
+                <ul>
+                  <li>I've changed the appearances of characters to better suit their official artwork.</li>
+                  <li>The starting stats and equipment of each character has been changed.</li>
+                  <li>Each character's equippable items has been changed.</li>
+                  <li>When in Magitek Armor the "Magitek" command is now 6 options for each character.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Dressing Room</h4>
+        <ul>
+          <li>During the World of Ruin, complete a new event to unlock the Dressing Room in the Falcon.</li>
+          <li>The newly added Dressing Room allows you change the appearance of every playable permanent character.</li>
+          <li>The field, map, and battle screens are changed as well. However, there is no change to save, shop, or party creation screens.</li>
+          <li>By clearing events and Achievements, you'll unlock up to 4 new costumes total for each character to change into.</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Terra</h4>
+                <ul>
+                  <li>Magic learned by her at various levels has been changed.</li>
+                  <li>"Trance" has been changed from 2 times damage increase to 1.5.</li>
+                  <li>"Trance" has also had its damage blocking changed from 1/2 to 1/3.</li>
+                  <li>"Trance" will not increase the damage done by non-elemental damage.</li>
+                  <li>By using the new accessory "Zeidrich", Terra can change "Trance" to "Shock".</li>
+                  <li>"Trance" now has a different casting animation for Magic.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="image-container">
+                <img src="img/tina_01.png" alt="Terra 1" >
+                <img src="img/tina_02.png" alt="Terra 2">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>For more information on Terra please check the link here: <a href="character.html#tina">→Character List - Terra</a></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Locke</h4>
+                <ul>
+                  <li>I've added the dagger "Orichalcum" for Locke which has its damage increased based on "Steal" total success.</li>
+                  <li>Orichalcum will have its max battle power increase to 255 once Locke has reach 510+ "Steal" successes.</li>
+                  <li>Orichalcum's current power can be checked on the weapon menu via checking it in the Item List.<br>
+                      ※The Equipment Menu itself can not show it accurately.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="image-container">
+                <img src="img/ori_01.png" alt="Locke 1" >
+                <img src="img/ori_02.png" alt="Locke 2">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>For more information on Locke please check the link here: <a href="character.html#rocke">→Character List - Locke</a></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Cyan</h4>
+                <ul>
+                  <li>The speed of the bar filling for "Iaido" has been increased.</li>
+                  <li>The names and effects of some "Iaido" have been changed.</li>
+                  <li>The performance of some "Iaido" and their accuracy has also been changed:
+                      <ul>
+                        <li>Tachi: Fang … Accuracy has been changed to 130.</li>
+                        <li>Tachi: Tiger … Changed from percent damage to Max HP-Current HP=damage.<br>
+                            The accuracy has been changed to 100.</li>
+                        <li>Tachi: Dragon … The effect value was lowered from 49 to 28.</li>
+                        <li>Tachi: Snow … Changed from "Moon". Deals ice/wind-elemental damage to a single target.</li>
+                        <li>Tachi: Moon … Changed from "Fierce". Does the same as "Moon" did in the original game.</li>
+                        <li>Tachi: Flower … Changed from "Cleave". Does the same as "Fierce" did in the original game.<br>
+                            The effect value has been lowered from 70 to 42.</li>
+                      </ul>
+                    </li>
+                    <li>I've changed his animation at the start of battle.</li>
+                    <li>For more information on Cyan please check the link here: <a href="character.html#cyan">→Character List - Cyan</a></li>
+                    <li>For more information on "Iaido" please check the link here: <a href="technique.html#swdtech">→Iaido List</a></li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Shadow</h4>
+                <ul>
+                  <li>Changed Shadow leaving the party randomly after a battle. He will no longer leave until the story requires him to.</li>
+                  <li>Shadow now immediately shows up at the end of the Floating Continent; there is no need to wait for him.<br>
+                      ※This is because the event with Shadow was added to the World of Ruin, so he can no longer be killed. Sorry.</li>
+                  <li>The chance of Interceptor parrying and attacking was lowered from 50% to 33%.</li>
+                  <li>Interceptor's attacks have been changed from the 2 random ones to a new fixed one only.</li>
+                  <li>Added the ability "Dual Wield" (Genji Glove) to all Ninjato.</li>
+                  <li>Changed the performance of Throw:
+
+                      <ul>
+                        <li>Flame Scroll … Lowered the effect value from 100 to 80.<br>
+                            Changed the additional effect of Blind to land with high accuracy.</li>
+                        <li>Water Scroll … Lowered the effect value from 100 to 80.<br>
+                            Changed the additional effect of Silence to land with high accuracy.</li>
+                        <li>Thunder Scroll … Lowered the effect value from 100 to 80.<br>
+                            Changed the additional effect of Slow to land with high accuracy.</li>
+                      </ul>
+                  </li>
+
+                  <li>For more information on Shadow please check the link here: <a href="character.html#shadow">→Character List - Shadow</a></li>
+                  <li>For more information on "Throw" please check the link here: <a href="technique.html#ninjutsu">→Throw List</a></li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Edgar</h4>
+        <ul>
+          <li>I've changed the performance and accuracy of many "Tools":
+              <ul>
+                <li>Auto Crossbow … Accuracy has been changed to 100.<br>
+                    The effect value was lowered from 125 to 65.</li>
+                <li>Noise Blaster  … Accuracy has been changed to 120.</li>
+                <li>Flash          … Accuracy has been changed to 128.<br>
+                    The effect value was increased from 42 to 45.<br>
+                    The chance of Blind being set is now very high.</li>
+                <li>Drill          … Accuracy has been changed to 120.<br>
+                    The effect value was lowered from 191 to 95.</li>
+                <li>Chainsaw       … Accuracy has been lowered from 252 to 225.<br></li>
+                <li>Air Anchor     … Accuracy has been changed to 140.<br>
+                    The effect value has been lowered from 191 to 172.<br>
+                    When used on enemies who resist, it will instead deal damage only.<br>
+                    Inflicts "Heat".<br>
+                    Can now be selected for single or multiple targets.</li>
+                <li>Debilitator    … Deleted.</li>
+                <li>Particle Bomb  … New ability.</li>
+              </ul>
+          </li>
+          <li>For more information on Edgar please check the link here: <a href="character.html#edgar">→Character List - Edgar</a></li>
+          <li>For more information on "Tools" please check the link here: <a href="technique.html#tools">→Tools List</a></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Sabin</h4>
+                <ul>
+                  <li>I've adjusted the performance and accuracy of most "Blitz" moves.
+
+                      <ul>
+                        <li>Pummel       … Accuracy has been changed to 130.<br>
+                            The effect value has been lowered from 110 to 98.</li>
+                        <li>Suplex       … Accuracy has been changed to 80.<br>
+                            The effect value has been increased from 180 to 182.</li>
+                        <li>Phoenix Dance … The effect value has been lowered from 42 to 40.<br>
+                        <li>Chakra       … Changed to now heal Poison. (Blind and Silence removed).<br>
+                        <li>Vacuum Wave  … The effect value has been lowered from 78 to 75.<br>
+                        <li>Spiral Soul  … Deleted.<br>
+                        <li>Tiger Rush   … New ability.<br>
+                        <li>Phantom Rush     … Accuracy has been changed to 150.<br>
+                            The effect value has been increased from 128 to 250.<br>
+                            It's been changed from a magic attack to now a physical attack.</li>
+                      </ul>
+                  </li>
+                  <li>For more information on Sabin please check the link here: <a href="character.html#mash">→Character List - Sabin</a></li>
+                  <li>For more information on "Blitz" please check the link here: <a href="technique.html#blitz">→Blitz List</a></li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Celes</h4>
+                <ul>
+                    <li>The Magic she learns at various levels has been changed.</li>
+                    <li>By equipping the accessory "Maiden's Prayer", "Runic" changes to "Pray".</li>
+                    <li>Runic's speed has been changed.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="image-container">
+                <img src="img/runic_01.png" alt="Runic">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+              <li>For more information on Celes please check the link here: <a href="character.html#celes">→Character List - Celes</a></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+<hr>
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Strago</h4>
+        <ul>
+          <li>Changed Strago's "Learned Techniques" to "Blue Magic" (was called Learned Techniques, now it's Blue Magic in Japanese. You know it as "Lore" -Kain).</li>
+          <li>The performance of some "Blue Magic" has been changed.</li>
+          <li>I've deleted and added new "Blue Magic":
+
+            <li>Deleted spells:
+              <ul>
+                <li>Stone Throw</li>
+                <li>Transfusion</li>
+                <li>Tsunami</li>
+              </ul>
+           </li>
+
+            <li>New spells:
+              <ul>
+                <li>Mind Blast</li>
+                <li>Magic Hammer</li>
+                <li>Ancient Prayer</li>
+              </ul>
+            </li>
+          </li>
+          <li>For more information on Strago please check the link here: <a href="character.html#stragos">→Character List - Strago</a></li>
+          <li>For more information on "Blue Magic" please check the link here: <a href="magic.html#blue">→Blue Magic List</a></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Relm</h4>
+                <ul>
+                    <li>Relm now learns magic naturally. The spells she learns at various levels has been added/changed.</li>
+                    <li>"Sketch" now uses Relm's stats rather than the enemy's.<br>Thanks to SPARX for this.</li>
+                    <li>"Sketch" now has a 75% chance to use the enemy's ability and a 25% chance to use the new ability "Wishing Star".</li>
+                    <li>I've deleted the accessory "Fake Moustache" and the ability "Control".</li>
+                    <li>"Sketch" can now be used even without a brush. <br>Brushes enhance the success rate of "Sketch".</li>
+                    <li>By equipping the new accessory "Embroided Tippet", "Sketch" is changed to "Spirit".</li>
+
+                    <li>For more information on Relm please check the link here: <a href="character.html#relm">→Character List - Relm</a></li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Setzer</h4>
+                <ul>
+                    <li>I've changed some performances of "Slots":
+
+                      <ul>
+                        <li>Seven Flush … Changed the effect value from 84 to 42.<br>
+                            The damage hasn't been reduced.</li>
+                        <li>Dive Bomb   … Changed the effect value from 130 to 65.<br>
+                            The damage hasn't been reduced.</li>
+                        <li>Mysidia Bunny … Changed the effect value from 10 to 14.<br>
+                            The formula has been changed to Level x Effect Value.</li>
+                      </ul>
+                  </li>
+
+                  <li>Dart and Card weapons now give a bonus against flying enemies.</li>
+                  <li>For more information on Setzer please check the link here: <a href="character.html#setzer">→Character List - Setzer</a></li>
+                  <li>For more information on "Slots" please check the link here: <a href="technique.html#Slots">→Slots List</a></li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Mog</h4>
+        <ul>
+          <li>"Dance" has been changed to now always succeed and no longer lock Mog. He'll now dance once then be able to pick another action on the next turn. This is now similar to how "Gaia" is in FF5.<br>Thanks to snow's patch for this.</li>
+          <li>I've adjusted many different aspects of "Dance".<br>
+              ※Because there's so many changes please refer to "technique.html" for a full explanation.</li>
+          <li>You can now get "Water's Harmony" during the World of Ruin if you've missed it.</li>
+          <li>I've changed Mog's job title from "Moogle" to "Moogle Knight".</li>
+          <li>By equipping the new accessory "Pheasant Netsuke" you can change "Dance" to "Animal".</li>
+
+          <li>For more information on Mog please check the link here: <a href="character.html#mog">→Character List - Mog</a></li>
+          <li>For more information on "Dance" please check the link here: <a href="technique.html#dance">→Dance List</a></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Gau</h4>
+                <ul>
+                    <li>I've changed his command list. "Leap" has been removed and Gau now knows "Fight".</li>
+                    <li>How Gau learns "Rage" abilities has been changed. Simply have him in the party now fighting battles anywhere will grant him the "Rage" if he can learn it.<br>
+                        <b>※You can now learn various "Rage" abilities in other places than the original game.<br>
+                        ※If you're playing on a save file prior to Version 1.49 his new command will be "Jump" instead.<br>
+                        To fix this yourself without restarting you'll need to use a save data editing program or edit code yourself. Change "Rage" to the following:</b> <span style="color:#FF0000;">7E17AE value 11→10</span>.</li>
+                    <li>The "Rage" list is now sorted in alphabetical order (Japanese, but also English too! -Kain).</li>
+                    <li>When in the Menu you can now check the "Rage" list on Gau and view the special ability of each "Rage" shown as an example below:</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="image-container">
+                <img src="img/rage_01.png" alt="Rage 1">
+                <img src="img/rage_02.png" alt="Rage 2">
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <ul>
+              <li>Gau can now equip specific weapons.</li>
+              <li>Due to this change his starting stats have been reduced a bit.</li>
+              <li>Gau now has a Desperation Attack.</li>
+
+              <li>For more information on Gau please check the link here: <a href="character.html#gau">→Character List - Gau</a></li>
+              <li>For more information on "Rage" please check the link here: <a href="rage.html">→Rage List</a></li>
+          </ul>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Gogo</h4>
+                <ul>
+                    <li>Gogo can now equip Eidolons to summon in battle.</li>
+                    <li>He can now learn Magic via Eidolons like the other party members.</li>
+
+                    <li>For more information on Gogo please check the link here: <a href="character.html#gogo">→Character List - Gogo</a></li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Umaro</h4>
+        <ul>
+          <li>I've changed it to where Umaro can now be controlled like other characters.</li>
+          <li>Like Gogo, you can equip Eidolons to summon now.</li>
+          <li>He can now learn Magic via Eidolons like the other party members.</li>
+          <li>I've added the new command "Snowstorm".<br>In the original game, equipping the accessory "Blizzard Orb" would grant Umaro this technique to be used randomly. Now you may select it at anytime.</li>
+          <li>By equipping the accessory "Berserker Ring" when using "Fight", "Throw Ally" has a high chance of activating.</li>
+          <li>By equipping the accessory "Power Belt" when using "Fight", "Rampage" has a high chance of activating.</li>
+          <li>Umaro now has a Desperation Attack.</li>
+
+          <li>For more information on Umaro please check the link here: <a href="character.html#umaro">→Character List - Umaro</a></li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<table class="section-heading-table" id="4">
+    <tr>
+        <td><b>4. Ability Related</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Steal</h4>
+              <ul>
+                <li>The formula for Steal, the chance of success, and rare steals have all been increased/changed from the original game:<br>
+                    <ul>
+                      <li>Success Chance  … Original - (Level+<b><span style="color:#0000FF;">50</span></b>-Target's Level)÷99<br>
+                          T-Edition - (Level+<b><span style="color:#FF0000;">70</span></b>-Target's Level)÷99</li>
+                      <li>Rare Steal  … Original - <b><span style="color:#0000FF;">1/8</span></b><br>
+                          T-Edition - <b><span style="color:#FF0000">1/4</span></b></li>
+                    </ul>
+                  </li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Gil Toss</h4>
+                <ul>
+                  <li>I've changed the formula from the original game to now consume more Gil and deal more damage (enemies still use the original game's formula):<br>
+                      <ul>
+                        <li>Gil Consumption … Original - Level ×<b><span style="color:#0000FF">30</span></b><br>
+                            T-Edition - Level ×<b><span style="color:#FF0000">180</span></b></li>
+                        <li>Damage    … Original - Gil consumed=<b><span style="color:#0000FF">2</span></b><br>
+                            T-Edition - Gil consumed=<b><span style="color:#FF0000">1/2</span></b></li>
+                        <li>Example of when used at Level 50:<br>
+                              Original - <b><span style="color:#0000FF">1500 Gil </span></b>consumed/<b><span style="color:#0000FF">3000 damage</span></b>÷# of targets. <br> T-Edition - <b><span style="color:#FF0000">9000 Gil </span></b>consumed/<b><span style="color:#FF0000">4500 damage</span></b> to all.</li>
+                      </ul>
+                    </li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>2 Hands (Gauntlet)</h4>
+                <ul>
+                    <li>When using both hands to hold a weapon <b>you'll deal double damage</b>.</li>
+                    <li>To balance this a bit, evasion has been lowered when using this feature.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Dual Wield (Genji Glove)</h4>
+              <ul>
+                <li><b>Damage has been lowered to 0.75 </b>per hand attack.</li>
+              </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Barrage (Master's Scroll Effect)</h4>
+                <ul>
+                  <li>The accuracy has been changed to <b>normal accuracy</b>.</li>
+                  <li>With this change <b>additional effect procs like instant death or Desperation Attacks</b> can't be dealt.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Physical/Magical Attack Power Up</h4>
+                <ul>
+                    <li>Equipment with these effects have been changed so that <b>if you equip multiples or other similar gear, they won't stack</b>. "Earrings", "Gigas Glove", "Brave Ring", etc.</li>
+                    <li>"Magic Attack Power Up" has been changed to also affect recovery magic now.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Extra Damage to Flying Monsters</h4>
+                <ul>
+                  <li>In the original game the formula was a chance to deal 1.5 times damage at a 50% rate, as well as a chance to do 3 times damage at also a 50% rate. <b>This is now a flat 1.5 times damage increase guaranteed</b>.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<table class="section-heading-table" id="5">
+    <tr>
+        <td><b>5. Item Related</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Item Classification</h4>
+        <ul>
+          <li>In addition to major item changes, new items have also been added.</li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<hr>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Ultima Weapon</h4>
+                <ul>
+                    <li>I've changed the level-dependent part of the attack power to now be based on <b>Stamina</b>. The higher the level, Stamina, and Strength, as well as your current HP%, the better the damage.</li>
+                    <li>When the weapon's damage hits a certain point the graphic changes:</li>
+
+                    <ul><tt>
+                      <li>Dagger： 0～2000</li>
+                      <li>Sword： 2001～5000</li>
+                      <li>Great Sword： 5001～9999</li>
+                    </tt></ul>
+
+                </ul>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div class="image-container">
+                <img src="img/altm_01.png" alt="Ultima Weapon 1" >
+                <img src="img/altm_02.png" alt="Ultima Weapon 2" >
+                <img src="img/altm_03.png" alt="Ultima Weapon 3">
+            </div>
+        </td>
+    </tr>
+</table>
+
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Valiant Knife</h4>
+              <ul>
+                <li>The physical defense-ignoring effect has been removed.</li>
+                <li>On the weapon menu for the attack value it's now listed as ???.</li>
+              </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Dancing Dagger</h4>
+                <ul>
+                    <li>This weapon has a 50% chance to deal a normal attack and a 50% chance to do one of Mog's "Dance" abilities.</li>
+                    <li>"Animal" will not activate through this, however.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+                <h4>Dice/Fixed Dice</h4>
+                <ul>
+                  <li>I've changed the calculation formula for "Fixed Dice". It's now the same as "Dice".
+
+                      <ul>
+                        <li>Before： Product of dice×2×user's level.</li>
+                        <li>After： Product of dice×2×user's level<b>×3/4</b>.</li>
+                        <li>Versus piercing-resist mobs the "product×2" is changed to "product×1.06".</li>
+                      </ul>
+                    </li>
+                    <li>"Fixed Dice" has had its accuracy changed to <b>100</b>. It's now the same as "Dice".</li>
+                    <li>I've changed it so the spell "Berserk" has no effect on "Dice" or "Fixed Dice".</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<table class="section-heading-table" id="6">
+    <tr>
+        <td><b>6. Monster Related</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Palette Changes</h4>
+                <ul>
+                    <li>I've created a new palette for existing monsters using the existing graphics:
+                      <ul>
+                        <li>Example 1: Imperial Soldier, Soldier, and Commander.</li>
+                        <li>Example 2: Crawler and Figaro Lizard.</li>
+                      </ul>
+                    </li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Monster Changes</h4>
+                <ul>
+                  <li>I've added and deleted some monsters.</li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+
+<table class="section-heading-table" id="7">
+    <tr>
+        <td><b>7. Event Related</b></td>
+        <td class="back-to-top"><a href="#top">▲</a></td>
+    </tr>
+</table>
+
+<table class="content-table">
+    <tr>
+        <td>
+            <div>
+              <h4>Original Event Changes</h4>
+                <ul>
+                  <li>The contents of several events have been changed:
+                      <ul>
+                        <li>Defending Narshe Battle  … If Cyan is in the party when confronting Kefka a new event plays.</li>
+                        <li>Night in Albrook            … A new event with Celes before leaving for Thamasa.</li>
+                        <li>Nursing Cid          … The amount of fish necessary to heal Cid has been reduced.</li>
+                        <li>His Name is Gerad          … Sabin will have new dialogue when you meet "Gerad".</li>
+                        <li>The Frozen Eidolon      … There'll be no battle if you don't have Terra for Valigarmanda.</li>
+                        <li>Gau's Make-over        … Talk to Gau's Father after his event to unlock all Veldt Formations.
+                        <li>Cyan's Dream          … A new solo battle for Cyan has been added. Losing won't Game Over.<br>
+                        </li>
+                      </ul>
+                    </li>
+                </ul>
+            </div>
+        </td>
+    </tr>
+</table>
+<hr>
+
+<table class="content-table">
+  <tr>
+    <td>
+      <div>
+        <h4>Side Quests</h4>
+        <ul>
+          <li>New events have been added, mostly during the World of Ruin.</li>
+          <li>For more information on "side quests" please check the link here: <a href="newevent.html">→Side Quests List</a>
+          </li>
+        </ul>
+      </div>
+    </td>
+  </tr>
+</table>
+
+
+<div class="version-info">Final Fantasy VI T-Edition. Mod Creator: Tsushiy◆KEHt9L6ti47L</div>
+</body>
+</html>
