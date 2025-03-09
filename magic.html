@@ -5,176 +5,205 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic List</title>
     <style>
-        /*  Resets (Normalize.css inspired -  more comprehensive) */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+       /*  Resets (Normalize.css inspired -  more comprehensive) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
+    font-size: 16px; /* Slightly larger base font size */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+h1 {
+    color: #323232;
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 2.5em; /* Larger heading */
+    letter-spacing: 0.05em;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid blue;
+    margin: 1em 0;
+}
+
+.last-updated {
+    text-align: right;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 1em;
+}
+
+.version-info {
+    text-align: right;
+    font-size: 0.9em;
+    color:#666;
+}
+
+.nav-table {
+    width: 100%;
+    table-layout: fixed;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    top: 0;
+    background-color: #f9f9f9; /* Light gray background for the whole nav */
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.nav-table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+    transition: background-color 0.2s; /* Smooth transition */
+}
 
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
-            font-size: 16px; /* Slightly larger base font size */
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #323232;
-            text-align: center;
-            margin-bottom: 0.5em;
-            font-size: 2.5em; /* Larger heading */
-            letter-spacing: 0.05em;
-        }
-
-        hr {
-            border: none;
-            border-top: 2px solid blue;
-            margin: 1em 0;
-        }
-
-        .last-updated {
-            text-align: right;
-            color: #666;
-            font-size: 0.9em;
-            margin-bottom: 1em;
-        }
-
-        .version-info {
-            text-align: right;
-            font-size: 0.9em;
-            color:#666;
-        }
+.nav-table td:hover {
+    background-color: #ddd; /*  Slightly darker on hover */
+}
+/* No hover color change for the text needed, handled below */
 
 
-        .nav-table {
+.nav-table a {
+    text-decoration: none;
+    display: block;
+    font-size: 0.9em;
+    transition: color 0.2s; /* Smooth transition for text color */
+}
+
+/* Link Colors */
+.nav-table a[href="#black"] { color: #333; }      
+.nav-table a[href="#white"] { color: #333; }    
+.nav-table a[href="#time"]  { color: #333; }    
+.nav-table a[href="#summon"] { color: #333; }   
+.nav-table a[href="#blue"] { color: #333; }  
+.nav-table a[href="#monster"]{ color: #333; } 
+.nav-table a[href="#ex"] { color: #333; }     
+
+.nav-table a:hover {
+    color: #000; /* Black on hover - change if you want something else*/
+}
+
+
+h2 {
+    font-size: 1.8em;
+    color: #383838;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2 a {
+    font-size: 0.6em;
+    text-decoration: none;
+    color: #007bff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 0.85em;
+}
+
+th {
+    background-color: #dfdfdf;
+    font-weight: bold;
+    top: 0px;
+    z-index: 50;
+}
+
+tr > td:first-child {
+    text-align: center;
+}
+
+.black-magic  td { background-color: #e0e0e0; }
+.white-magic  td { background-color: #f8f8ff; }
+.time-magic   td { background-color: #f0f0f0; }
+.summon-magic td { background-color: #f5f0ff; }
+.blue-magic   td { background-color: #e8f8ff; }
+.enemy-magic  td { background-color: #ffe8f8; }
+.ex-magic     td { background-color: #fff8dc; }
+
+.attr-fire     { color: red; }
+.attr-ice      { color: blue; }
+.attr-thunder  { color: goldenrod; }
+.attr-water    { color: deepskyblue; }
+.attr-earth    { color: saddlebrown; }
+.attr-wind     { color: seagreen; }
+.attr-darkness { color: purple; }
+.attr-light    { color: orange; }
+
+@media (max-width: 768px) {
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td {
+        box-sizing: border-box;
+    }
+
+    td:nth-child(7),
+    td:nth-child(10),
+    td:nth-child(11),
+    th:nth-child(7),
+    th:nth-child(10),
+    th:nth-child(11)
+    {
+        display: none;
+    }
+
+    @media (max-width: 480px) {
+        th, td {
+            display: block;
             width: 100%;
-            table-layout: fixed; /* Equal width columns */
-            margin-bottom: 20px;
-            border-collapse: collapse; /* Remove spacing between cells */
-            position: sticky;  /*  Sticky header */
-            top: 0;  /* Stick to the top */
-            background-color: rgba(244, 244, 244, 0.95); /* Slightly transparent background */
-            z-index: 100; /* Ensure it's above other content */
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
-
         }
-
-       .nav-table td {
-           padding: 8px;
-           text-align: center;
-           border: 1px solid #ddd;
-           transition: background-color 0.2s; /* Smooth transition */
+        tr {
+            margin-bottom: 10px;
+            display: block;
         }
+    }
+}
 
-        .nav-table td:hover {
-           background-color: #ddd;
-        }
+footer {
+    text-align: right;
+    font-size: 0.9em;
+    color: #666;
+}
 
-        .nav-table a {
-            text-decoration: none;
-            color: #333;
-            display: block; /* Make the link fill the cell */
-            font-size: 0.9em;
-        }
-        .nav-table td:nth-child(odd){
-            background-color: #ddddff;
-        }
+.mastery-item {
+    color: red;
+}
 
+.monster-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
 
-        h2 {
-            font-size: 1.8em;
-            color: #383838;
-            margin-top: 1.5em;
-            margin-bottom: 0.8em;
-            display: flex;         /* Use flexbox for alignment */
-            align-items: center; /* Vertically center content */
-            justify-content: space-between; /* Space out the title and link */
-        }
-
-        h2 a {
-            font-size: 0.6em; /* Smaller "top" link */
-            text-decoration: none;
-            color: #007bff; /* Link color */
-        }
-
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 2em;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-            overflow-x: auto;  /*  Horizontal scrolling on small screens */
-        }
-
-         th,  td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-            font-size: 0.85em; /* Reduce font size slightly for table content */
-        }
-
-         th {
-            background-color: #dfdfdf;
-            font-weight: bold;
-            position: sticky;
-            top: 55px; /*nav-table Height plus a buffer*/
-            z-index: 50;
-        }
-        tr > td:first-child{
-            text-align: center;
-        }
-
-         /*  Color coding rows - more semantic */
-        .black-magic  td { background-color: #e0e0e0; }
-        .white-magic  td { background-color: #f8f8ff; }
-        .time-magic   td { background-color: #f0f0f0; }
-        .summon-magic td { background-color: #f5f0ff; }
-        .blue-magic   td { background-color: #e8f8ff; }
-        .enemy-magic  td { background-color: #ffe8f8; }
-        .ex-magic     td { background-color: #fff8dc; }
-
-         /*  Attribute color coding (optional, but enhances readability) */
-        .attr-fire     { color: red; }
-        .attr-ice      { color: blue; }
-        .attr-thunder  { color: goldenrod; }
-        .attr-water    { color: deepskyblue; }
-        .attr-earth    { color: saddlebrown; }
-        .attr-wind     { color: seagreen; }
-        .attr-darkness { color: purple; }
-        .attr-light    { color: orange; } /*  "light" is hard to read.  */
-
-        /*  Responsive Table Adjustments */
-        @media (max-width: 768px) {
-             th,  td {
-                display: block;  /* Stack cells vertically */
-                width: 100%;    /* Full width */
-                box-sizing: border-box; /* Include padding/border in width */
-            }
-            th{
-                top:0px;
-            }
-
-            /* Hide less important columns on small screens */
-             td:nth-child(7),   /* Effect Value  */
-             td:nth-child(10),  /* Reflect */
-             td:nth-child(11)   /* Runic */
-              {
-                display: none;
-            }
-        }
-          /*  Footer */
-          footer{
-            text-align: right;
-            font-size: 0.9em;
-            color: #666;
-          }
-        .mastery-item{
-            color: red;
-        }
+.monster-list div {
+    white-space: nowrap;
+}
 
     </style>
 </head>
@@ -938,7 +967,7 @@
         <td>All</td>
         <td colspan="3">－</td>
         <td>12</td>
-        <td>Holy Aura</td>
+                <td>Holy Aura</td>
         <td>Gives all party members the effect of Regen and heals them a small amount.</td>
         <td>Regen</td>
         <td>○Cure (×5)<br><span style="color:#808080">●</span>Regen (<span style="color:#808080">●</span>リジェネ) (×2)</td>
@@ -1578,16 +1607,7 @@
     </tbody>
 </table>
 
-<style>
-.monster-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns */
-    gap: 5px; /* Spacing between items */
-}
-.monster-list div{
-    white-space: nowrap; /*keep names on one line*/
-}
-</style>
+
 
 <h2 id="monster">Enemy Magic/Techniques <a href="#top">▲</a></h2>
         <table class = "magic-table">
@@ -1837,7 +1857,7 @@
                     <td>x</td>
                 </tr>
                 <tr>
-                    <td>Entice</td>
+                                     <td>Entice</td>
                     <td>0</td>
                     <td>Single</td>
                     <td colspan="3">－</td>
