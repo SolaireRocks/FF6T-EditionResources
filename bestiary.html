@@ -17322,81 +17322,83 @@
 }
         
 
-    const tableBody = document.querySelector("#bestiary-table tbody");
-    const headers = document.querySelectorAll("#bestiary-table thead th");
-     const modal = document.getElementById('monsterModal'); // Get the modal element
-    const modalContent = document.getElementById("modalContent");
-    let currentSort = { column: 'name', direction: 'asc' };
+const tableBody = document.querySelector("#bestiary-table tbody");
+const headers = document.querySelectorAll("#bestiary-table thead th");
+const modal = document.getElementById('monsterModal'); // Get the modal element
+const modalContent = document.getElementById("modalContent");
+let currentSort = { column: 'name', direction: 'asc' };
 
 
-    function renderBestiary(data) {
-        tableBody.innerHTML = '';
+function renderBestiary(data) {
+    tableBody.innerHTML = '';
 
-        data.forEach(monster => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td><a href="#" class="monster-name">${monster.name}</a></td>
-                <td>${monster.level}</td>
-                <td>${monster.hp}</td>
-                <td>${monster.mp}</td>
-                <td>${monster.speed}</td>
-                <td>${monster.attack}</td>
-                <td>${monster.accuracy}</td>
-                <td>${monster.evade}</td>
-                <td>${monster.mevade}</td>
-                <td>${monster.defense}</td>
-                <td>${monster.mdefense}</td>
-                <td>${monster.magic}</td>
-                <td>${monster.exp}</td>
-                <td>${monster.gold}</td>               
-            `;
-            tableBody.appendChild(row);
+    data.forEach(monster => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td><a href="#" class="monster-name">${monster.name}</a></td>
+            <td>${monster.level}</td>
+            <td>${monster.hp}</td>
+            <td>${monster.mp}</td>
+            <td>${monster.speed}</td>
+            <td>${monster.attack}</td>
+            <td>${monster.accuracy}</td>
+            <td>${monster.evade}</td>
+            <td>${monster.mevade}</td>
+            <td>${monster.defense}</td>
+            <td>${monster.mdefense}</td>
+            <td>${monster.magic}</td>
+            <td>${monster.exp}</td>
+            <td>${monster.gold}</td>               
+        `;
+        tableBody.appendChild(row);
 
-              const nameLink = row.querySelector(".monster-name");
-            nameLink.addEventListener('click', (event) => {
-                event.preventDefault();  // Stop the link from navigating
-                showMonsterDetails(monster);
-            });
-
+        const nameLink = row.querySelector(".monster-name");
+        nameLink.addEventListener('click', (event) => {
+            event.preventDefault();  // Stop the link from navigating
+            showMonsterDetails(monster);
         });
-    }
 
-   function showMonsterDetails(monster) {
+    });
+}
 
-
+function showMonsterDetails(monster) {
     modalContent.innerHTML = '';  // Clear previous content
 
     const closeButton = document.createElement('button');
     closeButton.textContent = 'X';
     closeButton.classList.add('close-button');
-    closeButton.addEventListener('click', () => modal.style.display = "none"); // Corrected line
-
+    closeButton.addEventListener('click', () => modal.style.display = "none");
 
     let dropsHtml = '<ul>';
-    const dropItems = [];
-    const dropPercentages = [];
+    // Use a Map to store item names and their combined percentages.
+    const itemMap = new Map();
 
     for (const dropKey in monster.itemInfo) {
         if (dropKey.startsWith('drop') && monster.itemInfo[dropKey] !== 'Nothing') {
-            dropItems.push(monster.itemInfo[dropKey]);
-            dropPercentages.push(parseInt(dropKey.replace('drop', '')));
+            const itemName = monster.itemInfo[dropKey];
+            const percentage = parseInt(dropKey.replace('drop', ''));
+
+            // If the item is already in the map, add to its percentage.
+            if (itemMap.has(itemName)) {
+                itemMap.set(itemName, itemMap.get(itemName) + percentage);
+            } else {
+                // Otherwise, add the item to the map.
+                itemMap.set(itemName, percentage);
+            }
         }
     }
 
-    if (dropItems.length > 0) {
-        if (dropItems.every((val, i, arr) => val === arr[0])) {
-            dropsHtml += `<li>${dropItems[0]} (100%)</li>`;
-        } else {
-            for (let i = 0; i < dropItems.length; i++) {
-                dropsHtml += `<li>${dropItems[i]} (${dropPercentages[i]}%)</li>`;
-            }
+    if (itemMap.size > 0) {
+        // Iterate through the Map and create the HTML.
+        for (const [itemName, percentage] of itemMap) {
+            dropsHtml += `<li>${itemName} (${percentage}%)</li>`;
         }
     } else {
         dropsHtml += '<li>None</li>'; // Display "None" if no drops
     }
 
     dropsHtml += "</ul>";
-    dropsHtml += `<h3>Steal Info</h3><ul><li>Common: ${monster.itemInfo.stealCommon}</li><li>Rare: ${monster.itemInfo.stealRare}</li></ul>`
+    dropsHtml += `<h3>Steal Info</h3><ul><li>Common: ${monster.itemInfo.stealCommon}</li><li>Rare: ${monster.itemInfo.stealRare}</li></ul>`;
 
     const otherInfoHTML = `
         <h3>Resistances and Weaknesses:</h3>
@@ -17413,77 +17415,79 @@
         <p><strong>Flags:</strong> ${monster.flags}</p>
     `;
 
-     modalContent.innerHTML = `
-            <h2>${monster.name}</h2>
-            <div class="monster-details">
-                <div class="stats-section">
-                    <h3>Stats</h3>
-                    <p><strong>Level:</strong> ${monster.level}</p>
-                    <p><strong>HP:</strong> ${monster.hp}</p>
-                    <p><strong>MP:</strong> ${monster.mp}</p>
-                    <p><strong>Speed:</strong> ${monster.speed}</p>
-                    <p><strong>Attack:</strong> ${monster.attack}</p>
-                    <p><strong>Accuracy:</strong> ${monster.accuracy}</p>
-                    <p><strong>Evade:</strong> ${monster.evade}</p>
-                    <p><strong>Magic Evade:</strong> ${monster.mevade}</p>
-                    <p><strong>Defense:</strong> ${monster.defense}</p>
-                    <p><strong>Magic Defense:</strong> ${monster.mdefense}</p>
-                    <p><strong>Magic:</strong> ${monster.magic}</p>
-                    <p><strong>EXP:</strong> ${monster.exp}</p>
-                    <p><strong>Gold:</strong> ${monster.gold}</p>
-                </div>
-                <div class="drops-section">
-                    <h3>Drops</h3>
-                    ${dropsHtml}
-                </div>
-                <div class="other-info-section">
-                    ${otherInfoHTML}
-                </div>
+    modalContent.innerHTML = `
+        <h2>${monster.name}</h2>
+        <div class="monster-details">
+            <div class="stats-section">
+                <h3>Stats</h3>
+                <p><strong>Level:</strong> ${monster.level}</p>
+                <p><strong>HP:</strong> ${monster.hp}</p>
+                <p><strong>MP:</strong> ${monster.mp}</p>
+                <p><strong>Speed:</strong> ${monster.speed}</p>
+                <p><strong>Attack:</strong> ${monster.attack}</p>
+                <p><strong>Accuracy:</strong> ${monster.accuracy}</p>
+                <p><strong>Evade:</strong> ${monster.evade}</p>
+                <p><strong>Magic Evade:</strong> ${monster.mevade}</p>
+                <p><strong>Defense:</strong> ${monster.defense}</p>
+                <p><strong>Magic Defense:</strong> ${monster.mdefense}</p>
+                <p><strong>Magic:</strong> ${monster.magic}</p>
+                <p><strong>EXP:</strong> ${monster.exp}</p>
+                <p><strong>Gold:</strong> ${monster.gold}</p>
             </div>
-        `;
+            <div class="drops-section">
+                <h3>Drops</h3>
+                ${dropsHtml}
+            </div>
+            <div class="other-info-section">
+                ${otherInfoHTML}
+            </div>
+        </div>
+    `;
 
-     modalContent.appendChild(closeButton);
+    modalContent.appendChild(closeButton);
     modal.style.display = "flex";  // Show the modal
 }
 
-    function sortData(column, direction) {
-      const sortedData = [...Object.values(bestiaryData)].sort((a, b) => {
+
+
+function sortData(column, direction) {
+    const sortedData = [...Object.values(bestiaryData)].sort((a, b) => {
         const valA = a[column];
         const valB = b[column];
 
         if (typeof valA === 'number') {
-          return direction === 'asc' ? valA - valB : valB - valA;
+            return direction === 'asc' ? valA - valB : valB - valA;
         } else {
-          return direction === 'asc' ? String(valA).localeCompare(String(valB)) : String(valB).localeCompare(String(valA));
+            return direction === 'asc' ? String(valA).localeCompare(String(valB)) : String(valB).localeCompare(String(valA));
         }
 
-      });
-      return sortedData;
-    }
-
-    headers.forEach(header => {
-        header.addEventListener('click', () => {
-            const sortColumn = header.dataset.sort;
-            if (currentSort.column === sortColumn) {
-                currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
-            } else {
-                currentSort.column = sortColumn;
-                currentSort.direction = 'asc';
-            }
-            headers.forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
-            header.classList.add(currentSort.direction === 'asc' ? 'sort-asc' : 'sort-desc');
-            const sortedData = sortData(currentSort.column, currentSort.direction);
-            renderBestiary(sortedData);
-        });
     });
-        const initialData = sortData(currentSort.column, currentSort.direction);
-        renderBestiary(initialData);
+    return sortedData;
+}
+
+headers.forEach(header => {
+    header.addEventListener('click', () => {
+        const sortColumn = header.dataset.sort;
+        if (currentSort.column === sortColumn) {
+            currentSort.direction = currentSort.direction === 'asc' ? 'desc' : 'asc';
+        } else {
+            currentSort.column = sortColumn;
+            currentSort.direction = 'asc';
+        }
+        headers.forEach(h => h.classList.remove('sort-asc', 'sort-desc'));
+        header.classList.add(currentSort.direction === 'asc' ? 'sort-asc' : 'sort-desc');
+        const sortedData = sortData(currentSort.column, currentSort.direction);
+        renderBestiary(sortedData);
+    });
+});
+const initialData = sortData(currentSort.column, currentSort.direction);
+renderBestiary(initialData);
 //Clicking anywhere in the modal should close it
-      modal.addEventListener('click', (event) => {
-           if(event.target === modal){
-              modal.style.display = "none";
-           }
-        });
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
     </script>
 </body>
 </html>
