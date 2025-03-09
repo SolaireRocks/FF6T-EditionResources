@@ -5,20 +5,176 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FFVI T-Edition Guides</title>
     <style>
-        /* --- (All your other styles remain the same, up to the @media query) --- */
+        /* Reset and Basic Styles */
+        body, h1, h2, h3, p, ul, li, a, table, td, th {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            min-height: 100vh;
+            overflow: hidden; /* Hide any overflow on the body*/
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100vh;
+            background-color: #e9ecef;
+            color: #212529;
+            overflow-y: auto;
+            z-index: 1000;
+            box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+            transition: left 0.3s ease;
+        }
+
+        .sidebar.closed {
+            left: -250px;  /* Corrected: Use the full width */
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 60px;
+        }
+
+        .sidebar li {
+            /* Remove the border from the li */
+            /*border-bottom: 1px solid #ced4da; */
+        }
+         .sidebar li:last-child{
+            /*border-bottom: none;*/  /* No border on last li */
+        }
+
+        .sidebar li a {
+            display: block;
+            padding: 12px 15px;
+            color: #343a40;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .sidebar li a:hover {
+            background-color: #d4d8db;
+            color: #000;
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger-menu {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            z-index: 1001;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hamburger-menu:hover {
+            background-color: #0056b3;
+        }
+
+        .hamburger-menu span {
+            margin-right: 8px;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            padding: 40px;
+            margin-left: 250px;
+            transition: margin-left 0.3s;
+            overflow: hidden; /* Changed from auto to hidden*/
+            width: calc(100% - 250px);
+
+        }
+        .main-content.sidebar-closed{
+            margin-left: 0; /*  Much simpler! */
+            width: 100%;   /*  Much simpler! */
+        }
+        .main-content > * {
+            overflow-x: auto; /*Allow the children elements to have scroll bars if needed*/
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f8f9fa;
+        }
+
+        /* Horizontal Rule Styles */
+        .sidebar .separator {
+          border: none; /* Remove default hr styling */
+          height: 2px;  /* Make it a little thicker */
+          background-color: #495057; /* Darker color */
+          margin: 0; /* Remove the margins.  Key change. */
+          width: 100%; /* Full width. Key change */
+          padding: 0;
+
+        }
+
+        .sidebar ul > li:has(> .separator) {
+           /*No padding needed*/
+        }
+        .sidebar ul > li:has(> .separator) + li {
+            padding-top: .5rem; /* Add space *after* a separator */
+        }
+
 
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .sidebar {
-                width: 100%; /* Full width when open */
-                left: -100%;  /* Initially hidden */
-                margin-top: 0;
-                transition: all 0.3s ease; /* Transition *all* properties */
+                width: 100%;
+                left: 0;  /* Start at left: 0 */
+                position: fixed;
+                height: 100vh;
+                background-color: #e9ecef;
+                transition: transform 0.3s ease, opacity 0.3s ease; /* Animate transform and opacity */
+                transform: translateX(-100%);  /* Initially off-screen */
+                opacity: 0; /* Initially hidden */
+                pointer-events: none; /* Prevent clicks when hidden */
+                margin-top: 0;  /* remove this*/
             }
 
-            /* Display sidebar when open */
-            .sidebar:not(.closed) {
-                left: 0;
+            /*  No need for :not(.closed).  Handle in JS.  Much Cleaner! */
+              .sidebar.closed {
+                transform: translateX(-100%);
+                opacity: 0;
+                pointer-events: none;
             }
 
             .sidebar ul {
@@ -29,7 +185,6 @@
                 margin-left: 0 !important;
                 padding: 20px;
                 width: 100% !important;
-                transition: all 0.3s ease; /* Transition *all* for main content */
             }
 
             .hamburger-menu {
@@ -37,29 +192,35 @@
                 top: 10px;
                 left: 10px;
             }
+             /*No changes needed to these*/
+            .sidebar li {
+              /* border-bottom: 1px solid #ced4da;  Border on li for mobile, but handle with separators */
+            }
+            .sidebar li:last-child{
+               /* border-bottom:none; */ /*No border needed*/
+            }
+            .sidebar .separator {
+                /*No Changes needed on mobile*/
+            }
 
-            /* --- (Other mobile styles remain the same) --- */
         }
 
         /* iframe Styles */
-        .main-content iframe {
-            width: 100%;
-            height: 100vh;
+          .main-content iframe {
+            width: 100%;  /* Ensure iframe takes full width of .main-content */
+            height: 100vh; /*Use Viewport height*/
             border: none;
-            display: block;
+            display: block; /* Important for consistent sizing */
         }
-
-        /* --- (All your other styles from before, above the @media query) --- */
     </style>
 </head>
 <body>
-    <!-- --- (Your HTML remains the same) --- -->
 
-    <div class="sidebar" id="sidebar">
+    <div class="sidebar closed" id="sidebar">  <!-- Start closed on mobile -->
         <ul>
             <li><a href="readme.html" target="content">Read Me</a></li>
             <li><a href="readme translation (translated notes and guides in html folder, open the index file in a browser).txt" target="content">Read Me (Translation Notes)</a></li>
-            <li><a href="EXreadme.html" target="content">EX Read Me</a></li>
+            <li><a href="EX readme.html" target="content">EX Read Me</a></li>
             <li><a href="change.html" target="content">Changes From Vanilla</a></li>
             <li><a href="events.html" target="content">New Events/Side Quests</a></li>
             <li><a href="spoiler_free_new_quests.txt" target="content">Spoiler-Free New Event List</a></li>
@@ -97,7 +258,7 @@
         <span>☰</span> Menu
     </button>
 
-    <main class="main-content" id="mainContent">
+    <main class="main-content sidebar-closed" id="mainContent">  <!-- Start with sidebar-closed on mobile -->
         <iframe src="readme.html" name="content"></iframe>
     </main>
 
@@ -107,34 +268,76 @@
         const mainContent = document.getElementById('mainContent');
 
         function toggleSidebar() {
-            sidebar.classList.toggle('closed');
-            mainContent.classList.toggle('sidebar-closed'); // Keep this
+            if (sidebar.classList.contains('closed')) {
+                sidebar.classList.remove('closed');
+                sidebar.style.display = 'block'; // Ensure visibility
+                // Use requestAnimationFrame for smoother animation
+                requestAnimationFrame(() => {
+                    sidebar.style.transform = 'translateX(0)';
+                    sidebar.style.opacity = 1;
+                    sidebar.style.pointerEvents = 'auto';
+                 });
+
+            } else {
+                sidebar.classList.add('closed');
+                 sidebar.style.transform = 'translateX(-100%)';
+                 sidebar.style.opacity = 0;
+                 sidebar.style.pointerEvents = 'none';
+
+                setTimeout(() => {
+                    if (sidebar.classList.contains('closed')) {
+                        sidebar.style.display = 'none';
+                    }
+                }, 300); // Delay hiding to allow transition
+            }
+            mainContent.classList.toggle('sidebar-closed'); //Keep this!
         }
 
         hamburgerMenu.addEventListener('click', (e) => {
-            e.stopPropagation();
+            e.stopPropagation(); // Prevent click from reaching the document
             toggleSidebar();
         });
 
+         //Combined document click handler.  Much cleaner!
         document.addEventListener('click', (event) => {
-            if (!sidebar.contains(event.target) && !hamburgerMenu.contains(event.target) && !sidebar.classList.contains('closed') && window.innerWidth <= 768) {
-                toggleSidebar();
+          if (!sidebar.contains(event.target) && !hamburgerMenu.contains(event.target) && !sidebar.classList.contains('closed') && window.innerWidth <= 768) {
+                toggleSidebar(); //  Re-use toggleSidebar.  Avoids duplicate code.
+          }
+        });
+
+
+        // Close the sidebar when a link inside it is clicked (on mobile)
+       document.querySelectorAll('.sidebar a').forEach(link => {
+          link.addEventListener('click', (e) => {
+            if(window.innerWidth <= 768){
+              toggleSidebar(); // Close on mobile. Re-use the function.
             }
+          });
         });
 
-        document.querySelectorAll('.sidebar a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                if (window.innerWidth <= 768) {
-                    toggleSidebar();
-                }
-            });
-        });
+         //Initial setup: Check window size on load AND resize
+        function handleInitialSidebar() {
+            if (window.innerWidth <= 768) {
+                sidebar.classList.add('closed');
+                 sidebar.style.transform = 'translateX(-100%)';  //Offscreen
+                 sidebar.style.opacity = 0;
+                 sidebar.style.pointerEvents = 'none';
+                 sidebar.style.display = 'none'; //Hidden
 
-        // Initial setup (hide on mobile)
-        if (window.innerWidth <= 768) {
-            sidebar.classList.add('closed');
-           // mainContent.classList.add('sidebar-closed');  //No longer needed, we want it full width.
+                mainContent.classList.add('sidebar-closed');
+            } else {
+                sidebar.classList.remove('closed'); //Ensure open on larger screens
+                sidebar.style.display = 'block';    //and visible.
+                sidebar.style.transform = 'translateX(0)'; //Reset
+                sidebar.style.opacity = 1; //Reset
+                sidebar.style.pointerEvents = 'auto'; //Reset
+                mainContent.classList.remove('sidebar-closed');
+            }
         }
+
+        // Call on load and resize.  Very important!
+        handleInitialSidebar();  //On Load
+        window.addEventListener('resize', handleInitialSidebar); //On Resize
     </script>
 </body>
 </html>
