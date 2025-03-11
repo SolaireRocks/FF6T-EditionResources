@@ -5,140 +5,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Fantasy VI Item Database</title>
     <style>
-        /* --- General Styles --- */
-        body {
-            font-family: sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f9fa; /* Light gray background */
-            color: #343a40; /* Dark gray text */
-        }
+       /* --- General Styles --- */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Light gray background */
+    color: #343a40; /* Dark gray text */
+}
 
-        .container {
-            width: 80%;
-            max-width: 1200px; /* Limit maximum width for readability */
-            margin: 0 auto;
-            padding: 20px;
-        }
+.container {
+    width: 80%;
+    max-width: 1200px; /* Limit maximum width for readability */
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        h1, h2, h3 {
-            color: #007bff; /* Blue headings */
-            margin-bottom: 0.5em;
-        }
-        h1{
-            text-align: center;
-        }
-        h2 {
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
-            margin-top: 2em;
-        }
+h1, h2, h3 {
+    color: #007bff; /* Blue headings */
+    margin-bottom: 0.5em;
+}
+h1{
+    text-align: center;
+}
+h2 {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-top: 2em;
+}
 
-        /* --- Table of Contents --- */
-        #toc {
-            background-color: #e9ecef; /* Slightly darker gray */
-            padding: 15px;
-            border-radius: 5px;
-            margin-bottom: 30px;
-            position: sticky; /* Make it stick to the top */
-            top: 0;
-            z-index: 100; /* Ensure it's above other content */
-        }
+/* --- Table of Contents --- */
+#toc {
+    background-color: #e9ecef; /* Slightly darker gray */
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    /*position: sticky;  Removed sticky positioning */
+    /*top: 0; Removed top property */
+    /*z-index: 100;  Removed z-index */
+}
 
-        #toc ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex; /* Horizontal layout */
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            justify-content: space-around;
-        }
+#toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Horizontal layout */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: space-around;
+}
 
-        #toc li {
-            margin: 5px;
-        }
+#toc li {
+    margin: 5px;
+}
 
-        #toc a {
-            color: #007bff;
-            text-decoration: none;
-            padding: 5px 10px;
-            border-radius: 3px;
-            transition: background-color 0.2s ease; /* Smooth hover effect */
-        }
+#toc a {
+    color: #007bff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+}
 
-        #toc a:hover {
-            background-color: #007bff;
-            color: #fff;
-        }
+#toc a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
 
-        /* --- Item Listings --- */
-        .item-section {
-            margin-bottom: 40px;
-        }
+/* --- Item Listings --- */
+.item-section {
+    margin-bottom: 40px;
+}
 
-        .item-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
-            gap: 20px;
-        }
-        .item-list-single{
-            margin-bottom: 1rem;
-        }
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px;
+}
+.item-list-single{
+    margin-bottom: 1rem;
+}
 
-        .item {
-            background-color: #fff;
-            border: 1px solid #dee2e6;
-            border-radius: 5px;
-            padding: 15px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-            transition: transform 0.2s ease; /* Smooth hover effect */
-        }
+.item {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+}
 
-        .item:hover {
-            transform: translateY(-5px); /* Slight lift on hover */
-        }
+.item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
 
-        .item h3 {
-            color: #007bff;
-            margin-top: 0;
-        }
+.item h3 {
+    color: #007bff;
+    margin-top: 0;
+}
 
-        .item ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+.item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-        .item li {
-            margin-bottom: 5px;
-        }
+.item li {
+    margin-bottom: 5px;
+}
 
-        /* --- Back to Top Button --- */
-        #backToTop {
-            display: none; /* Hidden by default */
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 50%; /* Circular button */
-            width: 50px;
-            height: 50px;
-            font-size: 24px;
-            cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            z-index: 99; /* Ensure it's above other content */
-            transition: opacity 0.3s ease; /* Smooth fade-in */
-        }
+/* --- Back to Top Button --- */
+#backToTop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%; /* Circular button */
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 99; /* Ensure it's above other content */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+}
 
-        #backToTop:hover {
-            opacity: 0.8;
-        }
-        .acquire-list-item {
-            margin-left: 1rem;
-        }
+#backToTop:hover {
+    opacity: 0.8;
+}
+.acquire-list-item {
+    margin-left: 1rem;
+}
 
     </style>
 </head>
