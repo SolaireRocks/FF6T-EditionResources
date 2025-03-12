@@ -101,31 +101,31 @@
 <body>
     <div class="container">
         <h1>Read Me</h1>
-        <div class="header">
+        <header class="header">
             <div>Last Updated: December 8, 2022</div>
             <div>Version: 3.0.5 (EX: 2.0.5)</div>
-        </div>
+        </header>
 
-        <section id="system">
+        <section id="table-of-contents">
           <h2>0. Table of Contents</h2>
           <ul>
-            <li><a href="#1">1. Introduction</a></li>
-            <li><a href="#2">2. Notes</a></li>
-            <li><a href="#3">3. About FF6 T-Edition+EX</a></li>
-            <li><a href="#4">4. About Extra Patches</a></li>
-            <li><a href="#5">5. About Attached Files</a></li>
-            <li><a href="#6">6. Bug Fixes and Explanations</a></li>
-            <li><a href="#7">7. Frequently Asked Questions</a></li>
-            <li><a href="#8">8. Special Thanks</a></li>
-            <li><a href="#9">9. In Closing</a></li>
+            <li><a href="#introduction">1. Introduction</a></li>
+            <li><a href="#notes">2. Notes</a></li>
+            <li><a href="#about-t-edition">3. About FF6 T-Edition+EX</a></li>
+            <li><a href="#extra-patches">4. About Extra Patches</a></li>
+            <li><a href="#attached-files">5. About Attached Files</a></li>
+            <li><a href="#bug-fixes">6. Bug Fixes and Explanations</a></li>
+            <li><a href="#faq">7. Frequently Asked Questions</a></li>
+            <li><a href="#special-thanks">8. Special Thanks</a></li>
+            <li><a href="#closing">9. In Closing</a></li>
         </ul>
         </section>
 
-        <section id="1">
+        <section id="introduction">
             <h2>1. Introduction</h2>
             <p>Thanks for downloading this patch!</p>
-            <p>In order to patch this file, please use the program below, make sure you use a Japanese version of Final Fantasy VI, and ALWAYS patch on a new ROM, NEVER over one you've already edited or patched prior; you'll have problems (ignore this if playing the English version as it's already ready to be played -Kain).</p>
-            <p>※(<a href="http://www.romhacking.net/utilities/240/">http://www.romhacking.net/utilities/240/</a>)</p>
+            <p>In order to patch this file, please use the program below.  Make sure you use a Japanese version of Final Fantasy VI, and ALWAYS patch on a new ROM, NEVER over one you've already edited or patched prior; you'll have problems (ignore this if playing the English version as it's already ready to be played -Kain).</p>
+            <p>(<a href="http://www.romhacking.net/utilities/240/">Lunar IPS</a>)</p>
             <p>Also, please patch this ROM to a non-header one.</p>
             <p>Using this patch changes the ROM from a HiROM to an ExHiROM, so please use an emulator that supports this.</p>
             <p>This patch is remodeled and based on HZ9Cy.3WvI's "Final Fantasy 6 Omega Additional Patch Version 18.2".  I've also used a number of patches on top of this base mod.  If there's any complaints from the creators, I'll delete the patch from the uploader.  Please let me know though. Thank you.</p>
@@ -135,32 +135,33 @@
             <p>Please also note I'm not at liability for any damage this patch causes.</p>
         </section>
 
-        <section id="2">
+        <section id="notes">
             <h2>2. Notes</h2>
             <p>Although this is a finished patch, there are times when bugs and other problems may be corrected and when updates may happen based on my mood.</p>
-            <p><a href="http://jbbs.livedoor.jp/game/55803/">Final Fantasy VI T-Edition Forums</a></p>
+            <p><a href="http://jbbs.livedoor.jp/game/55803/">Final Fantasy VI T-Edition Forums (The link appears to be dead -Solaire) </a></p>
             <p>(Japanese IP posting only. Tsushiy speaks very little English, so make sure if you post to post in Japanese -Kain)</p>
             <p>In addition, there has been new conversations, events, and changes made by me that are not in the original game. I've also added new music from other Final Fantasy games, as well as other Square titles. Depending on who plays, you may not enjoy it, and for this I'm sorry.</p>
             <p>Further more, this patch is not created with the intention of having as many people enjoy it as much as possible. I created it for me and decided to share it.</p>
             <p>Any additional events that are added, even if they were previously adjusted or added, I may change them with little to no notice.</p>
             <p>Any other patches can not be applied to this mod.  There may be ways, however, it's very difficult.  As for save data, <span class = "bold-red">original game save data or other patches can not be used</span> (mainly due to how event flags are handled).  Also, <span class = "bold-red">save data from past versions of this patch will work, but problems may arise.</span></p>
             <p>The emulator used to check this patch's work is <b>UOSNES</b> Version <b>20100527</b>.  Other emulators may not work. (SNES 9x and Higan work, as do some others, but not perfectly. Audio quality is sometimes off or sounds really bad for some of the songs he added.  Please use the emulator included in the download if playing the Japanese version or if using SNES9x 1.60 simply go to Emulation >> Hacks >> OK >> Separate Echo Buffer from RAM -Kain)</p>
+            <p><strong>Emulator and Lua Scripting:</strong> This patch is best experienced with UOSNES Version 20100527. Some features, particularly audio, may not work correctly on other emulators. For full functionality, including optional features controlled by Lua scripts, SNES9x 1.60 (or later) is recommended. Ensure "Separate Echo Buffer from RAM" is enabled in SNES9x's emulation hacks.  Lua scripts, if provided, should be placed in the appropriate directory for your emulator (consult emulator documentation). The use of Lua scripts is optional but may enhance certain aspects of the game.</p>
         </section>
-		<section id = "3">
+		<section id = "about-t-edition">
 			<h2>3. About FF6 T-Edition+EX</h2>
-			<p>In addition to the "FF6 T-Edition X.X.X.ips" file which is the main part of FF6 T-Edition, "FF6 T-Edition EX X.X.X.ips" is also included with the download. You'll be able to play EX Mode after you clear the quest "Holy Angel Ultima" which is an additional event now in the original game. You'll need to save in a specific spot in the quest "Developer's Room", so make sure to read the <a href="newevent.html">newevent.html</a> for information.</p>
+			<p>In addition to the "FF6 T-Edition X.X.X.ips" file which is the main part of FF6 T-Edition, "FF6 T-Edition EX X.X.X.ips" is also included with the download. You'll be able to play EX Mode after you clear the quest "Holy Angel Ultima" which is an additional event now in the original game. You'll need to save in a specific spot in the quest "Developer's Room", so make sure to read the <a href="events.html">events.html</a> for information.</p>
 			<p>In "FF6 T-Edition EX X.X.X.ips", you can't play the normal game. Even if you try to make a new game, Terra will appear and explain things to you. Also, only data saved at a specific save point in the original game can be used (see the above). Please note you can't play this game normally because enemies, magic, and event flags in the data have been changed. This is not a normal game patch, just extra things not included in FF6 T-Edition.</p>
-			<p>There's spoilers here, but if you want to read and learn more, please check the <a href="EX readme.html">EX readme.html</a> for a full explanation.
+			<p>There's spoilers here, but if you want to read and learn more, please check the <a href="EXreadme.html">EX readme.html</a> for a full explanation.
 			</p>
 		</section>
-		<section id = "4">
+		<section id = "extra-patches">
 		<h2>4. About Extra Patches</h2>
 		<p>As an added bonus, I've included 3 patches to change the window type in the game.</p>
 		<p>Be sure you use these patches on a ROM already patched with <span class="bold-red">FF6 T-Edition or FF6 T-Edition EX</span>. There's no other changes besides changing the window type displayed.</p>
 		<p>Because these are patches designed for FF6 T-Edition, they won't work with a normal FF6 game. This is due to a different file being used to display the window now in FF6 T-Edition.</p>
 		<p><a href="windowtype.html">windowtype.html</a></p>
 		</section>
-		<section id = "5">
+		<section id = "attached-files">
 			<h2>5. About Attached Files</h2>
 			<p>In order to supply as much information as possible in the event I don't use the forums as much, I've included the following files to help players.<br>
 			    ※Currently, I'm using html files to display this:</p>
@@ -188,7 +189,7 @@
 				<li><span class="bold-text">windowtype.html</span><br>    Window types changed in FF6 T-Edition and in the other included patches.</li>
 			</ul>
 		</section>
-		<section id = "6">
+		<section id = "bug-fixes">
 			<h2>6. Bug Fixes and Explanations</h2>
 			<h3>Original Game Bug Fixes</h3>
 			<p>Note: The vast majority of bugs in FF6 have been fixed in general; only a few remain that unless you know this game in and out/are a speedrunner you will most likely never encounter them. Otherwise, the ones that remain won't affect gameplay and the list below are just ones Tsushiy made note of. In general, 99% of what you can think of has been fixed -Kain.</p>
@@ -242,7 +243,7 @@
 				<li>While playing New Game+, actual party members instead of Moogles may appear when hitting the Y Button during the "Save Terra!" event with the Moogles/Locke.</li>
 			</ul>
 		</section>
-		<section id = "7">
+		<section id = "faq">
 			<h2>7. Frequently Asked Questions</h2>
 			<p>Q. Where's the Eidolon that teaches ○? or ○?  How do you learn the magic ●? or ●? (Note: These are blank on purpose for examples.)<br>
 			A. Many things have been deleted, changed, or added. Please see the html files for more information.</p>
@@ -271,7 +272,7 @@
 			<p>Q. I keep hearing odd noises during some of the BGM...<br>
 			A. It's the emulator. I use UOSNES Version 20100527, as that what was checked and used for the patch, so I highly recommend you use it as well for the best performance. (We've attempted and had most of the glaring song issues fixed thanks to emberling in the English version, but some are still off slightly. Please listen to the music on UOSNES if you want the best version. The reason for the sound quality is due to UOSNES bypassing the SNES audio RAM limitation, where ZSNES, 9X, etc, all have limits. The sound quality is superior and is not possible to truly fix for any other emulator beyond fixing the beeps and boops or grating glitchy noises.)</p>
 		</section>
-		<section id = "8">
+		<section id = "special-thanks">
 			<h2>8. Special Thanks</h2>
 			<p>There are many people who helped and gave me advice for making this patch. I'd like to take this opportunity to thank them. Thank you very much!</p>
 			<h3>♪♪♪　People who loaned me songs for use　♪♪♪</h3>
@@ -310,7 +311,7 @@
 				<li>スンスケ ＆ momo    …　For the 2 videos to help my motivation for the patch!</li>
 			</ul>
 		</section>
-		<section id = "9">
+		<section id = "closing">
 		<h2>9. In Closing</h2>
 		<p>This patch has become very unique and has surpassed my personal desire for FF6. My modding policy is basically - "enhance any enemy that's weak", "balance any breakable items with magic properties", "make it look as if its been remodeled" and "add events during the World of Ruin". As it currently stands, I'm very happy.</p>
 		<p>What I mean to say is, after all this work is done, I want to play the patch! Because it's my concept, I feel like many things may not fit perfectly. Fortunately, since the analysis of Final Fantasy 6 modding has been made much easier thanks to many talented people, I think that it's good to try and do your own modding!</p>
