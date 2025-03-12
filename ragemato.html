@@ -4,137 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gau's Rage Compendium - FFVI T-Edition</title>
-    <style>
-        /* Reset and Base Styles */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, clean font */
-            background-color: #121212; /* Dark background */
-            color: #ddd; /* Light text for contrast */
-            line-height: 1.6;
-        }
+<style>
+    /* Reset and Base Styles */
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa; /* Light background */
+        color: #333; /* Dark text for contrast */
+        line-height: 1.6;
+    }
 
-        a {
-            color: #4CAF50; /* Green links */
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+    a {
+        color: #007bff; /* Blue links */
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
 
-        a:hover {
-            color: #66bb6a;
-        }
+    a:hover {
+        color: #0056b3; /* Darker blue on hover */
+    }
 
-        /* Container */
-        .container {
-            width: 95%;
-            max-width: 1400px; /* Wider for better readability on large screens */
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #1e1e1e; /* Slightly lighter dark for contrast */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
-            border-radius: 8px;
-            overflow-x: auto; /* Handles table overflow */
-        }
+    /* Container */
+    .container {
+        width: 95%;
+        max-width: 1400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff; /* White container background */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        border-radius: 8px;
+        overflow-x: auto;
+    }
 
-        /* Header */
-        .header {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #4CAF50;
-        }
+    /* Header */
+    .header {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #007bff;
+    }
 
-        .header h1{
-            margin: 5px;
-        }
+    .header h1 {
+        margin: 5px;
+    }
 
-        /* Update Info */
+    /* Update Info */
+    .update-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+        color: #555; /* Slightly darker gray */
+    }
+
+    /* Notes */
+    .notes {
+        margin-bottom: 30px;
+        font-size: 0.95em;
+        line-height: 1.5;
+        color: #444; /* Darker gray */
+        border-left: 4px solid #007bff; /* Blue visual cue */
+        padding-left: 15px;
+    }
+
+    .notes p {
+        margin: 5px;
+    }
+
+    /* Table Styles */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+        table-layout: fixed;
+    }
+
+    th, td {
+        padding: 12px 15px;
+        text-align: left;
+        border-bottom: 1px solid #ddd; /* Light gray border */
+        word-wrap: break-word;
+    }
+
+    th {
+        background-color: #007bff; /* Blue header color */
+        color: #fff; /* White text */
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Zebra striping for better readability */
+    tr:nth-child(even) {
+        background-color: #f2f2f2; /* Light gray for even rows */
+    }
+
+    tr:hover {
+        background-color: #e0e0e0; /* Slightly darker gray on hover */
+    }
+
+    /* Column Widths */
+    td:nth-child(1), td:nth-child(4) { width: 15%; } /* Monster Name */
+    td:nth-child(2), td:nth-child(5) { width: 8%; }  /* WoB/WoR */
+    td:nth-child(3), td:nth-child(6) { width: 27%; }  /* Location/Ability */
+
+    /* Footer */
+    .footer {
+        text-align: center;
+        margin-top: 40px;
+        color: #777; /* Gray footer text */
+        font-size: 0.8em;
+    }
+
+    .WoB {
+        text-align: center;
+    }
+
+    .WoR {
+        text-align: center;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
         .update-info {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            font-size: 0.9em;
-            color: #999;
+            flex-direction: column;
+            align-items: flex-start;
         }
-
-        /* Notes */
-        .notes {
-            margin-bottom: 30px;
-            font-size: 0.95em;
-            line-height: 1.5;
-            color: #bbb;
-            border-left: 4px solid #4CAF50; /* Subtle visual cue */
-            padding-left: 15px;
-        }
-        .notes p{
-            margin: 5px;
-        }
-
-        /* Table Styles */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            table-layout: fixed; /* Keeps columns consistent */
-
-        }
-
         th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #333;
-            word-wrap: break-word; /* Handles long words */
+            font-size: 12px;
+            padding: 8px 10px;
         }
-
-        th {
-            background-color: #4CAF50; /* Header color */
-            color: #121212;
-            font-weight: 600;
-            text-transform: uppercase; /* Make headers stand out */
-            letter-spacing: 1px;
-        }
-          /* Zebra striping for better readability */
-        tr:nth-child(even) {
-            background-color: #282828;
-        }
-
-        tr:hover {
-            background-color: #3a3a3a;
-        }
-
-        /* Column Widths */
-        td:nth-child(1), td:nth-child(4) { width: 15%; } /* Monster Name */
-        td:nth-child(2), td:nth-child(5) { width: 8%; }  /* WoB/WoR */
-        td:nth-child(3), td:nth-child(6) { width: 27%; }  /* Location/Ability */
-
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #666;
-            font-size: 0.8em;
-        }
-        .WoB{
-            text-align: center;
-        }
-        .WoR{
-            text-align: center;
-        }
-
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .update-info {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            th, td{
-                font-size: 12px;
-                padding: 8px 10px;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <div class="container">
