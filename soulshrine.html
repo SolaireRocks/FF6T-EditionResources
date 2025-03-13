@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFVI T-Edition Soul Shrine Guide</title>
+    <style>
+        /* Reset and Base Styles */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa; /* Light background */
+            color: #343a40; /* Dark text for contrast */
+            line-height: 1.6;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+
+        /* Container */
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 5px;
+            color: #007bff;
+        }
+        .header h2{
+          margin: 0px;
+        }
+
+        /* Note */
+        .note {
+            font-style: italic;
+            color: #6c757d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Group Section */
+        .group {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 20px;
+        }
+
+        .group:last-child {
+            border-bottom: none;
+        }
+
+        .group-header {
+            font-size: 1.25em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bgm {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-left: 10px;
+        }
+
+        /* Encounter List */
+        .encounters {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            columns: 280px; /*  Set the *desired* column width. */
+            column-gap: 20px; /*  Space between columns. */
+        }
+
+        .encounters li {
+            padding: 5px 0;
+            break-inside: avoid; /* Prevent items from breaking across columns */
+        }
+
+
+        .drop {
+            color: #28a745;
+            font-weight: bold;
+        }
+
+          /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #6c757d;
+            font-size: 0.8em;
+        }
+
+        /* Responsive adjustments:  Reduce column count on smaller screens. */
+        @media (max-width: 768px) {
+            .encounters {
+                columns: 240px; /* Narrower columns on smaller screens */
+            }
+        }
+         @media (max-width: 576px) {
+            .encounters {
+                columns: 1fr; /* Single column on very small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>FFVI T-Edition Soul Shrine Guide</h1>
+            <h2>Complete Enemy List</h2>
+        </div>
+        <div class="note">
+            Note: Upon clearing the Soul Shrine for the first time, you can select any of the groups from a list and rebattle them over and over. Great for farming high-end rare loot.
+        </div>
+
+        <!-- Group 1 -->
+        <div class="group">
+            <div class="group-header">Group #1 <span class="bgm">(BGM: Final Fantasy 6 - Save Them)</span></div>
+            <ul class="encounters">
+                <li>#  1: 2x Mandrago, LeafBunn</li>
+                <li>#  2: 3x Demiurok, 2x Hornet</li>
+                <li>#  3: 2x Mu, Goblin</li>
+                <li>#  4: 2x Cockatri, Gorgias, Zaghrem</li>
+                <li>#  5: MTekArmr, 2x Imp.Sold</li>
+                <li>#  6: Sahagin, Nautiloi, LesLopro</li>
+                <li>#  7: Darkside, 2x Spectre</li>
+                <li>#  8: 2x NetlHopr, Aepyorni, StrayCat</li>
+                <li>#  9: 4x Imp.Sold, Satellit  <span class="drop">[100% Drop: Green Beret]</span></li>
+                <li># 10: LivingDe, AnglWhis, 2x Phoebe</li>
+                <li># 11: 2x LivingDe, Oversoul</li>
+                <li># 12: 2x Anguifor, SahagChf</li>
+                <li># 13: Corporal, Fidor</li>
+                <li># 14: 2x Corporal, HvyArmor</li>
+                <li># 15: HellRidr</li>
+                <li># 16: 3x Rudra, MtrDrive</li>
+                <li># 17: VeilDanc, 2x IronClaw</li>
+                <li># 18: Harveste, HilGigas</li>
+                <li># 19: 3x Stunner, 2x Goetia</li>
+                <li># 20: 2x Don</li>
+                <li># 21: DrgnFosl, 3x Bug</li>
+                <li># 22: Wyvern, 2x LitworCh, Korpokkr</li>
+            </ul>
+        </div>
+
+        <!-- Group 2 -->
+        <div class="group">
+            <div class="group-header">Group #2 <span class="bgm">(BGM: Romancing SaGa 3/RS3 - Gens Castle Battle)</span></div>
+            <ul class="encounters">
+                <li># 23: 2x Sergeant, 2x Belzecue</li>
+                <li># 24: ProtoAmr, 2x Onion</li>
+                <li># 25: MTekInfa, 2x Belzecue</li>
+                <li># 26: 6x BlueFlan</li>
+                <li># 27: 2x Lamia, Dstroide</li>
+                <li># 28: MegaArmr, ProtoAmr</li>
+                <li># 29: 2x PiscoDmn, Draculdy</li>
+                <li># 30: Wizard, PiscoDmn, Antares</li>
+                <li># 31: 3x Balloon, 3x Bomb</li>
+                <li># 32: 2x Fawn, Mandrake</li>
+                <li># 33: 2x Gigantos <span class="drop">[100% Drop: Izayoi]</span></li>
+                <li># 34: Ankheg, Devourer, Chimera</li>
+                <li># 35: 2x SkyArmor, Spitfire</li>
+                <li># 36: Malboro</li>
+                <li># 37: Dragon</li>
+                <li># 38: Mindflyr, Fawn, Behemoth</li>
+                <li># 39: 2x Ninja, PlatDrgn</li>
+                <li># 40: 2x Domovoi</li>
+                <li># 41: Intangir</li>
+                <li># 42: 2x Peeper, ErthGurd</li>
+                <li># 43: KilrMnts, Fafnir</li>
+                <li># 44: SandFish, BlkDragn</li>
+            </ul>
+        </div>
+
+         <!-- Group 3 -->
+        <div class="group">
+             <div class="group-header">Group #3 <span class="bgm">(BGM: Xenogears/XG - Flight)</span></div>
+            <ul class="encounters">
+                <li># 45: 3x Scorpion</li>
+                <li># 46: NtWalker, 2x Gigntoad</li>
+                <li># 47: 3x Balloon, 3x Grenade</li>
+                <li># 48: 2x LunarWlf, DiveEagl</li>
+                <li># 49: 2x PoisnLch, 2x Gigntoad</li>
+                <li># 50: VampThrn, 2x Alraune</li>
+                <li># 51: 2x PurpBava, Gatling, Lizard</li>
+                <li># 52: 2x DsrtRabb, 2x Hundlegs</li>
+                <li># 53: Oceanus</li>
+                <li># 54: NeckHntr, Borghese, DsrtSaha</li>
+                <li># 55: Dante</li>
+                <li># 56: 3x Dropper</li>
+                <li># 57: 3x Slug</li>
+                <li># 58: 2x Zeveak, BkLizard, 3x YellowMo</li>
+                <li># 59: 3x Cactus, Cactuar</li>
+                <li># 60: 2x Aeronite</li>
+                <li># 61: 2x Carrot</li>
+                <li># 62: Apanda, 2x BkLizard</li>
+                <li># 63: DdlyHorr</li>
+                <li># 64: 2x Necroman, CloudWth</li>
+                <li># 65: 2x B. Lamia</li>
+                <li># 66: 3x BloodBat, Vampires</li>
+            </ul>
+        </div>
+
+         <!-- Group 4 -->
+        <div class="group">
+            <div class="group-header">Group #4 <span class="bgm">(BGM: Final Fantasy 11/FF11 - Luck of the Mog)</span></div>
+            <ul class="encounters">
+                <li># 67: GlasyaLa, DevilFst, Mugbear</li>
+                <li># 68: LamiaQen, 2x Punisher</li>
+                <li># 69: 2x Twinscyt</li>
+                <li># 70: Gorgimer</li>
+                <li># 71: LilMurde</li>
+                <li># 72: 2x Basilisk, LeapFrog</li>
+                <li># 73: Sprinter, GtMantis, 2x Lycaon</li>
+                <li># 74: 4x LeapFrog</li>
+                <li># 75: 4x Crawler</li>
+                <li># 76: 2x Puck, MedsaChk</li>
+                <li># 77: 2x RuneClaw, Purusa</li>
+                <li># 78: Emeraldi</li>
+                <li># 79: Ourobors, Vivian, Neochu</li>
+                <li># 80: St. Elmo, Mahadeva</li>
+                <li># 81: 2x Sorath</li>
+                <li># 82: Weredrgn, 2x Face</li>
+                <li># 83: Al Jabr, 2x Vampyr</li>
+                <li># 84: Cheshire, Samurai, Rust, Coco</li>
+                <li># 85: 2x FlameDog</li>
+                <li># 86: 2x Pineappl, Garm</li>
+                <li># 87: Covert, Jam, Chs.Drgn</li>
+                <li># 88: 2x Jam, 3x RedMarsh</li>
+            </ul>
+        </div>
+
+         <!-- Group 5 -->
+        <div class="group">
+           <div class="group-header">Group #5 <span class="bgm">(BGM: Unlimited Saga/US - Battle Theme I)</span></div>
+            <ul class="encounters">
+                <li># 89: TestRidr, Coolness</li>
+                <li># 90: 2x Frostbst</li>
+                <li># 91: 2x Lukhavi</li>
+                <li># 92: WhtJello, Frostbst, Coolness</li>
+                <li># 93: Tzakmaqi, Illuyank</li>
+                <li># 94: 3x Knotty, Imp</li>
+                <li># 95: 4x OniDashr</li>
+                <li># 96: Tonberry</li>
+                <li># 97: Amduscia, Kamui</li>
+                <li># 98: UndCheru, Amduscia, Mykale</li>
+                <li># 99: Corpse, Cassie, Baalzeph</li>
+                <li>#100: 3x Tonberri</li>
+                <li>#101: RicardMg, Shade</li>
+                <li>#102: Titania, MagiDrgn, Shade</li>
+                <li>#103: 2x Yama, Traveler</li>
+                <li>#104: Titania, Alchymia, Traveler</li>
+                <li>#105: 2x MagicPot</li>
+                <li>#106: 2x PitFiend</li>
+                <li>#107: 2x Deep One</li>
+                <li>#108: 2x Lilith, AlurRide</li>
+                <li>#109: BldDance, 4x Wild Cat</li>
+                <li>#110: AlurRide, 3x Minity</li>
+            </ul>
+        </div>
+
+        <!-- Group 6 -->
+        <div class="group">
+            <div class="group-header">Group #6 <span class="bgm">(BGM: Romancing SaGa/RS1 - Coup De Grace)</span></div>
+            <ul class="encounters">
+              <li>#111: Outsider, Ochiudo</li>
+              <li>#112: Fortis, DthMachi, DuelArmr</li>
+              <li>#113: Coeurl, 3x Lunatys</li>
+              <li>#114: 2x FigaroLz, Devil</li>
+              <li>#115: ArmrdWpn</li>
+              <li>#116: 2x NghtHawk</li>
+              <li>#117: 2x Tonber.M</li>
+              <li>#118: 4x VectorLy</li>
+              <li>#119: GrndBehe, Deathclw, GrtMalbo</li>
+              <li>#120: Maiden, 2x DemonKht</li>
+              <li>#121: BlkForce, 2x Soulflyr</li>
+              <li>#122: 2x OldDrago</li>
+              <li>#123: 3x MtlHitmn</li>
+              <li>#124: 3x Junk</li>
+              <li>#125: Helldive, 2x Colossus</li>
+              <li>#126: 2x Vanguard</li>
+              <li>#127: Fiend</li>
+            </ul>
+        </div>
+
+        <!-- Group 7 -->
+        <div class="group">
+           <div class="group-header">Group #7 <span class="bgm">(BGM: Romancing SaGa 2/RS2 - Last Battle)</span></div>
+            <ul class="encounters">
+              <li>#128: 3x InnoSent</li>
+              <li>#129: Gamma</li>
+              <li>#130: 3x Mover, Soulflyr</li>
+              <li>#131: MuudSuud</li>
+              <li>#132: Daedalus, Luminesc</li>
+              <li>#133: Promethe</li>
+              <li>#134: 3x GrtMalbo</li>
+              <li>#135: 2x VectChim</li>
+              <li>#136: 2x FendDrgn</li>
+              <li>#137: NinjaMas, Yojimbo</li>
+              <li>#138: Landworm</li>
+              <li>#139: Haokah, Haniel, Luminesc</li>
+              <li>#140: 2x SkullEtr</li>
+              <li>#141: Brachios, Tyranosa</li>
+              <li>#142: Demon</li>
+            </ul>
+        </div>
+
+        <!-- Group 8 -->
+        <div class="group">
+          <div class="group-header">Group #8 <span class="bgm">(BGM: Romancing SaGa 3/RS3 - Last Battle)</span></div>
+            <ul class="encounters">
+              <li>#143: CrysDrgn</li>
+              <li>#144: 2x Alv, IrnGiant</li>
+              <li>#145: 2x GrtDemon, Thor</li>
+              <li>#146: Azrael, Thor, Chronos</li>
+              <li>#147: Hecto, Abaddon</li>
+              <li>#148: 2x DarkBehe</li>
+              <li>#149: MoonGodd, Vilia, Hecto</li>
+              <li>#150: Chronos, Vilia, Thor</li>
+              <li>#151: ShldDrgn, Valefor</li>
+              <li>#152: ErthEatr</li>
+              <li>#153: 2x NinjaMas</li>
+              <li>#154: DonTonbe</li>
+              <li>#155: SoulEatr</li>
+              <li>#156: 4x Kum Kum</li>
+              <li>#157: Goddess</li>
+            </ul>
+        </div>
+
+        <!-- Group 9 -->
+        <div class="group">
+          <div class="group-header">Group #9 <span class="bgm">(BGM: Bravely Default Flying Fairy/BDFF - That Person's Name Is)</span></div>
+            <ul class="encounters">
+              <li>#158: Carbuncl</li>
+              <li>#159: Catoblep</li>
+              <li>#160: Seraphim</li>
+              <li>#161: Titan</li>
+              <li>#162: 2x MistDrgn</li>
+              <li>#163: Ashura <span class="drop">[100% Drop: Guard Bracelet]</span></li>
+              <li>#164: Diabolos</li>
+              <li>#165: Valigarm</li>
+              <li>#166: Alexande</li>
+              <li>#167: 2x Odin</li>
+              <li>#168: Leviatha</li>
+              <li>#169: Bahamut</li>
+            </ul>
+        </div>
+
+        <!-- Group 10 -->
+        <div class="group">
+          <div class="group-header">Group #10 <span class="bgm">(BGM: Final Fantasy 3/FF3 - Final Battle)</span></div>
+          <ul class="encounters">
+            <li>#170: 2x SlvrLobo, GardLedr <span class="drop">[100% Drop: Hi-Potion]</span></li>
+            <li>#171: PhaTrain <span class="drop">[100% Drop: Tent]</span></li>
+            <li>#172: 2x MtrDrive, Dadaluma</li>
+            <li>#173: Numbr024</li>
+            <li>#174: LeftClaw, Rt.Blade, Numbr128 <span class="drop">[100% Drop: Tent]</span></li>
+            <li>#175: 2x Crane</li>
+            <li>#176: MissileB, ReflectB, AirForce, LaserUni, ManaJamr <span class="drop">[100% Drop: X-Potion]</span></li>
+            <li>#177: Mom Bomb, 4x Bomb, Grenade</li>
+            <li>#178: YmirHead, AngWhelk <span class="drop">[100% Drop: Dragon Claw]</span></li>
+            <li>#179: UltimaWe <span class="drop">[100% Drop: Ultima Weapon]</span></li>
+          </ul>
+        </div>
+
+        <!-- Group 11 -->
+        <div class="group">
+           <div class="group-header">Group #11 <span class="bgm">(BGM: Final Fantasy 4/FF4 - The Final Battle)</span></div>
+            <ul class="encounters">
+                <li>#180: 3x Tentacle, DesrtTrp <span class="drop">[100% Drop: X-Ether]</span></li>
+                <li>#181: Wisp, Dullahan <span class="drop">[100% Drop: Reincarnation]</span></li>
+                <li>#182: KingBehe <span class="drop">[100% Drop: Behemoth Suit]</span></li>
+                <li>#183: Nightmar, Tantaria</li>
+                <li>#184: 2x Chadarno</li>
+                <li>#185: KTonberr <span class="drop">[100% Drop: Kitchen Knife]</span></li>
+                <li>#186: DthRider <span class="drop">[100% Drop: Black Robe]</span></li>
+                <li>#187: Proserpi <span class="drop">[100% Drop: White Robe]</span></li>
+                <li>#188: Tricerat</li>
+                <li>#189: Sam.Soul  <span class="drop">[100% Drop: Master's Scroll]</span></li>
+                <li>#190: 2x SoulSavr, Wrexsoul</li>
+                <li>#191: ---- None ---- </li>
+            </ul>
+        </div>
+
+        <!-- Group 12 -->
+        <div class="group">
+            <div class="group-header">Group #12 <span class="bgm">(BGM: Final Fantasy 5/FF5 - The Last Battle)</span></div>
+            <ul class="encounters">
+              <li>#192: Omniscen</li>
+              <li>#193: Gilgames</li>
+              <li>#194: GilTurtl</li>
+              <li>#195: Omega</li>
+              <li>#196: Shinryu</li>
+            </ul>
+        </div>
+
+        <!-- Group 13 -->
+        <div class="group">
+          <div class="group-header">Group #13 <span class="bgm">(BGM: Chrono Trigger/CT - Battle with Magus)</span></div>
+            <ul class="encounters">
+                <li>#197: 2x LifeTrap</li>
+                <li>#198: Adamanti</li>
+                <li>#199: GstTrain</li>
+                <li>#200: 2x Erebus, Hidon, 2x Nyx <span class="drop">[100% Drop: Dead Soul]</span></li>
+                <li>#201: Sandy, Mindy, Cindy</li>
+                <li>#202: Ketu, Rahu, Inferno</li>
+                <li>#203: Colossus, Wolfrmtr, Vanguard</li>
+                <li>#204: Guardian</li>
+                <li>#205: UltiBust  <span class="drop">[100% Drop: Ultima Weapon]</span></li>
+            </ul>
+        </div>
+
+        <!-- Group 14 -->
+        <div class="group">
+          <div class="group-header">Group #14 <span class="bgm">(BGM: Final Fantasy 7/FF7 - One Winged Angel)</span></div>
+            <ul class="encounters">
+                <li>#206: StrmDrgn  <span class="drop">[100% Drop: Force Armor]</span></li>
+                <li>#207: ErthDrgn <span class="drop"> [100% Drop: Rubber Suit]</span></li>
+                <li>#208: YlloDrgn  <span class="drop">[100% Drop: Lambent Hat]</span></li>
+                <li>#209: SkulDrgn  <span class="drop">[100% Drop: Bone Club]</span></li>
+                <li>#210: BlueDrgn  <span class="drop">[100% Drop: Pinwheel]</span></li>
+                <li>#211: RedDragn  <span class="drop">[100% Drop: Mutsunokami]</span></li>
+                <li>#212: HolyDrgn <span class="drop"> [100% Drop: Safety Bit]</span></li>
+                <li>#213: 4x FrzeDrgn <span class="drop"> [100% Drop: Force Shield]</span></li>
+                <li>#214: Kraken</li>
+                <li>#215: Lich</li>
+                <li>#216: Tiamat</li>
+                <li>#217: Marilith</li>
+            </ul>
+        </div>
+
+        <!-- Group 15 -->
+        <div class="group">
+            <div class="group-header">Group #15 <span class="bgm">(BGM: Final Fantasy 8/FF8 - The Extreme)</span></div>
+            <ul class="encounters">
+              <li>#218: Cerberus <span class="drop"> [100% Drop: Bracer]</span></li>
+              <li>#219: 2HedDrgn <span class="drop"> [100% Drop: Maximillian]</span></li>
+              <li>#220: Echidna <span class="drop"> [100% Drop: Lordly Robes]</span></li>
+              <li>#221: Ahriman <span class="drop"> [100% Drop: Grand Helm]</span></li>
+              <li>#222: 2x Skulnant, 2x Scarmili <span class="drop"> [100% Drop: Earth Greaves]</span></li>
+              <li>#223: 2x Cagnazzo <span class="drop"> [100% Drop: Water Cuffs]</span></li>
+              <li>#224: 2x Barbaric <span class="drop"> [100% Drop: Wind Corsage]</span></li>
+              <li>#225: 2x Rubicant <span class="drop"> [100% Drop: Flame Cape]</span></li>
+              <li>#226: Ultima</li>
+            </ul>
+        </div>
+    </div> <!-- Close container -->
+     <div class="footer">
+        Final Fantasy VI T-Edition.
+    </div>
+</body>
+</html>
