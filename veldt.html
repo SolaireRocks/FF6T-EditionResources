@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +13,18 @@
             font-family: sans-serif;
             margin: 0;
             padding: 0;
+<<<<<<< Updated upstream
             background-color: #f8f9fa;
             color: #343a40;
+=======
+            background-color: #121212;
+            color: #fff;
+>>>>>>> Stashed changes
             line-height: 1.6;
         }
 
         .container {
+<<<<<<< Updated upstream
             max-width: 960px;
             margin: 20px auto;
             padding: 20px;
@@ -37,12 +47,42 @@
         h3 {
           margin-top: 1.5em;
           margin-bottom:.75em;
+=======
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #4CAF50;
+            /* Green accent color */
+            margin-bottom: 0.5em;
+            font-weight: 600;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        h3 {
+            font-size: 1.5em;
+>>>>>>> Stashed changes
         }
 
         p {
             margin-bottom: 1em;
         }
 
+<<<<<<< Updated upstream
         ol, ul {
             padding-left: 20px;
         }
@@ -113,10 +153,152 @@
         }
     </style>
 </head>
+=======
+        ol,
+        ul {
+            margin-bottom: 1em;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 0.5em;
+        }
+
+        .steps {
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4CAF50; /* Green accent on steps */
+        }
+
+        .steps ol {
+            counter-reset: step-counter;
+            padding-left: 30px; /* Adjust for larger counter numbers */
+
+        }
+
+        .steps li {
+            counter-increment: step-counter;
+            margin-bottom: .8em;
+
+        }
+
+
+        .steps li::before {
+            content: counter(step-counter);
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+            display: inline-block;
+            min-width: 1.3em; /* Ensure numbers don't get cut off */
+            text-align: center;
+
+        }
+
+        .example {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #e91e63;  /* Pink accent for example */
+            margin-bottom: 20px;
+        }
+        .example p::before{
+            content: "Example: ";
+            font-weight: bold;
+
+        }
+
+        .mechanics {
+            background-color: #333;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #2196F3;  /* Blue accent for mechanics section */
+            margin-bottom: 20px;
+        }
+
+        .formation-groups {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .formation-group {
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #444;
+        }
+
+        .formation-group h3 {
+            margin-top: 0;
+            border-bottom: 1px solid #444;
+            padding-bottom: 5px;
+        }
+
+        .formation-group ul {
+            list-style: none; /* remove the standard bullet*/
+            padding-left: 0px;
+        }
+        .formation-group li::before{
+            content: "• "; /* Unicode bullet character */
+            color: #4CAF50; /* Or any color you prefer */
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+
+
+        .note {
+            background-color: rgba(255, 255, 0, 0.2); /* Light yellow */
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            color: #d4d400; /* Darker text for better contrast */
+            border: 1px solid #ffff9e;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .formation-groups {
+                grid-template-columns: 1fr; /* Stack groups on smaller screens */
+            }
+        }
+          .memory-address {
+            font-family: monospace;
+            background-color: #444;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .search-info{
+            background-color: #2a2a2a;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            border-left: 4px solid #4CAF50;
+        }
+        .section-title{
+              border-bottom: 2px solid #4CAF50;
+                padding-bottom: 5px;
+        }
+        .sub-step{
+            margin-left: 2em;
+            margin-bottom: .3em;
+        }
+    </style>
+</head>
+
+>>>>>>> Stashed changes
 <body>
     <div class="container">
         <h1>Veldt Encounter Guide</h1>
 
+<<<<<<< Updated upstream
         <div class="section">
             <h2>Finding Specific Enemies</h2>
             <p>To find a specific enemy on the Veldt, follow these steps:</p>
@@ -1062,4 +1244,979 @@ HellRidr on my first battle afterwards. I can now cross HellRidr off of my Rages
         </div>
     </div>
 </body>
+=======
+        <p>This guide explains how to manipulate encounters on the Veldt to find specific enemies.</p>
+
+        <h2 class="section-title">Finding a Specific Enemy</h2>
+         <div class="search-info">
+            <p>To locate your desired enemy:</p>
+             <ol>
+                <li>Find the enemy's formation group below.</li>
+                <li>Fight on the Veldt to identify your current group.</li>
+                <li>Repeat (2) until the *NEXT* group contains your target enemy.</li>
+            </ol>
+         </div>
+
+        <div class="steps">
+            <h3>Steps:</h3>
+            <ol>
+                <li>Perform an emulator save state (not in-game).</li>
+                <li>Fight a battle on the Veldt.  If it's your enemy, you're done!</li>
+                <li>If not, load the save state.</li>
+                <li>Fight a battle <em>off</em> the Veldt.</li>
+                <li>Return to the Veldt.</li>
+                <li>Repeat steps 1-5 until you find your target.</li>
+            </ol>
+        </div>
+
+        <div class="example">
+            <p>
+                I'm trying to find HellRidr (formation #10). I encounter a solo SoulEatr on the Veldt (formation #61).
+                I fight 12 more battles, ending in formation #9 (62, 63, 0-9). I save state, fight on the Veldt,
+                but encounter 3x LivingDe. I reload, fight off-Veldt, then return and find HellRidr on my first try.
+            </p>
+        </div>
+
+
+        <div class="mechanics">
+            <h2 class="section-title">Veldt Mechanics</h2>
+            <ol>
+                <li>Every Veldt encounter:
+                  <div class="sub-step">(a) Increase "group number" by 1.</div>
+                  <div class="sub-step"> (b) If group number ≥ 64, subtract 64 (or ID%64).</div>
+                  <div class="sub-step"> (c) Select a random encounter from the new group.</div>
+                  <div class="sub-step">(d) If you have not encountered that formation, pick the next one in the group.</div>
+                  <div class="sub-step">(e) If it's not a valid Veldt encounter, pick another in the group.</div>
+                  <div class="sub-step">(f) If you haven't encountered *ANY* enemies in a group, return to (a).</div>
+                </li>
+                <li>Off-Veldt encounters change the "randomly chosen" encounter in the current pack.</li>
+               <li>Every time you load an in-game save, the system/global save's RNG is increased by 13 and immediately saved, then the group ID is set to that. This may or may not match up with your save's previous group ID+13, and thus is only a semi-reliable way to increase the group ID by a fixed amount.  I would not rely on this method to find a particularly stubborn enemy, but if you're lucky, the stars may align and it could save you time, or at least pick a random formation much closer to the one you're going for.</li>
+                <li>The memory address <span class="memory-address">[7E1FA5]</span> holds the last encountered formation group.</li>
+            </ol>
+        </div>
+
+
+        <h2 class="section-title">Formation Groups</h2>
+        <div class="formation-groups">
+            <!-- Formation Group 0 -->
+            <div class="formation-group">
+                <h3>Formation Group # 0 (0x00)</h3>
+                <ul>
+                    <li>#1: SlvrLobo</li>
+                    <li>#2: 2x SlvrLobo</li>
+                    <li>#3: 2x Guard</li>
+                    <li>#4: 2x Demiurok, 2x SteelBat</li>
+                    <li>#5: 2x SlvrLobo, GardLedr</li>
+                    <li>#6: 3x Demiurok, 2x Hornet</li>
+                    <li>#7: 2x NutEater, LeafBunn</li>
+                    <li>#8: 2x LeafBunn</li>
+                </ul>
+            </div>
+
+            <!-- Formation Group 1 -->
+            <div class="formation-group">
+                <h3>Formation Group # 1 (0x01)</h3>
+                <ul>
+                    <li>#1: 2x NutEater</li>
+                    <li>#2: 3x Alacran, DesertSa</li>
+                    <li>#3: 2x DesertSa</li>
+                    <li>#4: 3x Alacran</li>
+                    <li>#5: 2x Alacran, DesertSa</li>
+                    <li>#6: 2x Hornet</li>
+                    <li>#7: 3x Wererat</li>
+                    <li>#8: Hornet, 2x SteelBat</li>
+                </ul>
+            </div>
+            <!-- Formation Group 2 -->
+            <div class="formation-group">
+                <h3>Formation Group # 2 (0x02)</h3>
+                <ul>
+                    <li>#1: 2x Gorgias</li>
+                    <li>#2: SlvrLobo, Megalodo</li>
+                    <li>#3: 3x Demiurok</li>
+                    <li>#4: Belmodar</li>
+                    <li>#5: 2x Mu, Belmodar</li>
+                    <li>#6: 2x Mu, Cockatri</li>
+                    <li>#7: 2x Mu, Cockatri, Belmodar</li>
+                    <li>#8: 2x Cockatri</li>
+                </ul>
+            </div>
+
+            <!-- Formation Group 3 -->
+            <div class="formation-group">
+                <h3>Formation Group # 3 (0x03)</h3>
+                <ul>
+                    <li>#1: 4x Mu</li>
+                    <li>#2: MTekArmr, 2x Imp.Sold</li>
+                    <li>#3: Wererat, SteelBat</li>
+                    <li>#4: MTekArmr</li>
+                    <li>#5: 2x RockSlug, Gorgias</li>
+                    <li>#6: 3x Cockatri</li>
+                    <li>#7: Cockatri, 2x Gorgias</li>
+                    <li>#8: Cockatri, 3x RockSlug</li>
+                </ul>
+            </div>
+
+            <!-- Formation Group 4 -->
+            <div class="formation-group">
+                <h3>Formation Group # 4 (0x04)</h3>
+                <ul>
+                    <li>#1: 2x Zaghrem</li>
+                    <li>#2: 2x Cockatri, Gorgias, Zaghrem</li>
+                    <li>#3: 2x MTekArmr</li>
+                    <li>#4: 2x LesLopro</li>
+                    <li>#5: 2x PiscoDmn, Draculdy</li>
+                    <li>#6: Sahagin, Nautiloi, LesLopro</li>
+                    <li>#7: Nautiloi, Sahagin</li>
+                    <li>#8: 2x Sahagin, LesLopro</li>
+                </ul>
+            </div>
+
+            <!-- Formation Group 5 -->
+            <div class="formation-group">
+                <h3>Formation Group # 5 (0x05)</h3>
+                <ul>
+                    <li>#1: Cockatri, 2x Goblin</li>
+                    <li>#2: SlvrLobo, 2x Guard</li>
+                    <li>#3: 2x Mu, Goblin</li>
+                    <li>#4: 2x Mu, Cockatri, Goblin</li>
+                    <li>#5: Wererat, SteelBat</li>
+                    <li>#6: 2x Wererat</li>
+                    <li>#7: 2x Doberman</li>
+                    <li>#8: 3x SahagChf</li>
+                </ul>
+            </div>
+
+            <!-- Formation Group 6 -->
+            <div class="formation-group">
+                <h3>Formation Group # 6 (0x06)</h3>
+                <ul>
+                    <li>#1: 2x Doberman, Imp.Sold</li>
+                    <li>#2: 3x StrayCat</li>
+                    <li>#3: 2x StrayCat, 2x NetlHopr</li>
+                    <li>#4: 3x NetlHopr</li>
+                    <li>#5: 5x ChipRabb</li>
+                    <li>#6: Aepyorni, 2x Hedgehog</li>
+                    <li>#7: 2x Aepyorni, StrayCat</li>
+                    <li>#8: Aepyorni, 2x ChipRabb</li>
+                </ul>
+            </div>
+
+            <!-- Formation Group 7 -->
+            <div class="formation-group">
+                <h3>Formation Group # 7 (0x07)</h3>
+                <ul>
+                    <li>#1: 2x Hedgehog, 3x ChipRabb</li>
+                    <li>#2: 2x NetlHopr, Aepyorni, StrayCat</li>
+                    <li>#3: 2x Templar</li>
+                    <li>#4: SOLDIER, Officer</li>
+                    <li>#5: 2x SOLDIER</li>
+                    <li>#6: 4x Imp.Sold, Satellit</li>
+                    <li>#7: 3x Doberman</li>
+                    <li>#8: LilMurde</li>
+                </ul>
+            </div>
+
+            <!-- Formation Group 8 -->
+            <div class="formation-group">
+                <h3>Formation Group # 8 (0x08)</h3>
+                <ul>
+                    <li>#1: HvyArmor</li>
+                    <li>#2: Ghost, Bomb</li>
+                    <li>#3: 3x Ghost</li>
+                    <li>#4: SahagChf, 2x Sahagin</li>
+                    <li>#5: 2x Ochu, Ghost</li>
+                    <li>#6: 2x Ochu, Bomb</li>
+                    <li>#7: 2x AnglWhis, Phoebe</li>
+                    <li>#8: 3x SteelBat</li>
+                </ul>
+            </div>
+
+            <!-- Formation Group 9 -->
+            <div class="formation-group">
+                <h3>Formation Group # 9 (0x09)</h3>
+                <ul>
+                    <li>#1: 2x Phoebe, 2x Bomb</li>
+                    <li>#2: 2x PiscoDmn, 2x Provoker</li>
+                    <li>#3: 4x AnglWhis</li>
+                    <li>#4: Phoebe, 2x Oversoul</li>
+                    <li>#5: 3x Bomb</li>
+                    <li>#6: 2x LivingDe, Bomb</li>
+                    <li>#7: 2x LivingDe, Oversoul</li>
+                    <li>#8: Cactus, Carrot</li>
+                </ul>
+            </div>
+            <!-- Formation Group 10 -->
+            <div class="formation-group">
+                <h3>Formation Group #10 (0x0A)</h3>
+                <ul>
+                   <li>#1: LivingDe, AnglWhis, 2x Phoebe</li>
+                   <li>#2: AnglWhis, 3x Bomb</li>
+                   <li>#3: Anguifor, 3x Sahagin</li>
+                   <li>#4: 2x Anguifor, SahagChf</li>
+                   <li>#5: 2x Guard, 2x Megalodo</li>
+                   <li>#6: 3x LivingDe</li>
+                   <li>#7: Anguifor, SahagChf</li>
+                   <li>#8: HellRidr</li>
+                </ul>
+            </div>
+             <!-- Formation Group 11 -->
+             <div class="formation-group">
+                <h3>Formation Group #11 (0x0B)</h3>
+                <ul>
+                    <li>#1: 2x Corporal, HvyArmor</li>
+                    <li>#2: Corporal, Fidor</li>
+                    <li>#3: AnglWhis</li>
+                    <li>#4: 4x Corporal</li>
+                    <li>#5: 2x Corporal, HntHound</li>
+                    <li>#6: DrgnFosl</li>
+                    <li>#7: 2x Bld.Fang</li>
+                    <li>#8: 3x Rudra, MtrDrive</li>
+                </ul>
+            </div>
+             <!-- Formation Group 12 -->
+            <div class="formation-group">
+                <h3>Formation Group #12 (0x0C)</h3>
+                <ul>
+                   <li>#1: 2x BrnCandy, 2x MtrDrive</li>
+                   <li>#2: 2x Bld.Fang, 2x Rudra</li>
+                   <li>#3: 3x BrnCandy, 2x MtrDrive</li>
+                   <li>#4: 2x MtrDrive</li>
+                   <li>#5: 2x Rudra, MtrDrive</li>
+                   <li>#6: 4x BrnCandy</li>
+                   <li>#7: HilGigas</li>
+                   <li>#8: 2x Basilisk, Crawler</li>
+                </ul>
+            </div>
+            <!-- Formation Group 13 -->
+            <div class="formation-group">
+                <h3>Formation Group #13 (0x0D)</h3>
+                <ul>
+                   <li>#1: 2x IronClaw</li>
+                   <li>#2: VeilDanc</li>
+                   <li>#3: VeilDanc, 2x IronClaw</li>
+                   <li>#4: Harveste</li>
+                   <li>#5: VeilDanc, 2x Harveste</li>
+                   <li>#6: 2x IronClaw, Harveste</li>
+                   <li>#7: Harveste, HilGigas</li>
+                   <li>#8: MagnLodr, 2x LtlMagna</li>
+                </ul>
+            </div>
+             <!-- Formation Group 14 -->
+           <div class="formation-group">
+            <h3>Formation Group #14 (0x0E)</h3>
+            <ul>
+                <li>#1: Goetia, 2x Stunner</li>
+                <li>#2: 3x Stunner, 2x Goetia</li>
+                <li>#3: 4x Crawler</li>
+                <li>#4: 2x Sergeant, 2x Belzecue</li>
+                <li>#5: MTekInfa, 2x Belzecue</li>
+                <li>#6: MagnLodr, LtlMagna</li>
+                <li>#7: 3x Trapper</li>
+                <li>#8: 2x General</li>
+            </ul>
+           </div>
+
+            <!-- Formation Group 15 -->
+            <div class="formation-group">
+                <h3>Formation Group #15 (0x0F)</h3>
+                <ul>
+                    <li>#1: General, 2x Onion</li>
+                    <li>#2: 4x Onion</li>
+                    <li>#3: 3x Trapper, Chaser</li>
+                    <li>#4: 3x Onion, Chaser</li>
+                    <li>#5: Lamia</li>
+                    <li>#6: 3x Commande</li>
+                    <li>#7: 2x Cactus, Aeronite</li>
+                    <li>#8: Frostbst</li>
+                </ul>
+            </div>
+            <!-- Formation Group 16 -->
+           <div class="formation-group">
+            <h3>Formation Group #16 (0x10)</h3>
+                <ul>
+                  <li>#1: 2x Lukhavi</li>
+                  <li>#2: Sprinter, LunarWlf</li>
+                  <li>#3: DiveEagl, Sprinter</li>
+                  <li>#4: 3x Sprinter</li>
+                  <li>#5: 2x Fem.Sold</li>
+                  <li>#6: SandFish, BlkDragn</li>
+                  <li>#7: 3x DsrtRabb</li>
+                  <li>#8: Mandrake</li>
+                </ul>
+           </div>
+          <!-- Formation Group 17 -->
+           <div class="formation-group">
+             <h3>Formation Group #17 (0x11)</h3>
+                <ul>
+                   <li>#1: 2x Ochu, 2x Mandrake</li>
+                   <li>#2: Io</li>
+                   <li>#3: 3x Hundlegs</li>
+                   <li>#4: 2x DrgnFosl</li>
+                   <li>#5: DrgnFosl, 3x Bug</li>
+                   <li>#6: 3x Korpokkr</li>
+                   <li>#7: 6x Bug</li>
+                   <li>#8: 2x Don</li>
+                </ul>
+            </div>
+        <!-- Formation Group 18 -->
+         <div class="formation-group">
+             <h3>Formation Group #18 (0x12)</h3>
+                <ul>
+                   <li>#1: Don, 2x Wyvern</li>
+                   <li>#2: Wyvern, 2x LitworCh, Korpokkr</li>
+                   <li>#3: Korpokkr, 2x Graswyrm</li>
+                   <li>#4: Don, Joker</li>
+                   <li>#5: 3x Joker</li>
+                   <li>#6: 5x LitworCh</li>
+                   <li>#7: Draculdy, DrgnZomb</li>
+                   <li>#8: 2x Outcast, DrgnZomb</li>
+                </ul>
+         </div>
+         <!-- Formation Group 19 -->
+         <div class="formation-group">
+            <h3>Formation Group #19 (0x13)</h3>
+            <ul>
+                <li>#1: Draculdy, PiscoDmn, Outcast</li>
+                <li>#2: 2x Provoker</li>
+                <li>#3: 3x Antares</li>
+                <li>#4: Wizard, PiscoDmn, Antares</li>
+                <li>#5: 3x Wizard</li>
+                <li>#6: 3x ImpElite</li>
+                <li>#7: Balloon, Bomb, Grenade</li>
+                <li>#8: 3x Balloon, 3x Bomb</li>
+            </ul>
+        </div>
+
+        <!-- Formation Group 20 -->
+        <div class="formation-group">
+            <h3>Formation Group #20 (0x14)</h3>
+            <ul>
+                <li>#1: 2x Ankheg</li>
+                <li>#2: Chimera</li>
+                <li>#3: Devourer, Ankheg</li>
+                <li>#4: 3x Devourer</li>
+                <li>#5: 2x Bonnacon, Mandrake</li>
+                <li>#6: 2x Fawn</li>
+                <li>#7: 5x Bonnacon</li>
+                <li>#8: 2x Fawn, Mandrake</li>
+            </ul>
+        </div>
+        <!-- Formation Group 21 -->
+        <div class="formation-group">
+          <h3>Formation Group #21 (0x15)</h3>
+          <ul>
+             <li>#1: 2x LandGril, Mandrake</li>
+             <li>#2: 2x Venobenu, Fawn</li>
+             <li>#3: Gigantos</li>
+             <li>#4: 2x Shade</li>
+             <li>#5: RicardMg, Shade</li>
+             <li>#6: 3x RicardMg</li>
+             <li>#7: 2x Gigantos</li>
+             <li>#8: 2x SkyArmor, Spitfire</li>
+          </ul>
+        </div>
+         <!-- Formation Group 22 -->
+         <div class="formation-group">
+            <h3>Formation Group #22 (0x16)</h3>
+            <ul>
+               <li>#1: SkyArmor, Spitfire</li>
+               <li>#2: Behemoth</li>
+               <li>#3: 2x Misfit, Apocryph</li>
+               <li>#4: Fawn, Apocryph</li>
+               <li>#5: 2x Ninja</li>
+               <li>#6: 2x PlatDrgn, Mindflyr</li>
+               <li>#7: 2x Mindflyr, Apocryph</li>
+               <li>#8: Apocryph, Misfit, 2x Brainpan</li>
+            </ul>
+         </div>
+         <!-- Formation Group 23 -->
+        <div class="formation-group">
+            <h3>Formation Group #23 (0x17)</h3>
+            <ul>
+               <li>#1: 3x Brainpan</li>
+               <li>#2: Dragon</li>
+               <li>#3: Mindflyr, Fawn, Behemoth</li>
+               <li>#4: 2x Behemoth</li>
+               <li>#5: 2x Ninja, PlatDrgn</li>
+               <li>#6: Malboro</li>
+               <li>#7: Ankheg, Devourer, Chimera</li>
+               <li>#8: 3x Ankheg</li>
+            </ul>
+        </div>
+        <!-- Formation Group 24 -->
+        <div class="formation-group">
+            <h3>Formation Group #24 (0x18)</h3>
+            <ul>
+                <li>#1: 2x Peeper</li>
+                <li>#2: 3x Cactus, Cactuar</li>
+                <li>#3: 2x Peeper, ErthGurd</li>
+                <li>#4: BlkDragn</li>
+                <li>#5: 4x Tonberri, Daedalus</li>
+                <li>#6: 2x Fafnir</li>
+                <li>#7: 4x Fafnir</li>
+                <li>#8: KilrMnts, Fafnir</li>
+            </ul>
+        </div>
+          <!-- Formation Group 25 -->
+            <div class="formation-group">
+             <h3>Formation Group #25 (0x19)</h3>
+             <ul>
+                <li>#1: 2x KilrMnts, PoisnLch</li>
+                <li>#2: 2x PoisnLch, 2x Gigntoad</li>
+                <li>#3: 2x DiveEagl, LunarWlf</li>
+                <li>#4: 2x LunarWlf, DiveEagl</li>
+                <li>#5: 3x PoisnLch, DiveEagl</li>
+                <li>#6: Daedalus, Luminesc</li>
+                <li>#7: 2x Tonberri, 2x Luminesc</li>
+                <li>#8: NtWalker, 2x Gigntoad</li>
+            </ul>
+        </div>
+        <!-- Formation Group 26-->
+         <div class="formation-group">
+            <h3>Formation Group #26 (0x1A)</h3>
+            <ul>
+              <li>#1: Scorpion, Gigntoad</li>
+              <li>#2: 3x Scorpion</li>
+              <li>#3: Intangir</li>
+              <li>#4: 4x NtWalker</li>
+              <li>#5: 2x VectChim</li>
+              <li>#6: 2x Gatling</li>
+              <li>#7: 2x PurpBava, Gatling</li>
+              <li>#8: 2x VampThrn, Lizard</li>
+            </ul>
+         </div>
+            <!-- Formation Group 27 -->
+        <div class="formation-group">
+          <h3>Formation Group #27 (0x1B)</h3>
+            <ul>
+              <li>#1: 2x VampThrn</li>
+              <li>#2: VampThrn, 2x Alraune</li>
+              <li>#3: 2x VampThrn, Gatling</li>
+              <li>#4: 2x PurpBava, Gatling, Lizard</li>
+              <li>#5: 2x DsrtRabb, 2x Hundlegs</li>
+              <li>#6: 3x Cactus</li>
+              <li>#7: 2x SandFish, Revnant</li>
+              <li>#8: Revnant, SandFish, Hundlegs</li>
+            </ul>
+        </div>
+            <!-- Formation Group 28 -->
+        <div class="formation-group">
+          <h3>Formation Group #28 (0x1C)</h3>
+            <ul>
+              <li>#1: Oceanus</li>
+              <li>#2: Oceanus, 3x DsrtRabb</li>
+              <li>#3: 2x FendDrgn</li>
+              <li>#4: Landworm</li>
+              <li>#5: 3x DsrtSaha</li>
+              <li>#6: Borghese, 2x DsrtSaha</li>
+              <li>#7: 2x Borghese, DsrtSaha</li>
+              <li>#8: 2x NeckHntr</li>
+            </ul>
+        </div>
+
+        <!-- Formation Group 29 -->
+        <div class="formation-group">
+          <h3>Formation Group #29 (0x1D)</h3>
+            <ul>
+               <li>#1: NeckHntr, Borghese, DsrtSaha</li>
+               <li>#2: Dante</li>
+               <li>#3: 3x Dropper</li>
+               <li>#4: 3x Tonberri</li>
+               <li>#5: 3x Slug</li>
+               <li>#6: Slagworm</li>
+               <li>#7: 3x YellowMo, Slug</li>
+               <li>#8: 2x Bogy</li>
+            </ul>
+        </div>
+        <!-- Formation Group 30 -->
+        <div class="formation-group">
+          <h3>Formation Group #30 (0x1E)</h3>
+          <ul>
+             <li>#1: 3x Zeveak</li>
+             <li>#2: 2x Zeveak, BkLizard, 3x YellowMo</li>
+             <li>#3: 3x YellowMo</li>
+             <li>#4: Bogy, YellowMo</li>
+             <li>#5: 2x LamiaQen</li>
+             <li>#6: LamiaQen, Vampires, CloudWth</li>
+             <li>#7: DdlyHorr</li>
+             <li>#8: 2x Necroman, CloudWth</li>
+          </ul>
+        </div>
+        <!-- Formation Group 31 -->
+        <div class="formation-group">
+          <h3>Formation Group #31 (0x1F)</h3>
+          <ul>
+            <li>#1: 2x Exoray, 2x BloodBat</li>
+            <li>#2: 3x Exoray</li>
+            <li>#3: Vampires, 2x Necroman</li>
+            <li>#4: LamiaQen, 2x BloodBat</li>
+            <li>#5: Emeraldi</li>
+            <li>#6: Tonberry</li>
+            <li>#7: 3x Knotty, Imp</li>
+            <li>#8: Tzakmaqi, Illuyank</li>
+          </ul>
+        </div>
+         <!-- Formation Group 32 -->
+        <div class="formation-group">
+          <h3>Formation Group #32 (0x20)</h3>
+          <ul>
+            <li>#1: Tzakmaqi, 2x Knotty, Imp</li>
+            <li>#2: 3x Illuyank</li>
+            <li>#3: 2x Imp, OniDashr</li>
+            <li>#4: 4x OniDashr</li>
+            <li>#5: Illuyank, 2x OniDashr, 2x Imp</li>
+            <li>#6: 2x LamiaQen</li>
+            <li>#7: DevilFst, 2x Punisher</li>
+            <li>#8: GlasyaLa</li>
+          </ul>
+        </div>
+
+        <!-- Formation Group 33 -->
+        <div class="formation-group">
+          <h3>Formation Group #33 (0x21)</h3>
+          <ul>
+            <li>#1: GlasyaLa, DevilFst, Mugbear</li>
+            <li>#2: Mugbear</li>
+            <li>#3: LamiaQen, 2x Punisher</li>
+            <li>#4: Punisher, Mugbear</li>
+            <li>#5: Twinscyt</li>
+            <li>#6: 2x Twinscyt</li>
+            <li>#7: Gorgimer</li>
+            <li>#8: 4x VectorLy</li>
+          </ul>
+        </div>
+        <!-- Formation Group 34 -->
+        <div class="formation-group">
+          <h3>Formation Group #34 (0x22)</h3>
+          <ul>
+            <li>#1: GrtMalbo, OldDrago, Deathclw</li>
+            <li>#2: 2x SnwPanth</li>
+            <li>#3: TestRidr, Coolness</li>
+            <li>#4: 2x Lukhavi, Coolness</li>
+            <li>#5: 2x Frostbst</li>
+            <li>#6: 4x Coolness</li>
+            <li>#7: SnwPanth, 2x WhtJello</li>
+            <li>#8: 2x PurpBava, 3x WhtJello, Coolness</li>
+          </ul>
+        </div>
+        <!-- Formation Group 35 -->
+        <div class="formation-group">
+            <h3>Formation Group #35 (0x23)</h3>
+            <ul>
+                <li>#1: WhtJello, Frostbst, Coolness</li>
+                <li>#2: Cassie, 2x RedMarsh</li>
+                <li>#3: 2x OldDrago</li>
+                <li>#4: BldDance, 2x Minity</li>
+                <li>#5: 2x Lilith, AlurRide</li>
+                <li>#6: AlurRide, 3x Minity</li>
+                <li>#7: Lilith</li>
+                <li>#8: BldDance, 4x Wild Cat</li>
+            </ul>
+        </div>
+        <!-- Formation Group 36 -->
+        <div class="formation-group">
+          <h3>Formation Group #36 (0x24)</h3>
+          <ul>
+             <li>#1: 2x Misty</li>
+             <li>#2: 3x Rafflesi</li>
+             <li>#3: StllLife</li>
+             <li>#4: 2x Neochu</li>
+             <li>#5: St. Elmo, Mahadeva</li>
+             <li>#6: Ourobors, Vivian, Neochu</li>
+             <li>#7: St. Elmo, 2x Ourobors</li>
+             <li>#8: MedsaChk, 2x Vivian</li>
+          </ul>
+        </div>
+        <!-- Formation Group 37 -->
+        <div class="formation-group">
+          <h3>Formation Group #37 (0x25)</h3>
+          <ul>
+            <li>#1: Sorath, 2x St. Elmo</li>
+            <li>#2: 2x Sorath</li>
+            <li>#3: 3x Revnant</li>
+            <li>#4: GrndBehe, Deathclw, VectorLy</li>
+            <li>#5: FendDrgn</li>
+            <li>#6: 2x Devil</li>
+            <li>#7: 2x FigaroLz, Devil</li>
+                        <!-- Continuing from Formation Group 37 -->
+            <li>#8: 2x Lunatys, 2x FigaroLz</li>
+          </ul>
+        </div>
+
+        <!-- Formation Group 38 -->
+        <div class="formation-group">
+          <h3>Formation Group #38 (0x26)</h3>
+          <ul>
+            <li>#1: 2x Coeurl</li>
+            <li>#2: ArmrdWpn</li>
+            <li>#3: Coeurl, 3x Lunatys</li>
+            <li>#4: Coeurl, Devil, FigaroLz</li>
+            <li>#5: VectorHn, Fem.Sold</li>
+            <li>#6: Face, 2x Al Jabr</li>
+            <li>#7: 2x Al Jabr, Samurai</li>
+            <li>#8: 2x PlutoAmr, 2x Rust</li>
+          </ul>
+        </div>
+
+        <!-- Formation Group 39 -->
+        <div class="formation-group">
+          <h3>Formation Group #39 (0x27)</h3>
+          <ul>
+            <li>#1: Cheshire, Coco</li>
+            <li>#2: Schmidt, 2x Rust, PlutoAmr</li>
+            <li>#3: 2x Weredrgn</li>
+            <li>#4: Cheshire, 3x Pandora</li>
+            <li>#5: Weredrgn, 2x Face</li>
+            <li>#6: Cheshire, Samurai, Rust, Coco</li>
+            <li>#7: 2x Haokah, FendDrgn</li>
+            <li>#8: Tricerat</li>
+          </ul>
+        </div>
+
+        <!-- Formation Group 40 -->
+        <div class="formation-group">
+          <h3>Formation Group #40 (0x28)</h3>
+          <ul>
+            <li>#1: 2x Tyranosa</li>
+            <li>#2: Tyranosa</li>
+            <li>#3: Brachios</li>
+            <li>#4: Sprinter, GtMantis, 2x Lycaon</li>
+            <li>#5: 4x LeapFrog</li>
+            <li>#6: 2x GtMantis</li>
+            <li>#7: 2x Basilisk, LeapFrog</li>
+            <li>#8: 5x Pineappl</li>
+          </ul>
+        </div>
+
+        <!-- Formation Group 41 -->
+          <div class="formation-group">
+          <h3>Formation Group #41 (0x29)</h3>
+          <ul>
+              <li>#1: 2x Sprinter, 2x Lycaon</li>
+              <li>#2: GrndBehe, Deathclw, GrtMalbo</li>
+              <li>#3: 3x GrtMalbo</li>
+              <li>#4: 2x Buck, MedsaChk</li>
+              <li>#5: 2x RuneClaw</li>
+              <li>#6: 3x MedsaChk, Purusa</li>
+              <li>#7: 3x NutEater</li>
+              <li>#8: Aeronite, Carrot</li>
+          </ul>
+        </div>
+
+        <!-- Formation Group 42 -->
+        <div class="formation-group">
+          <h3>Formation Group #42 (0x2A)</h3>
+          <ul>
+              <li>#1: 2x FlameDog</li>
+              <li>#2: 3x Pineappl, FlameDog</li>
+              <li>#3: 2x Pineappl, 2x Covert</li>
+              <li>#4: 2x Pineappl, Garm</li>
+              <li>#5: 2x Jam, 3x RedMarsh</li>
+              <li>#6: Garm, 2x RedMarsh</li>
+              <li>#7: Garm, 2x RedMarsh, Chs.Drgn</li>
+              <li>#8: Covert, Jam, Chs.Drgn</li>
+          </ul>
+        </div>
+        <!-- Formation Group 43 -->
+        <div class="formation-group">
+          <h3>Formation Group #43 (0x2B)</h3>
+          <ul>
+             <li>#1: Jam, Covert</li>
+             <li>#2: Pineappl, 2x FlameDog</li>
+             <li>#3: Mykale, Kamui</li>
+             <li>#4: 5x MedsaChk</li>
+             <li>#5: 2x SkullEtr</li>
+             <li>#6: Corpse, Cassie, Mykale</li>
+             <li>#7: 4x NutEater</li>
+             <li>#8: Amduscia, Baalzeph</li>
+          </ul>
+        </div>
+        <!-- Formation Group 44 -->
+        <div class="formation-group">
+          <h3>Formation Group #44 (0x2C)</h3>
+          <ul>
+             <li>#1: Corpse, Cassie, Baalzeph</li>
+             <li>#2: Amduscia, Kamui</li>
+             <li>#3: Samurai</li>
+             <li>#4: 2x MagicPot</li>
+             <li>#5: 6x BlueFlan</li>
+             <li>#6: 4x BlueFlan</li>
+             <li>#7: Lamia, 3x BlueFlan</li>
+             <li>#8: Ankheg, Chimera</li>
+          </ul>
+        </div>
+        <!-- Formation Group 45 -->
+        <div class="formation-group">
+            <h3>Formation Group #45 (0x2D)</h3>
+            <ul>
+              <li>#1: 2x Dstroide</li>
+              <li>#2: 2x Lamia, Dstroide</li>
+              <li>#3: Titania, Shade, RicardMg</li>
+              <li>#4: RicardMg, MagiDrgn, Shade</li>
+              <li>#5: 2x RicardMg, MagiDrgn</li>
+              <li>#6: 2x Shade, MagiDrgn</li>
+              <li>#7: 2x Ochiudo</li>
+              <li>#8: Outsider, Ochiudo</li>
+            </ul>
+        </div>
+        <!-- Formation Group 46 -->
+         <div class="formation-group">
+          <h3>Formation Group #46 (0x2E)</h3>
+          <ul>
+             <li>#1: 2x Outsider</li>
+             <li>#2: Fortis, DthMachi, DuelArmr</li>
+             <li>#3: Fortis, 2x Tonberri, DthMachi</li>
+             <li>#4: DthMachi, 2x DuelArmr</li>
+             <li>#5: 3x Fortis</li>
+             <li>#6: 2x VectorHn, Commande</li>
+             <li>#7: 2x VectorHn</li>
+             <li>#8: Cartagra, 2x WilloWsp</li>
+          </ul>
+         </div>
+        <!-- Formation Group 47 -->
+        <div class="formation-group">
+          <h3>Formation Group #47 (0x2F)</h3>
+          <ul>
+             <li>#1: GoldBear, WilloWsp</li>
+             <li>#2: 3x Cartagra</li>
+             <li>#3: 2x GoldBear</li>
+             <li>#4: 2x Darkside</li>
+             <li>#5: Darkside, 2x Spectre</li>
+             <li>#6: 4x Kum Kum</li>
+             <li>#7: 2x Kum Kum</li>
+             <li>#8: 2x Thor, Chronos</li>
+          </ul>
+        </div>
+        <!-- Formation Group 48-->
+        <div class="formation-group">
+            <h3>Formation Group #48 (0x30)</h3>
+            <ul>
+              <li>#1: 2x Aeronite</li>
+              <li>#2: 3x Cactus</li>
+              <li>#3: 2x Carrot</li>
+              <li>#4: Apanda, BkLizard</li>
+              <li>#5: UndCheru, Amduscia, Mykale</li>
+              <li>#6: UndCheru, 2x Corpse</li>
+              <li>#7: UndCheru, Kamui, Cassie</li>
+              <li>#8: <Not on Veldt> :: Imp.Sold</li>
+            </ul>
+        </div>
+        <!-- Formation Group 49 -->
+        <div class="formation-group">
+            <h3>Formation Group #49 (0x31)</h3>
+            <ul>
+                <li>#1: 3x BloodBat, Vampires</li>
+                <li>#2: 2x Purusa</li>
+                <li>#3: Titania, MagiDrgn, Shade</li>
+                <li>#4: Vanguard, InnoSent</li>
+                <li>#5: 2x Vanguard</li>
+                <li>#6: Promethe</li>
+                <li>#7: Helldive, 2x Colossus</li>
+                <li>#8: Gamma</li>
+            </ul>
+        </div>
+        <!-- Formation Group 50-->
+        <div class="formation-group">
+           <h3>Formation Group #50 (0x32)</h3>
+           <ul>
+              <li>#1: 3x InnoSent</li>
+              <li>#2: 3x Junk</li>
+              <li>#3: ProtoAmr</li>
+              <li>#4: 2x ProtoAmr</li>
+              <li>#5: ProtoAmr, 2x Onion</li>
+              <li>#6: 5x Onion</li>
+              <li>#7: 2x MagnLodr</li>
+              <li>#8: 4x LtlMagna</li>
+           </ul>
+        </div>
+        <!-- Formation Group 51 -->
+        <div class="formation-group">
+           <h3>Formation Group #51 (0x33)</h3>
+           <ul>
+              <li>#1: MegaArmr</li>
+              <li>#2: Captain</li>
+              <li>#3: 2x Templar, 2x Imp.Sold</li>
+              <li>#4: 4x Balloon</li>
+              <li>#5: 2x Imp.Sold</li>
+              <li>#6: 4x MtlHitmn, Helldive</li>
+              <li>#7: 3x MtlHitmn</li>
+              <li>#8: Colossus, Vanguard</li>
+           </ul>
+        </div>
+        <!-- Formation Group 52 -->
+        <div class="formation-group">
+          <h3>Formation Group #52 (0x34)</h3>
+          <ul>
+             <li>#1: 4x Sergeant</li>
+             <li>#2: MegaArmr, ProtoAmr</li>
+             <li>#3: Sergeant</li>
+             <li>#4: Naude</li>
+             <li>#5: 2x Samurai</li>
+             <li>#6: Pandora, 2x Samurai</li>
+             <li>#7: Al Jabr, 2x Vampyr</li>
+             <li>#8: 3x Vampyr</li>
+          </ul>
+        </div>
+        <!-- Formation Group 53 -->
+        <div class="formation-group">
+          <h3>Formation Group #53 (0x35)</h3>
+            <ul>
+               <li>#1: RicardMg, Alchymia, Traveler</li>
+               <li>#2: 2x BlkForce</li>
+               <li>#3: BlkForce, Soulflyr, DemonKht</li>
+               <li>#4: NinjaMas, Yojimbo</li>
+               <li>#5: Maiden, 2x DemonKht</li>
+               <li>#6: 3x Mover, Soulflyr</li>
+               <li>#7: MuudSuud</li>
+               <li>#8: 2x Daedalus</li>
+            </ul>
+        </div>
+        <!-- Formation Group 54 -->
+        <div class="formation-group">
+            <h3>Formation Group #54 (0x36)</h3>
+            <ul>
+               <li>#1: 2x Mandrago, LeafBunn</li>
+               <li>#2: Titania, Alchymia, Traveler</li>
+               <li>#3: 2x MTekArmr</li>
+               <li>#4: Tonber.M</li>
+               <li>#5: NghtHawk</li>
+               <li>#6: 2x Tonber.M</li>
+               <li>#7: 2x NghtHawk</li>
+               <li>#8: PitFiend, Alchymia</li>
+            </ul>
+        </div>
+        <!-- Formation Group 55-->
+        <div class="formation-group">
+          <h3>Formation Group #55 (0x37)</h3>
+          <ul>
+            <li>#1: Deep One</li>
+            <li>#2: Titania, Deep One</li>
+            <li>#3: 2x Deep One</li>
+            <li>#4: 2x PitFiend</li>
+            <li>#5: 2x Domovoi</li>
+            <li>#6: 2x Domovoi, Goblin</li>
+            <li>#7: Numbr024</li>
+            <li>#8: DonTonbe</li>
+          </ul>
+        </div>
+        <!-- Formation Group 56 -->
+        <div class="formation-group">
+          <h3>Formation Group #56 (0x38)</h3>
+          <ul>
+             <li>#1: 2x Alv, IrnGiant</li>
+             <li>#2: 2x NinjaMas, Yojimbo</li>
+             <li>#3: 2x Mover</li>
+             <li>#4: Nelapa</li>
+             <li>#5: BlkForce, 2x Soulflyr</li>
+             <li>#6: <Not on Veldt> :: Kefka</li>
+             <li>#7: LeftClaw, Rt.Blade, Numbr128</li>
+             <li>#8: 3x Opinicus</li>
+          </ul>
+        </div>
+        <!-- Formation Group 57 -->
+        <div class="formation-group">
+            <h3>Formation Group #57 (0x39)</h3>
+            <ul>
+               <li>#1: SahagChf, Opinicus</li>
+               <li>#2: Promethe</li>
+               <li>#3: MissileB, ReflectB, AirForce, LaserUni, ManaJamr</li>
+               <li>#4: Sahagin, Anguifor, Opinicus</li>
+               <li>#5: LifeTrap</li>
+               <li>#6: <Not on Veldt> :: BlkForce, Myrmecol, Valefor</li>
+               <li>#7: 2x LifeTrap</li>
+               <li>#8: Alv, IrnGiant</li>
+            </ul>
+        </div>
+
+        <!-- Formation Group 58 -->
+        <div class="formation-group">
+            <h3>Formation Group #58 (0x3A)</h3>
+            <ul>
+               <li>#1: NghtHawk, 2x Silenus</li>
+               <li>#2: Kum Kum, 2x SoulEatr</li>
+               <li>#3: Traveler, MagiDrgn</li>
+               <li>#4: CrysDrgn</li>
+               <li>#5: 2x CrysDrgn</li>
+               <li>#6: DarkBehe</li>
+               <li>#7: 2x ShldDrgn</li>
+               <li>#8: <Not on Veldt> :: Long Arm, Face, ShortArm</li>
+            </ul>
+        </div>
+          <!-- Formation Group 59 -->
+        <div class="formation-group">
+            <h3>Formation Group #59 (0x3B)</h3>
+            <ul>
+                <li>#1: Yama, Traveler</li>
+                <li>#2: GrtDemon, 2x Valefor</li>
+                <li>#3: Azrael, Thor, Chronos</li>
+                <li>#4: <Not on Veldt> :: Orthros</li>
+                <li>#5: Appariti</li>
+                <li>#6: 2x DarkBehe</li>
+                <li>#7: 2x Yama, Traveler</li>
+                <li>#8: NghtHawk, Silenus</li>
+             </ul>
+        </div>
+
+        <!-- Formation Group 60 -->
+        <div class="formation-group">
+            <h3>Formation Group #60 (0x3C)</h3>
+            <ul>
+               <li>#1: Titania, Yama, Traveler</li>
+               <li>#2: Hecto, Abaddon</li>
+               <li>#3: ShldDrgn, Valefor</li>
+               <li>#4: 2x Myrmecol</li>
+               <li>#5: Chronos, MoonGodd, Hecto</li>
+               <li>#6: <Not on Veldt> :: 3x Imp.Sold</li>
+               <li>#7: Alchymia, Traveler</li>
+               <li>#8: MoonGodd, Vilia, Hecto</li>
+            </ul>
+        </div>
+        <!-- Formation Group 61-->
+        <div class="formation-group">
+            <h3>Formation Group #61 (0x3D)</h3>
+            <ul>
+               <li>#1: 2x GrtDemon, Thor</li>
+               <li>#2: Chronos, Vilia, Thor</li>
+               <li>#3: Haokah, Haniel, Luminesc</li>
+               <li>#4: 3x Balloon, 3x Grenade</li>
+               <li>#5: 2x Haniel, Soulflyr</li>
+               <li>#6: SoulEatr</li>
+               <li>#7: Nightmar, Chronos, MoonGodd</li>
+               <li>#8: ErthEatr</li>
+            </ul>
+        </div>
+        <!-- Formation Group 62 -->
+        <div class="formation-group">
+            <h3>Formation Group #62 (0x3E)</h3>
+            <ul>
+               <li>#1: Imp.Sold</li>
+               <li>#2: <Not on Veldt> :: </li>
+               <li>#3: <Not on Veldt> :: </li>
+               <li>#4: <Not on Veldt> :: </li>
+               <li>#5: <Not on Veldt> :: </li>
+               <li>#6: <Not on Veldt> :: ZoneEatr</li>
+               <li>#7: <Not on Veldt> :: </li>
+               <li>#8: <Not on Veldt> :: Officer</li>
+            </ul>
+        </div>
+        <!-- Formation Group 63 -->
+        <div class="formation-group">
+          <h3>Formation Group #63 (0x3F)</h3>
+          <ul>
+                <li>#1: <Not on Veldt> :: </li>
+                <li>#2: <Not on Veldt> :: Kefka</li>
+                <li>#3: RicardMg, Alchymia</li>
+                <li>#4: <Not on Veldt> :: Cadet</li>
+                <li>#5: <Not on Veldt> :: Haniel</li>
+                <li>#6: <Not on Veldt> :: Omniscen</li>
+                <li>#7: <Not on Veldt> :: </li>
+                <li>#8: <Not on Veldt> :: UltiBust</li>
+          </ul>
+        </div>
+    </div><!-- Close formation-groups div-->
+ </div> <!-- Close container div -->
+</body>
+
+>>>>>>> Stashed changes
 </html>
