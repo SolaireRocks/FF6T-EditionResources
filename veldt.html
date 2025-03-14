@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veldt Encounter Guide</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2, h3 {
+            color: #212529;
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 0.3em;
+            margin-top: 1.5em;
+        }
+
+        h3 {
+          margin-top: 1.5em;
+          margin-bottom:.75em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        ol, ul {
+            padding-left: 20px;
+        }
+
+        .section {
+            margin-bottom: 2em;
+        }
+
+        .formation-group {
+            margin-bottom: 1em;
+            border-bottom: 1px solid #dee2e6;
+            padding-bottom: 1em;
+        }
+
+        .formation-group:last-child {
+            border-bottom: none;
+        }
+
+        .formation-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .formation-item {
+            margin-bottom: 0.5em;
+            display: flex;
+            align-items: center;
+            padding-left:.5rem;
+        }
+
+        .formation-number {
+            font-weight: bold;
+            margin-right: 0.5em;
+            min-width: 2em;
+            text-align: right;
+        }
+
+      .not-on-veldt {
+    color: #dc3545;
+    font-weight: bold;
+
+    margin-right: 0.5rem; /* Add margin-right for the space */
+}
+
+        .code {
+          font-family: monospace;
+          background-color:#f0f0f0;
+          padding:.125rem .25rem;
+          border-radius:.25rem;
+        }
+        .example {
+          background-color: #e9ecef;
+          padding:1rem;
+          border-radius: .5rem;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+
+        .tip {
+          font-style: italic;
+          color:#6c757d;
+          margin:.5rem 0;
+        }
+        hr {
+          border: none;
+          border-top: 1px solid #dee2e6;
+          margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Veldt Encounter Guide</h1>
+
+        <div class="section">
+            <h2>Finding Specific Enemies</h2>
+            <p>To find a specific enemy on the Veldt, follow these steps:</p>
+            <ol>
+                <li>Figure out which formation group below contains the enemy that you want.</li>
+                <li>Fight on the Veldt and determine which group contains the encounter you're on.</li>
+                <li>Repeat (2) until the NEXT group contains the enemy you want.</li>
+                <li>Perform an emulator save state (not in-game save state).</li>
+                <li>Fight a battle on the Veldt. If it contains your enemy, great! You're done!</li>
+                <li>If it doesn't, load the save state.</li>
+                <li>Fight an encounter off-Veldt.</li>
+                <li>Return to the Veldt.</li>
+                <li>Repeat steps 4-8 until you find your target enemy.</li>
+            </ol>
+             <div class='example'>
+              <p>For example, I'm trying to find HellRidr, which I can see from using <span class='code'>"CTRL-F/Find"</span> that
+it's only in formation #10. I go onto the Veldt and encounter a solo SoulEatr, so I
+know that I'm in formation #61. I fight 12 more battles after that, so my last battle
+was an encounter in formation #9 (62, 63, 0-9). I perform a save state, then fight a
+battle on the Veldt, but run into 3x LivingDe. That's not what I want, so I reload the
+save state, then go fight a battle off of the Veldt. I come back and, luckily, encounter
+HellRidr on my first battle afterwards. I can now cross HellRidr off of my Rages list.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Veldt Mechanics</h2>
+            <ol>
+                <li>Every time you run into an encounter on the Veldt, the following occurs:
+                    <ul>
+                        <li>(a) Increase "group number" by 1.</li>
+                        <li>(b) If the group number is 64 or higher, subtract 64 until it's below 64 (or ID%64).</li>
+                        <li>(c) Select a random encounter from the list in the new group.</li>
+                        <li>(d) If you have not encountered that formation, pick the next one in the group.</li>
+                        <li>(d) If it's not a valid Veldt encounter, pick a different one in the same group.</li>
+                        <li>(e) If you have not encountered ANY enemies in a group, return to (a).</li>
+                    </ul>
+                </li>
+                <li>Whenever you get into an encounter off the Veldt, the "randomly chosen" encounter from the
+                    current pack is changed.</li>
+                <li>Every time you load an in-game save, the system/global save's RNG is increased by 13 and
+                    immediately saved, then the group ID is set to that.  <span class='tip'>This may or may not match up with your
+                    save's previous group ID+13, and thus is only a semi-reliable way to increase the group ID
+                    by a fixed amount. I would not rely on this method to find a particularly stubborn enemy,
+                    but if you're lucky, the stars may align and it could save you time, or at least pick a
+                    random formation much closer to the one you're going for.</span></li>
+                <li>The memory address <span class='code'>[7E1FA5]</span> contains last encountered formation group after a battle.</li>
+            </ol>
+        </div>
+
+        <div class="section">
+            <h2>Formation Groups</h2>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 0</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>SlvrLobo</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>2x SlvrLobo</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Guard</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Demiurok, 2x SteelBat</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x SlvrLobo, GardLedr</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>3x Demiurok, 2x Hornet</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>2x NutEater, LeafBunn</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>2x LeafBunn</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 1</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x NutEater</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>3x Alacran, DesertSa</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>2x DesertSa</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>3x Alacran</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Alacran, DesertSa</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Hornet</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>3x Wererat</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>Hornet, 2x SteelBat</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 2</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Gorgias</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>SlvrLobo, Megalodo</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>3x Demiurok</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>Belmodar</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Mu, Belmodar</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Mu, Cockatri</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Mu, Cockatri, Belmodar</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>2x Cockatri</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 3</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>4x Mu</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>MTekArmr, 2x Imp.Sold</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Wererat, SteelBat</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>MTekArmr</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x RockSlug, Gorgias</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>3x Cockatri</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>Cockatri, 2x Gorgias</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>Cockatri, 3x RockSlug</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 4</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Zaghrem</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>2x Cockatri, Gorgias, Zaghrem</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>2x MTekArmr</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>2x LesLopro</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x PiscoDmn, Draculdy</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>Sahagin, Nautiloi, LesLopro</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>Nautiloi, Sahagin</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>2x Sahagin, LesLopro</span></li>
+                </ul>
+            </div>
+
+             <div class='formation-group'>
+                <h3>Formation Group # 5</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>Cockatri, 2x Goblin</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>SlvrLobo, 2x Guard</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Mu, Goblin</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Mu, Cockatri, Goblin</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>Wererat, SteelBat</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Wererat</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Doberman</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>3x SahagChf</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 6</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Doberman, Imp.Sold</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>3x StrayCat</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>2x StrayCat, 2x NetlHopr</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>3x NetlHopr</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>5x ChipRabb</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>Aepyorni, 2x Hedgehog</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Aepyorni, StrayCat</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>Aepyorni, 2x ChipRabb</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 7</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Hedgehog, 3x ChipRabb</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>2x NetlHopr, Aepyorni, StrayCat</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Templar</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>SOLDIER, Officer</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x SOLDIER</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>4x Imp.Sold, Satellit</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>3x Doberman</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>LilMurde</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 8</h3>
+                <ul class='formation-list'>
+                  <li class='formation-item'><span class='formation-number'>1:</span> <span>HvyArmor</span></li>
+                  <li class='formation-item'><span class='formation-number'>2:</span> <span>Ghost, Bomb</span></li>
+                  <li class='formation-item'><span class='formation-number'>3:</span> <span>3x Ghost</span></li>
+                  <li class='formation-item'><span class='formation-number'>4:</span> <span>SahagChf, 2x Sahagin</span></li>
+                  <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Ochu, Ghost</span></li>
+                  <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Ochu, Bomb</span></li>
+                  <li class='formation-item'><span class='formation-number'>7:</span> <span>2x AnglWhis, Phoebe</span></li>
+                  <li class='formation-item'><span class='formation-number'>8:</span> <span>3x SteelBat</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 9</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Phoebe, 2x Bomb</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>2x PiscoDmn, 2x Provoker</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>4x AnglWhis</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>Phoebe, 2x Oversoul</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>3x Bomb</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>2x LivingDe, Bomb</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>2x LivingDe, Oversoul</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>Cactus, Carrot</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 10</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>LivingDe, AnglWhis, 2x Phoebe</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>AnglWhis, 3x Bomb</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Anguifor, 3x Sahagin</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Anguifor, SahagChf</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Guard, 2x Megalodo</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>3x LivingDe</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>Anguifor, SahagChf</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>HellRidr</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 11</h3>
+                <ul class='formation-list'>
+                 <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Corporal, HvyArmor</span></li>
+                 <li class='formation-item'><span class='formation-number'>2:</span> <span>Corporal, Fidor</span></li>
+                 <li class='formation-item'><span class='formation-number'>3:</span> <span>AnglWhis</span></li>
+                 <li class='formation-item'><span class='formation-number'>4:</span> <span>4x Corporal</span></li>
+                 <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Corporal, HntHound</span></li>
+                 <li class='formation-item'><span class='formation-number'>6:</span> <span>DrgnFosl</span></li>
+                 <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Bld.Fang</span></li>
+                 <li class='formation-item'><span class='formation-number'>8:</span> <span>3x Rudra, MtrDrive</span></li>
+                </ul>
+            </div>
+
+             <div class='formation-group'>
+                <h3>Formation Group # 12</h3>
+                <ul class='formation-list'>
+                  <li class='formation-item'><span class='formation-number'>1:</span> <span>2x BrnCandy, 2x MtrDrive</span></li>
+                  <li class='formation-item'><span class='formation-number'>2:</span> <span>2x Bld.Fang, 2x Rudra</span></li>
+                  <li class='formation-item'><span class='formation-number'>3:</span> <span>3x BrnCandy, 2x MtrDrive</span></li>
+                  <li class='formation-item'><span class='formation-number'>4:</span> <span>2x MtrDrive</span></li>
+                  <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Rudra, MtrDrive</span></li>
+                  <li class='formation-item'><span class='formation-number'>6:</span> <span>4x BrnCandy</span></li>
+                  <li class='formation-item'><span class='formation-number'>7:</span> <span>HilGigas</span></li>
+                  <li class='formation-item'><span class='formation-number'>8:</span> <span>2x Basilisk, Crawler</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 13</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>2x IronClaw</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>VeilDanc</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>VeilDanc, 2x IronClaw</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>Harveste</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>VeilDanc, 2x Harveste</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>2x IronClaw, Harveste</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>Harveste, HilGigas</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>MagnLodr, 2x LtlMagna</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 14</h3>
+                <ul class='formation-list'>
+                 <li class='formation-item'><span class='formation-number'>1:</span> <span>Goetia, 2x Stunner</span></li>
+                 <li class='formation-item'><span class='formation-number'>2:</span> <span>3x Stunner, 2x Goetia</span></li>
+                 <li class='formation-item'><span class='formation-number'>3:</span> <span>4x Crawler</span></li>
+                 <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Sergeant, 2x Belzecue</span></li>
+                 <li class='formation-item'><span class='formation-number'>5:</span> <span>MTekInfa, 2x Belzecue</span></li>
+                 <li class='formation-item'><span class='formation-number'>6:</span> <span>MagnLodr, LtlMagna</span></li>
+                 <li class='formation-item'><span class='formation-number'>7:</span> <span>3x Trapper</span></li>
+                 <li class='formation-item'><span class='formation-number'>8:</span> <span>2x General</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 15</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>General, 2x Onion</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>4x Onion</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>3x Trapper, Chaser</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>3x Onion, Chaser</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>Lamia</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>3x Commande</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Cactus, Aeronite</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>Frostbst</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 16</h3>
+                <ul class='formation-list'>
+                 <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Lukhavi</span></li>
+                 <li class='formation-item'><span class='formation-number'>2:</span> <span>Sprinter, LunarWlf</span></li>
+                 <li class='formation-item'><span class='formation-number'>3:</span> <span>DiveEagl, Sprinter</span></li>
+                 <li class='formation-item'><span class='formation-number'>4:</span> <span>3x Sprinter</span></li>
+                 <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Fem.Sold</span></li>
+                 <li class='formation-item'><span class='formation-number'>6:</span> <span>SandFish, BlkDragn</span></li>
+                 <li class='formation-item'><span class='formation-number'>7:</span> <span>3x DsrtRabb</span></li>
+                 <li class='formation-item'><span class='formation-number'>8:</span> <span>Mandrake</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 17</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Ochu, 2x Mandrake</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>Io</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>3x Hundlegs</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>2x DrgnFosl</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>DrgnFosl, 3x Bug</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>3x Korpokkr</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>6x Bug</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>2x Don</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 18</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>Don, 2x Wyvern</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>Wyvern, 2x LitworCh, Korpokkr</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Korpokkr, 2x Graswyrm</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>Don, Joker</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>3x Joker</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>5x LitworCh</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>Draculdy, DrgnZomb</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>2x Outcast, DrgnZomb</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 19</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>Draculdy, PiscoDmn, Outcast</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>2x Provoker</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>3x Antares</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>Wizard, PiscoDmn, Antares</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>3x Wizard</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>3x ImpElite</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>Balloon, Bomb, Grenade</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>3x Balloon, 3x Bomb</span></li>
+                </ul>
+            </div>
+            <div class='formation-group'>
+                <h3>Formation Group # 20</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Ankheg</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>Chimera</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Devourer, Ankheg</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>3x Devourer</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Bonnacon, Mandrake</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Fawn</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>5x Bonnacon</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>2x Fawn, Mandrake</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 21</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x LandGril, Mandrake</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>2x Venobenu, Fawn</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Gigantos</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Shade</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>RicardMg, Shade</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>3x RicardMg</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Gigantos</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>2x SkyArmor, Spitfire</span></li>
+                </ul>
+            </div>
+
+             <div class='formation-group'>
+                <h3>Formation Group # 22</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>SkyArmor, Spitfire</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>Behemoth</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Misfit, Apocryph</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>Fawn, Apocryph</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Ninja</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>2x PlatDrgn, Mindflyr</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Mindflyr, Apocryph</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>Apocryph, Misfit, 2x Brainpan</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 23</h3>
+                <ul class='formation-list'>
+                                        <li class='formation-item'><span class='formation-number'>1:</span> <span>3x Brainpan</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>Dragon</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Mindflyr, Fawn, Behemoth</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Behemoth</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Ninja, PlatDrgn</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>Malboro</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>Ankheg, Devourer, Chimera</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>3x Ankheg</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 24</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Peeper</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>3x Cactus, Cactuar</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Peeper, ErthGurd</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>BlkDragn</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>4x Tonberri, Daedalus</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Fafnir</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>4x Fafnir</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>KilrMnts, Fafnir</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 25</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>2x KilrMnts, PoisnLch</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>2x PoisnLch, 2x Gigntoad</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>2x DiveEagl, LunarWlf</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>2x LunarWlf, DiveEagl</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>3x PoisnLch, DiveEagl</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>Daedalus, Luminesc</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Tonberri, 2x Luminesc</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>NtWalker, 2x Gigntoad</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 26</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>Scorpion, Gigntoad</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>3x Scorpion</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Intangir</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>4x NtWalker</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x VectChim</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Gatling</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>2x PurpBava, Gatling</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>2x VampThrn, Lizard</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 27</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x VampThrn</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>VampThrn, 2x Alraune</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>2x VampThrn, Gatling</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>2x PurpBava, Gatling, Lizard</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x DsrtRabb, 2x Hundlegs</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>3x Cactus</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>2x SandFish, Revnant</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>Revnant, SandFish, Hundlegs</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 28</h3>
+                <ul class='formation-list'>
+                  <li class='formation-item'><span class='formation-number'>1:</span> <span>Oceanus</span></li>
+                  <li class='formation-item'><span class='formation-number'>2:</span> <span>Oceanus, 3x DsrtRabb</span></li>
+                  <li class='formation-item'><span class='formation-number'>3:</span> <span>2x FendDrgn</span></li>
+                  <li class='formation-item'><span class='formation-number'>4:</span> <span>Landworm</span></li>
+                  <li class='formation-item'><span class='formation-number'>5:</span> <span>3x DsrtSaha</span></li>
+                  <li class='formation-item'><span class='formation-number'>6:</span> <span>Borghese, 2x DsrtSaha</span></li>
+                  <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Borghese, DsrtSaha</span></li>
+                  <li class='formation-item'><span class='formation-number'>8:</span> <span>2x NeckHntr</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 29</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>NeckHntr, Borghese, DsrtSaha</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>Dante</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>3x Dropper</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>3x Tonberri</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>3x Slug</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>Slagworm</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>3x YellowMo, Slug</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>2x Bogy</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 30</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>3x Zeveak</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>2x Zeveak, BkLizard, 3x YellowMo</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>3x YellowMo</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>Bogy, YellowMo</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>2x LamiaQen</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>LamiaQen, Vampires, CloudWth</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>DdlyHorr</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>2x Necroman, CloudWth</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 31</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Exoray, 2x BloodBat</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>3x Exoray</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Vampires, 2x Necroman</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>LamiaQen, 2x BloodBat</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>Emeraldi</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>Tonberry</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>3x Knotty, Imp</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>Tzakmaqi, Illuyank</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 32</h3>
+                <ul class='formation-list'>
+                  <li class='formation-item'><span class='formation-number'>1:</span> <span>Tzakmaqi, 2x Knotty, Imp</span></li>
+                  <li class='formation-item'><span class='formation-number'>2:</span> <span>3x Illuyank</span></li>
+                  <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Imp, OniDashr</span></li>
+                  <li class='formation-item'><span class='formation-number'>4:</span> <span>4x OniDashr</span></li>
+                  <li class='formation-item'><span class='formation-number'>5:</span> <span>Illuyank, 2x OniDashr, 2x Imp</span></li>
+                  <li class='formation-item'><span class='formation-number'>6:</span> <span>2x LamiaQen</span></li>
+                  <li class='formation-item'><span class='formation-number'>7:</span> <span>DevilFst, 2x Punisher</span></li>
+                  <li class='formation-item'><span class='formation-number'>8:</span> <span>GlasyaLa</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 33</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>GlasyaLa, DevilFst, Mugbear</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>Mugbear</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>LamiaQen, 2x Punisher</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>Punisher, Mugbear</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>Twinscyt</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Twinscyt</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>Gorgimer</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>4x VectorLy</span></li>
+                </ul>
+            </div>
+            <div class='formation-group'>
+                <h3>Formation Group # 34</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>GrtMalbo, OldDrago, Deathclw</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>2x SnwPanth</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>TestRidr, Coolness</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Lukhavi, Coolness</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Frostbst</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>4x Coolness</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>SnwPanth, 2x WhtJello</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>2x PurpBava, 3x WhtJello, Coolness</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 35</h3>
+                <ul class='formation-list'>
+                  <li class='formation-item'><span class='formation-number'>1:</span> <span>WhtJello, Frostbst, Coolness</span></li>
+                  <li class='formation-item'><span class='formation-number'>2:</span> <span>Cassie, 2x RedMarsh</span></li>
+                  <li class='formation-item'><span class='formation-number'>3:</span> <span>2x OldDrago</span></li>
+                  <li class='formation-item'><span class='formation-number'>4:</span> <span>BldDance, 2x Minity</span></li>
+                  <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Lilith, AlurRide</span></li>
+                  <li class='formation-item'><span class='formation-number'>6:</span> <span>AlurRide, 3x Minity</span></li>
+                  <li class='formation-item'><span class='formation-number'>7:</span> <span>Lilith</span></li>
+                  <li class='formation-item'><span class='formation-number'>8:</span> <span>BldDance, 4x Wild Cat</span></li>
+                </ul>
+            </div>
+
+             <div class='formation-group'>
+                <h3>Formation Group # 36</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Misty</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>3x Rafflesi</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>StllLife</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Neochu</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>St. Elmo, Mahadeva</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>Ourobors, Vivian, Neochu</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>St. Elmo, 2x Ourobors</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>MedsaChk, 2x Vivian</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 37</h3>
+                <ul class='formation-list'>
+                 <li class='formation-item'><span class='formation-number'>1:</span> <span>Sorath, 2x St. Elmo</span></li>
+                 <li class='formation-item'><span class='formation-number'>2:</span> <span>2x Sorath</span></li>
+                 <li class='formation-item'><span class='formation-number'>3:</span> <span>3x Revnant</span></li>
+                 <li class='formation-item'><span class='formation-number'>4:</span> <span>GrndBehe, Deathclw, VectorLy</span></li>
+                 <li class='formation-item'><span class='formation-number'>5:</span> <span>FendDrgn</span></li>
+                 <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Devil</span></li>
+                 <li class='formation-item'><span class='formation-number'>7:</span> <span>2x FigaroLz, Devil</span></li>
+                 <li class='formation-item'><span class='formation-number'>8:</span> <span>2x Lunatys, 2x FigaroLz</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 38</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Coeurl</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>ArmrdWpn</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Coeurl, 3x Lunatys</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>Coeurl, Devil, FigaroLz</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>VectorHn, Fem.Sold</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>Face, 2x Al Jabr</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Al Jabr, Samurai</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>2x PlutoAmr, 2x Rust</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 39</h3>
+                <ul class='formation-list'>
+                  <li class='formation-item'><span class='formation-number'>1:</span> <span>Cheshire, Coco</span></li>
+                  <li class='formation-item'><span class='formation-number'>2:</span> <span>Schmidt, 2x Rust, PlutoAmr</span></li>
+                  <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Weredrgn</span></li>
+                  <li class='formation-item'><span class='formation-number'>4:</span> <span>Cheshire, 3x Pandora</span></li>
+                  <li class='formation-item'><span class='formation-number'>5:</span> <span>Weredrgn, 2x Face</span></li>
+                  <li class='formation-item'><span class='formation-number'>6:</span> <span>Cheshire, Samurai, Rust, Coco</span></li>
+                  <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Haokah, FendDrgn</span></li>
+                  <li class='formation-item'><span class='formation-number'>8:</span> <span>Tricerat</span></li>
+                </ul>
+            </div>
+             <div class='formation-group'>
+                <h3>Formation Group # 40</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Tyranosa</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>Tyranosa</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>Brachios</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>Sprinter, GtMantis, 2x Lycaon</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>4x LeapFrog</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>2x GtMantis</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Basilisk, LeapFrog</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>5x Pineappl</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 41</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Sprinter, 2x Lycaon</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>GrndBehe, Deathclw, GrtMalbo</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>3x GrtMalbo</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Buck, MedsaChk</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>2x RuneClaw</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>3x MedsaChk, Purusa</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>3x NutEater</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>Aeronite, Carrot</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 42</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>2x FlameDog</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>3x Pineappl, FlameDog</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Pineappl, 2x Covert</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Pineappl, Garm</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Jam, 3x RedMarsh</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>Garm, 2x RedMarsh</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>Garm, 2x RedMarsh, Chs.Drgn</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>Covert, Jam, Chs.Drgn</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 43</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>Jam, Covert</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>Pineappl, 2x FlameDog</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Mykale, Kamui</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>5x MedsaChk</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x SkullEtr</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>Corpse, Cassie, Mykale</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>4x NutEater</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>Amduscia, Baalzeph</span></li>
+                </ul>
+            </div>
+            <div class='formation-group'>
+                <h3>Formation Group # 44</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>Corpse, Cassie, Baalzeph</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>Amduscia, Kamui</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>Samurai</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>2x MagicPot</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>6x BlueFlan</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>4x BlueFlan</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>Lamia, 3x BlueFlan</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>Ankheg, Chimera</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 45</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Dstroide</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>2x Lamia, Dstroide</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Titania, Shade, RicardMg</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>RicardMg, MagiDrgn, Shade</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x RicardMg, MagiDrgn</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Shade, MagiDrgn</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Ochiudo</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>Outsider, Ochiudo</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 46</h3>
+                <ul class='formation-list'>
+                  <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Outsider</span></li>
+                  <li class='formation-item'><span class='formation-number'>2:</span> <span>Fortis, DthMachi, DuelArmr</span></li>
+                  <li class='formation-item'><span class='formation-number'>3:</span> <span>Fortis, 2x Tonberri, DthMachi</span></li>
+                  <li class='formation-item'><span class='formation-number'>4:</span> <span>DthMachi, 2x DuelArmr</span></li>
+                  <li class='formation-item'><span class='formation-number'>5:</span> <span>3x Fortis</span></li>
+                  <li class='formation-item'><span class='formation-number'>6:</span> <span>2x VectorHn, Commande</span></li>
+                  <li class='formation-item'><span class='formation-number'>7:</span> <span>2x VectorHn</span></li>
+                  <li class='formation-item'><span class='formation-number'>8:</span> <span>Cartagra, 2x WilloWsp</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 47</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>GoldBear, WilloWsp</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>3x Cartagra</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>2x GoldBear</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Darkside</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>Darkside, 2x Spectre</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>4x Kum Kum</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Kum Kum</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>2x Thor, Chronos</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 48</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Aeronite</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>3x Cactus</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Carrot</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>Apanda, BkLizard</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>UndCheru, Amduscia, Mykale</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>UndCheru, 2x Corpse</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>UndCheru, Kamui, Cassie</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span class='not-on-veldt'>Not on Veldt</span> Imp.Sold</li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 49</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>3x BloodBat, Vampires</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>2x Purusa</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Titania, MagiDrgn, Shade</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>Vanguard, InnoSent</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Vanguard</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>Promethe</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>Helldive, 2x Colossus</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>Gamma</span></li>
+                </ul>
+            </div>
+            <div class='formation-group'>
+                <h3>Formation Group # 50</h3>
+                <ul class='formation-list'>
+                 <li class='formation-item'><span class='formation-number'>1:</span> <span>3x InnoSent</span></li>
+                 <li class='formation-item'><span class='formation-number'>2:</span> <span>3x Junk</span></li>
+                 <li class='formation-item'><span class='formation-number'>3:</span> <span>ProtoAmr</span></li>
+                 <li class='formation-item'><span class='formation-number'>4:</span> <span>2x ProtoAmr</span></li>
+                 <li class='formation-item'><span class='formation-number'>5:</span> <span>ProtoAmr, 2x Onion</span></li>
+                 <li class='formation-item'><span class='formation-number'>6:</span> <span>5x Onion</span></li>
+                 <li class='formation-item'><span class='formation-number'>7:</span> <span>2x MagnLodr</span></li>
+                 <li class='formation-item'><span class='formation-number'>8:</span> <span>4x LtlMagna</span></li>
+                </ul>
+            </div>
+            <div class='formation-group'>
+                <h3>Formation Group # 51</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>MegaArmr</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>Captain</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Templar, 2x Imp.Sold</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>4x Balloon</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Imp.Sold</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>4x MtlHitmn, Helldive</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>3x MtlHitmn</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>Colossus, Vanguard</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 52</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>4x Sergeant</span></li>
+					                    <li class='formation-item'><span class='formation-number'>2:</span> <span>MegaArmr, ProtoAmr</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>Sergeant</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>Naude</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Samurai</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>Pandora, 2x Samurai</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>Al Jabr, 2x Vampyr</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>3x Vampyr</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 53</h3>
+                <ul class='formation-list'>
+                 <li class='formation-item'><span class='formation-number'>1:</span> <span>RicardMg, Alchymia, Traveler</span></li>
+                 <li class='formation-item'><span class='formation-number'>2:</span> <span>2x BlkForce</span></li>
+                 <li class='formation-item'><span class='formation-number'>3:</span> <span>BlkForce, Soulflyr, DemonKht</span></li>
+                 <li class='formation-item'><span class='formation-number'>4:</span> <span>NinjaMas, Yojimbo</span></li>
+                 <li class='formation-item'><span class='formation-number'>5:</span> <span>Maiden, 2x DemonKht</span></li>
+                 <li class='formation-item'><span class='formation-number'>6:</span> <span>3x Mover, Soulflyr</span></li>
+                 <li class='formation-item'><span class='formation-number'>7:</span> <span>MuudSuud</span></li>
+                 <li class='formation-item'><span class='formation-number'>8:</span> <span>2x Daedalus</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 54</h3>
+                <ul class='formation-list'>
+                 <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Mandrago, LeafBunn</span></li>
+                 <li class='formation-item'><span class='formation-number'>2:</span> <span>Titania, Alchymia, Traveler</span></li>
+                 <li class='formation-item'><span class='formation-number'>3:</span> <span>2x MTekArmr</span></li>
+                 <li class='formation-item'><span class='formation-number'>4:</span> <span>Tonber.M</span></li>
+                 <li class='formation-item'><span class='formation-number'>5:</span> <span>NghtHawk</span></li>
+                 <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Tonber.M</span></li>
+                 <li class='formation-item'><span class='formation-number'>7:</span> <span>2x NghtHawk</span></li>
+                 <li class='formation-item'><span class='formation-number'>8:</span> <span>PitFiend, Alchymia</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 55</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>Deep One</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>Titania, Deep One</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Deep One</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>2x PitFiend</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Domovoi</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span>2x Domovoi, Goblin</span></li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>Numbr024</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>DonTonbe</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 56</h3>
+                <ul class='formation-list'>
+                  <li class='formation-item'><span class='formation-number'>1:</span> <span>2x Alv, IrnGiant</span></li>
+                  <li class='formation-item'><span class='formation-number'>2:</span> <span>2x NinjaMas, Yojimbo</span></li>
+                  <li class='formation-item'><span class='formation-number'>3:</span> <span>2x Mover</span></li>
+                  <li class='formation-item'><span class='formation-number'>4:</span> <span>Nelapa</span></li>
+                  <li class='formation-item'><span class='formation-number'>5:</span> <span>BlkForce, 2x Soulflyr</span></li>
+                  <li class='formation-item'><span class='formation-number'>6:</span> <span class='not-on-veldt'>Not on Veldt</span> Kefka</li>
+                  <li class='formation-item'><span class='formation-number'>7:</span> <span>LeftClaw, Rt.Blade, Numbr128</span></li>
+                  <li class='formation-item'><span class='formation-number'>8:</span> <span>3x Opinicus</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 57</h3>
+                <ul class='formation-list'>
+                    <li class='formation-item'><span class='formation-number'>1:</span> <span>SahagChf, Opinicus</span></li>
+                    <li class='formation-item'><span class='formation-number'>2:</span> <span>Promethe</span></li>
+                    <li class='formation-item'><span class='formation-number'>3:</span> <span>MissileB, ReflectB, AirForce, LaserUni, ManaJamr</span></li>
+                    <li class='formation-item'><span class='formation-number'>4:</span> <span>Sahagin, Anguifor, Opinicus</span></li>
+                    <li class='formation-item'><span class='formation-number'>5:</span> <span>LifeTrap</span></li>
+                    <li class='formation-item'><span class='formation-number'>6:</span> <span class='not-on-veldt'>Not on Veldt</span> BlkForce, Myrmecol, Valefor</li>
+                    <li class='formation-item'><span class='formation-number'>7:</span> <span>2x LifeTrap</span></li>
+                    <li class='formation-item'><span class='formation-number'>8:</span> <span>Alv, IrnGiant</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 58</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>NghtHawk, 2x Silenus</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>Kum Kum, 2x SoulEatr</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>Traveler, MagiDrgn</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>CrysDrgn</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>2x CrysDrgn</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>DarkBehe</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>2x ShldDrgn</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span class='not-on-veldt'>Not on Veldt</span> Long Arm, Face, ShortArm</li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 59</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>Yama, Traveler</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>GrtDemon, 2x Valefor</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>Azrael, Thor, Chronos</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span class='not-on-veldt'>Not on Veldt</span> Orthros</li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>Appariti</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>2x DarkBehe</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>2x Yama, Traveler</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>NghtHawk, Silenus</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 60</h3>
+                <ul class='formation-list'>
+                  <li class='formation-item'><span class='formation-number'>1:</span> <span>Titania, Yama, Traveler</span></li>
+                  <li class='formation-item'><span class='formation-number'>2:</span> <span>Hecto, Abaddon</span></li>
+                  <li class='formation-item'><span class='formation-number'>3:</span> <span>ShldDrgn, Valefor</span></li>
+                  <li class='formation-item'><span class='formation-number'>4:</span> <span>2x Myrmecol</span></li>
+                  <li class='formation-item'><span class='formation-number'>5:</span> <span>Chronos, MoonGodd, Hecto</span></li>
+                  <li class='formation-item'><span class='formation-number'>6:</span> <span class='not-on-veldt'>Not on Veldt</span> 3x Imp.Sold</li>
+                  <li class='formation-item'><span class='formation-number'>7:</span> <span>Alchymia, Traveler</span></li>
+                  <li class='formation-item'><span class='formation-number'>8:</span> <span>MoonGodd, Vilia, Hecto</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 61</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>2x GrtDemon, Thor</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span>Chronos, Vilia, Thor</span></li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span>Haokah, Haniel, Luminesc</span></li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span>3x Balloon, 3x Grenade</span></li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span>2x Haniel, Soulflyr</span></li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span>SoulEatr</span></li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span>Nightmar, Chronos, MoonGodd</span></li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span>ErthEatr</span></li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 62</h3>
+                <ul class='formation-list'>
+                   <li class='formation-item'><span class='formation-number'>1:</span> <span>Imp.Sold</span></li>
+                   <li class='formation-item'><span class='formation-number'>2:</span> <span class='not-on-veldt'>Not on Veldt</span> </li>
+                   <li class='formation-item'><span class='formation-number'>3:</span> <span class='not-on-veldt'>Not on Veldt</span> </li>
+                   <li class='formation-item'><span class='formation-number'>4:</span> <span class='not-on-veldt'>Not on Veldt</span> </li>
+                   <li class='formation-item'><span class='formation-number'>5:</span> <span class='not-on-veldt'>Not on Veldt</span> </li>
+                   <li class='formation-item'><span class='formation-number'>6:</span> <span class='not-on-veldt'>Not on Veldt</span> ZoneEatr</li>
+                   <li class='formation-item'><span class='formation-number'>7:</span> <span class='not-on-veldt'>Not on Veldt</span> </li>
+                   <li class='formation-item'><span class='formation-number'>8:</span> <span class='not-on-veldt'>Not on Veldt</span> Officer</li>
+                </ul>
+            </div>
+
+            <div class='formation-group'>
+                <h3>Formation Group # 63</h3>
+                <ul class='formation-list'>
+                  <li class='formation-item'><span class='formation-number'>1:</span> <span class='not-on-veldt'>Not on Veldt</span> </li>
+                  <li class='formation-item'><span class='formation-number'>2:</span> <span class='not-on-veldt'>Not on Veldt</span> Kefka</li>
+                  <li class='formation-item'><span class='formation-number'>3:</span> <span>RicardMg, Alchymia</span></li>
+                  <li class='formation-item'><span class='formation-number'>4:</span> <span class='not-on-veldt'>Not on Veldt</span> Cadet</li>
+                  <li class='formation-item'><span class='formation-number'>5:</span> <span class='not-on-veldt'>Not on Veldt</span> Haniel</li>
+                  <li class='formation-item'><span class='formation-number'>6:</span> <span class='not-on-veldt'>Not on Veldt</span> Omniscen</li>
+                  <li class='formation-item'><span class='formation-number'>7:</span> <span class='not-on-veldt'>Not on Veldt</span> </li>
+                  <li class='formation-item'><span class='formation-number'>8:</span> <span class='not-on-veldt'>Not on Veldt</span> UltiBust</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
